@@ -14,7 +14,6 @@ export default function Home() {
       <HeroSlider />
         <Kings/>
       <CompanyIntro/>
-    
       <ServiceGrid/>
       <LoanCalculator/>
       <FinancialPartners/>
