@@ -86,7 +86,7 @@ export default function ContactPage() {
         {/* Left: Enrollment Form */}
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h2 className="text-2xl font-bold text-blue-500 mb-2">
-            Enroll Now - Free Counseling
+            Free Financial Consultation
           </h2>
           <p className="text-gray-600 mb-8">
             Fill out the form below and our counselors will contact you within 24 hours
@@ -173,7 +173,7 @@ export default function ContactPage() {
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                placeholder="Tell us about your career goals or any specific questions..."
+                placeholder="Tell us about your requirements or any specific questions you have regarding our services..."
                 className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
@@ -186,7 +186,7 @@ export default function ContactPage() {
                   loading ? "opacity-50 cursor-not-allowed" : "hover:bg-red-700"
                 }`}
               >
-                {loading ? "Submitting..." : "Submit & Get Free Counseling"}
+                {loading ? "Submitting..." : "Free Financial Consultation"}
               </button>
             </div>
           </form>
@@ -206,7 +206,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="font-medium">Call Us</p>
-                  <p className="text-lg text-gray-700">+91 7669291199</p>
+                  <p className="text-lg text-gray-700">+91 7669291199, 0120 420 6832</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -226,29 +226,20 @@ export default function ContactPage() {
           {/* Campus Info */}
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Our Campus
+              Company Address
             </h3>
             <div className="space-y-4">
               <div>
-                <p className="font-bold text-blue-600">Noida, UP</p>
+                <p className="font-bold text-blue-600"></p>
                 <p className="text-gray-700">
-                  H-25, Sector - 63, Noida 201301,
+                  A-39  2nd floor Sector 63
                   <br />
-                  Greater Noida, UP, 201306
+                   Noida 201301
                 </p>
                 <p className="text-gray-700 mt-2">+91 7669291199</p>
               </div>
-            </div>
-
-            <h4 className="text-xl font-bold text-gray-900 mt-10 mb-4">
-              Upcoming Campuses
-            </h4>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-center gap-3">
-                <span className="w-3 h-3 bg-blue-600 rounded-full"></span>
-                Delhi
-              </li>
-            </ul>
+            </div>           
+            
           </div>
         </div>
       </section>

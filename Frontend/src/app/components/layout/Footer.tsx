@@ -102,7 +102,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
+        
         {/* Bottom Bar */}
         <div className="mt-20 pt-12 border-t border-white/10 flex flex-col lg:flex-row justify-between items-center gap-10">
           <div className="flex flex-col items-center lg:items-start space-y-3">

@@ -4,14 +4,14 @@ export const footerData: FooterData = {
   information: [
     { type: "phone", label: "01204206832", href: "tel:+1232341234" },
     { type: "mail", label: "info@moneykingfingfinicial", href: "mailto:info@moneykingfingfinicial" },
-    { type: "map", label: "H-25, Sector-63, Noida", href: "https://maps.google.com" },
+    { type: "map", label: "2nd floor block A-39 Sector 63 Noida 201301", href: "https://maps.google.com" },
   
   ],
   quickLinks: [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Pricing", href: "#" },
+  
   ],
   services: [
     { label: "Financial Planning and Advisory", href: "#" },

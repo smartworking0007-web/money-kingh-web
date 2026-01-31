@@ -73,14 +73,9 @@ export default function GeneralInsurancePage() {
                 sizes="(max-width: 1024px) 100vw, 33vw"
               />
             </div>
-            <p className="text-center text-sm text-gray-600 mt-4 font-medium">
-              Complete protection for all your assets
-            </p>
           </div>
-          
         </div>
       </section>
-
       <FinancialPartners />
       <WhyChoose />
       <LoanCalculator />

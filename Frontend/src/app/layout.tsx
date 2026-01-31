@@ -11,9 +11,14 @@ const lexend = Lexend({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+// Yahan metadata update kiya hai
 export const metadata: Metadata = {
   title: "Money King",
   description: "Learn in-demand skills with industry experts",
+  metadataBase: new URL('https://moneykingfinancial.com'),
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function RootLayout({
@@ -24,9 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lexend.variable} antialiased bg-white`}>
-        {/* Navbar and SecondNavbar must be ABOVE the content */}
         <Navbar />
-        {/* Hero starts here – give space so it's not hidden under navbars */}
         <main className="pt-0 lg:pt-0">
           {children}
         </main>
@@ -34,4 +37,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-} 
+}
