@@ -20,7 +20,6 @@ export default function MStockPage() {
       "MIRA – AI-powered virtual assistant for guidance",
       "Fast & secure platform from Mirae Asset",
     ],
-    
   };
 
   return (
@@ -57,17 +56,14 @@ export default function MStockPage() {
                 </div>
               ))}
             </div>
-
-            {/* Last Updated */}
-           
           </div>
 
-          {/* Right: Image Sidebar (Desktop only) */}
+          {/* Right: Image Sidebar */}
           <div className="lg:col-span-4 order-1 lg:order-2 mb-8 lg:mb-0">
-            <div className="relative w-full h-96 lg:h-full min-h-96 rounded-xl overflow-hidden shadow-2xl border border-gray-100">
+            <div className="relative w-full h-96 lg:h-[500px] rounded-xl overflow-hidden shadow-2xl border border-gray-100">
               <Image
                 src="/images/mstock/mstock.png" 
-                alt="mStock trading app – Zero brokerage stock trading with Money King"
+                alt="mStock trading app – Zero brokerage stock trading"
                 fill
                 className="object-cover"
                 priority
@@ -77,6 +73,7 @@ export default function MStockPage() {
           </div>
         </div>
       </section>
+
       {/* Common Sections */}
       <FinancialPartners />
       <WhyChoose />
