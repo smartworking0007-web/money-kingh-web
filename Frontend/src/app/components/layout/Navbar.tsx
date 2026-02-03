@@ -70,29 +70,48 @@ export default function Navbar() {
 
             {/* Desktop Search & Actions */}
             <div className="ml-auto flex items-center gap-4">
-              <div className="flex items-center w-[210px] h-11 rounded-md border border-gray-300 bg-white shadow-sm focus-within:border-blue-500 transition-all">
-                <Search className="ml-4 w-5 h-5 text-gray-400" />{" "}
-                {/* Search used here */}
+              {/* WhatsApp Input Container */}
+              <div className="flex items-center w-[320px] h-11 rounded-md border border-gray-300 bg-white shadow-sm focus-within:border-blue-500 transition-all pr-2">
+                <Search className="ml-4 w-5 h-5 text-gray-400" />
+
                 <input
                   type="text"
-                  placeholder="Search..."
-                  className="ml-3 flex-1 bg-transparent text-sm outline-none placeholder:text-gray-400"
+                  placeholder="WhatsApp: +91 9311284229"
+                  className="ml-3 flex-1 bg-transparent text-sm outline-none placeholder:text-gray-400 min-w-0"
                 />
+
+                <a
+                  href="https://wa.me/9311284229"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whitespace-nowrap ml-2 bg-green-500 hover:bg-green-600 text-white px-3 py-1.5 rounded-md text-xs font-medium transition-colors"
+                >
+                  Chat
+                </a>
               </div>
-              <Button className="w-[145px] h-11 rounded-md shadow-md">
-                <Typography variant="btn-primary">
-                  <a href="/contact">Sign Up</a>
-                </Typography>
-              </Button>
-              <Button
-                variant="ghost"
-                className="w-[100px] h-11 rounded-md bg-[#E7EDF0] text-blue-600 hover:bg-[#d0dfe6]"
-              >
-                <a href="/contact">Login</a>
-              </Button>
+
+              {/* Sign Up Button */}
+              <div className="ml-auto flex items-center gap-4">
+                {/* Sign Up Button */}
+                <a href="/contact">
+                  <Button className="w-[145px] h-11 rounded-md shadow-md">
+                    <Typography variant="btn-primary">Sign Up</Typography>
+                  </Button>
+                </a>
+
+                {/* Login Button */}
+                <a href="/contact">
+                  <Button
+                    variant="ghost"
+                    className="w-[100px] h-11 rounded-md bg-[#E7EDF0] text-blue-600 hover:bg-[#d0dfe6]"
+                  >
+                    Login
+                  </Button>
+                </a>
+              </div>
             </div>
           </nav>
-          
+
           {/* MOBILE MENU */}
           <div className="lg:hidden">
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
@@ -127,7 +146,6 @@ export default function Navbar() {
                     {/* Mobile Search - Search icon used here too */}
                     <div className="relative">
                       <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                     
                     </div>
 
                     <nav className="flex flex-col space-y-2">

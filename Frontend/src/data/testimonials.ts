@@ -10,26 +10,26 @@ export interface TestimonialItem {
 export const testimonialData: TestimonialItem[] = [
   {
     id: 1,
-    name: "Rahul Sharma",
+    name: "Sumit Kumar",
     role: "Business Owner",
     content: "The loan process was incredibly smooth. I received my funds within 24 hours just as promised. Truly the best financial service!",
-    image: "/images/Testimonial/1.avif", 
+    image: "/images/Testimonial/1.jpeg", 
     rating: 5,
   },
   {
     id: 2,
-    name: "Priya Patel",
+    name: "Pooja ",
     role: "Software Engineer",
     content: "Lowest interest rates I could find in the market. The user-friendly dashboard made tracking my application very easy.",
-    image: "/images/Testimonial/2.avif", 
-    rating: 5,
+    image: "/images/Testimonial/2.jpeg", 
+    rating: 4,
   },
   {
     id: 3,
-    name: "Amit Verma",
+    name: "Tanu Verma",
     role: "Entrepreneur",
     content: "Secured database and minimal documentation. I felt safe sharing my details and the approval was lightning fast.",
-    image: "/images/Testimonial/3.avif", 
+    image: "/images/Testimonial/3.jpeg", 
     rating: 4,
   },
 ];

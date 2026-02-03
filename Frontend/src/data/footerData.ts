@@ -4,7 +4,7 @@ export const footerData: FooterData = {
   information: [
     { type: "phone", label: "01204206832", href: "tel:+1232341234" },
     { type: "mail", label: "info@moneykingfingfinicial", href: "mailto:info@moneykingfingfinicial" },
-    { type: "map", label: "2nd floor block A-39 Sector 63 Noida 201301", href: "https://maps.google.com" },
+    { type: "map", label: "A 39 2rd floor sector 63 noida 201301", href: "https://maps.google.com" },
   
   ],
   quickLinks: [

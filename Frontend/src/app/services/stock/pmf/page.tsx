@@ -21,7 +21,6 @@ export default function PMFPage() {
       "Diversified across large, mid & small-cap stocks",
       "Regular reviews and rebalancing",
     ],
-    
   };
 
   return (
@@ -57,31 +56,28 @@ export default function PMFPage() {
                   </Typography>
                 </div>
               ))}
-            </div>         
+            </div>
           </div>
 
-          {/* Right: Image Sidebar (Desktop only) */}
+          {/* Right: Image Sidebar */}
           <div className="lg:col-span-4 order-1 lg:order-2 mb-8 lg:mb-0">
-            <div className="relative w-full h-96 lg:h-full min-h-96 rounded-xl overflow-hidden shadow-2xl border border-gray-100">
+            <div className="relative w-full h-96 lg:h-[500px] rounded-xl overflow-hidden shadow-2xl border border-gray-100">
               <Image
-                src="/images/mstock/pmf.jpg"   
-                alt="Professional portfolio management and stock investment – Money King PMS"
+                src="/images/mstock/pmf.jpg" 
+                alt="Professional portfolio management services"
                 fill
                 className="object-cover"
                 priority
                 sizes="(max-width: 1024px) 100vw, 33vw"
               />
             </div>
-           
           </div>
-          
         </div>
       </section>
 
-      {/* Common Sections */}
       <FinancialPartners />
       <WhyChoose />
-      <LoanCalculator /> {/* You can replace with a Returns Calculator if needed */}
+      <LoanCalculator />
     </main>
   );
 }
