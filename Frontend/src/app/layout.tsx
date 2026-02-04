@@ -1,9 +1,10 @@
-// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
+// 1. Is line ko import karein
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const lexend = Lexend({ 
   subsets: ["latin"],
@@ -11,7 +12,6 @@ const lexend = Lexend({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-// Yahan metadata update kiya hai
 export const metadata: Metadata = {
   title: "Money King",
   description: "Learn in-demand skills with industry experts",
@@ -35,6 +35,8 @@ export default function RootLayout({
         </main>
         <Footer/>
       </body>
+      {/* 2. Body tag ke niche ya andar ye component add karein */}
+      <GoogleAnalytics gaId="G-V97R5DZ17S" />
     </html>
   );
 }
