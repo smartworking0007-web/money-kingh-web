@@ -52,7 +52,7 @@ export default function Kings() {
             {/* Container for the logo - Adjusted size for mobile responsiveness */}
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px]">
               <Image
-                src="/images/logo-1.png" 
+                src="/images/l.png" 
                 alt="Money King Logo"
                 fill
                 className="object-contain drop-shadow-2xl"
