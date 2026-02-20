@@ -10,15 +10,9 @@ export const heroSlides: HeroSlide[] = [
     imageUrl: "/images/Frame1.1..png",
     imageAlt: "Digital Marketing",
   },
-
   {
     id: 3,
     imageUrl: "/images/Frame3.png",
-    imageAlt: "Web Development",
-  },
-  {
-    id: 4,
-    imageUrl: "/images/Frame4.jpg",
     imageAlt: "Web Development",
   },
 ];

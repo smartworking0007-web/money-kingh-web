@@ -107,13 +107,12 @@ const Footer = () => {
         <div className="mt-20 pt-12 border-t border-white/10 flex flex-col lg:flex-row justify-between items-center gap-10">
           <div className="flex flex-col items-center lg:items-start space-y-3">
             <Typography variant="h4" className="text-white font-black uppercase">
-              Money King Financial
+              Money King Financial Services PVT.LTD.
             </Typography>
             <Typography variant="caption" className="text-gray-300">
               © {new Date().getFullYear()} Money King Financial Services PVT.LTD.
             </Typography>
           </div>
-
           {/* Social Links Mapping */}
           <div className="flex gap-4">
             {footerData.socials.map((social: SocialItem, idx: number) => {

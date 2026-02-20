@@ -16,13 +16,9 @@ export default function HeroSlider() {
   return (
     <div className="w-full flex justify-center mt-2 mb-6 sm:mb-10 px-2 sm:px-6">
       <div 
-        className="relative w-full max-w-7xl bg-white overflow-hidden group
-        
-        /* === ASPECT RATIO === */
-        /* Mobile ke liye 16:9 aur Desktop ke liye 21:9 standard hai */
-        aspect-[16/9] sm:aspect-[21/9] 
-        rounded-lg sm:rounded-3xl
-        "
+        className="relative w-full max-w-7xl bg-white overflow-hidden group 
+                   aspect-[16/9] sm:aspect-[21/9] 
+                   rounded-lg sm:rounded-3xl"
       >
         <div 
           className="flex h-full transition-transform duration-700 ease-in-out"
@@ -37,11 +33,6 @@ export default function HeroSlider() {
                 src={slide.imageUrl}
                 alt={slide.imageAlt}
                 fill
-                /* === SOLUTION FOR CUTTING ===
-                   'object-fill': Ye image ko kheench kar (stretch karke) 
-                   box ke andar poora fit kar dega.
-                   Ab image ka koi bhi hissa nahi katega.
-                */
                 className="object-fill"
                 priority={slide.id === 1}
               />
