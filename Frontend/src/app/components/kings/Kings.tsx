@@ -19,12 +19,13 @@ export default function Kings() {
                   Financial Services Pvt. Ltd.
                 </span>
               </h1>
+
             </div>
 
             <div className="space-y-6 text-gray-500 text-base md:text-lg lg:text-xl leading-relaxed">
               <p className="border-l-4 border-blue-500 pl-4 bg-blue-50/50 py-3 rounded-r-lg mx-auto lg:mx-0 max-w-2xl">
-                We work with India&apos;s top banks & NBFCs! Our vision is to provide 
-                premium, hassle-free financial services that empower your future.
+                We work with India s top banks & NBFCs! Our vision is to provide premium, hassle-free financial services that empower your future.
+
               </p>
 
               <p className="max-w-2xl mx-auto lg:mx-0">
