@@ -13,14 +13,15 @@ export interface MutualFundProduct {
 // 9 most popular / largest mutual fund houses in India
 // Ordered roughly by AUM / visibility on retail platforms (Groww, Zerodha Coin, etc.) ~ Dec 2025
 export const numberedMutualData: PartnerLogo[] = [
-  { name: "SBI Mutual Fund",        src: "/images/mutual/2.webp" },
-  { name: "ICICI Prudential",       src: "/images/mutual/3.webp" },
-  { name: "Nippon India",           src: "/images/mutual/4.webp" },
-  { name: "Aditya Birla Sun Life",  src: "/images/mutual/5.webp" },
-  { name: "Kotak Mutual Fund",      src: "/images/mutual/6.webp" },
-  { name: "Axis Mutual Fund",       src: "/images/mutual/7.webp" },
-  { name: "UTI Mutual Fund",        src: "/images/mutual/8.webp" },
-  { name: "Mirae Asset",            src: "/images/mutual/9.webp" },
+  { name: "SBI Mutual Fund",          src: "/images/mutual/2.jpeg" }, 
+  { name: "ICICI Prudential",         src: "/images/mutual/3.png" },  
+  { name: "Kotak Mutual Fund",        src: "/images/mutual/4.jpeg" }, 
+  { name: "Baroda Pioneer Mutual Fund", src: "/images/mutual/5.jpeg" }, 
+  { name: "Canara Robeco Mutual Fund", src: "/images/mutual/6.png" },  
+  { name: "IDBI Mutual",              src: "/images/mutual/7.png" },  
+  { name: "IndusInd Bank",            src: "/images/mutual/8.png" },  
+  { name: "Federal Bank",             src: "/images/mutual/9.png" },  
+ 
 ];
 
 export const partnerLogos: PartnerLogo[] = [

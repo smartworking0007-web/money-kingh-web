@@ -94,8 +94,8 @@ export default function Navbar() {
               <div className="ml-auto flex items-center gap-4">
                 {/* Sign Up Button */}
                 <a href="/contact">
-                  <Button className="w-[145px] h-11 rounded-md shadow-md">
-                    <Typography variant="btn-primary">Sign Up</Typography>
+                  <Button className="w-[120px] h-11 rounded-md  shadow-md">
+                    <Typography variant="btn-primary">Sign up</Typography>
                   </Button>
                 </a>
 
@@ -108,6 +108,8 @@ export default function Navbar() {
                     Login
                   </Button>
                 </a>
+
+                
               </div>
             </div>
           </nav>

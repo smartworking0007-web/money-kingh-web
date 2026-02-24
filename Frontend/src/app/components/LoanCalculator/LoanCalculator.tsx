@@ -77,7 +77,7 @@ const SliderRow = ({
 // --- MAIN COMPONENT ---
 const LoanCalculator = () => {
   // --- STATE ---
-  const [loanAmount, setLoanAmount] = useState(10000000);
+  const [loanAmount, setLoanAmount] = useState(10000);
   const [loanTerm, setLoanTerm] = useState(84); // Total Months
   const [interestRate, setInterestRate] = useState(4.5);
   const [frequency, setFrequency] = useState("Monthly");
