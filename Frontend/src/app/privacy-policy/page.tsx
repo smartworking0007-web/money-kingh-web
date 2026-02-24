@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
             <p>
               This Privacy Policy outlines how Money King Financial Services Pvt. Ltd. (Company) collects, 
               processes, stores, shares, and protects personal and financial information in compliance with the 
-              Information Technology Act, 2000, Digital Personal Data Protection Act, 2023, and applicable RBI guidelines.
+              Information Technology Act, 2000, Digital Personal Data Protection Act, 2023, and applicable RBI guidelines..
             </p>
           </section>
 
