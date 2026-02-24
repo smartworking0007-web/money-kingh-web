@@ -5,6 +5,7 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 // 1. Is line ko import karein
 import { GoogleAnalytics } from '@next/third-parties/google';
+// import MarketTicker from "./components/Market/MarketTicker";
 
 const lexend = Lexend({ 
   subsets: ["latin"],
@@ -29,6 +30,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lexend.variable} antialiased bg-white`}>
+        {/* <MarketTicker/> */}
+        
         <Navbar />
         <main className="pt-0 lg:pt-0">
           {children}

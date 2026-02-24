@@ -92,10 +92,10 @@ export default function SIPPage() {
             <div className="lg:col-span-5 relative group">
               <div className="relative rounded-[2rem] overflow-hidden shadow-xl border-[8px] border-white h-[450px]">
                 <Image
-                  src="/images/mutual/M.jpg" // Aapki image path
+                  src="/images/mutual/a.jpg" // Aapki image path
                   alt="SIP Wealth Growth"
                   fill
-                  className="object-cover" // Image ko container mein "cover" karne ke liye
+                  className="object-cover" 
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#004687]/40 via-transparent to-transparent"></div>

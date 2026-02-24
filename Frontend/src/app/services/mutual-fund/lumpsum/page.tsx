@@ -113,7 +113,7 @@ export default function SIPPage() {
                   <Calculator className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <Typography variant="h4" className="m-0 font-bold text-slate-900">lumsum Calculator</Typography>
+                  <Typography variant="h4" className="m-0 font-bold text-slate-900">Lumpsum Calculator</Typography>
                   <p className="text-slate-400 text-sm">Estimate your wealth growth</p>
                 </div>
               </div>
