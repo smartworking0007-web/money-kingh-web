@@ -13,7 +13,7 @@ import {
   Legend,
 } from "recharts";
 
-// --- HELPER COMPONENT: SLIDER ROW ---
+// --- HELPER COMPONENT: SLIDER ROW (FIXED 0 ISSUE) ---
 const SliderRow = ({
   label,
   value,
@@ -60,8 +60,12 @@ const SliderRow = ({
         )}
         <input
           type="number"
-          value={value}
-          onChange={(e) => setValue(Number(e.target.value))}
+          value={value === 0 ? "" : value}
+          onChange={(e) => {
+            const val = e.target.value;
+            setValue(val === "" ? 0 : Number(val));
+          }}
+          onFocus={(e) => e.target.select()}
           className="w-full bg-transparent outline-none text-gray-800 font-bold text-base text-right font-lexend"
         />
         {suffix && (
@@ -77,8 +81,8 @@ const SliderRow = ({
 // --- MAIN COMPONENT ---
 const LoanCalculator = () => {
   // --- STATE ---
-  const [loanAmount, setLoanAmount] = useState(10000);
-  const [loanTerm, setLoanTerm] = useState(84); // Total Months
+  const [loanAmount, setLoanAmount] = useState(100000); // Fixed initial state to match min
+  const [loanTerm, setLoanTerm] = useState(84); 
   const [interestRate, setInterestRate] = useState(4.5);
   const [frequency, setFrequency] = useState("Monthly");
   const [activeTab, setActiveTab] = useState("chart");
@@ -100,9 +104,12 @@ const LoanCalculator = () => {
     const totalPeriods = Math.round((loanTerm / 12) * ppy);
     const periodicRate = interestRate / 100 / ppy;
 
+    // Financial PMT formula
     const pmt =
-      (loanAmount * periodicRate * Math.pow(1 + periodicRate, totalPeriods)) /
-      (Math.pow(1 + periodicRate, totalPeriods) - 1);
+      totalPeriods > 0 && periodicRate > 0
+        ? (loanAmount * periodicRate * Math.pow(1 + periodicRate, totalPeriods)) /
+          (Math.pow(1 + periodicRate, totalPeriods) - 1)
+        : loanAmount / (totalPeriods || 1);
 
     let accumulatedInterest = 0;
 
@@ -220,7 +227,6 @@ const LoanCalculator = () => {
 
           {/* RIGHT COLUMN: VISUALS */}
           <div className="lg:col-span-7 flex flex-col">
-            {/* TAB SWITCHER */}
             <div className="flex p-1.5 bg-gray-100 rounded-xl w-fit mb-8 self-center lg:self-start">
               <button
                 onClick={() => setActiveTab("chart")}
@@ -240,7 +246,6 @@ const LoanCalculator = () => {
               </button>
             </div>
 
-            {/* DISPLAY AREA */}
             <div className="h-[400px] w-full relative">
               {activeTab === "chart" ? (
                 <ResponsiveContainer width="100%" height="100%">
@@ -260,17 +265,12 @@ const LoanCalculator = () => {
                     <YAxis
                       axisLine={false}
                       tickLine={false}
-                      tickFormatter={(value) => `₹${(value / 100000).toFixed(0)}L`}
+                      tickFormatter={(val) => `₹${(val / 100000).toFixed(0)}L`}
                       tick={{ fill: "#9ca3af", fontSize: 11 }}
                     />
                     <Tooltip
                       contentStyle={{ borderRadius: "12px", border: "none", boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1)" }}
-                      // SOLUTION: Explicit type guard and return type for Tooltip formatter
-                      formatter={(value: number | string | undefined): [string, string] => {
-                        const numericValue = typeof value === "string" ? parseFloat(value) : value;
-                        if (numericValue === undefined || isNaN(numericValue)) return ["₹0", ""];
-                        return [`₹${Math.round(numericValue).toLocaleString()}`, ""];
-                      }}
+                      formatter={(val: any) => [`₹${Math.round(val).toLocaleString()}`, ""]}
                     />
                     <Legend verticalAlign="top" height={40} iconType="circle" />
                     <Area type="monotone" dataKey="balance" stroke="#3b82f6" strokeWidth={2} fill="url(#colorBalance)" name="Remaining Balance" />

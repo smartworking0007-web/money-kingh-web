@@ -13,23 +13,24 @@ export interface MutualFundProduct {
 // 9 most popular / largest mutual fund houses in India
 // Ordered roughly by AUM / visibility on retail platforms (Groww, Zerodha Coin, etc.) ~ Dec 2025
 export const numberedMutualData: PartnerLogo[] = [
-  { name: "SBI Mutual Fund",          src: "/images/mutual/2.jpeg" }, 
-  { name: "ICICI Prudential",         src: "/images/mutual/3.png" },  
-  { name: "Kotak Mutual Fund",        src: "/images/mutual/4.jpeg" }, 
-  { name: "Baroda Pioneer Mutual Fund", src: "/images/mutual/5.jpeg" }, 
-  { name: "Canara Robeco Mutual Fund", src: "/images/mutual/6.png" },  
-  { name: "IDBI Mutual",              src: "/images/mutual/7.png" },  
-  { name: "IndusInd Bank",            src: "/images/mutual/8.png" },  
-  { name: "Federal Bank",             src: "/images/mutual/9.png" },  
- 
+  { name: "SBI Mutual Fund", src: "/images/mutual/2.jpeg" },
+  { name: "ICICI Prudential", src: "/images/mutual/3.png" },
+  { name: "Kotak Mutual Fund", src: "/images/mutual/4.jpeg" },
+  { name: "Baroda Pioneer Mutual Fund", src: "/images/mutual/5.jpeg" },
+  { name: "Canara Robeco Mutual Fund", src: "/images/mutual/6.png" },
+  { name: "IDBI Mutual", src: "/images/mutual/7.png" },
+  { name: "Choice Mutual Fund", src: "/images/mutual/10.webp" },
+  { name: "NJ Mutual Funds", src: "/images/mutual/11.webp" },
+  { name: "PGIM India Mutual Fund", src: "/images/mutual/12.png" },
+  { name: "Quant Mutual Fund", src: "/images/mutual/13.webp" },
+  { name: "Samco Mutual Fund", src: "/images/mutual/14.webp" },
+  { name: "Tata Mutual Fund", src: "/images/mutual/15.webp" },
+  { name: "Quant Mutual Fund", src: "/images/mutual/16.webp" },
 ];
 
-export const partnerLogos: PartnerLogo[] = [
-  ...numberedMutualData,
-];
+export const partnerLogos: PartnerLogo[] = [...numberedMutualData];
 
 export const mutualFundProducts: MutualFundProduct[] = [
-
   {
     id: 2,
     title: "Debt Funds",

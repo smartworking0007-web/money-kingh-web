@@ -13,12 +13,12 @@ export default function Kings() {
             but standard order-1 is usually better for SEO/Readability */}
           <div className="flex-1 space-y-6 md:space-y-8 text-center lg:text-left">
             <div className="animate-in fade-in slide-in-from-left duration-700">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900">
-                Money King <br />
+              <h5 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900">
+                Money King Financial Services Pvt. Ltd. <br/>
                 <span className="text-blue-600 text-3xl md:text-4xl lg:text-5xl">
-                  Financial Services Pvt. Ltd.
+                  
                 </span>
-              </h1>
+              </h5>
 
             </div>
 

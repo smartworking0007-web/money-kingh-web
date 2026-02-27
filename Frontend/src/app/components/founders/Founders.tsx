@@ -61,10 +61,11 @@ const Founders = () => {
             <div className="flex flex-col space-y-6 text-center md:text-left">
               <div className="space-y-2">
                 <Typography
-                  variant="b2"
-                  className="font-bold uppercase tracking-[0.2em] text-[#4DB6AC]"
+                  variant="b1"
+                  className=" uppercase tracking-[0.1em] "
                 >
-                  Founder & Chief Executive Officer
+                  20+ Years Experienced Financial Services Leader
+
                 </Typography>
                 <Typography
                   variant="h3"
@@ -90,7 +91,7 @@ const Founders = () => {
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="rounded-2xl bg-[#F1F5F9] p-4 text-center md:text-left">
                   <Typography variant="h5" className="font-bold text-[#0B1D33]">
-                    10+ Years
+                    0+ Years
                   </Typography>
                   <Typography variant="caption" className="text-gray-500">
                     Industry Expertise
