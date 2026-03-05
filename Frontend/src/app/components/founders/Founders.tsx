@@ -84,14 +84,14 @@ const Founders = () => {
                   Money King Financial
                 </span>
                 ,Founder & CEO Message Amarjeet Chaddhha Money King Financial
-                Services Pvt. Ltd. I am Amarjeet Chadha, Founder & CEO of Money King Financial Services Pvt. Ltd., established in 2016. With over 20 years in financial services, I’ve helped thousands secure fast loans and working capital finance with minimal documentation and competitive rates. Partnering with India’s top banks & NBFCs, we deliver quick approvals, low-cost solutions, and personalized support for businesses and individuals. Our vision: Simplifying Your Finances and empowering your growth.
+                Services Pvt. Ltd. I am Amarjeet Chaddhha, Founder & CEO of Money King Financial Services Pvt. Ltd., established in 2016. With over 20 years in financial services, I’ve helped thousands secure fast loans and working capital finance with minimal documentation and competitive rates. Partnering with India’s top banks & NBFCs, we deliver quick approvals, low-cost solutions, and personalized support for businesses and individuals. Our vision: Simplifying Your Finances and empowering your growth.
 
               </Typography>
               {/* Stats/Features Grid */}
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="rounded-2xl bg-[#F1F5F9] p-4 text-center md:text-left">
                   <Typography variant="h5" className="font-bold text-[#0B1D33]">
-                    0+ Years
+                    20+ Years
                   </Typography>
                   <Typography variant="caption" className="text-gray-500">
                     Industry Expertise

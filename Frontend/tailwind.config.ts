@@ -1,4 +1,3 @@
-// tailwind.config.ts
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -8,7 +7,7 @@ const config: Config = {
   theme: {
     extend: {
       animation: {
-        marquee: 'marquee 40s linear infinite',
+        marquee: 'marquee 50s linear infinite', 
       },
       keyframes: {
         marquee: {

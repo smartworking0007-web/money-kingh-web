@@ -3,7 +3,6 @@ import { Lexend } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
-// 1. Is line ko import karein
 import { GoogleAnalytics } from '@next/third-parties/google';
 // import MarketTicker from "./components/Market/MarketTicker";
 
