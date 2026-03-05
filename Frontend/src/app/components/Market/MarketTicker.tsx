@@ -1,21 +1,20 @@
 // "use client";
-// import React, { useState, useEffect, useCallback } from "react";
+// import React, { useState, useEffect, useCallback, useRef } from "react";
 
 // interface MarketData {
 //   name: string;
-//   price: number | string;
+//   price: number;
 //   changePercent: number;
-//   changePoints: number;
 // }
 
-// interface YahooItem {
+// // ESLint 'any' error hatane ke liye naya interface
+// interface APIResult {
 //   symbol: string;
-//   regularMarketPrice: number;
-//   regularMarketChangePercent: number;
-//   regularMarketChange: number;
+//   regularMarketPrice?: number;
+//   regularMarketChangePercent?: number;
 // }
 
-// const SYMBOLS = [
+// const SYMBOLS_MAP = [
 //   { label: "SENSEX", sym: "^BSESN" },
 //   { label: "NIFTY 50", sym: "^NSEI" },
 //   { label: "NIFTY BANK", sym: "^NSEBANK" },
@@ -23,72 +22,73 @@
 //   { label: "SILVER", sym: "SI=F" }
 // ];
 
-// const TickerItems = ({ data }: { data: MarketData[] }) => (
-//   <div className="flex gap-12 px-6 items-center">
-//     {data.map((item, index) => (
-//       <div key={index} className="flex items-center gap-3 whitespace-nowrap">
-//         <span className="text-[11px] font-bold text-gray-500 uppercase tracking-tight">{item.name}</span>
-//         <span className="text-[13px] font-mono font-bold text-black">
-//           {typeof item.price === "number" ? item.price.toLocaleString('en-IN', { minimumFractionDigits: 2 }) : item.price}
-//         </span>
-//         <span className={`flex items-center text-[11px] font-bold ${item.changePercent >= 0 ? "text-green-600" : "text-red-600"}`}>
-//           {item.changePercent >= 0 ? "▲" : "▼"} 
-//           <span className="ml-1">{Math.abs(item.changePoints).toFixed(2)} ({item.changePercent >= 0 ? "+" : ""}{item.changePercent.toFixed(2)}%)</span>
-//         </span>
-//       </div>
-//     ))}
-//   </div>
-// );
-
 // export default function MarketTicker() {
-//   const [data, setData] = useState<MarketData[]>([]);
+//   const [marketData, setMarketData] = useState<MarketData[]>([]);
+//   const isFetching = useRef(false);
 
 //   const fetchData = useCallback(async () => {
-//     try {
-//       const response = await fetch("/api/market");
-//       if (!response.ok) throw new Error('API unreachable');
-      
-//       const results: YahooItem[] = await response.json();
+//     if (isFetching.current) return;
 
-//       if (Array.isArray(results)) {
-//         const formatted: MarketData[] = SYMBOLS.map(s => {
-//           const apiMatch = results.find((r) => r.symbol === s.sym);
+//     isFetching.current = true;
+    
+//     try {
+//       const res = await fetch("/api/market");
+//       if (!res.ok) throw new Error("API call failed");
+      
+//       const results = await res.json();
+
+//       if (Array.isArray(results) && results.length > 0) {
+//         const formatted = SYMBOLS_MAP.map(s => {
+//           // Yahan 'any' ki jagah 'APIResult' use kiya hai
+//           const match = results.find((r: APIResult) => r.symbol === s.sym);
 //           return {
 //             name: s.label,
-//             price: apiMatch?.regularMarketPrice ?? "---",
-//             changePercent: apiMatch?.regularMarketChangePercent ?? 0,
-//             changePoints: apiMatch?.regularMarketChange ?? 0
+//             price: match?.regularMarketPrice || 0,
+//             changePercent: match?.regularMarketChangePercent || 0
 //           };
 //         });
-//         setData(formatted);
+//         setMarketData(formatted);
 //       }
-//     } catch (error) {
-//       console.error("Market fetch error:", error);
+//     } catch (err) {
+//       console.error("Ticker fetch error:", err);
+//     } finally {
+//       isFetching.current = false;
 //     }
 //   }, []);
 
 //   useEffect(() => {
-//     let isMounted = true;
-//     if (isMounted) fetchData();
-
-//     const interval = setInterval(() => {
-//       if (isMounted) fetchData();
-//     }, 60000); 
-
+//     const timer = setTimeout(fetchData, 1000);
+//     const interval = setInterval(fetchData, 60000);
+    
 //     return () => {
-//       isMounted = false;
+//       clearTimeout(timer);
 //       clearInterval(interval);
 //     };
 //   }, [fetchData]);
 
-//   if (data.length === 0) return null;
+//   if (marketData.length === 0) {
+//     return (
+//       <div className="h-[40px] bg-white border-b flex items-center px-4 text-gray-400 text-[10px] font-bold uppercase tracking-widest">
+//         Connecting to Money King Live Market...
+//       </div>
+//     );
+//   }
 
 //   return (
-//     <div className="w-full bg-white text-black py-2.5 overflow-hidden border-b border-gray-200 sticky top-0 z-50 shadow-sm">
-//       <div className="flex w-max animate-marquee">
-//         <TickerItems data={data} />
-//         <TickerItems data={data} />
+//     <div className="w-full bg-white py-2 overflow-hidden border-b flex items-center h-[40px] sticky top-0 z-50 shadow-sm">
+//       <div className="flex animate-marquee whitespace-nowrap">
+//         {[...marketData, ...marketData].map((item, idx) => (
+//           <div key={idx} className="flex items-center gap-3 px-8 border-r border-gray-100 last:border-0">
+//             <span className="text-[10px] font-bold text-gray-400 uppercase">{item.name}</span>
+//             <span className="text-[13px] font-mono font-bold text-black">
+//               {item.price > 0 ? item.price.toLocaleString("en-IN") : "---"}
+//             </span>
+//             <span className={`text-[10px] font-bold ${item.changePercent >= 0 ? "text-green-600" : "text-red-600"}`}>
+//               {item.changePercent >= 0 ? "▲" : "▼"} {Math.abs(item.changePercent).toFixed(2)}%
+//             </span>
+//           </div>
+//         ))}
 //       </div>
 //     </div>
 //   );
-// }
+// } 
