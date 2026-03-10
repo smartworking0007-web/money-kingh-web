@@ -4,7 +4,17 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
 
-  // Ye code www wali site ko non-www (Money King) par redirect karega
+  // 1. External Images Allow Karein (Unsplash fix)
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+  },
+
+  // 2. WWW to Non-WWW Redirect (Money King)
   async redirects() {
     return [
       {
@@ -16,7 +26,7 @@ const nextConfig: NextConfig = {
           },
         ],
         destination: 'https://moneykingfinancial.com/:path*',
-        permanent: true, // 301 Redirect: Google ko batata hai ki sirf ek hi site hai
+        permanent: true, // 301 Redirect
       },
     ];
   },

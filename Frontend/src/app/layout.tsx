@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import Popup from "./components/layout/Popup";
 // import MarketTicker from "./components/Market/MarketTicker";
 
 const lexend = Lexend({ 
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Navbar />
         <main className="pt-0 lg:pt-0">
           {children}
+          <Popup/>
         </main>
         <Footer/>
       </body>
