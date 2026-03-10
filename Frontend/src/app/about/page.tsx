@@ -1,25 +1,36 @@
 // src/app/about/page.tsx
-
 import React from "react";
-import { Typography } from "../components/ui/Typography"; // Import Typography component
 import CompanyIntro from "../components/stats/CompanyIntro";
 import ServiceGrid from "../components/Service/ServiceGrid";
-import LoanCalculator from "../components/LoanCalculator/LoanCalculator";
 import FinancialPartners from "../components/FinancialPartners/FinancialPartners";
+import MissionVision from "./MissionVision";
+import AboutServiceGrid from "./AboutServiceGrid";
+import Hero from "./Hero";
+import { AboutTestimonialCard } from "./AboutTestimonialCard";
+import WhyChoose from "../components/Choose/WhyChoose";
 
 export default function About() {
   return (
-    <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      {/* Page Title */}
-      <Typography variant="h1" className="text-center text-4xl font-semibold mb-8">
-        About Us
-      </Typography>
-
-      {/* About Content */}
-      <CompanyIntro/>
-      <ServiceGrid/>
-      <LoanCalculator/>
-      <FinancialPartners/>
-    </div>
+    <main className="w-full min-h-screen">
+      <MissionVision />
+      {/* Sections ke beech ka gap kam karne ke liye space-y ko control karein */}
+      <div className="w-full flex flex-col">
+        {/* Company Intro agar white background hai */}
+        <div className="max-w-7xl mx-auto px-4 py-16">
+          <CompanyIntro />
+        </div>
+        <AboutServiceGrid />
+        <Hero />
+        <AboutTestimonialCard />
+        
+        <div className="max-w-7xl mx-auto px-4 py-16">
+          <FinancialPartners />
+          
+          
+        </div>
+        <ServiceGrid />   
+        <WhyChoose />
+      </div>
+    </main>
   );
 }
