@@ -2,12 +2,8 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Typography } from '../ui/Typography';
-
-// 1. Apne firebase file se 'db' ko import karein
-// Note: Path check kar lena agar file 'src/lib/firebase.ts' mein hai
 import { db } from '@/lib/firebase'; 
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-
 export default function WelcomePopup() {
   const [showPopup, setShowPopup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -30,15 +26,13 @@ export default function WelcomePopup() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     try {
-      // 2. 'db' variable ko use karke Firestore mein data bhejein
       await addDoc(collection(db, "contact_forms"), {
         fullName: formData.name,
         phone: formData.phone,
         email: formData.email,
         createdAt: serverTimestamp(),
-        source: "welcome_popup" // Isse track rahega ki data popup se aaya hai
+        source: "welcome_popup" 
       });
 
       localStorage.setItem('popupSubmitted', 'true');
@@ -51,13 +45,12 @@ export default function WelcomePopup() {
       setIsSubmitting(false);
     }
   };
-
+ 
+  
   if (!showPopup) return null;
-
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-md px-4 font-lexend">
       <div className="relative bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden border border-gray-100">
-        
         {/* Close Button */}
         <button 
           onClick={() => setShowPopup(false)}
@@ -68,7 +61,6 @@ export default function WelcomePopup() {
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
-
         <div className="bg-blue-600 p-8 text-center text-white">
           <div className="relative bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-3 overflow-hidden shadow-lg border-2 border-blue-400">
             <Image 
@@ -102,7 +94,6 @@ export default function WelcomePopup() {
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
               />
             </div>
-
             <div>
               <label className="block mb-2 text-[18px] leading-[26px] font-medium text-gray-800">
                 Phone Number
