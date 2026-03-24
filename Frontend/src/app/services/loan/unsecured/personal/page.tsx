@@ -1,55 +1,168 @@
 "use client";
 import React from "react";
-import { CheckCircle2 } from "lucide-react";
-// Use the '@' alias to point to the correct components folder
-import { Typography } from "@/app/components/ui/Typography"; 
-import CompanyIntro from "@/app/components/stats/CompanyIntro";
-import ServiceGrid from "@/app/components/Service/ServiceGrid";
+import Image from "next/image";
+import { Shield, Clock, Headphones, Megaphone } from "lucide-react";
+import { Typography } from "@/app/components/ui/Typography";
+import TrustBar from "./TrustBar";
 import LoanCalculator from "@/app/components/LoanCalculator/LoanCalculator";
+import LoanOffers from "./LoanOffers";
+import LoanFeatures from "./LoanFeatures";
+import LoanSlider from "./LoanSlider";
+import Financial from "./Financial";
+import Eligibility from "./Eligibility";
+import LoanTypes from "./LoanTypes";
+import LoanCharges from "./LoanCharges";
+import LoanFAQ from "./LoanFAQ";
+import { AboutTestimonialCard } from "@/app/about/AboutTestimonialCard";
 import FinancialPartners from "@/app/components/FinancialPartners/FinancialPartners";
 
+
 export default function PersonalLoanPage() {
-  const data = {
-    title: "Personal Loan",
-    description: "Personal Loan is your go-to solution for managing financial emergencies. Meet all your urgent financial needs with an instant personal loan while improving your credit score.",
-    features: [
-      "For Salaried & Self-Employed Individuals",
-      "No Collateral Required",
-      "Disbursal in 24 Hours",
-      "Interest Rate @ 9.99% p.a.",
-    ],
-    lastUpdated: "11 December 2025",
-  };
+  const features = [
+    {
+      icon: <Shield className="w-8 h-8 text-slate-400 stroke-[1.5]" />,
+      title: "100% End-to-End Digital Process",
+      desc: "Minimal Documentation Required",
+    },
+    {
+      icon: <Clock className="w-8 h-8 text-slate-500 stroke-[1.5]" />,
+      title: "Quick Approval & Faster Disbursal",
+      desc: "No Collaterals or Hidden Charges",
+    },
+    {
+      icon: <Headphones className="w-8 h-8 text-slate-500 stroke-[1.5]" />,
+      title: "Relationship Manager",
+      desc: "End-to-end support from Money King Financial Services",
+    },
+    {
+      icon: <Megaphone className="w-8 h-8 text-slate-500 stroke-[1.5]" />,
+      title: "100% Secure & Confidential",
+      desc: "No Spam Calls",
+    },
+  ];
 
   return (
-    <main className="min-h-screen bg-white">
-      <section className="max-w-7xl mx-auto px-6 py-12 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div className="lg:col-span-8">
-            <Typography variant="h1" as="h1" className="text-[#004687] mb-4 mt-0">
-              {data.title}
-            </Typography>
-            <Typography variant="b1" className="text-gray-700 mb-8 leading-relaxed">
-              {data.description}
-            </Typography>
-            <div className="flex flex-wrap gap-x-8 gap-y-4 mb-10">
-              {data.features.map((f, i) => (
-                <div key={i} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" />
-                  <Typography variant="s2" as="span" className="text-black font-medium">
-                    {f}
-                  </Typography>
-                </div>
-              ))}
+    <main className="min-h-screen bg-white overflow-hidden font-sans">
+      {/* Hero Section */}
+      <section className="relative pt-5 pb-20 md:pt-2 min-h-[500px]">
+        {/* --- Background Shading --- */}
+        <div className="absolute inset-0 bg-linear-to-br from-[#dce8f7] via-white to-white -z-20" />
+        <div
+          className="absolute inset-0 opacity-[0.05] pointer-events-none -z-10"
+          style={{
+            backgroundImage: `url('https://www.transparenttextures.com/patterns/silk.png')`,
+          }}
+        />
+
+        <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          {/* --- LEFT CONTENT AREA --- */}
+          <div className="lg:col-span-7 z-10">
+            <div className="max-w-2xl">
+              <Typography
+                variant="d1"
+                as="h1"
+                className="text-[#002e5b] mb-6! mt-0! leading-tight font-black"
+              >
+                Personal Loan
+              </Typography>
+
+              <div className="space-y-6">
+                <Typography
+                  variant="h4"
+                  as="p"
+                  className="text-slate-800 font-medium m-0! leading-snug"
+                >
+                  Compare & choose best personal loan with interest rates
+                  starting at
+                  <span className="text-slate-900 font-bold ml-2">
+                    9.98% p.a.
+                  </span>{" "}
+                  only.
+                </Typography>
+
+                <Typography variant="b1" className="text-slate-600 m-0!">
+                  A personal loan offers a quick and flexible financial solution
+                  for all your immediate needs, whether its for travel, medical
+                  emergencies, or debt consolidation.
+                </Typography>
+              </div>
+
+              {/* Vertical Features List */}
+              <div className="space-y-10 mt-12">
+                {features.map((item, i) => (
+                  <div key={i} className="flex items-start gap-6 group">
+                    <div className="shrink-0 mt-1 group-hover:scale-110 transition-transform">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <Typography
+                        variant="h5"
+                        as="h3"
+                        className="text-slate-900 m-0! leading-tight font-bold"
+                      >
+                        {item.title}
+                      </Typography>
+                      <Typography
+                        variant="b1"
+                        className="text-slate-500 m-0! mt-1"
+                      >
+                        {item.desc}
+                      </Typography>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-           
+          </div>
+
+          {/* --- RIGHT SIDE GRAPHIC AREA --- */}
+          <div className="lg:col-span-5 relative flex justify-center items-center h-[500px] lg:h-[700px]">
+            <div className="absolute w-[115%] h-[115%] border border-yellow-400/20 rounded-full animate-[spin_20s_linear_infinite]" />
+            <div className="absolute w-[95%] h-[95%] border border-blue-400/10 rounded-full animate-[spin_25s_linear_infinite_reverse]" />
+            <div className="absolute top-[25%] -left-12 z-20 animate-pulse">
+              <span className="text-green-400 text-7xl font-bold opacity-30 rotate-12 drop-shadow-md">
+                ₹
+              </span>
+            </div>
+
+            <div className="relative z-10 drop-shadow-[0_50px_80px_rgba(0,0,0,0.15)] transform hover:scale-105 transition-transform duration-500">
+              <Image
+                src="/images/Loan/pm.jpg"
+                alt="Personal Loan App Dashboard"
+                width={400}
+                height={750}
+                className="w-full max-w-[360px] h-auto rounded-[3.5rem]"
+                priority
+              />
+            </div>
+            <div className="absolute top-[65%] -right-16 z-10">
+              <span className="text-green-500 text-5xl font-bold opacity-20 -rotate-12">
+                ₹
+              </span>
+            </div>
           </div>
         </div>
       </section>
-      <CompanyIntro/>
-      <ServiceGrid/>
-      <LoanCalculator/>
-      <FinancialPartners/>
+
+      {/* --- CONTENT COMPONENTS AREA --- */}
+      {/* Yahan 'space-y-16' ya 'space-y-24' ka use karke components ke beech gap add kiya gaya hai.
+          'mb-20' ensure karega ki page ke end mein bhi thodi jagah rahe.
+      */}
+      <section className="flex flex-col space-y-20 md:space-y-0 mb-20">
+        <TrustBar />
+        <LoanCalculator />
+        <LoanOffers />
+        <LoanFeatures />
+        <LoanSlider />
+        <Financial />
+        <Eligibility />
+        <LoanTypes />
+        <LoanCharges />
+        <AboutTestimonialCard />
+        <FinancialPartners />
+
+        <LoanFAQ />
+      </section>
     </main>
   );
 }

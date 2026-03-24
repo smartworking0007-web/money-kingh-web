@@ -3,7 +3,6 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-// Direct config values (Testing ke liye)
 const firebaseConfig = {
   apiKey: "AIzaSyCeamPfpzIT5kWbBFUJCXutv7JEOV3d5NM",
   authDomain: "money-king-financial-sercices.firebaseapp.com",

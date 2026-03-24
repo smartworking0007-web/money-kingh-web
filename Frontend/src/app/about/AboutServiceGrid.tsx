@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Image from "next/image";
 import { Typography } from "../components/ui/Typography";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,13 +13,11 @@ const partners = [
     role: "Sales Manager",
     image: "/images/Founders/Picture2.png",
   },
-
   {
     name: "Shivangi Verma",
     role: "Marketing Executive",
     image: "/images/Founders/Picture3.jpeg",
   },
-  
   {
     name: "Maneesh Thakur",
     role: "Senior Consultant",
@@ -71,12 +68,12 @@ const FinancialPartners = () => {
         >
           {partners.map((partner, index) => (
             <SwiperSlide key={index}>
-              <div className="flex flex-col items-center  rounded-md border border-gray-100 ">
+              <div className="flex flex-col items-center group">
                 
-                {/* Image Container */}
-                <div className="relative w-full aspect-[3/4] mb-4 overflow-hidden rounded-xl bg-gray-50">
+                {/* Image Container - FIXED to aspect-3/4 */}
+                <div className="relative w-full aspect-3/4 mb-4 overflow-hidden rounded-xl bg-gray-50 shadow-sm transition-transform duration-300 group-hover:scale-[1.02]">
                   <Image
-                    src={partner.image}
+                    src={partner.image} 
                     alt={partner.name}
                     fill
                     priority={index < 4}
@@ -84,23 +81,15 @@ const FinancialPartners = () => {
                   />
                 </div>
 
-                {/* Company Tag */}
-                <span className="text-[10px] bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-bold uppercase mb-2">
-                  
-                </span>
-
                 {/* Partner Name */}
-                <Typography variant="s1" className="text-[#0b1c44] font-extrabold text-lg">
+                <Typography variant="s1" className="text-[#0b1c44] font-extrabold text-lg m-0!">
                   {partner.name}
                 </Typography>
 
                 {/* Role */}
-                <Typography variant="caption" className="text-gray-500 mb-3 font-medium">
+                <Typography variant="caption" className="text-gray-500 font-medium mt-1">
                   {partner.role}
                 </Typography>
-
-                {/* Social Media Links */}
-              
               </div>
             </SwiperSlide>
           ))}
@@ -110,16 +99,21 @@ const FinancialPartners = () => {
       <style jsx global>{`
         .financial-partners-slider .swiper-button-next,
         .financial-partners-slider .swiper-button-prev {
-          color: #0b1c44;
-          transform: scale(0.6);
+          color: #0b1c44 !important;
           background: white;
-          width: 40px;
-          height: 40px;
+          width: 40px !important;
+          height: 40px !important;
           border-radius: 50%;
-          shadow: 0 4px 6px rgba(0,0,0,0.1);
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          transform: translateY(-50%) scale(0.7);
+        }
+        .financial-partners-slider .swiper-button-next:after,
+        .financial-partners-slider .swiper-button-prev:after {
+          font-size: 20px !important;
+          font-weight: bold;
         }
         .financial-partners-slider .swiper-pagination-bullet-active {
-          background: #0b1c44;
+          background: #0b1c44 !important;
         }
       `}</style>
     </section>

@@ -1,11 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   reactCompiler: true,
-
-  // 1. External Images Allow Karein (Unsplash fix)
   images: {
+    qualities: [75, 95], // Fixed: Allows quality={95}
     remotePatterns: [
       {
         protocol: 'https',
@@ -13,20 +11,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-
-  // 2. WWW to Non-WWW Redirect (Money King)
   async redirects() {
     return [
       {
         source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.moneykingfinancial.com',
-          },
-        ],
+        has: [{ type: 'host', value: 'www.moneykingfinancial.com' }],
         destination: 'https://moneykingfinancial.com/:path*',
-        permanent: true, // 301 Redirect
+        permanent: true,
       },
     ];
   },
