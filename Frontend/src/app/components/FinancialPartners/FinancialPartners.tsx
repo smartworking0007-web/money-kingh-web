@@ -10,7 +10,7 @@ const FinancialPartners: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
 
-  // 1. Manual Scroll Logic
+  // 1. Manual Scroll Logic 
   const handleScroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
       const scrollAmount = 300; 

@@ -11,7 +11,7 @@ const row1 = [
     image: "/images/Testimonial/1.jpeg"
   },
   {
-    name: "Priya Mehta",
+    name: "Amar singh",
     role: "Freelancer, South Delhi",
     quote: "I needed urgent funds for my course fees. Got a fast approval personal loan from Money King — amount disbursed in 48 hours!",
     image: "/images/Testimonial/2.jpeg"
