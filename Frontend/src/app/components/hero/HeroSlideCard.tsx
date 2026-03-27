@@ -17,7 +17,7 @@ export default function HeroSlider() {
     <div className="w-full flex justify-center mt-2 mb-6 sm:mb-10 px-2 sm:px-6">
       <div
         className="relative w-full max-w-7xl bg-white overflow-hidden group 
-                   aspect-[16/9] sm:aspect-[21/9] 
+                   aspect-video sm:aspect-21/9 
                    rounded-lg sm:rounded-3xl"
       >
         <div
@@ -27,7 +27,7 @@ export default function HeroSlider() {
           {heroSlides.map((slide) => (
             <div
               key={slide.id}
-              className="min-w-full flex-shrink-0 h-full relative"
+              className="min-w-full shrink-0 h-full relative" // Changed: flex-shrink-0 -> shrink-0
             >
               <Image
                 src={slide.imageUrl}
@@ -44,6 +44,7 @@ export default function HeroSlider() {
         <div className="absolute bottom-2 sm:bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
           {heroSlides.map((_, index) => (
             <button
+              type="button"
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`rounded-full transition-all duration-300 ${
@@ -51,6 +52,7 @@ export default function HeroSlider() {
                   ? "w-4 h-1 sm:w-8 sm:h-2 bg-blue-600"
                   : "w-1 h-1 sm:w-2 sm:h-2 bg-gray-300"
               }`}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
