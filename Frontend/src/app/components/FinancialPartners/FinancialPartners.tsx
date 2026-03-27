@@ -84,11 +84,11 @@ const FinancialPartners: React.FC = () => {
             {partnerLogos.map((partner, index) => (
               <div 
                 key={index} 
-                className="flex-shrink-0 snap-center"
+                className="shrink-0 snap-center"
               >
                 <Image 
                   src={partner.src} 
-                  alt={partner.name} 
+                  alt={partner.name}  
                   width={180} 
                   height={70} 
                   className="h-10 md:h-14 w-auto object-contain " 

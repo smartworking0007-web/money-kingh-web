@@ -49,7 +49,7 @@ export default function WelcomePopup() {
   
   if (!showPopup) return null;
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-md px-4 font-lexend">
+    <div className="fixed inset-0 z-9999 flex items-center justify-center bg-black/70 backdrop-blur-md px-4 font-lexend">
       <div className="relative bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden border border-gray-100">
         {/* Close Button */}
         <button 

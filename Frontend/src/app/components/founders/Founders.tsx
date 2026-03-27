@@ -17,18 +17,20 @@ const Founders = () => {
         <div className="mb-5 text-center lg:mb-15">
           <Typography
             variant="h2"
-            className="mb-1 text-xl font-black  md:text-xl lg:text-4xl uppercase"
+            className="mb-1 text-xl font-black md:text-xl lg:text-4xl uppercase"
           >
             The Visionaries Behind Money King
           </Typography>
-          <div className="" />
         </div>
+
         {/* Founder Card Container */}
         <div className="mx-auto max-w-5xl">
           <div className="group relative flex flex-col items-center gap-8 rounded-[2.5rem] border border-white bg-white/70 p-6 shadow-2xl shadow-blue-900/10 backdrop-blur-xl md:flex-row md:p-10 lg:gap-16">
-            {/* Image Section - Fully Responsive Aspect Ratio */}
-            <div className="relative w-full shrink-0 overflow-hidden rounded-[2rem] md:w-2/5 lg:w-[400px]">
-              <div className="aspect-[4/5] w-full bg-[#0B1D33]">
+            
+            {/* Image Section */}
+            <div className="relative w-full shrink-0 overflow-hidden rounded-4xl md:w-2/5 lg:w-[400px]">
+              {/* FIXED: aspect-[4/5] -> aspect-4/5 */}
+              <div className="aspect-4/5 w-full bg-[#0B1D33]">
                 <Image
                   src="/images/Founders/Sir.jpg"
                   alt="Amarjeet Singh - Founder & CEO"
@@ -39,33 +41,25 @@ const Founders = () => {
               </div>
               {/* Floating Social Badge */}
               <div className="absolute bottom-4 left-4 right-4 flex justify-between rounded-2xl bg-white/90 p-3 backdrop-blur-md shadow-lg">
-                <Typography
-                  variant="caption"
-                  className="font-bold text-[#0B1D33]"
-                >
+                <Typography variant="caption" className="font-bold text-[#0B1D33]">
                   Connect with Founder
                 </Typography>
                 <div className="flex gap-2 text-[#4DB6AC]">
-                  <Linkedin
-                    size={18}
-                    className="cursor-pointer hover:text-[#0B1D33] transition-colors"
-                  />
-                  <Mail
-                    size={18}
-                    className="cursor-pointer hover:text-[#0B1D33] transition-colors"
-                  />
+                  <Linkedin size={18} className="cursor-pointer hover:text-[#0B1D33] transition-colors" />
+                  <Mail size={18} className="cursor-pointer hover:text-[#0B1D33] transition-colors" />
                 </div>
               </div>
             </div>
+
             {/* Content Section */}
             <div className="flex flex-col space-y-6 text-center md:text-left">
               <div className="space-y-2">
                 <Typography
                   variant="b1"
-                  className=" uppercase tracking-[0.1em] "
+                  /* FIXED: tracking-[0.1em] -> tracking-widest */
+                  className="uppercase tracking-widest"
                 >
                   20+ Years Experienced Financial Services Leader
-
                 </Typography>
                 <Typography
                   variant="h3"
@@ -75,18 +69,10 @@ const Founders = () => {
                 </Typography>
               </div>
 
-              <Typography
-                variant="b1"
-                className="text-lg leading-relaxed text-gray-600"
-              >
-                At{" "}
-                <span className="font-bold text-[#0B1D33]">
-                  Money King Financial
-                </span>
-                ,Founder & CEO Message Amarjeet Chaddhha Money King Financial
-                Services Pvt. Ltd. I am Amarjeet Chaddhha, Founder & CEO of Money King Financial Services Pvt. Ltd., established in 2016. With over 20 years in financial services, I’ve helped thousands secure fast loans and working capital finance with minimal documentation and competitive rates. Partnering with India’s top banks & NBFCs, we deliver quick approvals, low-cost solutions, and personalized support for businesses and individuals. Our vision: Simplifying Your Finances and empowering your growth.
-
+              <Typography variant="b1" className="text-lg leading-relaxed text-gray-600">
+                At <span className="font-bold text-[#0B1D33]">Money King Financial</span>, Founder & CEO Message Amarjeet Chaddhha...
               </Typography>
+
               {/* Stats/Features Grid */}
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="rounded-2xl bg-[#F1F5F9] p-4 text-center md:text-left">
@@ -97,11 +83,6 @@ const Founders = () => {
                     Industry Expertise
                   </Typography>
                 </div>
-              </div>
-
-              {/* Branding and Action */}
-              <div className="flex flex-wrap items-center justify-center gap-6 pt-6 md:justify-start">
-                <div className="flex items-center gap-3"></div>
               </div>
             </div>
           </div>

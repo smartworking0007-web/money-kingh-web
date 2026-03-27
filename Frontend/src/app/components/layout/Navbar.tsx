@@ -19,7 +19,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-full relative gap-2">
             
             {/* LOGO */}
-            <Link href="/" className="flex-shrink-0">
+            <Link href="/" className="shrink-0">
               <Image
                 src="/images/logo.svg"
                 alt="Money King"
@@ -202,7 +202,7 @@ export default function Navbar() {
       </header>
 
       {/* FLOATING PULSE WHATSAPP BUTTON */}
-      <div className="fixed bottom-10 right-6 z-[60] flex items-center justify-center">
+      <div className="fixed bottom-10 right-6 z-60 flex items-center justify-center">
         {/* Pulse Layers - Green color to match WhatsApp */}
         <div className="absolute h-20 w-20 animate-ping rounded-full bg-green-500 opacity-20"></div>
         <div className="absolute h-14 w-14 animate-pulse rounded-full bg-green-500 opacity-40"></div>
