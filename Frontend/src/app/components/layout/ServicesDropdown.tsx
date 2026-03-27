@@ -81,7 +81,7 @@ const ServicesDropdown: React.FC = () => {
                - Mobile: screen ke beech mein (left-0 right-0 mx-auto), width 95vw
                - Desktop (md): Aapka original 'right-60', width max-w-6xl
             */
-            className="fixed left-0 right-0 mx-auto md:mx-0 md:left-auto md:right-60 w-[95vw] md:w-full max-w-6xl z-50 transition-all duration-300"
+            className="fixed left-0 right-0 mx-auto md:mx-0 md:left-auto md:right-35 w-[95vw] md:w-full max-w-6xl z-50 transition-all duration-300"
             style={{ top: "75px" }}
           >
             <div className="bg-white border border-slate-100 shadow-2xl rounded-2xl overflow-hidden flex flex-col">
