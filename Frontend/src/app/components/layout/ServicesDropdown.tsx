@@ -1,149 +1,147 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { services } from "@/data/ServicesDataDrowpdown"; 
-import { ChevronDown, ChevronRight } from "lucide-react";  
-import { Typography } from "../ui/Typography"; 
+import { services, ServiceItem, SubItem, ChildItem } from "@/data/ServicesDataDrowpdown";
+import {
+  ChevronDown,
+  Home,
+  Car,
+  Landmark,
+  Briefcase,
+  ShieldCheck,
+  PieChart,
+  Coins,
+  UserCircle,
+  GraduationCap,
+  HeartPulse,
+  Sparkles,
+  X, // Mobile ke liye close icon
+} from "lucide-react";
+
+const IconComponent = ({ name }: { name?: string }) => {
+  const icons: Record<string, React.ReactNode> = {
+    home: <Home size={18} />,
+    car: <Car size={18} />,
+    bank: <Landmark size={18} />,
+    business: <Briefcase size={18} />,
+    shield: <ShieldCheck size={18} />,
+    chart: <PieChart size={18} />,
+    coins: <Coins size={18} />,
+    user: <UserCircle size={18} />,
+    education: <GraduationCap size={18} />,
+    health: <HeartPulse size={18} />,
+  };
+  return icons[name?.toLowerCase() || "sparkles"] || <Sparkles size={18} />;
+};
 
 const ServicesDropdown: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
-  const [activeThirdMenu, setActiveThirdMenu] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-
-  const closeAll = () => {
-    setIsOpen(false);
-    setActiveSubMenu(null);
-    setActiveThirdMenu(null);
-  };
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-        closeAll();
+        setIsOpen(false);
       }
     };
     document.addEventListener("mousedown", handleOutsideClick);
     return () => document.removeEventListener("mousedown", handleOutsideClick);
   }, []);
 
-  const handleMouseEnter = () => {
-    if (window.innerWidth >= 1024) setIsOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    if (window.innerWidth >= 1024) closeAll();
-  };
-
   return (
-    <div 
-      className="relative w-full lg:w-auto h-full flex items-center" 
+    <div
+      className="flex items-center h-full relative"
       ref={containerRef}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
     >
-      {/* TRIGGER BUTTON */}
       <button
         type="button"
-        onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center justify-between w-full lg:w-auto px-5 py-4 lg:py-2 lg:px-4 transition-colors ${
+        onClick={() => setIsOpen(!isOpen)} // Mobile toggle ke liye
+        className={`relative z-50 flex items-center px-4 py-2 transition-all font-bold text-[17px] ${
           isOpen ? "text-blue-600" : "text-gray-700 hover:text-blue-600"
         }`}
       >
-        <Typography variant="s2">Services</Typography>
-        <ChevronDown className={`ml-2 w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : "text-gray-400"}`} />
+        <span>Services</span>
+        <ChevronDown
+          className={`ml-1 w-5 h-5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+        />
       </button>
 
-      {/* DROPDOWN CONTAINER */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full lg:w-64 z-50 pt-2">
-          <div className="bg-white border border-gray-100 rounded-xl shadow-xl p-2">
-            {services.map((service, index) => (
-              <div 
-                key={index} 
-                className="relative"
-                onMouseEnter={() => window.innerWidth >= 1024 && setActiveSubMenu(service.title)}
-              >
-                <button
-                  onClick={(e) => {
-                    if (window.innerWidth < 1024) {
-                      e.stopPropagation();
-                      setActiveSubMenu(activeSubMenu === service.title ? null : service.title);
-                    }
-                  }}
-                  className={`flex items-center justify-between w-full px-4 py-2.5 rounded-lg transition-all ${
-                    activeSubMenu === service.title 
-                      ? "bg-blue-50 text-blue-700 font-medium" 
-                      : "text-gray-600 hover:bg-gray-50"
-                  }`}
-                >
-                  <span className="text-[15px]">{service.title}</span>
-                  {service.subItems && <ChevronRight className="w-4 h-4 opacity-50" />}
-                </button>
+        <>
+          {/* Mobile Overlay: Sirf mobile pe dikhega piche ka area halka dark karne ke liye */}
+          <div 
+            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden" 
+            onClick={() => setIsOpen(false)}
+          />
 
-                {/* Submenu Level 2 */}
-                {activeSubMenu === service.title && service.subItems && (
-                  <div className="lg:absolute lg:-top-2 lg:left-full lg:pl-2 w-full lg:w-64">
-                    <div className="bg-white border-l-2 border-blue-500 lg:border lg:border-gray-100 lg:rounded-xl lg:shadow-xl p-2 space-y-1 mt-1 lg:mt-0 ml-4 lg:ml-0">
-                      {service.subItems.map((sub, i) => (
-                        <div 
-                          key={i} 
-                          className="relative"
-                          onMouseEnter={() => window.innerWidth >= 1024 && setActiveThirdMenu(sub.title)}
-                        >
-                          {sub.children ? (
-                            <button
-                              onClick={(e) => {
-                                if (window.innerWidth < 1024) {
-                                  e.stopPropagation();
-                                  setActiveThirdMenu(activeThirdMenu === sub.title ? null : sub.title);
-                                }
-                              }}
-                              className={`flex items-center justify-between w-full px-4 py-2 rounded-lg transition-colors ${
-                                activeThirdMenu === sub.title ? "bg-gray-100 text-blue-700 font-medium" : "text-gray-600 hover:bg-gray-50"
-                              }`}
-                            >
-                              <span className="text-[14px]">{sub.title}</span>
-                              <ChevronRight className="w-4 h-4 opacity-40" />
-                            </button>
-                          ) : (
-                            <Link 
-                              href={sub.href || "#"} 
-                              onClick={closeAll}
-                              className="block px-4 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-700 text-[14px]"
-                            >
-                              {sub.title}
-                            </Link>
-                          )}
-
-                          {/* Level 3 Children */}
-                          {activeThirdMenu === sub.title && sub.children && (
-                            <div className="lg:absolute lg:-top-2 lg:left-full lg:pl-2 w-full lg:w-60">
-                              <div className="bg-white border-l-2 border-blue-300 lg:border lg:border-gray-100 lg:rounded-xl lg:shadow-xl p-2 space-y-1 mt-1 lg:mt-0 ml-4 lg:ml-0">
-                                {sub.children.map((child, j) => (
-                                  <Link 
-                                    key={j} 
-                                    href={child.href} 
-                                    onClick={closeAll}
-                                    className="block px-4 py-2 rounded-lg text-[13px] text-gray-500 hover:bg-blue-50 hover:text-blue-700 transition-colors"
-                                  >
-                                    {child.title}
-                                  </Link>
-                                ))}
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
+          <div
+            /* Responsive Classes: 
+               - Mobile: screen ke beech mein (left-0 right-0 mx-auto), width 95vw
+               - Desktop (md): Aapka original 'right-60', width max-w-6xl
+            */
+            className="fixed left-0 right-0 mx-auto md:mx-0 md:left-auto md:right-60 w-[95vw] md:w-full max-w-6xl z-50 transition-all duration-300"
+            style={{ top: "75px" }}
+          >
+            <div className="bg-white border border-slate-100 shadow-2xl rounded-2xl overflow-hidden flex flex-col">
+              
+              {/* Mobile Header: Sirf mobile pe dikhega close button ke saath */}
+              <div className="flex items-center justify-between p-4 border-b md:hidden bg-slate-50">
+                <span className="font-bold text-slate-900">Services</span>
+                <button onClick={() => setIsOpen(false)} className="p-1"><X size={20}/></button>
               </div>
-            ))}
+
+              <div className="p-6 lg:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6 items-start max-h-[70vh] md:max-h-[80vh] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                {services.map((service: ServiceItem, index: number) => (
+                  <div key={index} className="flex flex-col space-y-4 mb-4">
+                    <h3 className="text-slate-900 font-black text-[13px] uppercase tracking-widest border-b-2 border-slate-100 pb-2">
+                      {service.title}
+                    </h3>
+
+                    <ul className="space-y-4">
+                      {service.subItems?.map((sub: SubItem, i: number) => (
+                        <li key={i} className="flex flex-col">
+                          <div className="flex items-start group">
+                            <div className="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center mr-3 border border-slate-100 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0">
+                              <IconComponent name={sub.icon} />
+                            </div>
+                            <div className="flex flex-col overflow-hidden">
+                              <Link
+                                href={sub.href || "#"}
+                                onClick={() => setIsOpen(false)}
+                                className="text-[15px] font-bold text-slate-700 hover:text-blue-600 leading-snug"
+                              >
+                                {sub.title}
+                              </Link>
+
+                              {sub.children && (
+                                <div className="mt-2 flex flex-col space-y-1.5 pl-2 border-l-2 border-slate-100 ml-1">
+                                  {sub.children.map((child: ChildItem, j: number) => (
+                                    <Link
+                                      key={j}
+                                      href={child.href}
+                                      onClick={() => setIsOpen(false)}
+                                      className="text-[13px] text-slate-500 hover:text-blue-600 py-0.5 pl-2"
+                                    >
+                                      {child.title}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
+        </>
       )}
-    </div> 
+    </div>
   );
 };
 

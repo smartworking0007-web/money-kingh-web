@@ -41,7 +41,7 @@ const ServiceGrid = () => {
             {/* CARD CONTAINER */}
             <div className="bg-white rounded-md overflow-hidden h-full flex flex-col">
               {/* IMAGE WRAPPER */}
-              <div className="relative w-full aspect-[5/3] overflow-hidden">
+              <div className="relative w-full aspect-5/3 overflow-hidden">
                 <Image
                   src={service.image}  // The image for each service
                   alt={service.title}   // Alt text for accessibility
