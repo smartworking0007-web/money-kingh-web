@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
-import { Lexend } from "next/font/google";
+import { Inter, Lexend } from "next/font/google"; // Inter add kiya
 import "./globals.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import Popup from "./components/layout/Popup";
-// import MarketTicker from "./components/Market/MarketTicker";
 
+// DigiSME wala font (Primary)
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+// Aapka purana font (Secondary/Variable)
 const lexend = Lexend({ 
   subsets: ["latin"],
   variable: "--font-lexend",
@@ -29,18 +35,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${lexend.variable} antialiased bg-white`}>
-        {/* <MarketTicker/> */}
-        
+      {/* 1. inter.className ko body pe lagaya hai taaki poori site Inter font mein dikhe.
+          2. lexend.variable ko bhi rakha hai taaki aap specific jagah par Lexend use kar sakein.
+      */}
+      <body className={`${inter.className} ${lexend.variable} antialiased bg-white`}>
         <Navbar />
         <main className="pt-0 lg:pt-0">
           {children}
           <Popup/>
         </main>
         <Footer/>
+        <GoogleAnalytics gaId="G-V97R5DZ17S" />
       </body>
-      {/* 2. Body tag ke niche ya andar ye component add karein */}
-      <GoogleAnalytics gaId="G-V97R5DZ17S" />
     </html>
   );
 }
