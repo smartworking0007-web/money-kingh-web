@@ -8,6 +8,7 @@ import CompanyIntro from "./components/stats/CompanyIntro";
 import MutualPartners from "./components/MutualPartners/MutualPartners";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Kings from "./components/kings/Kings";
+import AboutFincart from "./components/AboutFincart/AboutFincart";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         
         {/* Company Intro Section */}
         <CompanyIntro />
+        <AboutFincart />
         
         {/* Loan Calculator Section - Padding add ki gayi hai overlap rokne ke liye */}
         <div className="relative z-10 py-5 md:py-24 bg-white">

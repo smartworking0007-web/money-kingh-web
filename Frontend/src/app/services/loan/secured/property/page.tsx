@@ -72,7 +72,7 @@ export default function LoanAgainstPropertyPage() {
           </div>
           {/* Right Side: Image Card */}
           <div className="lg:col-span-5 order-1 lg:order-2 relative">
-            <div className="relative z-10 w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border-[12px] border-white">
+            <div className="relative z-10 w-full aspect-4/5 rounded-[2.5rem] overflow-hidden shadow-2xl border-12px border-white">
               <Image
                 src="/images/loanpage/loan.jpg"
                 alt="Loan Against Property background"

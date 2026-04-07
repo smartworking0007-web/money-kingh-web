@@ -3,7 +3,7 @@ import * as React from "react";
 import { cn } from "@/app/lib/utils";
 
 type Variant =
-  | "d1" | "d2"
+  | "d1" | "d2" 
   | "h1" | "h2" | "h3" | "h4" | "h5"
   | "s1" | "s2"
   | "b1" | "b2" | "b3" 

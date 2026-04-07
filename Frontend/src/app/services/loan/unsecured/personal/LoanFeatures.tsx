@@ -76,7 +76,7 @@ const LoanFeatures = () => {
 
         {/* Features Sub-heading */}
         <div className="mb-10 text-center">
-            <Typography variant="h4" as="h3" className="text-[#002e5b] font-semibold">
+            <Typography variant="h3" as="h3" className="text-[#005db9] font-bold">
                 Personal Loan Features & Benefits
             </Typography>
         </div>

@@ -2,12 +2,18 @@ export type HeroSlide = {
   id: number;
   imageUrl: string;
   imageAlt: string;
+  title: string;
+  description: string;
+  contactLink: string; // <-- Add this line to fix the error
 };
 
 export const heroSlides: HeroSlide[] = [
   {
     id: 1,
-    imageUrl: "/images/Frame5.jpeg",
-    imageAlt: "Web Development",
+    imageUrl: "/images/frame6.png",
+    imageAlt: "Finance Strategy",
+    title: "Your Wealth.\nOur Strategy.\nYour Future.",
+    description: "Bespoke financial strategies designed for discerning individuals, families, and businesses who demand clarity, precision, and measurable results.",
+    contactLink: "/contact", 
   },
 ];

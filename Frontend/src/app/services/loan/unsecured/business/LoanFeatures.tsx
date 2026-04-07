@@ -111,7 +111,6 @@ const BusinessLoanFAQ = () => {
                     )}
                   </div>
                 </button>
-                
                 {openIndex === index && (
                   <div className="px-5 pb-6 md:px-6 md:pb-7 animate-in fade-in slide-in-from-top-2 duration-300">
                     <Typography variant="b1" className="text-slate-600 leading-relaxed">
@@ -123,7 +122,6 @@ const BusinessLoanFAQ = () => {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

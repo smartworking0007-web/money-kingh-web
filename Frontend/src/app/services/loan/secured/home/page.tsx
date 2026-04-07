@@ -2,111 +2,132 @@
 
 import React from "react";
 import Image from "next/image";
-import { CheckCircle2, Home, Percent, Clock} from "lucide-react";
+import Link from "next/link";
 import { Typography } from "@/app/components/ui/Typography";
 import WhyChoose from "@/app/components/Choose/WhyChoose";
 import LoanCalculator from "@/app/components/LoanCalculator/LoanCalculator";
 import FinancialPartners from "@/app/components/FinancialPartners/FinancialPartners";
+import HomeLoanContent from "./HomeLoanContent";
+import HomeLoanRatesTable from "./HomeLoanRatesTable";
+import FeaturesBenefits from "./FeaturesBenefits";
+import TypesOfHomeLoans from "./TypesOfHomeLoans";
+import HomeLoanBanner from "./HomeLoanBanner";
+import HomeLoanCharges from "./HomeLoanCharges";
+import HomeLoanEligibility from "./HomeLoanEligibility";
+import HomeLoanDocuments from "./HomeLoanDocuments";
+import ApplyHomeLoan from "./ApplyHomeLoan";
+import HomeLoanRejection from "./HomeLoanRejection";
+import HomeLoanDosDonts from "./HomeLoanDosDonts";
+import HomeLoanTips from "./HomeLoanTips";
+import HomeLoanFAQ from "./HomeLoanFAQ";
 
 export default function HomeLoanPage() {
-  const data = {
-    title: "Home Loan",
-    description: "Turn your dream of owning a home into reality with our affordable and flexible home loan solutions. We provide end-to-end support for purchasing new flats, independent houses, or constructing on your own plot.",
-    stats: [
-      { label: "Interest Rate", value: "7.10% p.a.", icon: <Percent className="w-5 h-5" /> },
-      { label: "Tenure Up To", value: "30 Years", icon: <Clock className="w-5 h-5" /> },
-      { label: "Financing", value: "Up to 90%", icon: <Home className="w-5 h-5" /> },
-    ],
-    features: [
-      "Quick approval and disbursal",
-      "Balance transfer facility",
-      "Minimal documentation",
-      "Low processing fees",
-      "PMAY Special benefits",
-      "Flexible repayment options",
-    ],
-    
-  };
-
   return (
     <main className="min-h-screen bg-white">
-      {/* --- HERO SECTION --- */}
-      <section className="relative max-w-7xl mx-auto px-6 py-16 md:py-24">
-        {/* Decorative Background Elements */}
-        <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-gradient-to-l from-blue-50 to-transparent rounded-full blur-3xl opacity-50" />
+{/* --- HERO SECTION --- */}
+{/* --- HERO SECTION --- */}
+<section className="relative w-full h-[75vh] md:h-[90vh] bg-[#73c7d3] overflow-hidden font-lexend">
+  
+  {/* Background Image Container */}
+  <div className="absolute inset-0 w-full h-full z-0">
+    <Image
+      src="/images/loanpage/home.jpeg"
+      alt="New Home Background"
+      fill
+      /* FIX: 'object-left' se image ka left side (banda + ghar) hamesha visible rahega.
+         'md:object-right' desktop par image ko right side dhakel dega layout balance karne ke liye.
+      */
+      className="object-cover object-left md:object-right transition-all duration-500"
+      priority
+      quality={100}
+    />
+    
+    {/* Mobile Overlay: Text readability ke liye */}
+    <div className="absolute inset-0 bg-black/10 md:bg-transparent" />
+  </div>
+
+  {/* Hero Content Wrapper */}
+  <div className="absolute inset-0 z-10 max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col">
+    
+    {/* 1. Top Spacer: Mobile par isko kam kiya hai taaki text upar chala jaye */}
+    <div className="flex-[0.4] md:flex-1" />
+
+    {/* 2. Main Content */}
+    <div className="w-full flex flex-col items-center md:items-end">
+      <div className="max-w-[340px] md:max-w-xl flex flex-col items-center md:items-start text-center md:text-left">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
-          {/* Left: Content Column */}
-          <div className="lg:col-span-7 order-2 lg:order-1">
-            {/* Premium Badge */}
-          
+        <Typography
+          variant="d2"
+          as="h1"
+          className="text-white md:text-[#1e293b] mb-3 md:mb-6 leading-[1.1] font-bold drop-shadow-xl md:drop-shadow-none text-2xl sm:text-4xl md:text-[64px]"
+        >
+          Sapno Ka Ghar, <br className="hidden md:block" />
+          Sirf Ek Loan Door
+        </Typography>
 
-            <Typography
-              variant="h1"
-              as="h1"
-              className=""
-            >
-            Your Future Starts at Home.
-            </Typography> 
-            <Typography
-              variant="b1"
-              className="text-gray-600 mb-10 text-lg md:text-xl leading-relaxed max-w-2xl"
-            >
-              {data.description}
-            </Typography>
+        <Typography
+          variant="s1"
+          as="p"
+          className="text-white md:text-[#334155] mb-6 md:mb-8 font-medium leading-relaxed text-[14px] md:text-lg max-w-[280px] md:max-w-lg"
+        >
+          Make your dream home a reality with 12 EMIs waived
+          <br className="hidden md:block" />
+          on your home loan.
+        </Typography>
 
-            {/* Quick Stats Grid */}
-            <div className="grid grid-cols-3 gap-4 mb-10">
-              {data.stats.map((stat, i) => (
-                <div key={i} className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 group hover:border-blue-200 transition-all">
-                  <div className="text-blue-600 mb-2 group-hover:scale-110 transition-transform">{stat.icon}</div>
-                  <div className="text-xl font-bold text-gray-900">{stat.value}</div>
-                  <div className="text-[10px] text-gray-500 uppercase font-bold tracking-tight">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+        <Link href="/contact" className="w-full md:w-auto">
+          <button className="w-full md:w-auto bg-[#6CDAE7] hover:bg-[#5bc8d5] text-white px-10 py-3 md:px-12 md:py-4 rounded-xl font-bold text-base md:text-lg transition-all shadow-xl active:scale-95 cursor-pointer">
+            Avail Now
+          </button>
+        </Link>
+      </div>
+    </div>
 
-            {/* Feature Tags List */}
-            <div className="flex flex-wrap gap-3 mb-12">
-              {data.features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-full border border-gray-100">
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  <span className="text-sm font-semibold text-gray-700">{feature}</span>
-                </div>
-              ))}
-            </div>
+    {/* 3. Bottom Spacer: Isse bande ki image ke liye jagah banegi */}
+    <div className="flex-1 md:hidden" />
+    <div className="hidden md:block md:h-24" />
+  </div>
+</section>
+      {/* --- ALL OTHER SECTIONS --- */}
+      <div className="relative z-20 bg-white">
+        <section className="py-10">
+          <HomeLoanContent />
+        </section>
 
-            
+        <section className="py-12">
+          <div className="max-w-7xl mx-auto px-4">
+             <HomeLoanRatesTable />
           </div>
+        </section>
 
-          {/* Right: Premium Image Card */}
-          <div className="lg:col-span-5 order-1 lg:order-2 relative">
-            <div className="relative z-10 w-full aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,70,135,0.3)] ">
-              <Image
-                src="/images/loanpage/home.jpg"
-                alt="Modern Luxury Home"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-            
-            {/* Visual Decoration */}
-            <div className="absolute -top-12 -right-12 w-48 h-48 bg-blue-100 rounded-full -z-10 blur-2xl opacity-50" />
-            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-[#004687] rounded-3xl -z-10 opacity-10" />
+        <section className="py-16 md:py-24 border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-4">
+            <LoanCalculator />
           </div>
-          
-        </div>
-      </section>
+        </section>
 
-      {/* --- PAGE CONTENT BLOCKS --- */}
-      <div className="space-y-24 pb-24">
-        <FinancialPartners />
-        <div className="bg-gray-50 py-24 shadow-inner">
-          <WhyChoose />
+        <section className="-mt-12 md:-mt-20">
+          <FeaturesBenefits />
+        </section>
+
+        <TypesOfHomeLoans />
+        <HomeLoanBanner />
+        <HomeLoanCharges />
+        <HomeLoanEligibility />
+        <HomeLoanDocuments />
+        <ApplyHomeLoan />
+        <HomeLoanRejection />
+        <HomeLoanDosDonts />
+        <HomeLoanTips />
+        <HomeLoanFAQ />
+
+        {/* --- FOOTER SECTIONS --- */}
+        <div className="space-y-16 py-20">
+          <FinancialPartners />
+          <div className="bg-[#f8fafc] py-20">
+            <WhyChoose />
+          </div>
         </div>
-        <LoanCalculator />
       </div>
     </main>
   );

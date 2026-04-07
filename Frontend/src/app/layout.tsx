@@ -1,44 +1,56 @@
 import type { Metadata } from "next";
-import { Inter, Lexend } from "next/font/google"; // Inter add kiya
+import { 
+  Inter, 
+  Lexend, 
+  Plus_Jakarta_Sans, 
+  Manrope, 
+  Outfit, 
+  Urbanist 
+} from "next/font/google"; 
 import "./globals.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import Popup from "./components/layout/Popup";
 
-// DigiSME wala font (Primary)
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
+// 1. Inter (Standard Professional)
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
-// Aapka purana font (Secondary/Variable)
-const lexend = Lexend({ 
-  subsets: ["latin"],
-  variable: "--font-lexend",
-  weight: ["300", "400", "500", "600", "700"],
-});
+// 2. Lexend (Friendly & Modern)
+const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend", weight: ["300", "400", "500", "600", "700"] });
+
+// 3. Plus Jakarta Sans (Fintech Special - Highly Recommended)
+const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-plus-jakarta" });
+
+// 4. Manrope (Clean & Techy)
+const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
+
+// 5. Outfit (Premium & Geometric)
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
+
+// 6. Urbanist (Elegant & Sharp)
+const urbanist = Urbanist({ subsets: ["latin"], variable: "--font-urbanist" });
 
 export const metadata: Metadata = {
   title: "Money King",
   description: "Learn in-demand skills with industry experts",
   metadataBase: new URL('https://moneykingfinancial.com'),
-  alternates: {
-    canonical: '/',
-  },
+  alternates: { canonical: '/' },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      {/* 1. inter.className ko body pe lagaya hai taaki poori site Inter font mein dikhe.
-          2. lexend.variable ko bhi rakha hai taaki aap specific jagah par Lexend use kar sakein.
-      */}
-      <body className={`${inter.className} ${lexend.variable} antialiased bg-white`}>
+      <body className={`
+        ${inter.variable} 
+        ${lexend.variable} 
+        ${plusJakarta.variable} 
+        ${manrope.variable} 
+        ${outfit.variable} 
+        ${urbanist.variable} 
+        ${inter.className}  /* Default font abhi Inter rakha hai */
+        antialiased bg-white
+      `}>
         <Navbar />
         <main className="pt-0 lg:pt-0">
           {children}

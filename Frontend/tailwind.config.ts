@@ -8,10 +8,12 @@ const config: Config = {
     extend: {
       // Font family configuration
       fontFamily: {
-        // 'sans' ko override karke Inter set kiya (DigiSME look ke liye)
-        sans: ["var(--font-inter)", "ui-sans-serif", "system-ui"],
-        // Lexend ko alag se use karne ke liye
-        lexend: ["var(--font-lexend)", "sans-serif"],
+        sans: ["var(--font-inter)", "ui-sans-serif", "system-ui"], // Default Professional
+        lexend: ["var(--font-lexend)", "sans-serif"], // Friendly & Modern (Current)
+        manrope: ["var(--font-manrope)", "sans-serif"], // Corporate & Sharp
+        plusJakarta: ["var(--font-plus-jakarta)", "sans-serif"], // Super Clean (Fintech Style)
+        outfit: ["var(--font-outfit)", "sans-serif"], // Geometric & Premium
+        urbanist: ["var(--font-urbanist)", "sans-serif"], // High-end Fashion/Tech look
       },
       animation: {
         marquee: 'marquee 50s linear infinite', 
