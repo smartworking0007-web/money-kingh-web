@@ -13,15 +13,15 @@ export const testimonialData: TestimonialItem[] = [
     name: "Sumit Kumar",
     role: "Business Owner",
     content: "The loan process was incredibly smooth. I received my funds within 24 hours just as promised. Truly the best financial service!",
-    image: "/images/Testimonial/1.jpeg", 
+    image: "/images/Testimonial/4.png", 
     rating: 5,
   },
   {
     id: 2,
-    name: "Pooja ",
+    name: "Rajat",
     role: "Software Engineer",
     content: "Lowest interest rates I could find in the market. The user-friendly dashboard made tracking my application very easy.",
-    image: "/images/Testimonial/2.jpeg", 
+    image: "/images/Testimonial/5.jpeg", 
     rating: 4,
   },
   {
@@ -29,7 +29,7 @@ export const testimonialData: TestimonialItem[] = [
     name: "Tanu Verma",
     role: "Entrepreneur",
     content: "Secured database and minimal documentation. I felt safe sharing my details and the approval was lightning fast.",
-    image: "/images/Testimonial/3.jpeg", 
+    image: "/images/Testimonial/6.webp", 
     rating: 4,
   },
 ];

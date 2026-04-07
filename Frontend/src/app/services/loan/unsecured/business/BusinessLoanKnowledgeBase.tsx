@@ -6,7 +6,7 @@ import { Info, Lightbulb, ArrowRightLeft, CheckCircle } from "lucide-react";
 const BusinessLoanKnowledgeBase = () => {
   const proTips = [
     {
-      title: "Improve Credit Score",
+      title: "Maintain Stable Cash Flow",
       desc: "Maintain a score of 700+. High scores unlock lower interest rates and faster approvals.",
     },
     {
@@ -75,41 +75,45 @@ const BusinessLoanKnowledgeBase = () => {
             <Typography
               variant="h3"
               as="h3"
-              className="text-[#002e5b] font-bold m-0!"
+              className="text-[#0058b0] font-bold m-0!"
             >
               What to Know Before Applying for a Business Loan
             </Typography>
           </div>
 
           <Typography
-            variant="b1"
-            className="text-slate-600 mb-10 leading-relaxed max-w-4xl"
+            variant="b2"
+            className="text-slate-900 mb-10 leading-relaxed max-w-4x2"
           >
-            Securing capital is a milestone for any entrepreneur. To ensure a
-            seamless application process and get the best terms, keep these
-            critical factors in mind:
+            Meta Description- Before applying for an unsecured business loan in India, it is important to understand key financial factors that affect approval, interest rates, and repayment capacity. This business loan guide helps you make informed decisions and improve your approval chances.
+
           </Typography>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <KnowledgeCard
-              title="1. Fixed vs. Floating Rates"
-              desc="Choose based on your cash-flow stability. Fixed rates offer predictability, while floating rates change with market fluctuations."
+              title="Fixed vs. Floating Rates"
+              desc=".Choose between fixed and floating interest rates based on your business cash flow. Fixed rates offer stability, while floating rates may vary with market conditions.
+"
             />
             <KnowledgeCard
-              title="2. Choosing the Right Lender"
-              desc="Research Public vs. Private banks and NBFCs. Each has different approval speeds and risk appetites for business goals."
+              title="Choosing the Right Lender"
+              desc="A CIBIL score of 700+ improves your chances of business loan approval and helps secure lower interest rates.
+
+"
             />
             <KnowledgeCard
-              title="3. Power of Credit Score"
+              title="Power of Credit Score"
               desc="A score of 700+ is the 'Golden Ticket.' It unlocks lower interest rates, while poor ratings can lead to rejection."
             />
             <KnowledgeCard
-              title="4. Total Cost of Borrowing"
-              desc="Factor in Processing Fees and Prepayment penalties. Don't just look at the interest rate; negotiate where possible."
+              title="Total Cost of Borrowing"
+              desc="Consider processing fees, prepayment charges, and hidden costs along with interest rates before choosing a loan.
+"
             />
             <KnowledgeCard
-              title="5. EMI Affordability"
-              desc="Longer Tenure = Smaller EMIs but higher interest. Shorter Tenure = Larger EMIs but significant interest savings."
+              title="EMI Affordability"
+              desc="Select a loan tenure that matches your repayment capacity. Longer tenure reduces EMI, while shorter tenure saves interest.
+"
             />
           </div>
         </div>
@@ -123,7 +127,7 @@ const BusinessLoanKnowledgeBase = () => {
               as="h3"
               className="text-[#002e5b] font-bold m-0!"
             >
-              Pro-Tips to Boost Your Loan Approval Chances
+              Tips to Improve Business Loan Approval Chances in India 
             </Typography>
           </div>
 

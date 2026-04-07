@@ -1,8 +1,17 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { Inter } from "next/font/google";
-// Real data import
+
+// --- STEP 1: Saare 6 Fonts ko yahan import kiya gaya hai ---
+import {
+  // Inter,
+  Lexend,
+  // Plus_Jakarta_Sans,
+  // Manrope,
+  // Outfit,
+  // Urbanist,
+} from "next/font/google";
+
 import { services, ServiceItem } from "@/data/ServicesDataDrowpdown";
 import {
   ChevronDown,
@@ -17,9 +26,14 @@ import {
   Sparkles,
 } from "lucide-react";
 
-const inter = Inter({ subsets: ["latin"] });
+// --- STEP 2: Fonts ko initialize kiya gaya hai ---
+// const inter = Inter({ subsets: ["latin"] });
+const lexend = Lexend({ subsets: ["latin"] });
+// const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
+// const manrope = Manrope({ subsets: ["latin"] });
+// const outfit = Outfit({ subsets: ["latin"] });
+// const urbanist = Urbanist({ subsets: ["latin"] });
 
-// --- Icon Mapping (Sirf wahi icons jo use ho rahe hain) ---
 const IconComponent = ({ name }: { name?: string }) => {
   const icons: Record<string, React.ReactNode> = {
     home: <Home size={18} />,
@@ -88,7 +102,6 @@ const ServiceBlock: React.FC<{
 const ServicesDropdown: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       if (
@@ -102,7 +115,6 @@ const ServicesDropdown: React.FC = () => {
     return () => document.removeEventListener("mousedown", handleOutsideClick);
   }, []);
 
-  // Filter services for columns
   const loanService = services.find((s) => s.title === "Loan");
   const insuranceService = services.find((s) => s.title === "Insurance");
   const mutualFundService = services.find((s) => s.title === "Mutual Fund");
@@ -111,7 +123,17 @@ const ServicesDropdown: React.FC = () => {
 
   return (
     <div
-      className={`${inter.className} flex items-center h-full relative`}
+      /* --- STEP 3: FONT CHANGE KARNE KE LIYE NICHE DEKHEIN ---
+         Bas `${inter.className}` ko badal kar aap ye likh sakte hain:
+
+         1. ${inter.className}         <- Inter (Professional)
+         2. ${lexend.className}        <- Lexend (Friendly)
+         3. ${plusJakarta.className}   <- Plus Jakarta (Modern Fintech)
+         4. ${manrope.className}       <- Manrope (Clean & Sharp)
+         5. ${outfit.className}        <- Outfit (Premium Geometric)
+         6. ${urbanist.className}      <- Urbanist (Minimalist)
+      */
+      className={`   ${lexend.className}    flex items-center h-full relative`}
       ref={containerRef}
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
@@ -135,7 +157,6 @@ const ServicesDropdown: React.FC = () => {
             className="fixed inset-0 bg-slate-900/20 backdrop-blur-[2px] z-40 md:hidden"
             onClick={() => setIsOpen(false)}
           />
-
           <div
             className="fixed left-0 right-0 mx-auto md:mx-0 md:left-auto md:right-35 w-[95vw] md:w-full max-w-6xl z-50"
             style={{ top: "70px" }}
@@ -167,7 +188,6 @@ const ServicesDropdown: React.FC = () => {
                       setIsOpen={setIsOpen}
                     />
                   )}
-
                   <div className="flex flex-col space-y-12">
                     {stocksService && (
                       <ServiceBlock

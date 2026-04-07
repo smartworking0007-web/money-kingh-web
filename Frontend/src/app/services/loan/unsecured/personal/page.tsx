@@ -86,7 +86,7 @@ export default function PersonalLoanPage() {
                   emergencies, or debt consolidation.
                 </Typography>
               </div>
-
+              
               {/* Vertical Features List */}
               <div className="space-y-10 mt-12">
                 {features.map((item, i) => (
@@ -127,7 +127,7 @@ export default function PersonalLoanPage() {
 
             <div className="relative z-10 drop-shadow-[0_50px_80px_rgba(0,0,0,0.15)] transform hover:scale-105 transition-transform duration-500">
               <Image
-                src="/images/Loan/pm.jpg"
+                src="/images/Loan/pmss.png"
                 alt="Personal Loan App Dashboard"
                 width={400}
                 height={750}
