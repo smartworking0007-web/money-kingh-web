@@ -1,90 +1,116 @@
 "use client";
 
 import Image from "next/image";
-import { CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 import { Typography } from "@/app/components/ui/Typography";
+import { Button } from "@/app/components/ui/Button";
 import WhyChoose from "@/app/components/Choose/WhyChoose";
 import LoanCalculator from "@/app/components/LoanCalculator/LoanCalculator";
 import FinancialPartners from "@/app/components/FinancialPartners/FinancialPartners";
+import CarLoanComparison from "./CarLoanComparison";
+import CarLoanFeatures from "./CarLoanFeatures";
+import CarLoanTypes from "./CarLoanTypes";
+import CarLoanTips from "./CarLoanTips";
+import EligibilityCriteria from "./EligibilityCriteria";
+import DocumentsRequired from "./DocumentsRequired";
+import FAQPage from "./FAQPage";
 
 export default function CarLoanPage() {
   const data = {
-    title: "Car Loan",
-    description:
-      "Drive home your dream car with our fast, flexible, and affordable car loan solutions. Whether it's a brand-new sedan, SUV, or electric vehicle, enjoy quick approval, attractive rates, and hassle-free documentation.",
-    features: [
-      "Up to 100% on-road price funding",
-      "Flexible tenure up to 7–8 years",
-      "Quick approval & instant disbursal",
-      "Competitive interest rates starting @ 8.25% p.a.",
-      "Special lower rates for electric vehicles",
-      "Minimal documentation required",
-      "Pre-approved offers for existing customers",
-    ],
-   
+    title: "Feel the joy of a\nlonger drive",
+    description: "Take the next drive in your own car with a car loan.",
   };
 
   return (
     <main className="min-h-screen bg-white">
-      <section className="max-w-7xl mx-auto px-6 py-12 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
-          {/* Left: Main Content */}
-          <div className="lg:col-span-8 order-2 lg:order-1">
+      {/* 1. Hero Banner */}
+      <section className="relative w-full h-[400px] md:h-[550px] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/Carloan/car.jpeg"
+            alt="blue car on a foggy urban street"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-white/95 via-white/60 to-transparent" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+          <div className="max-w-2xl">
             <Typography
-              variant="h1"
+              variant="h2"
               as="h1"
-              className="text-[#004687] mb-8 mt-0 scroll-mt-20"
+              className="text-gray-900 leading-tight mb-4 whitespace-pre-line"
             >
               {data.title}
             </Typography>
-
-            <Typography variant="b1" className="text-gray-700 mb-8 leading-relaxed">
+            <Typography
+              variant="b1"
+              className="text-lg text-gray-800 mb-8 max-w-lg"
+            >
               {data.description}
             </Typography>
 
-            {/* Features List */}
-            <div className="flex flex-wrap gap-x-8 gap-y-4 mb-10">
-              {data.features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" />
-                  <Typography
-                    variant="s2"
-                    as="span"
-                    className="text-black font-medium"
-                  >
-                    {feature}
-                  </Typography>
-                </div>
-              ))}
-            </div>
-
-            {/* Last Updated */}
-           
+            <Link href="/contact" passHref>
+              <Button
+                size="lg"
+                className="bg-[#96395e] hover:bg-[#831441] text-white border-none shadow-lg cursor-pointer transition-transform hover:scale-105"
+              >
+                Apply Now
+              </Button>
+            </Link>
           </div>
-
-          {/* Right: Image Sidebar (Desktop only) */}
-          <div className="lg:col-span-4 order-1 lg:order-2 mb-8 lg:mb-0">
-            <div className="relative w-full h-96 lg:h-full min-h-96 rounded-xl overflow-hidden shadow-2xl border border-gray-100">
-              <Image
-                src="/images/loanpage/car.jpeg"   
-                alt="Happy family with their brand new car"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 1024px) 100vw, 33vw"
-              />
-            </div>
-           
-          </div>
-          
         </div>
       </section>
 
-      {/* Reusable Sections – same as Home Loan page */}
-      <FinancialPartners />
-      <WhyChoose />
-      <LoanCalculator />
+      {/* 2. Comparison Table */}
+      <CarLoanComparison />
+
+      {/* 3. Loan Calculator */}
+      <section className="py-20 md:py-30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <LoanCalculator />
+        </div>
+      </section>
+
+      <section className="-mt-30 md:-mt-40 py-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <CarLoanFeatures />
+        </div>
+      </section>
+
+      <section className="mt-0 md:-mt-40 py-0 md:py-30">
+        <CarLoanTypes />
+      </section>
+
+      <section className="relative z-20 -mt-30 md:-mt-60 py-0">
+        <CarLoanTips />
+      </section>
+
+      <section className=" -mt-10 md:-mt-20 py-0">
+        <EligibilityCriteria />
+      </section>
+
+      <section className=" -mt-10 md:-mt-20 py-0">
+        <DocumentsRequired />
+      </section>
+
+      <section className=" -mt-10 md:-mt-20 py-0">
+        <FAQPage />
+      </section>
+
+      {/* 4. Financial Partners (Ab yeh WhyChoose ke uper hai) */}
+      <section className="mt-0 md:-mt-30 py-0 md:py-20">
+        <FinancialPartners />
+      </section>
+
+      {/* 5. Why Choose Money King */}
+      <section className="-mt-5 md:-mt-30 py-12 md:py-20">
+        <div className="max-w-7xl mx-auto">
+          <WhyChoose />
+        </div>
+      </section>
     </main>
   );
 }

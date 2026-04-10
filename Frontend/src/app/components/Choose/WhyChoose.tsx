@@ -29,16 +29,16 @@ const WhyChoose = () => {
               key={item.id}
               className={cn(
                 "relative flex items-center p-4 md:p-5 rounded-xl border-2 border-[#D1E5FF] bg-white",
-                "w-full max-w-[320px] sm:max-w-none md:w-[280px] h-[80px] md:h-[90px]",
+                "w-full max-w-[320px] sm:max-w-none md:w-[280px] h-80px md:h-[90px]",
                 "transition-all duration-300 hover:shadow-lg hover:border-[#4DB6AC]/30 group"
               )}
             >
               {/* The "Broken Border" White Gaps - Hidden or narrowed on very small screens if needed */}
-              <div className="absolute -top-[2px] left-8 w-10 md:w-12 h-[2px] bg-white" />
-              <div className="absolute -bottom-[2px] right-8 w-10 md:w-12 h-[2px] bg-white" />
+              <div className="absolute -top-2px left-8 w-10 md:w-12 h-2px bg-white" />
+              <div className="absolute -bottom-2px right-8 w-10 md:w-12 h-2px bg-white" />
 
               {/* Icon Container */}
-              <div className="flex-shrink-0 mr-4 w-10 h-10 md:w-12 md:h-12 relative transition-transform group-hover:scale-110">
+              <div className="shrink-0 mr-4 w-10 h-10 md:w-12 md:h-12 relative transition-transform group-hover:scale-110">
                 <Image
                   src={item.icon}
                   alt={item.title}
