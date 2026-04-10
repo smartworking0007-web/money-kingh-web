@@ -1,6 +1,6 @@
 import WhyChoose from "./components/Choose/WhyChoose";
 import FinancialPartners from "./components/FinancialPartners/FinancialPartners";
-import Founders from "./components/founders/Founders";
+// import Founders from "./components/founders/Founders";
 import HeroSlider from "./components/hero/HeroSlideCard";
 import LoanCalculator from "./components/LoanCalculator/LoanCalculator";
 import ServiceGrid from "./components/Service/ServiceGrid";
@@ -35,7 +35,7 @@ export default function Home() {
         <FinancialPartners />
         <MutualPartners />
         <WhyChoose />
-        <Founders />
+        {/* <Founders /> */}
         <Testimonials />
       </div>
     </main>

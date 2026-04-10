@@ -22,7 +22,7 @@ const AboutSection: React.FC = () => {
           {/* Main Team Photo */}
           <div className="relative w-[280px] h-[280px] sm:w-[450px] sm:h-[450px] md:w-[500px] md:h-[500px] overflow-hidden rounded-full shadow-2xl z-20 border-4 border-white">
             <Image
-              src="/images/team.jpeg"
+              src="/images/teame.jpeg"
               alt="Money King Team"
               fill
               className="object-cover"
@@ -40,7 +40,7 @@ const AboutSection: React.FC = () => {
           >
             <div className="relative w-full h-full rounded-full overflow-hidden">
               <Image
-                src="/images/circle.png"
+                src="/images/circleee.png"
                 alt="Money King Logo"
                 fill
                 className="object-contain p-2"

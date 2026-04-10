@@ -3,7 +3,7 @@ import { FooterData } from "@/types/footer";
 export const footerData: FooterData = {
   information: [
     { type: "phone", label: "01204206832", href: "tel:+1232341234" },
-    { type: "mail", label: "info@moneykingfingfinicial", href: "mailto:info@moneykingfingfinicial" },
+    { type: "mail", label: "info@moneykingfinancial.com", href: "mailto:info@moneykingfinancial.com" },
     { type: "map", label: "A 39 2rd floor sector 63 noida 201301", href: "https://maps.google.com" },
   
   ],

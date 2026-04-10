@@ -71,15 +71,6 @@ export default function HeroSlider() {
                         </Typography>
                       </button>
                     </Link>
-
-                    <button className="border-2 border-white px-10 py-4 rounded-full transition-all hover:bg-white/10 active:scale-95 backdrop-blur-sm group cursor-pointer">
-                      <Typography
-                        variant="btn-primary"
-                        className="text-white font-bold!"
-                      >
-                        Explore Our Services
-                      </Typography>
-                    </button>
                   </div>
                 </div>
               </div>
