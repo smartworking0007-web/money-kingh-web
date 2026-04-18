@@ -2,110 +2,149 @@
 
 import React from "react";
 import Image from "next/image";
-import { CheckCircle2, Settings, Percent, Clock } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { Typography } from "@/app/components/ui/Typography";
-import WhyChoose from "@/app/components/Choose/WhyChoose";
 import LoanCalculator from "@/app/components/LoanCalculator/LoanCalculator";
 import FinancialPartners from "@/app/components/FinancialPartners/FinancialPartners";
+import MachineryLoanInfo from "./MachineryLoanInfo";
+import MachineryFeatures from "./MachineryFeatures";
+import MachineryEligibility from "./MachineryEligibility";
+import MachineryLoanRatesBanner from "./MachineryLoanRatesBanner";
+import DocumentsAccordionPage from "./DocumentsRequiredPage";
+import MachineryProcess from "./MachineryProcess.tsx";
+import ProductSegmentation from "./ProductSegmentation";
+import MachineryFAQ from "./MachineryFAQ";
+
+interface StatItem {
+  label: string;
+  value: string;
+  icon: React.ReactNode;
+}
 
 export default function MachineryLoanPage() {
   const data = {
-    title: "Machinery Loan",
+    title: "Power Your Business With Advanced Machinery",
     description:
-      "Boost your business productivity with financing for new or used machinery & equipment. Ideal for MSMEs and manufacturing units looking to upgrade technology, expand operations, or replace old machines.",
-    stats: [
-      { label: "Interest Rate", value: "9.50% p.a.", icon: <Percent className="w-5 h-5" /> },
-      { label: "Tenure Up To", value: "7 Years", icon: <Clock className="w-5 h-5" /> },
-      { label: "Financing", value: "Up to 90%", icon: <Settings className="w-5 h-5"/> },
-    ],
-    features: [
-      "New & Used machinery financing",
-      "Flexible repayment structures",
-      "Minimal documentation required",
-      "Quick sanction & disbursal",
-      "Tax benefits on interest paid",
-      "Competitive processing fees",
-      "No hidden charges",
-    ],
+      "Boost your business productivity with financing for new or used machinery & equipment.",
+    stats: [] as StatItem[],
+    features: [] as string[],
   };
 
   return (
     <main className="min-h-screen bg-white">
-      {/* --- HERO SECTION --- */}
-      <section className="relative max-w-7xl mx-auto px-6 py-16 md:py-24">
-        {/* Decorative Background Elements */}
-        <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-gradient-to-l from-blue-50 to-transparent rounded-full blur-3xl opacity-50" />
-        
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
-          {/* Left: Content Column */}
-          <div className="lg:col-span-7 order-2 lg:order-1">
-            <Typography
-              variant="h1"
-              as="h1"
-              className="text-4xl md:text-5xl font-bold mb-6 text-gray-900"
-            >
-              Power Your Business With Advanced Machinery.
-            </Typography>
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        {/* Background Image Section */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/Machinery/Machinery.jpeg"
+            alt="Background"
+            fill
+            className="object-cover object-center brightness-[0.7]"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/40"/>
+        </div>
 
-            <Typography
-              variant="b1"
-              className="text-gray-600 mb-10 text-lg md:text-xl leading-relaxed max-w-2xl"
-            >
-              {data.description}
-            </Typography>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-24 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-8">
+              <Typography
+                variant="h1"
+                as="h1"
+                className="text-4xl md:text-6xl font-bold mb-6 text-white"
+              >
+                {data.title || " "}
+              </Typography>
 
-            {/* Quick Stats Grid */}
-            <div className="grid grid-cols-3 gap-4 mb-10">
-              {data.stats.map((stat, i) => (
-                <div key={i} className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 group hover:border-blue-200 transition-all">
-                  <div className="text-blue-600 mb-2 group-hover:scale-110 transition-transform">{stat.icon}</div>
-                  <div className="text-xl font-bold text-gray-900">{stat.value}</div>
-                  <div className="text-[10px] text-gray-500 uppercase font-bold tracking-tight">{stat.label}</div>
-                </div>
-              ))}
+              <Typography
+                variant="b1"
+                className="text-white/90 mb-10 text-lg md:text-xl max-w-2xl"
+              >
+                {data.description || " "}
+              </Typography>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+                {data.stats.map((stat, i) => (
+                  <div
+                    key={i}
+                    className="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20"
+                  >
+                    <div className="text-white mb-2">{stat.icon}</div>
+                    <div className="text-xl font-bold text-white">
+                      {stat.value}
+                    </div>
+                    <div className="text-[10px] text-white/70 uppercase font-bold">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Features */}
+              <div className="flex flex-wrap gap-3">
+                {data.features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-green-400" />
+                    <span className="text-sm font-semibold text-white">
+                      {feature}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
-
-            {/* Feature Tags List */}
-            <div className="flex flex-wrap gap-3 mb-12">
-              {data.features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-full border border-gray-100">
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  <span className="text-sm font-semibold text-gray-700">{feature}</span>
-                </div>
-              ))}
-            </div>
-            
-            {/* Last Updated section removed from here to fix the error */}
           </div>
-
-          {/* Right: Premium Image Card */}
-          <div className="lg:col-span-5 order-1 lg:order-2 relative">
-            <div className="relative z-10 w-full aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,70,135,0.3)] ">
-              <Image
-                src="/images/loanpage/M.jpg"
-                alt="Industrial Machinery"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-            
-            {/* Visual Decoration */}
-            <div className="absolute -top-12 -right-12 w-48 h-48 bg-blue-100 rounded-full -z-10 blur-2xl opacity-50" />
-            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-[#004687] rounded-3xl -z-10 opacity-10" />
-          </div>
-          
         </div>
       </section>
 
-      {/* --- PAGE CONTENT BLOCKS --- */}
-      <div className="space-y-24 pb-24">
-        <FinancialPartners />
-        <div className="bg-gray-50 py-24 shadow-inner">
-          <WhyChoose />
-        </div>
+      <div className="relative z-20 bg-white space-y-24 pb-24">
+        <MachineryLoanInfo />
+      </div>
+
+      <div className="relative z-20 bg-white space-y-24 pb-24">
         <LoanCalculator />
+      </div>
+
+      <div className="relative z-20 bg-white space-y-30 pb-0">
+        <MachineryFeatures />
+      </div>
+
+      <div className="relative z-20 bg-white space-y-10 pb-0">
+        <div className="-mt-5">
+          {" "}
+          {/* Ye space-y-10 ke effect ko cancel kar dega */}
+          <MachineryEligibility />
+        </div>
+      </div>
+
+      <div className="relative z-20 bg-white space-y-10 pb-10">
+        <DocumentsAccordionPage />
+      </div>
+
+      <div className="relative z-20 bg-white space-y-10 pb-10">
+        <MachineryProcess />
+      </div>
+
+      {/* space-y-6 mobile ke liye, space-y-50 desktop ke liye */}
+      <div className="relative z-20 bg-white space-y-10 md:space-y-50 pb-6 md:pb-10">
+        <MachineryLoanRatesBanner />
+        {/* Agla component yahan aayega */}
+      </div>
+
+      <div className="relative z-20 bg-white space-y-10 pb-10">
+        <ProductSegmentation />
+      </div>
+
+      
+
+      <div className="relative z-20 bg-white space-y-24 pb-24">
+        <FinancialPartners />
+      </div>
+
+      <div className="relative z-20 bg-white space-y-10 pb-10">
+        <MachineryFAQ  />
       </div>
     </main>
   );
