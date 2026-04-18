@@ -1,93 +1,105 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
-import { CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 import { Typography } from "@/app/components/ui/Typography";
-import WhyChoose from "@/app/components/Choose/WhyChoose";
+import { Button } from "@/app/components/ui/Button";
+import GoldLoanContent from "./GoldLoanContent";
 import LoanCalculator from "@/app/components/LoanCalculator/LoanCalculator";
-import FinancialPartners from "@/app/components/FinancialPartners/FinancialPartners";
+import GoldLoanFeatures from "./GoldLoanFeatures";
+import GoldLoanDetails from "./GoldLoanDetails";
+import GoldLoanRates from "./GoldLoanRates";
+import GoldLoanEligibility from "./GoldLoanEligibility";
+import ApplyGoldLoan from "./ApplyGoldLoan";
+import GoldLoanProcess from "./GoldLoanProcess";
+import FAQPage from "../car/FAQPage";
 
 export default function GoldLoanPage() {
-  const data = {
-    title: "Gold Loan",
-    description:
-      "Get instant cash against your gold jewellery or coins with no income proof required. Enjoy the highest loan-to-value ratio, quick disbursal, safe storage of your gold, and competitive rates – perfect for urgent financial needs.",
-    features: [
-      "Highest LTV up to 75% of gold value",
-      "Short & flexible tenure from 3 months to 4 years",
-      "No income proof or credit score required",
-      "Competitive interest rates starting @ 8.75% p.a.",
-      "Safe vault storage of your pledged gold",
-      "Overdraft facility & bullet repayment options",
-      "Instant approval & disbursal in minutes",
-    ],
-   
-  };
-
   return (
     <main className="min-h-screen bg-white">
-      <section className="max-w-7xl mx-auto px-6 py-12 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
-          {/* Left: Main Content */}
-          <div className="lg:col-span-8 order-2 lg:order-1">
+      {/* --- HERO SECTION --- */}
+      <section className="relative w-full h-[500px] md:h-[600px] flex items-center overflow-hidden">
+        {/* Background Image Container */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/gold/gold.jpeg"
+            alt="Turn your gold into opportunities"
+            fill
+            className="object-cover object-right"
+            priority
+          />
+          {/* Gradient Overlay using v4 bg-linear syntax */}
+          <div className="absolute inset-0 bg-linear-to-r from-white via-white/95 to-transparent md:via-white/40" />
+        </div>
+
+        {/* Hero Content */}
+        <div className="container mx-auto px-10 md:px-20 relative z-10">
+          <div className="max-w-[85%] md:max-w-2xl">
             <Typography
-              variant="h1"
-              as="h1"
-              className="text-[#004687] mb-8 mt-0 scroll-mt-20"
+              variant="h2"
+              as="h2"
+              className="text-[#004687]! text-3xl! md:text-5xl! font-bold! mb-4! mt-0! leading-tight!"
             >
-              {data.title}
+              Turn your gold <br className="md:hidden" /> into opportunities
             </Typography>
 
-            <Typography variant="b1" className="text-gray-700 mb-8 leading-relaxed">
-              {data.description}
+            <Typography
+              variant="s1"
+              as="p"
+              className="text-slate-700! text-lg! md:text-2xl! mb-8! mt-0! font-medium!"
+            >
+              Safe, secure & quick gold loans for your various needs.
             </Typography>
 
-            {/* Features List */}
-            <div className="flex flex-wrap gap-x-8 gap-y-4 mb-10">
-              {data.features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" />
-                  <Typography
-                    variant="s2"
-                    as="span"
-                    className="text-black font-medium"
-                  >
-                    {feature}
-                  </Typography>
-                </div>
-              ))}
-            </div>
-
-            {/* Last Updated */}
-            <div className="pt-6 border-t border-gray-100">
-             
-            </div>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-[#004687]! hover:bg-[#003566]! rounded-xl! h-12! md:h-14! px-8! md:px-10! shadow-lg! cursor-pointer transition-colors"
+              >
+                APPLY NOW
+              </Button>
+            </Link>
           </div>
-
-          {/* Right: Image Sidebar (Desktop only) */}
-          <div className="lg:col-span-4 order-1 lg:order-2 mb-8 lg:mb-0">
-            <div className="relative w-full h-96 lg:h-full min-h-96 rounded-xl overflow-hidden shadow-2xl border border-gray-100">
-              <Image
-                src="/images/loanpage/gold.webp"
-                alt="Gold jewellery and cash – instant Gold Loan with Money King"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 1024px) 100vw, 33vw"
-              />
-            </div>
-            
-          </div>
-          
         </div>
       </section>
 
-      {/* Common Sections */}
-      <FinancialPartners />
-      <WhyChoose />
-      <LoanCalculator />
+      {/* --- CONTENT SECTION --- */}
+      {/* py-20 provides a strong visual break, and border-t adds a subtle separation line */}
+      <section className="bg-white py-20 md:py-28 ">
+        <GoldLoanContent />
+      </section>
+      <section className="bg-white py-10 md:py-5 ">
+        <LoanCalculator />
+      </section>
+      <section className="bg-white py-10 md:py-5 ">
+        <GoldLoanFeatures />
+      </section>
+
+       <section className="bg-white py-10 md:py-5 ">
+        <GoldLoanDetails />
+      </section>
+
+      <section className="bg-white py-10 md:py-5 ">
+        <GoldLoanRates />
+      </section>
+
+      
+      <section className="bg-white py-10 md:py-5 ">
+        <GoldLoanEligibility />
+      </section>
+
+       
+      <section className="bg-white py-10 md:py-5 ">
+        <ApplyGoldLoan />
+      </section>
+
+      <section className="bg-white py-10 md:py-5 ">
+        <GoldLoanProcess />
+      </section>
+
+      <section className="bg-white py-10 md:py-5 ">
+        <FAQPage />
+      </section>
     </main>
   );
 }
