@@ -58,7 +58,7 @@ export const servicesData: ServiceItem[] = [
   {
     id: 8,
     title: "Open Demat Account",
-    image: "/images/servicesimages/s-9.jpeg",
+    image: "/images/servicesimages/s-10.jpeg",
     href: "https://ekyc.mstock.com/Register-with-us?pdc=AE2D3E733",
   },
 ];
