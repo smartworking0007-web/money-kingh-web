@@ -1,0 +1,122 @@
+"use client";
+
+import React from "react";
+import { Typography } from "@/app/components/ui/Typography";
+import {
+  ScanSearch,
+  ShieldCheck,
+  HandCoins,
+  Briefcase,
+  FileCheck,
+  SmartphoneNfc,
+  LucideIcon,
+} from "lucide-react";
+
+interface FeatureItem {
+  title: string;
+  desc: string;
+  icon: LucideIcon;
+  bg: string;
+  iconColor: string;
+}
+
+const features: FeatureItem[] = [
+  {
+    title: "Comprehensive Assessment",
+    desc: "We analyze your financial situation to identify risks and recommend the best coverage.",
+    icon: ScanSearch,
+    bg: "bg-blue-50",
+    iconColor: "text-blue-600",
+  },
+  {
+    title: "Customized Plans",
+    desc: "Tailored solutions including life, health, general, and business insurance policies.",
+    icon: ShieldCheck,
+    bg: "bg-emerald-50",
+    iconColor: "text-emerald-600",
+  },
+  {
+    title: "Financial Protection",
+    desc: "Ensures you and your family are protected against unexpected financial burdens.",
+    icon: HandCoins,
+    bg: "bg-amber-50",
+    iconColor: "text-amber-600",
+  },
+  {
+    title: "Business Risk Management",
+    desc: "Identify and manage operational, financial, and market risks effectively.",
+    icon: Briefcase,
+    bg: "bg-indigo-50",
+    iconColor: "text-indigo-600",
+  },
+  {
+    title: "Regulatory Compliance",
+    desc: "Ensure all your policies comply with industry standards and legal requirements.",
+    icon: FileCheck,
+    bg: "bg-slate-50",
+    iconColor: "text-slate-600",
+  },
+  {
+    title: "Digital Claim Support",
+    desc: "Quick and hassle-free claim processing with advanced digital support systems.",
+    icon: SmartphoneNfc,
+    bg: "bg-red-50",
+    iconColor: "text-[#8B1D1D]",
+  },
+];
+
+export default function InsuranceRiskFeatures() {
+  return (
+    <section className="w-full bg-white py-10 md:py-10 px-4 md:px-6 font-lexend relative z-20">
+      <div className="max-w-6xl mx-auto">
+        {/* --- HEADER --- */}
+        <div className="text-center mb-10 md:mb-14">
+          <Typography
+            variant="h4"
+            as="h4"
+            className="text-2xl md:text-4xl font-black  mb-3 mt-0 "
+          >
+            Key Features of Insurance and Risk Management
+          </Typography>
+          
+        </div>
+
+        {/* --- COMPACT FEATURES GRID --- */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+          {features.map((feature, idx) => {
+            const Icon = feature.icon;
+            return (
+              <div
+                key={idx}
+                className="group p-5 md:p-6 bg-white border border-slate-100 rounded-2rem hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                {/* Compact Icon Box */}
+                <div
+                  className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:rotate-6 ${feature.bg} ${feature.iconColor}`}
+                >
+                  <Icon size={24} />
+                </div>
+
+                {/* Text Content */}
+                <div className="space-y-2">
+                  <Typography
+                    variant="h5"
+                    className="text-base md:text-lg font-bold text-slate-900 mt-0 leading-tight group-hover:text-[#8B1D1D] transition-colors"
+                  >
+                    {feature.title}
+                  </Typography>
+                  <Typography
+                    variant="b1"
+                    className="text-slate-500 text-xs md:text-sm leading-relaxed mt-0 opacity-80"
+                  >
+                    {feature.desc}
+                  </Typography>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
