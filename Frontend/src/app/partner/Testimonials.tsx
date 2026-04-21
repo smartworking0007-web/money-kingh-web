@@ -10,10 +10,10 @@ const testimonials = [
     name: "Rajesh Sharma",
     role: "Financial Advisor",
     text: "Joining Money King as a Channel Partner was one of my best decisions. The onboarding process was smooth, and the support team helped me at every step. I started earning within the first month.",
-    image: "/images/Testimonial/3.jpeg", // Change to your local image
+    image: "/images/Testimonial/3.jpeg", 
   },
   {
-    name: "Neha Verma",
+    name: "Raj Verma",
     role: "Insurance Consultant",
     text: "The digital KYC and e-sign process made registration super easy. I love how transparent and fast the system works. Highly recommended for anyone looking to grow in finance.",
     image: "/images/Testimonial/4.png",
@@ -96,7 +96,7 @@ export default function TestimonialsHub() {
                       </Typography>
                     </div>
 
-                    <Typography className="text-slate-600 text-xs md:text-sm leading-relaxed italic mt-0">
+                    <Typography className="text-slate-600 text-xs md:text-sm leading-relaxed mt-0">
                       {item.text}
                     </Typography>
 

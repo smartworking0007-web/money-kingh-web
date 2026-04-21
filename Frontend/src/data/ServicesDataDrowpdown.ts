@@ -1,5 +1,3 @@
-// data/services.ts
-
 export interface ChildItem {
   title: string;
   href: string;
@@ -8,7 +6,7 @@ export interface ChildItem {
 export interface SubItem {
   title: string;
   href?: string;
-  icon?: string; // Added to fix "Property 'icon' does not exist"
+  icon?: string;
   children?: ChildItem[];
 }
 
@@ -24,16 +22,12 @@ export const services: ServiceItem[] = [
     subItems: [
       {
         title: "Secured Loan",
-        icon: "home", // You can now add icon keys here
+        icon: "home",
         children: [
           { title: "Home loan", href: "/services/loan/secured/home" },
-          {
-            title: "Loan against property",
-            href: "/services/loan/secured/property",
-          },
+          { title: "LAP", href: "/services/loan/secured/property" },
           { title: "Car loan", href: "/services/loan/secured/car" },
           { title: "Machinery Loan", href: "/services/loan/secured/machinery" },
-          { title: "Gold loan", href: "/services/loan/secured/gold" },
         ],
       },
       {
@@ -42,6 +36,44 @@ export const services: ServiceItem[] = [
         children: [
           { title: "Personal loan", href: "/services/loan/unsecured/personal" },
           { title: "Business loan", href: "/services/loan/unsecured/business" },
+        ],
+      },
+    ],
+  },
+  /* --- 1. Insurance Section (Now at Top/Second Position) --- */
+  {
+    title: "Insurance",
+    subItems: [
+      {
+        title: "Health Insurance",
+        href: "/services/insurance/health",
+        icon: "health",
+      },
+      {
+        title: "Life Insurance",
+        href: "/services/insurance/lic",
+        icon: "user",
+      },
+      {
+        title: "General Insurance",
+        href: "/services/insurance/general",
+        icon: "shield",
+      },
+    ],
+  },
+  /* --- 2. Loan (BT n Top Up) Section (Moved Down) --- */
+  {
+    title: "Loan (BT n Top Up)",
+    subItems: [
+      {
+        title: "BT & Top-Up",
+        icon: "bank",
+        children: [
+          { title: "Personal Loan BT", href: "/services/loan-bt/personal" },
+          { title: "Home Loan BT", href: "/services/loan-bt/home" },
+          { title: "LAP BT & Top-Up", href: "/services/loan-bt/lap" },
+          { title: "Machinery Loan BT", href: "/services/loan-bt/machinery" },
+          { title: "Car Loan BT", href: "/services/loan-bt/car" },
         ],
       },
     ],
@@ -67,26 +99,6 @@ export const services: ServiceItem[] = [
     title: "Credit Card",
     subItems: [
       { title: "HDFC", href: "/services/credit/hdfc", icon: "shield" },
-    ],
-  },
-  {
-    title: "Insurance",
-    subItems: [
-      {
-        title: "Health Insurance",
-        href: "/services/insurance/health",
-        icon: "health",
-      },
-      {
-        title: "Life Insurance (LI)",
-        href: "/services/insurance/lic",
-        icon: "user",
-      },
-      {
-        title: "General Insurance",
-        href: "/services/insurance/general",
-        icon: "shield",
-      },
     ],
   },
 ];

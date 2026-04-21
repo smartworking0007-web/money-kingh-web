@@ -14,12 +14,11 @@ export const footerData: FooterData = {
   
   ],
   services: [
-    { label: "Financial Planning and Advisory", href: "#" },
-    { label: "Investment Management", href: "#" },
-    { label: "Banking and Cash Management", href: "#" },
-    { label: "Insurance and Risk Management", href: "#" },
-    { label: "More Services", href: "#" },
-  ],
+  { label: "Financial Planning and Advisory", href: "/services/financial-planning" },
+  { label: "Investment Management", href: "/services/investment-management" },
+  { label: "Banking and Cash Management", href: "/services/banking-management" },
+  { label: "Insurance and Risk Management", href: "/services/insurance-management" },
+],
   socials: [
     { platform: "facebook", href: "https://www.facebook.com/profile.php?id=100094636427010" },
     { platform: "twitter", href: "https://x.com/services9871" },
