@@ -131,7 +131,7 @@ export default function WelcomePopup() {
                 }
               />
             </div>
-
+  
             <div>
               <label className="block mb-1.5 text-[10px] font-black text-slate-400 uppercase tracking-[1px]">
                 Email Address
