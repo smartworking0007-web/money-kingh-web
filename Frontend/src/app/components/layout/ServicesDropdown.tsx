@@ -45,7 +45,7 @@ const ServiceBlock: React.FC<{
       {service.subItems?.map((sub, i) => (
         <li key={i} className="flex flex-col">
           <div className="flex items-start group">
-            <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-slate-50 flex items-center justify-center mr-2 md:mr-3 border border-slate-100 shrink-0 text-slate-600">
+            <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-slate-50 flex items-center justify-center mr-2 md:mr-3 border border-slate-100 shrink-0 text-slate-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
               <IconComponent name={sub.icon} />
             </div>
             <div className="flex flex-col pt-0.5 w-full">
@@ -53,7 +53,7 @@ const ServiceBlock: React.FC<{
                 <Link
                   href={sub.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-[13px] md:text-[14px] font-bold text-slate-800 leading-tight hover:text-blue-600"
+                  className="text-[13px] md:text-[14px] font-bold text-slate-800 leading-tight hover:text-blue-600 transition-colors"
                 >
                   {sub.title}
                 </Link>
@@ -89,10 +89,22 @@ const ServicesDropdown: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // Desktop hover functionality
+  const handleMouseEnter = () => setIsOpen(true);
+  const handleMouseLeave = () => setIsOpen(false);
+
   useEffect(() => {
-    if (isOpen) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "unset";
-  }, [isOpen]);
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, []);
 
   const loanService = services.find((s) => s.title === "Loan");
   const insuranceService = services.find((s) => s.title === "Insurance");
@@ -102,37 +114,46 @@ const ServicesDropdown: React.FC = () => {
   );
 
   return (
-    <div className={`${lexend.className} relative`} ref={containerRef}>
+    <div
+      className={`${lexend.className} flex items-center h-full relative`}
+      ref={containerRef}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center px-4 py-2 font-semibold text-[15px] ${isOpen ? "text-blue-600" : "text-slate-700"}`}
+        className={`flex items-center px-4 py-2 font-semibold text-[15px] transition-colors ${isOpen ? "text-blue-600" : "text-slate-700"}`}
       >
         <span>Services</span>
         <ChevronDown
-          className={`ml-1 w-4 h-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
+          className={`ml-1 w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
 
       {isOpen && (
         <>
-          {/* Overlay for mobile to close */}
+          {/* Mobile Overlay */}
           <div
-            className="fixed inset-0 bg-black/20 z-998 md:hidden"
+            className="fixed inset-0 bg-black/10 z-998 md:hidden"
             onClick={() => setIsOpen(false)}
           />
 
-          <div className="fixed md:absolute left-1/2 -translate-x-1/2 md:translate-x-0 md:left-0 top-[60px] md:top-full w-[92vw] md:w-[850px] lg:w-[1000px] z-999 bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden">
+          {/* FIX: Desktop aur Mobile dono par perfectly center karne ke liye classes:
+            1. 'fixed' viewport ke hisaab se lega.
+            2. 'left-1/2' aur '-translate-x-1/2' se horizontal center hoga.
+          */}
+          <div className="fixed left-1/2 -translate-x-1/2 top-[65px] md:top-[75px] w-[92vw] md:w-[900px] lg:w-[1100px] z-999 bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden">
             {/* Mobile Header */}
             <div className="flex md:hidden items-center justify-between p-4 border-b bg-slate-50">
-              <span className="font-bold text-slate-700">All Services</span>
+              <span className="font-bold text-slate-700">Explore Services</span>
               <X
-                className="w-5 h-5 text-slate-500"
+                className="w-5 h-5 text-slate-500 cursor-pointer"
                 onClick={() => setIsOpen(false)}
               />
             </div>
 
-            <div className="p-5 md:p-8 max-h-[75vh] md:max-h-none overflow-y-auto custom-scrollbar">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+            <div className="p-5 md:p-10 max-h-[80vh] md:max-h-none overflow-y-auto custom-scrollbar">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-10 items-start">
                 {loanService && (
                   <ServiceBlock service={loanService} setIsOpen={setIsOpen} />
                 )}
@@ -146,7 +167,7 @@ const ServicesDropdown: React.FC = () => {
                   />
                 )}
 
-                <div className="flex flex-col space-y-8 md:space-y-12">
+                <div className="flex flex-col space-y-10 md:space-y-12">
                   {otherServices.map((s, idx) => (
                     <ServiceBlock key={idx} service={s} setIsOpen={setIsOpen} />
                   ))}
