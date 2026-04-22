@@ -1,5 +1,4 @@
 "use client";
-import LoanCalculator from "@/app/components/LoanCalculator/LoanCalculator";
 import Image from "next/image";
 import FinancialAdvisoryContent from "./FinancialAdvisoryContent";
 import FinancialPlanningTypes from "./FinancialPlanningTypes";
@@ -44,14 +43,9 @@ export default function CarLoanHero() {
         </div>
       </section>
 
-      {/* --- CALCULATOR SECTION --- */}
-      {/* Mobile par py-40 bahut zyada tha, use py-12 kiya hai */}
-      <section className="bg-white py-40 md:py-40">
-        <LoanCalculator />
-      </section>
 
       {/* --- CONTENT SECTIONS --- */}
-      <section className="bg-white -mt-50 md:py-0">
+      <section className="bg-white mt-50 md:py-0">
         <FinancialAdvisoryContent />
       </section>
       <section className="bg-white">

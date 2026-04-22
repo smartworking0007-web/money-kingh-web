@@ -41,13 +41,13 @@ const row2 = [
     name: "Neha Gupta",
     role: "Homemaker",
     quote: "First time taking a loan — was nervous. Money King made it so simple with fast personal loan approval and polite staff guidance.",
-    image: "/images/Testimonial/6.webp"
+    image: "/images/Testimonial/6.jpeg"
   },
   {
     name: "Sandeep Kumar",
     role: "SME Owner, Rohini",
     quote: "Best decision was choosing Money King for my business expansion loan. Quick documentation check, fast disbursal, and really low pressure.",
-    image: "/images/Testimonial/7.webp"
+    image: "/images/Testimonial/7.jpeg"
   },
   {
     name: "Rajesh",

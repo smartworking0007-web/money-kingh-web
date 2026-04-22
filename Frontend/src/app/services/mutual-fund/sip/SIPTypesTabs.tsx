@@ -147,7 +147,7 @@ export default function SIPTypesTabs() {
           </div>
 
           {/* Right Side: Visual Card */}
-          <div className={`relative rounded-[2rem] p-6 md:p-10 transition-all duration-500 ${current.color} order-1 lg:order-2 shadow-xl`}>
+          <div className={`relative rounded-2rem p-6 md:p-10 transition-all duration-500 ${current.color} order-1 lg:order-2 shadow-xl`}>
              <div className="relative z-10 bg-white rounded-2xl shadow-lg p-6 md:p-8 transform hover:scale-[1.02] transition-transform">
                 <div className="flex justify-between items-center mb-6 border-b border-slate-50 pb-4">
                   <span className="font-black text-slate-800 uppercase tracking-widest text-[10px] md:text-xs">Category: Mutual Funds</span>

@@ -38,7 +38,6 @@ export default function WelcomePopup() {
 
       localStorage.setItem("popupSubmitted", "true");
       setShowPopup(false);
-      // Success message in English
       alert("Thank you! Our experts will get in touch with you shortly.");
     } catch (error) {
       console.error("Firebase Error:", error);
@@ -77,14 +76,15 @@ export default function WelcomePopup() {
 
         {/* Header Section */}
         <div className="bg-slate-900 pt-8 pb-6 text-center text-white px-6">
-          <div className="relative bg-white w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4 overflow-hidden shadow-lg border border-slate-700">
+          {/* Logo Container - Made Bigger (w-20 h-20) */}
+          <div className="relative bg-white w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 overflow-hidden shadow-xl border-2 border-slate-700">
             <Image
               src="/images/logo.svg"
               alt="Money King Logo"
-              width={40}
-              height={40}
+              width={65} // Image width increased
+              height={65} // Image height increased
               priority
-              className="object-contain"
+              className="object-contain p-1"
             />
           </div>
           <Typography
@@ -151,7 +151,11 @@ export default function WelcomePopup() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`w-full mt-6 py-3.5 rounded-lg shadow-xl active:scale-95 transition-all text-slate-900 font-extrabold text-xs uppercase tracking-wider ${isSubmitting ? "bg-slate-200 cursor-not-allowed" : "bg-amber-500 hover:bg-amber-600"}`}
+            className={`w-full mt-6 py-3.5 rounded-lg shadow-xl active:scale-95 transition-all text-slate-900 font-extrabold text-xs uppercase tracking-wider ${
+              isSubmitting
+                ? "bg-slate-200 cursor-not-allowed"
+                : "bg-amber-500 hover:bg-amber-600"
+            }`}
           >
             {isSubmitting ? "Processing..." : "Get Free Consultation"}
           </button>

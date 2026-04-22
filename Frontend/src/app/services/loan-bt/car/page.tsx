@@ -15,7 +15,7 @@ export default function CarLoanHero() {
       <section className="relative w-full overflow-hidden">
         <div className="relative w-full aspect-6/3 sm:aspect-10/9 md:aspect-15/9 lg:aspect-15/6">
           <Image
-            src="/images/bt/car1.jpeg"
+            src="/images/bt/car5.jpeg"
             alt="Car Loan BT"
             fill
             className="object-cover object-right md:object-center transition-all duration-500"

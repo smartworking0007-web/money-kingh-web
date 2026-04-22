@@ -8,11 +8,12 @@ import {
   Home,
   UserCircle,
   PieChart,
-  IndianRupee, // Dollar ki jagah Rupee import kiya
+  IndianRupee,
   Landmark,
   ShieldCheck,
   HeartPulse,
   Sparkles,
+  CreditCard as CardIcon,
 } from "lucide-react";
 
 const lexend = Lexend({ subsets: ["latin"] });
@@ -22,10 +23,11 @@ const IconComponent = ({ name }: { name?: string }) => {
     home: <Home size={16} />,
     user: <UserCircle size={16} />,
     chart: <PieChart size={16} />,
-    coins: <IndianRupee size={16} />, // Yahan CircleDollarSign ko IndianRupee se badal diya
+    coins: <IndianRupee size={16} />,
     bank: <Landmark size={16} />,
     shield: <ShieldCheck size={16} />,
     health: <HeartPulse size={16} />,
+    card: <CardIcon size={16} />,
   };
   return icons[name?.toLowerCase() || ""] || <Sparkles size={16} />;
 };
@@ -34,18 +36,18 @@ const ServiceBlock: React.FC<{
   service: ServiceItem;
   setIsOpen: (val: boolean) => void;
 }> = ({ service, setIsOpen }) => (
-  <div className="flex flex-col space-y-4">
-    <h3 className="text-slate-400 font-bold text-[10px] uppercase tracking-wider border-b border-slate-100 pb-1.5">
+  <div className="flex flex-col space-y-5">
+    <h3 className="text-slate-400 font-bold text-[10px] uppercase tracking-wider border-b border-slate-100 pb-2">
       {service.title}
     </h3>
-    <ul className="space-y-4">
+    <ul className="space-y-6">
       {service.subItems?.map((sub, i) => (
         <li key={i} className="flex flex-col">
           <div className="flex items-start group">
             <div className="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center mr-3 border border-slate-100 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 text-slate-600">
               <IconComponent name={sub.icon} />
             </div>
-            <div className="flex flex-col pt-0.5">
+            <div className="flex flex-col pt-0.5 w-full">
               {sub.href ? (
                 <Link
                   href={sub.href}
@@ -61,13 +63,14 @@ const ServiceBlock: React.FC<{
               )}
 
               {sub.children && (
-                <div className="mt-2 flex flex-col space-y-1.5 pl-3 border-l border-slate-200">
+                /* Gap badhaya gaya hai 'space-y-3' se */
+                <div className="mt-3 flex flex-col space-y-3 pl-4 border-l border-slate-200">
                   {sub.children.map((child, j) => (
                     <Link
                       key={j}
                       href={child.href}
                       onClick={() => setIsOpen(false)}
-                      className="text-[12px] text-slate-500 hover:text-blue-600 transition-colors font-medium block w-full"
+                      className="text-[12px] text-slate-500 hover:text-blue-600 transition-colors font-medium block w-full leading-normal"
                     >
                       {child.title}
                     </Link>
@@ -88,7 +91,10 @@ const ServicesDropdown: React.FC = () => {
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
@@ -101,7 +107,7 @@ const ServicesDropdown: React.FC = () => {
   const btService = services.find((s) => s.title.includes("BT"));
   const mfService = services.find((s) => s.title === "Mutual Fund");
   const stocksService = services.find((s) => s.title === "Stocks");
-  const ccService = services.find((s) => s.title === "Credit Card");
+  const cardService = services.find((s) => s.title === "Card");
 
   return (
     <div
@@ -127,22 +133,37 @@ const ServicesDropdown: React.FC = () => {
           className="fixed left-0 right-0 mx-auto w-[95vw] md:w-full max-w-6xl z-50 shadow-2xl"
           style={{ top: "70px" }}
         >
-          <div className="bg-white border border-slate-200 rounded-2xl p-6 lg:p-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-x-10 gap-y-8 items-start">
-              {/* Column 1: Loan */}
-              {loanService && <ServiceBlock service={loanService} setIsOpen={setIsOpen} />}
-              
-              {/* Column 2: Loan (BT n Top Up) */}
-              {btService && <ServiceBlock service={btService} setIsOpen={setIsOpen} />}
-              
-              {/* Column 3: Insurance */}
-              {insuranceService && <ServiceBlock service={insuranceService} setIsOpen={setIsOpen} />}
-              
-              {/* Column 4: Investment & Others */}
-              <div className="flex flex-col space-y-10">
-                {mfService && <ServiceBlock service={mfService} setIsOpen={setIsOpen} />}
-                {stocksService && <ServiceBlock service={stocksService} setIsOpen={setIsOpen} />}
-                {ccService && <ServiceBlock service={ccService} setIsOpen={setIsOpen} />}
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 lg:p-10">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-x-12 gap-y-10 items-start">
+              {/* Col 1: Main Loans */}
+              {loanService && (
+                <ServiceBlock service={loanService} setIsOpen={setIsOpen} />
+              )}
+
+              {/* Col 2: BT & Top Up Section */}
+              {btService && (
+                <ServiceBlock service={btService} setIsOpen={setIsOpen} />
+              )}
+
+              {/* Col 3: Insurance */}
+              {insuranceService && (
+                <ServiceBlock
+                  service={insuranceService}
+                  setIsOpen={setIsOpen}
+                />
+              )}
+
+              {/* Col 4: MF, Stocks & Cards */}
+              <div className="flex flex-col space-y-12">
+                {mfService && (
+                  <ServiceBlock service={mfService} setIsOpen={setIsOpen} />
+                )}
+                {stocksService && (
+                  <ServiceBlock service={stocksService} setIsOpen={setIsOpen} />
+                )}
+                {cardService && (
+                  <ServiceBlock service={cardService} setIsOpen={setIsOpen} />
+                )}
               </div>
             </div>
           </div>
