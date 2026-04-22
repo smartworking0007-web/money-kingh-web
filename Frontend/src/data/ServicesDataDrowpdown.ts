@@ -40,7 +40,6 @@ export const services: ServiceItem[] = [
       },
     ],
   },
-  /* --- 1. Insurance Section (Now at Top/Second Position) --- */
   {
     title: "Insurance",
     subItems: [
@@ -61,7 +60,6 @@ export const services: ServiceItem[] = [
       },
     ],
   },
-  /* --- 2. Loan (BT n Top Up) Section (Moved Down) --- */
   {
     title: "Loan (BT n Top Up)",
     subItems: [
@@ -96,9 +94,9 @@ export const services: ServiceItem[] = [
     ],
   },
   {
-    title: "Credit Card",
+    title: "Card",
     subItems: [
-      { title: "HDFC", href: "/services/credit/hdfc", icon: "shield" },
+      { title: "Credit Card", href: "/services/credit/hdfc", icon: "card" },
     ],
   },
 ];

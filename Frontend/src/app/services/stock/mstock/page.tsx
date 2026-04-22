@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Typography } from "@/app/components/ui/Typography";
 import { Button } from "@/app/components/ui/Button";
 import StockMarketInvestment from "./StockMarketInvestment";
@@ -12,6 +12,21 @@ import OptionsTools from "./OptionsTools";
 import FAQSection from "./FAQSection";
 
 export default function MStockHeroPage() {
+  // Mobile number state
+  const [mobileNumber, setMobileNumber] = useState("");
+
+  // Redirect function to your link
+  const handleRedirect = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (mobileNumber.length === 10) {
+      const baseUrl = "https://ekyc.mstock.com/Register-with-us?pdc=AE2D3E733";
+      // Redirecting with the number
+      window.location.href = `${baseUrl}&mobile=${mobileNumber}`;
+    } else {
+      alert("Please enter a valid 10-digit mobile number");
+    }
+  };
+
   return (
     <main className="min-h-screen bg-white font-sans overflow-x-hidden">
       {/* --- HERO SECTION --- */}
@@ -85,10 +100,7 @@ export default function MStockHeroPage() {
                   </span>
                 </Typography>
 
-                <form
-                  className="space-y-5 md:space-y-6"
-                  onSubmit={(e) => e.preventDefault()}
-                >
+                <form className="space-y-5 md:space-y-6" onSubmit={handleRedirect}>
                   <div className="relative group">
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2">
                       <span className="text-gray-400 font-bold">+91</span>
@@ -96,6 +108,10 @@ export default function MStockHeroPage() {
                     </div>
                     <input
                       type="tel"
+                      required
+                      maxLength={10}
+                      value={mobileNumber}
+                      onChange={(e) => setMobileNumber(e.target.value.replace(/\D/g, ""))}
                       placeholder="Enter mobile number"
                       className="w-full pl-16 md:pl-20 pr-4 py-3.5 md:py-4 rounded-xl bg-white text-black font-semibold text-base md:text-lg focus:outline-none focus:ring-2 focus:ring-orange-400 shadow-inner"
                     />
@@ -105,6 +121,7 @@ export default function MStockHeroPage() {
                     <input
                       type="checkbox"
                       id="terms"
+                      required
                       className="mt-1 w-4 h-4 accent-orange-500 cursor-pointer"
                     />
                     <label
@@ -116,7 +133,10 @@ export default function MStockHeroPage() {
                     </label>
                   </div>
 
-                  <Button className="w-full bg-[#FF7A00] hover:bg-[#E66E00] text-white font-black py-3.5 md:py-4.5 rounded-xl text-lg md:text-xl transition-all shadow-lg active:scale-95 cursor-pointer">
+                  <Button 
+                    type="submit"
+                    className="w-full bg-[#FF7A00] hover:bg-[#E66E00] text-white font-black py-3.5 md:py-4.5 rounded-xl text-lg md:text-xl transition-all shadow-lg active:scale-95 cursor-pointer"
+                  >
                     Open an Account Now
                   </Button>
                 </form>
@@ -126,7 +146,7 @@ export default function MStockHeroPage() {
         </div>
       </section>
 
-      {/* --- FEATURE HIGHLIGHT BAR (Mobile Responsive) --- */}
+      {/* --- FEATURE HIGHLIGHT BAR --- */}
       <div className="relative z-20 -mt-8 md:-mt-13 px-5 md:px-6">
         <div className="max-w-6xl mx-auto bg-white rounded-2xl md:rounded-3xl shadow-[0_15px_40px_rgba(0,0,0,0.08)] border border-gray-100 p-6 md:p-10">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-0 items-center">
@@ -142,7 +162,7 @@ export default function MStockHeroPage() {
               </p>
             </div>
 
-            <div className="text-center md:border-r gray-100 px-2 py-4 md:py-0 border-t border-b md:border-t-0 md:border-b-0 gray-50">
+            <div className="text-center md:border-r gray-100 px-2 py-4 md:py-0 border-t border-b md:border-t-0 md:border-b-0 bgray-50">
               <p className="text-3xl md:text-4xl font-black text-[#003B73] mb-0.5">
                 ₹0{" "}
                 <span className="text-base md:text-xl font-bold uppercase">
@@ -166,6 +186,7 @@ export default function MStockHeroPage() {
         </div>
       </div>
 
+      {/* --- BAKI SARE SECTIONS --- */}
       <section className="bg-white py-12 md:py-20">
         <StockMarketInvestment />
       </section>
@@ -185,6 +206,7 @@ export default function MStockHeroPage() {
       <section className="bg-white py-12 md:py-20">
         <AssetClasses />
       </section>
+
       <section className="bg-white py-12 md:py-20">
         <OptionsTools />
       </section>

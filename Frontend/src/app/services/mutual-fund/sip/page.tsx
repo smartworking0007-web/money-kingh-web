@@ -9,6 +9,7 @@ import SIPMistakesSection from "./SIPMistakesSection";
 import SIPCalculator from "./SIPCalculator";
 import SIPTypesTabs from "./SIPTypesTabs";
 import SIPDocumentsFAQ from "./SIPDocumentsFAQ";
+import SIPDocuments from "./SIPDocuments";
 
 export default function LoanAgainstPropertyPage() {
   return (
@@ -56,6 +57,9 @@ export default function LoanAgainstPropertyPage() {
       </section>
       <section className="bg-white py-10 md:py-5 ">
         <SIPTypesTabs />
+      </section>
+      <section className="bg-white py-10 md:py-5 ">
+        <SIPDocuments />
       </section>
         <section className="bg-white py-10 md:py-5 ">
         <SIPDocumentsFAQ />
