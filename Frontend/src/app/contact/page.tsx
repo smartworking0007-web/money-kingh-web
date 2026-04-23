@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { db } from "@/lib/firebase"; 
+import { db } from "@/lib/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import Link from "next/link";
-import { Typography } from "@/app/components/ui/Typography"; // Typography component import kiya
+import { Typography } from "@/app/components/ui/Typography";
 import { cn } from "@/app/lib/utils";
+import { Phone, Mail, MapPin, ChevronDown } from "lucide-react";
 
 type FormData = {
   fullName: string;
@@ -23,43 +24,36 @@ export default function ContactPage() {
     email: "",
     course: "",
     message: "",
-    consent: true, 
+    consent: true,
   });
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    const { name, value, type } = e.target;
-    if (type === "checkbox") {
-      const checked = (e.target as HTMLInputElement).checked;
-      setFormData((prev) => ({ ...prev, [name]: checked }));
-    } else {
-      setFormData((prev) => ({ ...prev, [name]: value }));
-    }
+  // Is state se dropdown address change hoga
+  const [selectedBranch, setSelectedBranch] = useState("Noida (HO)");
+
+  const branchOffices: Record<string, string> = {
+    "Noida (HO)": "A-39, 2nd Floor, Sector 63, Noida, Uttar Pradesh 201301",
+    Mumbai:
+      "Office No. 502, 5th Floor, BKC Corporate Tower, Bandra Kurla Complex, Mumbai – 400051",
+    Bangalore:
+      "3rd Floor, Prestige Tech Park, Marathahalli – Sarjapur Ring Road, Bangalore – 560103",
+    Jaipur:
+      "2nd Floor, Pink Square Mall, Govind Marg, Raja Park, Jaipur – 302004",
+    Patna: "4th Floor, Maurya Lok Complex, Dak Bungalow Road, Patna – 800001",
+    Bhopal:
+      "3rd Floor, DB City Corporate Park, MP Nagar Zone-1, Bhopal – 462011",
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.consent) {
-      alert("Please accept the consent to proceed.");
-      return;
-    }
-
     setLoading(true);
-    setSuccess(false);
-
     try {
       await addDoc(collection(db, "contact_forms"), {
         ...formData,
-        fullName: formData.fullName.trim(),
-        phone: formData.phone.trim(),
-        email: formData.email.trim(),
         createdAt: new Date().toISOString(),
       });
-
       setSuccess(true);
       setFormData({
         fullName: "",
@@ -69,153 +63,210 @@ export default function ContactPage() {
         message: "",
         consent: true,
       });
-      alert("Thank you! We will contact you within 24 hours.");
     } catch (error) {
-      console.error("Firebase submission error:", error);
-      alert("Error submitting form. Please check your connection.");
+      console.error(error);
+      alert("Error submitting form.");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      {/* --- Header Section --- */}
-      <section className="bg-blue-50/50 py-16 text-center">
-        <Typography variant="d1" as="h1" className="text-slate-900 m-0! leading-tight">
+    <div className="min-h-screen bg-[#F8FAFC] font-lexend pb-20">
+      <section className="bg-slate-900 py-20 px-6 text-center text-white">
+        <Typography variant="h2" as="h1" className="font-black mb-3">
           Get in Touch
         </Typography>
+        <p className="text-slate-400 max-w-md mx-auto text-sm md:text-base">
+          Experience financial excellence across India. Choose your nearest
+          branch below.
+        </p>
       </section>
 
-      {/* --- Main Content --- */}
-      <section className="max-w-7xl mx-auto px-4 py-12 grid lg:grid-cols-2 gap-12">
-        
-        {/* Left Card: Form */}
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
-          <Typography variant="h4" as="h2" className="text-blue-600 mb-2! mt-0!">
-            Free Financial Consultation
-          </Typography>
-          <Typography variant="b1" className="text-slate-500 mb-8!">
-            Fill out the form below and our counselors will contact you within 24 hours
+      <section className="max-w-6xl mx-auto px-6 -mt-12 grid lg:grid-cols-12 gap-8">
+        {/* LEFT: FORM SECTION */}
+        <div className="lg:col-span-7 bg-white rounded-3xl shadow-xl p-8 md:p-10 border border-slate-100">
+          <Typography variant="h4" className="text-slate-900 font-bold mb-6">
+            Send us a Message
           </Typography>
 
-          {success && (
-            <div className="mb-6 p-4 bg-emerald-50 text-emerald-700 rounded-lg border border-emerald-100 font-medium text-sm">
-              ✓ Form successfully submitted! Our team will reach out soon.
+          {success ? (
+            <div className="p-6 bg-emerald-50 text-emerald-700 rounded-2xl border border-emerald-100 font-bold text-center">
+              ✓ Successfully submitted! We ll call you soon.
             </div>
-          )}
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid sm:grid-cols-2 gap-6">
-              <div className="space-y-1.5">
-                <Typography variant="caption" className="font-bold text-slate-700 uppercase">Full Name *</Typography>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid md:grid-cols-2 gap-5">
                 <input
-                  type="text" name="fullName" value={formData.fullName} onChange={handleChange} required
-                  placeholder="John Doe"
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all"
+                  type="text"
+                  placeholder="Full Name"
+                  required
+                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+                  onChange={(e) =>
+                    setFormData({ ...formData, fullName: e.target.value })
+                  }
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  required
+                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+                  onChange={(e) =>
+                    setFormData({ ...formData, phone: e.target.value })
+                  }
                 />
               </div>
-              <div className="space-y-1.5">
-                <Typography variant="caption" className="font-bold text-slate-700 uppercase">Phone Number *</Typography>
-                <input
-                  type="tel" name="phone" value={formData.phone} onChange={handleChange} required
-                  placeholder="+91 0000000000"
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all"
-                />
-              </div>
-            </div>
-
-            <div className="space-y-1.5">
-              <Typography variant="caption" className="font-bold text-slate-700 uppercase">Email Address *</Typography>
               <input
-                type="email" name="email" value={formData.email} onChange={handleChange} required
-                placeholder="example@mail.com"
-                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all"
+                type="email"
+                placeholder="Email Address"
+                required
+                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
               />
-            </div>
-
-            <div className="space-y-1.5">
-              <Typography variant="caption" className="font-bold text-slate-700 uppercase">Service Interested In</Typography>
               <select
-                name="course" value={formData.course} onChange={handleChange}
-                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all cursor-pointer"
+                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none"
+                onChange={(e) =>
+                  setFormData({ ...formData, course: e.target.value })
+                }
               >
                 <option value="">Select Service</option>
-                <option value="Personal Loan">Personal Loan</option>
-                <option value="Home Loan">Home Loan</option>
-                <option value="Business Loan">Business Loan</option>
+                <option value="Loans">Loans (Personal/Home/Business)</option>
                 <option value="Mutual Funds">Mutual Funds</option>
+                <option value="Insurance">Insurance</option>
               </select>
-            </div>
-
-            <div className="space-y-1.5">
-              <Typography variant="caption" className="font-bold text-slate-700 uppercase">Message (Optional)</Typography>
               <textarea
-                name="message" value={formData.message} onChange={handleChange} rows={3}
-                placeholder="How can we help you?"
-                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none"
-              />
-            </div>
+                placeholder="Your Message"
+                rows={3}
+                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none resize-none"
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
+              ></textarea>
 
-            {/* Consent Checkbox */}
-            <div className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl border border-slate-200">
-              <input
-                type="checkbox" id="consent" name="consent"
-                checked={formData.consent} onChange={handleChange}
-                className="mt-1 h-5 w-5 text-blue-600 rounded border-slate-300 cursor-pointer shrink-0"
-              />
-              <label htmlFor="consent" className="text-[11px] text-slate-500 leading-relaxed cursor-pointer">
-                I consent to receive communications from 
-                <span className="font-bold text-slate-800"> Money King Financial Services Pvt. Ltd.</span> through WhatsApp, SMS, email, and calls. 
-                I agree to the <Link href="/privacy-policy" className="text-blue-600 underline font-bold hover:text-blue-800">Privacy Policy</Link>.
-              </label>
-            </div>
+              <div className="flex items-start gap-3 p-4 bg-blue-50/50 rounded-2xl border border-blue-100">
+                <input
+                  type="checkbox"
+                  checked={formData.consent}
+                  readOnly
+                  className="mt-1"
+                />
+                <p className="text-[11px] text-slate-600">
+                  I agree to receive updates via WhatsApp/Call.{" "}
+                  <Link
+                    href="/privacy-policy"
+                    className="text-blue-600 font-bold"
+                  >
+                    Privacy Policy
+                  </Link>
+                </p>
+              </div>
 
-            <button
-              type="submit" disabled={loading}
-              className={cn(
-                "w-full py-4 text-white font-bold text-lg rounded-xl shadow-lg transition-all shadow-blue-100",
-                loading ? "bg-slate-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700 active:scale-95"
-              )}
-            >
-              {loading ? "Processing..." : "Get Free Consultation"}
-            </button>
-          </form>
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full py-4 bg-blue-600 text-white rounded-2xl font-black uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
+              >
+                {loading ? "Sending..." : "Submit Request"}
+              </button>
+            </form>
+          )}
         </div>
 
-        {/* Right Section: Info */}
-        <div className="space-y-8">
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
-            <Typography variant="h5" as="h3" className="mb-6! mt-0!">Quick Contact</Typography>
-            <div className="space-y-6">
-              <ContactInfoItem icon="📞" label="Call Us" value="+91 7669291199" />
-              <ContactInfoItem icon="✉️" label="Email Us" value="info@moneykingfinancial.com" />
+        {/* RIGHT: ADDRESS DROPDOWN SECTION */}
+        <div className="lg:col-span-5 space-y-6">
+          {/* Contact Details */}
+          <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm space-y-6">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600">
+                <Phone size={20} />
+              </div>
+              <div>
+                <p className="text-[10px] font-bold text-slate-400 uppercase">
+                  Call Us
+                </p>
+                <p className="font-bold text-slate-900">+91 76692 91199</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600">
+                <Mail size={20} />
+              </div>
+              <div>
+                <p className="text-[10px] font-bold text-slate-400 uppercase">
+                  Email
+                </p>
+                <p className="font-bold text-slate-900">
+                  info@moneykingfinancial.com
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
-            <Typography variant="h5" as="h3" className="mb-4! mt-0!">Company Address</Typography>
-            <Typography variant="b1" className="text-slate-600 leading-relaxed m-0!">
-              A-39, 2nd Floor, Sector 63<br />
-              Noida, Uttar Pradesh 201301<br />
-              <span className="font-bold text-slate-900">+91 7669291199</span>
-            </Typography>
+          {/* DYNAMIC ADDRESS CARD (DROPDOWN) */}
+          <div className="bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden">
+            <div className="p-8">
+              <div className="flex items-center gap-2 mb-6">
+                <MapPin size={20} className="text-blue-600" />
+                <Typography variant="h5" className="font-bold text-slate-900">
+                  Find Our Offices
+                </Typography>
+              </div>
+
+              <div className="relative mb-8">
+                <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2 block ml-1">
+                  Select Branch Location
+                </label>
+                <div className="relative">
+                  <select
+                    value={selectedBranch}
+                    onChange={(e) => setSelectedBranch(e.target.value)}
+                    className="w-full appearance-none bg-slate-50 border-2 border-slate-100 rounded-2xl px-5 py-4 font-bold text-slate-700 focus:border-blue-500 focus:bg-white outline-none transition-all cursor-pointer pr-12"
+                  >
+                    {Object.keys(branchOffices).map((city) => (
+                      <option key={city} value={city}>
+                        {city}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown
+                    className="absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"
+                    size={20}
+                  />
+                </div>
+              </div>
+
+              {/* Dynamic Display Area */}
+              <div
+                className={cn(
+                  "p-6 rounded-2xl border-2 transition-all duration-500",
+                  selectedBranch === "Noida (HO)"
+                    ? "bg-blue-600 border-blue-600 text-white shadow-blue-200"
+                    : "bg-slate-50 border-slate-100 text-slate-900",
+                )}
+              >
+                <p
+                  className={cn(
+                    "text-[10px] font-black uppercase tracking-widest mb-2",
+                    selectedBranch === "Noida (HO)"
+                      ? "text-blue-200"
+                      : "text-blue-600",
+                  )}
+                >
+                  {selectedBranch}{" "}
+                  {selectedBranch === "Noida (HO)"
+                    ? "Headquarters"
+                    : "Branch Office"}
+                </p>
+                <p className="font-bold text-sm md:text-base leading-relaxed">
+                  {branchOffices[selectedBranch]}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </div>
   );
 }
-
-// Helper Component for Contact Info
-const ContactInfoItem = ({ icon, label, value }: { icon: string; label: string; value: string }) => (
-  <div className="flex items-center gap-4">
-    <div className="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-xl shadow-xs border border-slate-100">
-      {icon}
-    </div>
-    <div>
-      <Typography variant="caption" className="text-slate-400 font-bold uppercase">{label}</Typography>
-      <Typography variant="s2" className="text-slate-900 font-bold m-0!">{value}</Typography>
-    </div>
-  </div>
-);

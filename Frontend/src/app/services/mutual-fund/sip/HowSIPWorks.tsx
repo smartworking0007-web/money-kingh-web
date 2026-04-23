@@ -118,7 +118,7 @@ const HowSIPWorks = () => {
           </div>
 
           <div className="mt-5 text-center md:mt-10 md:text-left">
-            <Link href="/contact" prefetch={true}>
+            <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply" prefetch={true}>
               <button className="w-full cursor-pointer rounded-xl bg-[#1e293b] px-8 py-3.5 text-base font-bold text-white shadow-xl transition-all hover:bg-[#0f172a] active:scale-95 md:w-auto md:px-12 md:py-4 md:text-xl">
                 Invest Now
               </button>

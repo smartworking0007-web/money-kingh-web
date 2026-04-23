@@ -45,7 +45,7 @@ export default function MachineryLoanHero() {
                 {/* Apply Now Button */}
                 <div className="pt-4">
                   <Link 
-                    href="/contact" // Aapka contact us page ka path
+                   href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply" // Aapka contact us page ka path
                     className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-8 rounded-full text-lg transition-all transform active:scale-95 shadow-lg"
                   >
                     Apply Now

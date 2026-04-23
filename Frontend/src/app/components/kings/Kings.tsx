@@ -67,7 +67,7 @@ export default function MoneyKingSection() {
                 </div>
                 <div>
                   <Typography variant="h5" as="h4" className="mt-0 mb-1 text-gray-900">
-                    2016 Grand Opening
+                    2016 Startup
                   </Typography>
                   <Typography variant="b2" className="text-gray-500">
                     Preparing to set a new benchmark in the financial industry.

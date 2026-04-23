@@ -48,7 +48,7 @@ export default function HomeLoanPage() {
                 Top Up
               </Typography>
 
-              <Link href="/contact" className="w-full md:w-auto">
+              <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply" className="w-full md:w-auto">
                 <button className="w-full md:w-auto bg-white text-[#d73a32] hover:bg-slate-100 px-10 py-3 md:px-14 md:py-4 rounded-xl font-bold text-base md:text-lg transition-all shadow-2xl active:scale-95 cursor-pointer">
                   Avail Now
                 </button>
