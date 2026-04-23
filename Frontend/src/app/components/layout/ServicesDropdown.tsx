@@ -149,7 +149,7 @@ const ServicesDropdown: React.FC = () => {
               <X
                 className="w-5 h-5 text-slate-500 cursor-pointer"
                 onClick={() => setIsOpen(false)}
-              />
+              /> 
             </div>
 
             <div className="p-5 md:p-10 max-h-[80vh] md:max-h-none overflow-y-auto custom-scrollbar">

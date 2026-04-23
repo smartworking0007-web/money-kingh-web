@@ -133,7 +133,7 @@ export default function MachineryLoanBenefits() {
         {/* --- CTA BUTTON --- */}
         <div className="mt-12 md:mt-16">
           <Link
-            href="/contact"
+            href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply"
             className="inline-block px-10 md:px-14 py-4 md:py-5 bg-[#8B1D1D] text-white rounded-2xl font-bold text-sm md:text-lg shadow-2xl hover:bg-red-900 transition-all active:scale-95 uppercase tracking-widest no-underline"
           >
             Unlock Funding Now

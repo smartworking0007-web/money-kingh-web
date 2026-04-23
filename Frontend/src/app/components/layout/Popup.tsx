@@ -50,7 +50,7 @@ export default function WelcomePopup() {
   if (!showPopup) return null;
 
   return (
-    <div className="fixed inset-0 z-9999 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm px-4 pt-12">
+    <div className="fixed inset-0 z-9999 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm px-4 pt-12 font-lexend">
       <div className="relative bg-white rounded-2xl shadow-2xl max-w-sm w-full overflow-hidden border border-slate-100 transform transition-all duration-300 scale-100 animate-in fade-in zoom-in-95">
         {/* Close Button */}
         <button
@@ -75,16 +75,16 @@ export default function WelcomePopup() {
         </button>
 
         {/* Header Section */}
-        <div className="bg-slate-900 pt-8 pb-6 text-center text-white px-6">
-          {/* Logo Container - Made Bigger (w-20 h-20) */}
-          <div className="relative bg-white w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 overflow-hidden shadow-xl border-2 border-slate-700">
+        <div className="bg-slate-900 pt-10 pb-6 text-center text-white px-6">
+          {/* Logo Container - Made Even Bigger (w-28 h-28) */}
+          <div className="relative bg-white w-28 h-28 rounded-3xl flex items-center justify-center mx-auto mb-5 overflow-hidden shadow-2xl border-4 border-slate-700 p-2">
             <Image
               src="/images/logo.svg"
               alt="Money King Logo"
-              width={65} // Image width increased
-              height={65} // Image height increased
+              width={100} // Image width increased
+              height={100} // Image height increased
               priority
-              className="object-contain p-1"
+              className="object-contain"
             />
           </div>
           <Typography
@@ -131,7 +131,7 @@ export default function WelcomePopup() {
                 }
               />
             </div>
-  
+
             <div>
               <label className="block mb-1.5 text-[10px] font-black text-slate-400 uppercase tracking-[1px]">
                 Email Address

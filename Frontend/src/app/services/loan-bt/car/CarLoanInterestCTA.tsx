@@ -30,7 +30,7 @@ export default function CarLoanInterestCTA() {
 
             {/* --- BUTTON --- */}
             <div className="pt-4">
-              <Link href="/contact">
+              <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply">
                 <button className="px-10 py-3.5 md:px-12 md:py-4 bg-[#8B1D1D] text-white rounded-2xl font-black text-sm md:text-lg uppercase tracking-widest shadow-lg hover:bg-red-900 transition-all active:scale-95 cursor-pointer">
                   Know More
                 </button>

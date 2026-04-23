@@ -39,7 +39,7 @@ const MachineryLoanRatesBanner = () => {
 
             {/* --- BUTTONS (Fixed UI) --- */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
-              <Link href="/contact" className="w-full sm:w-auto">
+              <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply" className="w-full sm:w-auto">
                 <button className="w-full sm:w-[200px] bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-bold text-base md:text-lg transition-all duration-300 shadow-lg shadow-blue-500/20 active:scale-95 cursor-pointer border-none outline-none">
                   Apply Now
                 </button>

@@ -16,7 +16,7 @@ export default function HealthInsuranceHero() {
       <section className="relative w-full">
         <div className="relative w-full h-auto">
           <Image
-            src="/images/Become/Become.jpeg"
+            src="/images/Become/Become1.jpeg"
             alt="Be the Partner Everyone Wishes to be"
             width={1920}
             height={800}

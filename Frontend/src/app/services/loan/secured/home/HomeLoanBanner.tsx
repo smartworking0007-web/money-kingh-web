@@ -43,7 +43,10 @@ const HomeLoanBanner = () => {
             {/* --- BUTTONS (Mobile Stack, Desktop Row) --- */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-6">
               {/* Apply Now Button wrapped with Link */}
-              <Link href="/contact" className="w-full sm:w-auto">
+              <Link
+                href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply"
+                className="w-full sm:w-auto"
+              >
                 <button className="w-full bg-[#00C4D8] hover:bg-[#0099ab] text-white px-8 md:px-14 py-3.5 md:py-4 rounded-full font-bold text-base md:text-lg transition-all duration-300 shadow-lg shadow-cyan-500/20 active:scale-95 cursor-pointer">
                   Apply Now
                 </button>

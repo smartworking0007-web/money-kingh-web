@@ -163,7 +163,7 @@ export default function CarLoanApplySteps() {
 
             <div className="pt-4 flex justify-center lg:justify-start">
               <Link
-                href="/contact"
+                href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply"
                 className="flex items-center gap-2 text-[#8B1D1D] font-bold hover:gap-3 transition-all text-sm md:text-base"
               >
                 Start Step {current.id} Now <ArrowRight size={18} />

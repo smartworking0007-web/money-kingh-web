@@ -28,6 +28,11 @@ const partners = [
     role: "Sales Manager",
     image: "/images/Founders/Picture5.png",
   },
+  {
+    name: "Amit",
+    role: "Chief Sales Officer",
+    image: "/images/Founders/Amit1.jpeg",
+  },
 ];
 
 const FinancialPartners = () => {

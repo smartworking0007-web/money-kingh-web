@@ -50,7 +50,7 @@ export default function LoanAgainstPropertyPage() {
               Enjoy long tenures up to 20 years.
             </Typography>
 
-            <Link href="/contact">
+            <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply">
               <Button
                 size="lg"
                 className="bg-[#004687]! rounded-xl! h-12! md:h-14! px-8! md:px-10! shadow-lg! cursor-pointer"

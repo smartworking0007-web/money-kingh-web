@@ -52,7 +52,10 @@ export default function CarLoanPage() {
               {data.description}
             </Typography>
 
-            <Link href="/contact" passHref>
+            <Link
+              href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply"
+              passHref
+            >
               <Button
                 size="lg"
                 className="bg-[#96395e] hover:bg-[#831441] text-white border-none shadow-lg cursor-pointer transition-transform hover:scale-105"
