@@ -74,7 +74,7 @@ export default function Navbar() {
               </Link>
 
               <Link
-                href="https://ekyc.mstock.com/Register-with-us?pdc=AE2D3E733"
+                href="/services/stock/mstock"
                 className="px-2 xl:px-5 h-full flex items-center group"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -88,7 +88,7 @@ export default function Navbar() {
               </Link>
 
               <Link
-                href="/services/stock/mstock"
+                href="/partner"
                 className="px-2 xl:px-5 h-full flex items-center group"
               >
                 <Typography
