@@ -73,15 +73,15 @@ const ApplyLAPLoan = () => {
         <div className="relative z-10 md:col-span-7 order-1 md:order-2">
           <div className="mb-6 md:mb-10 text-center md:text-left">
             <Typography
-              variant="h3"
+              variant="h4"
               as="h3"
               className="mb-3 mt-0! text-2xl font-bold tracking-tight text-[#1e293b] md:text-5xl leading-tight"
             >
               How To Apply For A LAP Loan
             </Typography>
             <Typography
-              variant="h5"
-              as="h5"
+              variant="b1"
+              as="h3"
               className="mt-0! text-[13px] font-normal text-gray-500 md:text-xl leading-relaxed"
             >
               Follow this step-by-step guide when applying for a housing loan from Money King.
@@ -102,7 +102,7 @@ const ApplyLAPLoan = () => {
               className="duration-700 animate-in fade-in slide-in-from-bottom-5"
             >
               <Typography
-                variant="h5"
+                variant="b1"
                 as="h4"
                 className="mb-2 mt-0! text-lg font-bold text-[#0f172a] md:mb-4 md:text-4xl"
               >

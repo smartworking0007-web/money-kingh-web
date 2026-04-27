@@ -16,7 +16,6 @@ import LoanFAQ from "./LoanFAQ";
 import { AboutTestimonialCard } from "@/app/about/AboutTestimonialCard";
 import FinancialPartners from "@/app/components/FinancialPartners/FinancialPartners";
 
-
 export default function PersonalLoanPage() {
   const features = [
     {
@@ -86,7 +85,7 @@ export default function PersonalLoanPage() {
                   emergencies, or debt consolidation.
                 </Typography>
               </div>
-              
+
               {/* Vertical Features List */}
               <div className="space-y-10 mt-12">
                 {features.map((item, i) => (
@@ -148,21 +147,43 @@ export default function PersonalLoanPage() {
       {/* Yahan 'space-y-16' ya 'space-y-24' ka use karke components ke beech gap add kiya gaya hai.
           'mb-20' ensure karega ki page ke end mein bhi thodi jagah rahe.
       */}
-      <section className="flex flex-col space-y-20 md:space-y-0 mb-20">
-        <TrustBar />
-        <LoanCalculator />
-        <LoanOffers />
-        <LoanFeatures />
-        <LoanSlider />
-        <Financial />
-        <Eligibility />
-        <LoanTypes />
-        <LoanCharges />
-        <AboutTestimonialCard />
-        <FinancialPartners />
 
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
+        <TrustBar />
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-40 md:py-40 -mt-10 md:-mt-10">
+        <LoanCalculator />
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-45 md:-mt-40">
+        <LoanOffers />
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-20">
+        <LoanFeatures />
+      </div>
+      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-45">
+        <LoanSlider />
+      </div>
+      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-28 md:-mt-45">
+        <Financial />
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
+        <Eligibility />
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-15 md:-mt-40">
+        <LoanTypes />
+      </div>
+      <div className="relative z-20 bg-white space-y-0 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-40">
+        <LoanCharges />
+      </div>
+      <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-30 md:-mt-45">
+        <AboutTestimonialCard />
+      </div>
+      <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-35">
+        <FinancialPartners />
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-25 md:-mt-35">
         <LoanFAQ />
-      </section>
+      </div>
     </main>
   );
 }

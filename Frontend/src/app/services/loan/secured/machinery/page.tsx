@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { CheckCircle2 } from "lucide-react";
 import { Typography } from "@/app/components/ui/Typography";
 import LoanCalculator from "@/app/components/LoanCalculator/LoanCalculator";
 import FinancialPartners from "@/app/components/FinancialPartners/FinancialPartners";
@@ -32,37 +31,42 @@ export default function MachineryLoanPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden">
         {/* Background Image Section */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/Machinery/Machinery.jpeg"
             alt="Background"
             fill
-            className="object-cover object-center brightness-[0.7]"
+            // MOBILE FIX: object-[20%_center] mobile par image ko left shift karega
+            // md:object-center web par pehle jaisa hi rakhega
+            className="object-cover object-[80%_center] md:object-center brightness-[0.7]"
             priority
           />
-          <div className="absolute inset-0 bg-black/40"/>
+          {/* Mobile par overlay thoda strong kiya hai taaki text saaf dikhe */}
+          <div className="absolute inset-0 bg-black/50 md:bg-black/40" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-24 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-8">
+            <div className="lg:col-span-10">
               <Typography
                 variant="h1"
                 as="h1"
-                className="text-4xl md:text-6xl font-bold mb-6 text-white"
+                // text-3xl! se mobile heading handle hogi, md:text-6xl! desktop ke liye
+                className="text-white font-bold! text-3xl! md:text-6xl! mb-6 mt-0! leading-tight!"
               >
                 {data.title || " "}
               </Typography>
 
               <Typography
                 variant="b1"
-                className="text-white/90 mb-10 text-lg md:text-xl max-w-2xl"
+                className="text-white/90 mb-10 text-base md:text-xl max-w-2xl mt-0!"
               >
                 {data.description || " "}
               </Typography>
 
+              {/* Stats & Features agar data hai toh... */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
                 {data.stats.map((stat, i) => (
                   <div
@@ -79,72 +83,47 @@ export default function MachineryLoanPage() {
                   </div>
                 ))}
               </div>
-
-              {/* Features */}
-              <div className="flex flex-wrap gap-3">
-                {data.features.map((feature, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full"
-                  >
-                    <CheckCircle2 className="w-4 h-4 text-green-400" />
-                    <span className="text-sm font-semibold text-white">
-                      {feature}
-                    </span>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <div className="relative z-20 bg-white space-y-24 pb-24">
+      {/* Content Sections */}
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-15">
         <MachineryLoanInfo />
       </div>
-
-      <div className="relative z-20 bg-white space-y-24 pb-24">
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-15">
         <LoanCalculator />
       </div>
-
-      <div className="relative z-20 bg-white space-y-30 pb-0">
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 -py-10 -md:py-10">
         <MachineryFeatures />
       </div>
-
-      <div className="relative z-20 bg-white space-y-10 pb-0">
-        <div className="-mt-5">
-          {" "}
-          {/* Ye space-y-10 ke effect ko cancel kar dega */}
-          <MachineryEligibility />
-        </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-30">
+        <MachineryEligibility />
       </div>
 
-      <div className="relative z-20 bg-white space-y-10 pb-10">
+      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-50">
         <DocumentsAccordionPage />
       </div>
 
-      <div className="relative z-20 bg-white space-y-10 pb-10">
+      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-30">
         <MachineryProcess />
       </div>
 
-      {/* space-y-6 mobile ke liye, space-y-50 desktop ke liye */}
-      <div className="relative z-20 bg-white space-y-10 md:space-y-50 pb-6 md:pb-10">
+      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-50">
         <MachineryLoanRatesBanner />
-        {/* Agla component yahan aayega */}
       </div>
 
-      <div className="relative z-20 bg-white space-y-10 pb-10">
+      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-50">
         <ProductSegmentation />
       </div>
 
-      
-
-      <div className="relative z-20 bg-white space-y-24 pb-24">
+      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-50">
         <FinancialPartners />
       </div>
 
-      <div className="relative z-20 bg-white space-y-10 pb-10">
-        <MachineryFAQ  />
+      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-35">
+        <MachineryFAQ />
       </div>
     </main>
   );

@@ -39,7 +39,7 @@ export default function LAPDocuments() {
 
   return (
     // -mt-10 aur pt-0 se web aur mobile dono pe ye aur upar chala jayega
-    <div className="max-w-7xl mx-auto px-4 md:px-12 pt-0 pb-10 font-lexend bg-white relative z-20 -mt-10 md:-mt-12">
+    <div className="max-w-7xl mx-auto px-4 md:px-12 pt-0 pb-15 font-lexend bg-white relative z-20 -mt-10 md:-mt-35">
       
       {/* --- TOP SECTION --- */}
       <div className="mb-6 md:mb-10 text-center md:text-left">

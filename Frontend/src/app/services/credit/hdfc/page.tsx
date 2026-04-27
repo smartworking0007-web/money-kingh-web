@@ -47,7 +47,7 @@ export default function LoanAgainstPropertyPage() {
               and brand offers.
             </Typography>
 
-            <Link href="/contact">
+            <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply">
               <Button
                 size="lg"
                 className="bg-[#004687]! rounded-xl! h-12! md:h-14! px-8! md:px-10! shadow-lg! cursor-pointer"
@@ -70,7 +70,7 @@ export default function LoanAgainstPropertyPage() {
         <ApplyStepSection />
       </section>
 
-       <section className="bg-white py-10 md:py-5 ">
+       <section className="bg-white py-0 md:py-5 ">
         <CreditCardDocuments />
       </section>
 

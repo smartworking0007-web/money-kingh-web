@@ -20,91 +20,99 @@ export default function LoanAgainstPropertyPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* --- HERO SECTION --- */}
-      <section className="relative w-full h-[500px] md:h-[600px] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/laplon/lapa.jpeg"
-            alt="Loan Against Property"
-            fill
-            className="object-cover object-right"
-            priority
-          />
-          <div className="absolute inset-0 bg-linear-to-r from-white via-white/95 to-transparent md:via-white/40" />
-        </div>
+      <section className="relative w-full overflow-hidden">
+        {/* Mobile: aspect-square (1:1) ya [4/5] use karne se image ki height achhi dikhegi aur bande nahi katenge */}
+        <div className="relative w-full aspect-5/5 md:aspect-none md:h-[600px] flex items-center">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/laplon/lapa.jpeg"
+              alt="Loan Against Property"
+              fill
+              // object-[75%] mobile par image ko thoda right khiskayega taki log frame mein aayein
+              className="object-cover object-[97%_center] md:object-right transition-all duration-500"
+              priority
+            />
+            {/* Mobile Gradient: Niche se upar black shadow taki white text dikhe */}
+            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent md:bg-linear-to-r md:from-black/60 md:via-transparent md:to-transparent" />
+          </div>
 
-        <div className="container mx-auto px-10 md:px-20 relative z-10">
-          <div className="max-w-[85%] md:max-w-2xl">
-            <Typography
-              variant="h1"
-              as="h1"
-              className="text-[#004687]! text-3xl! md:text-7xl! font-extrabold! mb-4! mt-0! leading-tight!"
-            >
-              Loan Against <br className="md:hidden" /> Property
-            </Typography>
-
-            <Typography
-              variant="s1"
-              as="p"
-              className="text-slate-700! text-lg! md:text-2xl! mb-8! mt-0! font-medium!"
-            >
-              Enjoy long tenures up to 20 years.
-            </Typography>
-
-            <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply">
-              <Button
-                size="lg"
-                className="bg-[#004687]! rounded-xl! h-12! md:h-14! px-8! md:px-10! shadow-lg! cursor-pointer"
+          <div className="container mx-auto px-6 md:px-20 relative z-10 mt-auto pb-12 md:pb-0 md:mt-0">
+            <div className="max-w-full md:max-w-2xl">
+              <Typography
+                variant="h1"
+                as="h1"
+                className="text-white! text-4xl! md:text-7xl! font-extrabold! mb-3! mt-0! leading-[1.1]! drop-shadow-lg"
               >
-                APPLY NOW
-              </Button>
-            </Link>
+                Loan Against <br /> Property
+              </Typography>
+
+              <Typography
+                variant="s1"
+                as="p"
+                className="text-white! text-lg! md:text-2xl! mb-8! mt-0! font-medium! drop-shadow-md"
+              >
+                Enjoy long tenures up to 20 years.
+              </Typography>
+
+              <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply">
+                <Button
+                  size="lg"
+                  className="bg-[#004687]! hover:bg-[#003566]! rounded-xl! h-12! md:h-14! px-10! shadow-xl! cursor-pointer border-none!"
+                >
+                  APPLY NOW
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      <div className="py-15">
+      {/* --- CONTENT SECTIONS --- */}
+
+      <div className="py-10 md:py-10">
         <LoanAgainstPropertyContent />
       </div>
 
-      <div className="-mt-25 md:-mt-15 relative z-20">
+      {/* Spacing adjustments to prevent overlapping on mobile */}
+      <div className="-mt-15 md:-mt-10 pb-10 md:pb-10 relative z-20">
         <LAPFeaturesBenefits />
       </div>
 
-      <div className="py-40">
+      <div className="py-16 md:py-32 bg-gray-50/50">
         <LoanCalculator />
       </div>
 
-      <div className="-mt-35 md:-mt-40 relative z-20">
+      <div className="-mt-15 md:-mt-30 pb-16 md:pb-28 relative z-20">
         <TypesOfLAPLoans />
       </div>
 
-      <div className="-mt-35 md:-mt-40 relative z-20">
+      <div className="-mt-20 md:-mt-40 pb-16 md:pb-28 relative z-20">
         <LAPLoanBanner />
       </div>
 
-      <div className="mt-0! relative z-20">
+      <div className="-mt-15 md:-mt-30 pb-16 md:pb-28 relative z-20">
         <LAPLoanCharges />
       </div>
-      <div className="mt-0! relative z-20">
+
+      <div className="-mt-15 md:-mt-30 pb-16 md:pb-28 relative z-20">
         <LAPLoanEligibility />
       </div>
-      <div className="mt-0! relative z-20">
+
+      <div className="-mt-15 md:-mt-30 pb-16 md:pb-28 relative z-20">
         <LAPLoanDocuments />
       </div>
 
-      <div className="mt-0! relative z-20">
+      <div className="-mt-15 md:-mt-30 pb-16 md:pb-28 relative z-20">
         <ApplyLAPLoan />
       </div>
 
-      <div className="mt-0! relative z-20">
+      <div className="-mt-15 md:-mt-30 pb-16 md:pb-28 relative z-20">
         <LAPLoanConsiderations />
       </div>
 
-      <div className="mt-0! relative z-20">
+      <div className="-mt-20 md:-mt-45 pb-16 md:pb-28 relative z-20">
         <LAPLoanFAQ />
       </div>
-
-     
     </main>
   );
 }

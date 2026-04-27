@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import { Typography } from "@/app/components/ui/Typography";
-import { Button } from "@/app/components/ui/Button";
 
 export default function GoldLoanRates() {
   return (
@@ -34,7 +33,7 @@ export default function GoldLoanRates() {
                 Interest Rate & Charges
               </Typography>
             </div>
-            <Link href="/contact">
+            <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply">
             
             </Link>
           </div>

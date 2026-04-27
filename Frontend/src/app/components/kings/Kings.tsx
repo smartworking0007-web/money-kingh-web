@@ -15,7 +15,7 @@ export default function MoneyKingSection() {
             
             <div className="relative z-10 flex justify-center">
               <Image
-                src="/images/your-image.jpeg" 
+                src="/images/your.jpeg" 
                 alt="Money King Financial Services"
                 width={600}
                 height={500}

@@ -61,15 +61,18 @@ export default function HeroSlider() {
                   {/* BUTTONS SECTION */}
                   <div className="flex flex-col sm:flex-row gap-5">
                     {/* 2. Wrap Button with Next.js Link */}
-                    <Link href={slide.contactLink} className="contents">
-                      <button className="bg-white px-10 py-4 rounded-full transition-all hover:scale-105 active:scale-95 shadow-2xl group cursor-pointer">
-                        <Typography
-                          variant="btn-primary"
-                          className="text-black font-bold!"
-                        >
-                          Book a Consultation
-                        </Typography>
-                      </button>
+                    <Link
+                      href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white px-10 py-4 rounded-full transition-all hover:scale-105 active:scale-95 shadow-2xl group cursor-pointer inline-flex items-center justify-center"
+                    >
+                      <Typography
+                        variant="btn-primary"
+                        className="text-black font-bold!"
+                      >
+                        Book a Consultation
+                      </Typography>
                     </Link>
                   </div>
                 </div>

@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import { Typography } from "@/app/components/ui/Typography";
 import { motion, AnimatePresence } from "framer-motion";
@@ -17,6 +16,7 @@ const faqData = [
     question: "How is the loan amount calculated?",
     answer: "The loan amount depends on the purity of the gold, its total weight, and the current market value per gram.",
   },
+
   {
     question: "Is my gold safe?",
     answer: "Yes, your gold is stored securely in bank-grade, insured vaults with advanced 24/7 security surveillance.",

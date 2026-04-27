@@ -35,7 +35,7 @@ export default function PersonalLoanBTSteps() {
       contactSection.scrollIntoView({ behavior: "smooth" });
     } else {
       // Agar contact section is page pe nahi hai, toh seedha contact us page par bhej do
-      window.location.href = "/contact";
+      window.location.href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply";
     }
   };
 

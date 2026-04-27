@@ -31,10 +31,10 @@ export default function CarLoanTypes() {
     <section className="max-w-7xl mx-auto px-6 py-16 md:py-24 ">
       {/* Meta Header */}
       <div className="mb-5 pb-5">
-        <Typography variant="h4" as="h3" className="mb-5">
+        <Typography variant="h5" as="h5" className="mb-5">
           Types of Car Loans in India
         </Typography>
-        <Typography variant="h5" as="p" className=" max-w-5xl">
+        <Typography variant="s2" as="p" className=" max-w-5xl">
           Car loans in India are available in different types to suit various
           financial needs and customer profiles. Whether you are buying a new
           vehicle, a pre-owned car, or need urgent funds, there is a suitable

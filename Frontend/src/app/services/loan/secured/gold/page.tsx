@@ -51,7 +51,7 @@ export default function GoldLoanPage() {
               Safe, secure & quick gold loans for your various needs.
             </Typography>
 
-            <Link href="/contact">
+            <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply">
               <Button
                 size="lg"
                 className="bg-[#004687]! hover:bg-[#003566]! rounded-xl! h-12! md:h-14! px-8! md:px-10! shadow-lg! cursor-pointer transition-colors"

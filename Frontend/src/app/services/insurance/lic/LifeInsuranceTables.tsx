@@ -75,7 +75,7 @@ export default function LifeInsuranceTables() {
                     <td className="p-3 md:p-4 text-center">
                       {/* URL ko /contact kar diya hai */}
                       <Link 
-                        href="/contact" 
+                        href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply" 
                         className="inline-block bg-blue-600 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-md text-[10px] md:text-sm font-bold hover:bg-blue-700 transition-all"
                       >
                         Apply Now

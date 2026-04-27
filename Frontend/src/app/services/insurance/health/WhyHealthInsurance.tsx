@@ -104,7 +104,7 @@ export default function WhyHealthInsurance() {
 
         {/* --- CTA BUTTON --- */}
         <div className="text-center">
-          <Link href="/contact" className="inline-block">
+          <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply" className="inline-block">
             <button className="px-8 py-2.5 md:py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-[10px] md:text-sm shadow-lg shadow-blue-200 transition-all active:scale-95 uppercase tracking-wide">
               Buy Online Now
             </button>

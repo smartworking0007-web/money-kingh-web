@@ -45,14 +45,14 @@ const LAPLoanDocuments = () => {
         {/* --- HEADER --- */}
         <div className="mb-8">
           <Typography
-            variant="h3"
+            variant="h4"
             as="h3"
             className="text-[#1e293b] font-bold text-[28px] md:text-[36px] mb-3 mt-0! tracking-tight"
           >
             Documents Required for a LAP Loan
           </Typography>
           <Typography
-            variant="h5"
+            variant="b1"
             as="h5"
             className="text-gray-500 text-base md:text-[18px] mb-6 mt-0! font-normal leading-relaxed"
           >

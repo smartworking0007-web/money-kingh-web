@@ -1,2 +1,29 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+/* --- MOBILE OVERFLOW FIX --- */
+@layer base {
+  html, 
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    /* Isse mobile par page side mein nahi khiskega */
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  main {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Swiper ya Marquee ke liye extra safety */
+  .overflow-hidden-safe {
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+
+/* Agar aapne fonts define kiye hain toh wo yahan niche aayenge */

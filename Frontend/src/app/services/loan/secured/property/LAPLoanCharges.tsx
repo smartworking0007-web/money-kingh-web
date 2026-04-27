@@ -48,7 +48,7 @@ const LAPLoanCharges = () => {
         {/* --- HEADER SECTION --- */}
         <div className="mb-8">
           <Typography
-            variant="h3"
+            variant="h4"
             as="h3"
             className="text-[#1e293b] font-bold text-[24px] md:text-[32px] mb-2 tracking-tight mt-0!"
           >
@@ -56,7 +56,7 @@ const LAPLoanCharges = () => {
           </Typography>
 
           <Typography
-            variant="h5"
+            variant="b1"
             as="h5"
             className="text-gray-500 text-sm md:text-lg font-normal mt-0!"
           >

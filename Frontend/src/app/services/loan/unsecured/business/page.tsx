@@ -142,23 +142,45 @@ export default function BusinessLoanPage() {
       </section>
 
       {/* --- CONTENT COMPONENTS AREA --- */}
-      <section className="flex flex-col space-y-8 md:space-y-0 mb-20">
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-30 -mt-10 md:-mt-24">
         <TrustBar />
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-35 mt-20 md:-mt-10">
         <LoanCalculator />
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-10 -mt-10 md:-mt-30">
         <LoanOffers />
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-20">
         <AboutBusinessLoan />
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-25 -mt-10 md:-mt-30">
         <BusinessLoanFeatures />
+      </div>
+      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-10 -mt-30 md:-mt-40">
         <LoanSlider />
-        
+      </div>
+      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-30">
         <Financial />
+      </div>
+      <div className="relative z-20  space-y-10 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
         <Eligibility />
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
         <BusinessLoanKnowledgeBase />
+      </div>
+      <div className="relative z-20  space-y-10 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-40">
         <GovtLoanSchemes />
-
+      </div>
+      <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-50">
         <AboutTestimonialCard />
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
         <FinancialPartners />
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
         <LoanFAQ />
-      </section>
+      </div>
     </main>
   );
 }
