@@ -30,13 +30,13 @@ export default function ContactPage() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  // Is state se dropdown address change hoga
-  const [selectedBranch, setSelectedBranch] = useState("Noida (HO)");
+  // Default selection Mumbai (HO)
+  const [selectedBranch, setSelectedBranch] = useState("Mumbai (HO)");
 
   const branchOffices: Record<string, string> = {
-    "Noida (HO)": "A-39, 2nd Floor, Sector 63, Noida, Uttar Pradesh 201301",
-    Mumbai:
+    "Mumbai (HO)":
       "Office No. 502, 5th Floor, BKC Corporate Tower, Bandra Kurla Complex, Mumbai – 400051",
+    Noida: "A-39, 2nd Floor, Sector 63, Noida, Uttar Pradesh 201301",
     Bangalore:
       "3rd Floor, Prestige Tech Park, Marathahalli – Sarjapur Ring Road, Bangalore – 560103",
     Jaipur:
@@ -78,8 +78,8 @@ export default function ContactPage() {
           Get in Touch
         </Typography>
         <p className="text-slate-400 max-w-md mx-auto text-sm md:text-base">
-          Experience financial excellence across India. Choose your nearest
-          branch below.
+          Experience financial excellence at our Mumbai Headquarters and
+          branches nationwide.
         </p>
       </section>
 
@@ -126,7 +126,7 @@ export default function ContactPage() {
                 }
               />
               <select
-                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none"
+                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none cursor-pointer"
                 onChange={(e) =>
                   setFormData({ ...formData, course: e.target.value })
                 }
@@ -174,9 +174,8 @@ export default function ContactPage() {
           )}
         </div>
 
-        {/* RIGHT: ADDRESS DROPDOWN SECTION */}
+        {/* RIGHT: ADDRESS SECTION */}
         <div className="lg:col-span-5 space-y-6">
-          {/* Contact Details */}
           <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm space-y-6">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600">
@@ -204,19 +203,18 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* DYNAMIC ADDRESS CARD (DROPDOWN) */}
           <div className="bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden">
             <div className="p-8">
               <div className="flex items-center gap-2 mb-6">
                 <MapPin size={20} className="text-blue-600" />
                 <Typography variant="h5" className="font-bold text-slate-900">
-                  Find Our Offices
+                  Our Headquarters
                 </Typography>
               </div>
 
               <div className="relative mb-8">
                 <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2 block ml-1">
-                  Select Branch Location
+                  Select Location
                 </label>
                 <div className="relative">
                   <select
@@ -237,11 +235,10 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Dynamic Display Area */}
               <div
                 className={cn(
                   "p-6 rounded-2xl border-2 transition-all duration-500",
-                  selectedBranch === "Noida (HO)"
+                  selectedBranch === "Mumbai (HO)"
                     ? "bg-blue-600 border-blue-600 text-white shadow-blue-200"
                     : "bg-slate-50 border-slate-100 text-slate-900",
                 )}
@@ -249,15 +246,12 @@ export default function ContactPage() {
                 <p
                   className={cn(
                     "text-[10px] font-black uppercase tracking-widest mb-2",
-                    selectedBranch === "Noida (HO)"
+                    selectedBranch === "Mumbai (HO)"
                       ? "text-blue-200"
                       : "text-blue-600",
                   )}
                 >
-                  {selectedBranch}{" "}
-                  {selectedBranch === "Noida (HO)"
-                    ? "Headquarters"
-                    : "Branch Office"}
+                  {selectedBranch}
                 </p>
                 <p className="font-bold text-sm md:text-base leading-relaxed">
                   {branchOffices[selectedBranch]}
