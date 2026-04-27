@@ -161,10 +161,10 @@ const Footer = () => {
             <Typography variant="h5" className="text-white font-black uppercase text-sm">
               Money King Financial Services PVT. LTD.
             </Typography>
-            <Typography variant="caption" className="text-gray-500 text-[9px]">
+            <Typography variant="b2" className="text-white text-[9px]">
               © {new Date().getFullYear()} All Rights Reserved.
             </Typography>
-              <Typography variant="caption" className="text-gray-500 text-[9px]">
+              <Typography variant="b2" className="text-white text-[9px]">
               Mutual Fund investments are subject to market risks, read all scheme related documents carefully
             </Typography>
           </div>
