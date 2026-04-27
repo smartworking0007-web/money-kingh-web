@@ -14,32 +14,33 @@ import SIPDocuments from "./SIPDocuments";
 export default function LoanAgainstPropertyPage() {
   return (
     <main className="min-h-screen bg-white">
-      {/* --- HERO SECTION (ONLY IMAGE) --- */}
-      <section className="relative w-full h-[350px] md:h-[550px] lg:h-[700px]">
+      {/* --- HERO SECTION --- */}
+      {/* Mobile height 450px rakhi hai taaki image clear dikhe */}
+      <section className="relative w-full h-[500px] md:h-[550px] lg:h-[750px] overflow-hidden">
         
         {/* Background Image Container */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/Sip/sip.jpeg"
+            src="/images/Sip/sip3.jpeg"
             alt="SIP Investment Banner"
             fill
-            // MOBILE FIX: 'object-center' mobile par image ko beech mein rakhega
-            // 'md:object-right' laptop par image ko side mein rakhega
-            className="object-cover object-[100%_center] md:object-right transition-all duration-700"
+            // MOBILE: object-[75%] se main content center-right mein shift hoga
+            // DESKTOP: object-right se design balance rahega
+            className="object-cover object-[75%_center] md:object-right transition-all duration-700"
             priority
             quality={100}
           />
           
-          {/* Halka sa gradient taaki transition smooth lage niche wale section ke saath */}
-          <div className="absolute inset-0 bg-linear-to-t from-white/20 to-transparent" />
+          {/* Transition Gradient (Tailwind v4 syntax compliant) */}
+          <div className="absolute inset-0 bg-linear-to-t  via-white/5 to-transparent" />
         </div>
       </section>
 
       {/* --- CONTENT WRAPPER --- */}
-      {/* Laptop par negative margin se ye upar chala jayega, mobile par flat rahega */}
-      <div className="relative z-20 bg-white md:-mt-16 rounded-t-32px md:rounded-t-none">
+      {/* -mt-10 mobile par aur -mt-20 desktop par design ko image ke upar float karwayega */}
+      <div className="relative z-20 bg-white -mt-10 md:-mt-20 rounded-t-[40px] md:rounded-t-none">
         
-        <section className="py-10 md:py-14">
+        <section className="py-12 md:py-16">
           <SIPMutualFundContent />
         </section>
         
@@ -47,7 +48,8 @@ export default function LoanAgainstPropertyPage() {
           <SIPBenefits />
         </section>
         
-        <section className="-mt-30 md:py-14">
+        {/* Spacing Fix: Mobile par negative margins overlap kar rahe the, unhe clean kiya hai */}
+        <section className="py-10 md:py-14 bg-slate-50/50">
           <SIPAccordionBenefits />
         </section>
         
@@ -55,23 +57,26 @@ export default function LoanAgainstPropertyPage() {
           <HowSIPWorks />
         </section>
         
-        <section className="py-10 md:py-14">
+        <section className="py-10 md:py-14 bg-slate-50/50">
           <SIPMistakesSection />
         </section>
         
         <section className="py-10 md:py-14">
-          <SIPCalculator />
+          <div className="max-w-7xl mx-auto px-4">
+            <SIPCalculator />
+          </div>
         </section>
         
         <section className="py-10 md:py-14">
           <SIPTypesTabs />
         </section>
         
-        <section className="-mt-10 md:py-14">
+        {/* Document section spacing reset */}
+        <section className="py-10 md:py-14">
           <SIPDocuments />
         </section>
         
-        <section className="-mt-20 md:py-14 pb-24">
+        <section className="py-10 md:py-14 pb-24">
           <SIPDocumentsFAQ />
         </section>
         
