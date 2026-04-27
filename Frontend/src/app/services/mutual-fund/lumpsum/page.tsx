@@ -11,55 +11,46 @@ export default function LumpsumInvestmentPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* --- HERO SECTION --- */}
-      {/* Mobile par h-[400px] fix kiya hai aur Laptop par 600px tak */}
-      <section className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] flex items-center overflow-hidden">
+      {/* Desktop height thodi badhayi hai taaki image ka laptop part cut na ho */}
+      <section className="relative w-full h-[300px] md:h-[400px] lg:h-[1000px] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/lumsum/lumpsum.jpg"
+            src="/images/lumsum/lumsum2.png"
             alt="Lumpsum Investment"
             fill
-            // object-[75%] se mobile par image ka main subject (coins/investment) center mein dikhega
-            className="object-cover object-[75%_center] md:object-right transition-all duration-500"
+            // DESKTOP FIX: 'object-bottom' laptop screen ko frame ke upar rakhega
+            // MOBILE FIX: 'object-[80%]' subject (person + laptop) ko frame mein layega
+            className="object-cover object-[80%_center] md:object-bottom transition-all duration-700"
             priority
+            quality={100}
           />
 
-          {/* Responsive Overlay Gradient - Tailwind v4 syntax used correctly */}
-          {/* Mobile: Bottom to Top gradient for white text readability */}
-          <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent md:hidden" />
-
-          {/* Desktop: Left to Right gradient (Pehle jaisa) */}
-          <div className="hidden md:block absolute inset-0 bg-linear-to-r from-white/60 via-white/20 to-transparent" />
-        </div>
-
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
-          {/* Empty div for spacing, agar text add karna ho toh yahan karein */}
-          <div className="max-w-[280px] md:max-w-md lg:max-w-xl"></div>
+          {/* Smooth Gradients */}
+          <div className="absolute inset-0 bg-linear-to-t  via-transparent to-transparent md:hidden" />
+          <div className="hidden md:block absolute inset-0 bg-linear-to-r from-white/20 via-transparent to-transparent" />
         </div>
       </section>
 
-      {/* --- CONTENT WRAPPER --- */}
-      {/* Mobile par rounded corners aur -mt-10 se ye image ke upar float karega */}
-      <div className="relative z-20 bg-white -mt-10 md:-mt-20 rounded-t-32px md:rounded-t-none">
-        {/* --- CALCULATOR SECTION --- */}
-        <section className="py-10 md:py-16">
-          <div className="max-w-5xl mx-auto px-4"></div>
-        </section>
+      {/* --- CONTENT WRAPPER WITH DIVS --- */}
+      {/* Calculator Section - Floating Effect */}
+      <div className="relative z-20  py-8 md:py-20 mt-10 md:-mt-32 rounded-t-[40px] md:rounded-t-none">
+        <LumpsumCalculator />
+      </div>
 
-        <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
-          <LumpsumCalculator />
-        </div>
-        <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
-          <InvestmentComparisonContent />
-        </div>
-        <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
-          <SIPRulesOfThumb />
-        </div>
-        <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
-          <LumpsumBenefitsUI />
-        </div>
-        <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
-          <LumpsumFAQ />
-        </div>
+      <div className="relative z-20  mt-10 md:-mt-25">
+        <InvestmentComparisonContent />
+      </div>
+
+      <div className="relative z-20 -mt-25 md:py-20">
+        <SIPRulesOfThumb />
+      </div>
+
+      <div className="relative z-20  mt-10 md:-mt-25">
+        <LumpsumBenefitsUI />
+      </div>
+
+      <div className="relative z-20 bg-white mt-10 md:-mt-20 pb-24">
+        <LumpsumFAQ />
       </div>
     </main>
   );
