@@ -19,7 +19,8 @@ import {
   LucideIcon,
   Fingerprint,
   BadgeCheck,
-  Rocket, // Rocket icon Startup India ke liye
+  Rocket,
+  FileText, // ARN icon
 } from "lucide-react";
 
 const platformIcons: Record<string, LucideIcon> = {
@@ -34,14 +35,13 @@ const Footer = () => {
   return (
     <footer className="w-full bg-[#0B1D33] text-white py-12 lg:py-16 border-t border-white/5 font-lexend">
       <div className="max-w-[1300px] mx-auto px-6 flex flex-col">
-        {/* Columns Grid - Reduced gap from 12 to 8 */}
+        
+        {/* 4 COLUMN GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
-          {/* 1. Contact Info - Reduced spacing */}
+          
+          {/* 1. Contact Info */}
           <div className="flex flex-col space-y-4">
-            <Typography
-              variant="h5"
-              className="text-white font-bold border-b-2 border-[#4DB6AC] pb-2 inline-block w-fit uppercase text-sm tracking-wider"
-            >
+            <Typography variant="h5" className="text-white font-bold border-b-2 border-[#4DB6AC] pb-2 inline-block w-fit uppercase text-sm tracking-wider">
               Contact Info
             </Typography>
             <ul className="space-y-3">
@@ -54,10 +54,7 @@ const Footer = () => {
                     {item.type === "globe" && <Globe size={16} />}
                   </div>
                   <Link href={item.href} className="pt-1 flex-1">
-                    <Typography
-                      variant="b2"
-                      className="text-gray-300 group-hover:text-[#4DB6AC] transition-colors text-xs"
-                    >
+                    <Typography variant="b2" className="text-gray-300 group-hover:text-[#4DB6AC] transition-colors text-xs">
                       {item.label}
                     </Typography>
                   </Link>
@@ -68,25 +65,15 @@ const Footer = () => {
 
           {/* 2. Quick Links */}
           <div className="flex flex-col space-y-4">
-            <Typography
-              variant="h5"
-              className="text-white font-bold border-b-2 border-[#4DB6AC] pb-2 inline-block w-fit uppercase text-sm tracking-wider"
-            >
+            <Typography variant="h5" className="text-white font-bold border-b-2 border-[#4DB6AC] pb-2 inline-block w-fit uppercase text-sm tracking-wider">
               Quick Links
             </Typography>
             <ul className="space-y-2.5">
               {footerData.quickLinks.map((link: FooterItem, idx: number) => (
                 <li key={idx}>
-                  <Link
-                    href={link.href}
-                    className="group flex items-center gap-2"
-                  >
-                    <Typography
-                      variant="b2"
-                      className="text-gray-300 group-hover:text-[#4DB6AC] transition-all group-hover:translate-x-1 text-xs"
-                    >
-                      <span className="text-[#4DB6AC] text-[8px] mr-1">●</span>{" "}
-                      {link.label}
+                  <Link href={link.href} className="group flex items-center gap-2">
+                    <Typography variant="b2" className="text-gray-300 group-hover:text-[#4DB6AC] transition-all group-hover:translate-x-1 text-xs">
+                      <span className="text-[#4DB6AC] text-[8px] mr-1">●</span> {link.label}
                     </Typography>
                   </Link>
                 </li>
@@ -96,25 +83,15 @@ const Footer = () => {
 
           {/* 3. Services */}
           <div className="flex flex-col space-y-4">
-            <Typography
-              variant="h5"
-              className="text-white font-bold border-b-2 border-[#4DB6AC] pb-2 inline-block w-fit uppercase text-sm tracking-wider"
-            >
+            <Typography variant="h5" className="text-white font-bold border-b-2 border-[#4DB6AC] pb-2 inline-block w-fit uppercase text-sm tracking-wider">
               Our Services
             </Typography>
             <ul className="space-y-2.5">
               {footerData.services.map((service: FooterItem, idx: number) => (
                 <li key={idx}>
-                  <Link
-                    href={service.href}
-                    className="group flex items-center gap-2"
-                  >
-                    <Typography
-                      variant="b2"
-                      className="text-gray-300 group-hover:text-[#4DB6AC] transition-all group-hover:translate-x-1 text-xs"
-                    >
-                      <span className="text-[#4DB6AC] text-[8px] mr-1">●</span>{" "}
-                      {service.label}
+                  <Link href={service.href} className="group flex items-center gap-2">
+                    <Typography variant="b2" className="text-gray-300 group-hover:text-[#4DB6AC] transition-all group-hover:translate-x-1 text-xs">
+                      <span className="text-[#4DB6AC] text-[8px] mr-1">●</span> {service.label}
                     </Typography>
                   </Link>
                 </li>
@@ -122,12 +99,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* 4. Compliance - Added Startup India & Reduced spacing */}
+          {/* 4. Compliance (4 Lines + ARN as 5th Line) */}
           <div className="flex flex-col space-y-4">
-            <Typography
-              variant="h5"
-              className="text-white font-bold border-b-2 border-[#4DB6AC] pb-2 inline-block w-fit uppercase text-sm tracking-wider"
-            >
+            <Typography variant="h5" className="text-white font-bold border-b-2 border-[#4DB6AC] pb-2 inline-block w-fit uppercase text-sm tracking-wider">
               Compliance
             </Typography>
             <ul className="space-y-3">
@@ -136,12 +110,8 @@ const Footer = () => {
                   <Rocket size={16} />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[9px] text-gray-500 font-bold uppercase">
-                    Startup India ID
-                  </span>
-                  <Typography variant="b2" className="text-gray-300 text-xs">
-                    DIPP199589
-                  </Typography>
+                  <span className="text-[9px] text-gray-500 font-bold uppercase">Startup India ID</span>
+                  <Typography variant="b2" className="text-gray-300 text-xs">DIPP199589</Typography>
                 </div>
               </li>
               <li className="flex items-start gap-3 group">
@@ -149,12 +119,8 @@ const Footer = () => {
                   <BadgeCheck size={16} />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[9px] text-gray-500 font-bold uppercase">
-                    GSTIN / ARN No
-                  </span>
-                  <Typography variant="b2" className="text-gray-300 text-xs">
-                    09AAPCM7383J1ZM / 324915
-                  </Typography>
+                  <span className="text-[9px] text-gray-500 font-bold uppercase">GSTIN</span>
+                  <Typography variant="b2" className="text-gray-300 text-xs">09AAPCM7383J1ZM</Typography>
                 </div>
               </li>
               <li className="flex items-start gap-3 group">
@@ -162,15 +128,8 @@ const Footer = () => {
                   <Fingerprint size={16} />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[9px] text-gray-500 font-bold uppercase">
-                    CIN NO
-                  </span>
-                  <Typography
-                    variant="b2"
-                    className="text-gray-300 text-xs leading-none"
-                  >
-                    U65990UP2022PTC163608
-                  </Typography>
+                  <span className="text-[9px] text-gray-500 font-bold uppercase">CIN NO</span>
+                  <Typography variant="b2" className="text-gray-300 text-xs leading-none">U65990UP2022PTC163608</Typography>
                 </div>
               </li>
               <li className="flex items-start gap-3 group">
@@ -178,42 +137,46 @@ const Footer = () => {
                   <ShieldCheck size={16} />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[9px] text-gray-500 font-bold uppercase">
-                    NSE / BSE AP
-                  </span>
-                  <Typography
-                    variant="b2"
-                    className="text-gray-300 text-xs leading-none"
-                  >
-                    AP3022004823 / AP01668101170229
-                  </Typography>
+                  <span className="text-[9px] text-gray-500 font-bold uppercase">NSE / BSE AP</span>
+                  <Typography variant="b2" className="text-gray-300 text-xs leading-none text-nowrap">AP3022004823 / AP01668101170229</Typography>
+                </div>
+              </li>
+              {/* 5th Line: ARN Number added simply */}
+              <li className="flex items-start gap-3 group">
+                <div className="bg-white/10 p-2 rounded-lg text-[#4DB6AC] group-hover:bg-[#4DB6AC] group-hover:text-white transition-all shrink-0">
+                  <FileText size={16} />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[9px] text-gray-500 font-bold uppercase">ARN Number</span>
+                  <Typography variant="b2" className="text-gray-300 text-xs">324915</Typography>
                 </div>
               </li>
             </ul>
           </div>
         </div>
-        {/* Bottom Bar - Reduced mt */}
-        <div className="mt-8 pt-6 border-t border-white/10 flex flex-col lg:flex-row justify-between items-center gap-6">
+
+        {/* Bottom Bar */}
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col lg:flex-row justify-between items-center gap-6">
           <div className="flex flex-col items-center lg:items-start space-y-1">
-            <Typography
-              variant="h5"
-              className="text-white font-black uppercase text-sm"
-            >
+            <Typography variant="h5" className="text-white font-black uppercase text-sm">
               Money King Financial Services PVT. LTD.
             </Typography>
             <Typography variant="caption" className="text-gray-500 text-[9px]">
               © {new Date().getFullYear()} All Rights Reserved.
             </Typography>
+              <Typography variant="caption" className="text-gray-500 text-[9px]">
+              Mutual Fund investments are subject to market risks, read all scheme related documents carefully
+            </Typography>
           </div>
-
+          
           <div className="flex gap-2.5">
             {footerData.socials.map((social: SocialItem, idx: number) => {
               const Icon = platformIcons[social.platform] || Globe;
               return (
-                <Link
-                  key={idx}
-                  href={social.href}
-                  target="_blank"
+                <Link 
+                  key={idx} 
+                  href={social.href} 
+                  target="_blank" 
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#4DB6AC] hover:scale-110 transition-all"
                 >
