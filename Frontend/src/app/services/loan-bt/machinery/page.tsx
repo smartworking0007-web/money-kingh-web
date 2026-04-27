@@ -1,52 +1,60 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link"; // Link import kiya
+import Link from "next/link";
 import MachineryLoanContent from "./MachineryLoanContent";
 import LoanCalculator from "@/app/components/LoanCalculator/LoanCalculator";
 import MachineryLoanBenefits from "./MachineryLoanBenefits";
 import MachineryLoanEligibility from "./MachineryLoanEligibility";
 import MachineryLoanApplyStep from "./MachineryLoanApplyStep";
 import MachineryLoanFAQs from "./MachineryLoanFAQs";
-import { Typography } from "@/app/components/ui/Typography"; // Typography agar use kar rahe hain
+import { Typography } from "@/app/components/ui/Typography";
 
 export default function MachineryLoanHero() {
   return (
     <main className="w-full bg-white">
       {/* --- HERO SECTION --- */}
       <section className="relative w-full overflow-hidden">
-        {/* Aspect ratio container */}
-        <div className="relative w-full aspect-4/3 md:aspect-15/9 lg:aspect-15/6">
+        {/* Mobile: h-[500px] (Fixed height for better image view)
+            Desktop: aspect-ratio maintain kiya hai
+        */}
+        <div className="relative w-full h-[500px] md:h-auto md:aspect-15/9 lg:aspect-15/6">
           <Image
             src="/images/bt/ma.jpeg"
             alt="Business Machinery Loan"
             fill
-            className="object-cover"
+            // object-[35%] mobile par image ko thoda khiskayega taki main subject dikhe
+            className="object-cover object-[35%_center] md:object-center"
             priority
           />
-          
-          {/* Overlay for Text (SEO Friendly) */}
-          <div className="absolute inset-0 bg-black/30 flex items-center">
+
+          {/* Overlay: 
+              Mobile par bottom-to-top gradient taki text readable ho.
+              Desktop par dark overlay.
+          */}
+          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent md:bg-black/40 flex items-center">
             <div className="max-w-7xl mx-auto px-6 w-full">
-              <div className="max-w-xl text-center md:text-left text-white space-y-4 md:space-y-6">
-                {/* H1 for SEO */}
-                <Typography 
-                  variant="h2" 
-                  as="h2" 
-                  className="text-white font-black text-3xl md:text-5xl lg:text-6xl leading-tight"
+              {/* Mobile par left-align (text-left) zyada premium lagta hai */}
+              <div className="max-w-xl text-left text-white space-y-4 md:space-y-6">
+                <Typography
+                  variant="h2"
+                  as="h1"
+                  // text-3xl! mobile ke liye balance size hai
+                  className="text-white! font-black! text-3xl! md:text-5xl! lg:text-6xl! leading-tight! mt-0!"
                 >
                   Machinery Loan to <br />
-                Empower Your Business
+                  Empower Your Business
                 </Typography>
-                
-                <p className="text-white/90 text-sm md:text-lg lg:text-xl font-medium max-w-md">
-                  Get fast, flexible funding for high-tech machinery with minimal documentation and attractive interest rates.
+
+                <p className="text-white/90 text-base md:text-lg lg:text-xl font-medium max-w-md leading-relaxed">
+                  Get fast, flexible funding for high-tech machinery with
+                  minimal documentation and attractive interest rates.
                 </p>
 
                 {/* Apply Now Button */}
                 <div className="pt-4">
-                  <Link 
-                   href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply" // Aapka contact us page ka path
-                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-8 rounded-full text-lg transition-all transform active:scale-95 shadow-lg"
+                  <Link
+                    href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply"
+                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-10 rounded-xl text-lg transition-all transform active:scale-95 shadow-xl border-none"
                   >
                     Apply Now
                   </Link>
@@ -56,26 +64,24 @@ export default function MachineryLoanHero() {
           </div>
         </div>
       </section>
-
-      {/* --- Baki Sections --- */}
-      <section className="bg-white py-10 md:py-5">
+      <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
         <MachineryLoanContent />
-      </section>
-      <section className="bg-white py-10 md:py-5">
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 mt-10 md:-mt-24">
         <LoanCalculator />
-      </section>
-      <section className="bg-white py-10 md:py-5">
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-15 md:-mt-24">
         <MachineryLoanBenefits />
-      </section>
-      <section className="bg-white py-10 md:py-5">
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
         <MachineryLoanEligibility />
-      </section>
-      <section className="bg-white py-0 md:py-5">
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
         <MachineryLoanApplyStep />
-      </section>
-      <section className="bg-white py-10 md:py-5">
+      </div>
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
         <MachineryLoanFAQs />
-      </section>
+      </div>
     </main>
   );
 }

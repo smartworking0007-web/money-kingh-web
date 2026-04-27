@@ -11,54 +11,43 @@ interface TestimonialItem {
   avatar: string;
   name: string;
   role: string;
-  nameClass: string;
 }
 
 const marqueeItems: TestimonialItem[] = [
   {
     type: "text",
-    content:
-      "Money King Financial Services helped me secure a business loan within 48 hours. The process was transparent and the team was extremely helpful throughout.",
+    content: "Money King Financial Services helped me secure a business loan within 48 hours. The process was transparent and the team was extremely helpful.",
     avatar: "/images/Testimonial/1.jpeg",
     name: "Rajesh Khanna",
     role: "SME Business Owner",
-    nameClass: "font-sans",
   },
   {
     type: "text",
-    content:
-      "Best experience with personal loans! Minimal documentation and very competitive interest rates. Highly recommend them for any financial needs.",
+    content: "Best experience with personal loans! Minimal documentation and very competitive interest rates. Highly recommend them for financial needs.",
     avatar: "/images/Testimonial/2.jpeg",
     name: "Sandeep Verma",
-    role: "Former",
-    nameClass: "font-sans",
+    role: "Professional",
   },
   {
     type: "text",
-    content:
-      "I was struggling with home loan approvals until I met the team at Money King. They managed everything professionally and got it sanctioned quickly.",
+    content: "I was struggling with home loan approvals until I met the team at Money King. They managed everything professionally and got it sanctioned quickly.",
     avatar: "/images/Testimonial/3.jpeg",
-    name: "Maneesh Shingh",
+    name: "Maneesh Singh",
     role: "Property Investor",
-    nameClass: "font-sans",
   },
   {
     type: "text",
-    content:
-      "Excellent service and honest advice. They don't just sell loans; they provide the right financial solution according to your capacity.",
+    content: "Excellent service and honest advice. They don't just sell loans; they provide the right financial solution according to your capacity.",
     avatar: "/images/Testimonial/4.png",
     name: "Anil Patel",
     role: "Retailer",
-    nameClass: "font-sans",
   },
   {
     type: "text",
-    content:
-      "Getting a gold loan was never this easy. The staff is polite and the valuation process is very fair. Thank you Money King team!",
+    content: "Getting a gold loan was never this easy. The staff is polite and the valuation process is very fair. Thank you Money King team!",
     avatar: "/images/Testimonial/5.jpeg",
     name: "Ajay Sharma",
     role: "Entrepreneur",
-    nameClass: "font-sans",
   },
 ];
 
@@ -67,7 +56,6 @@ const TestimonialsMarquee = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(0);
 
-  // Smooth infinite loop ke liye items duplicate kiye
   const doubledItems = [...marqueeItems, ...marqueeItems, ...marqueeItems];
 
   useEffect(() => {
@@ -84,7 +72,7 @@ const TestimonialsMarquee = () => {
           x: {
             repeat: Infinity,
             repeatType: "loop",
-            duration: 40,
+            duration: 35, // Thoda fast marquee
             ease: "linear",
           },
         },
@@ -93,42 +81,34 @@ const TestimonialsMarquee = () => {
   }, [controls, containerWidth]);
 
   return (
-    <section className="py-20 overflow-hidden bg-white">
+    <section className="py-12 md:py-20 overflow-hidden bg-[#FBFBFF] font-lexend">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <Typography variant="h2" className="text-[#1A1A37] font-bold mb-4">
-            What My Clients Say?
+        <div className="text-center mb-10 md:mb-16">
+          <Typography variant="h3" className="text-[#1A1A37] font-bold mb-3">
+            What Our Clients Say
           </Typography>
-          <p className="text-gray-500 max-w-2xl mx-auto">
-            See how Money King Financial Services is helping people achieve
-            their dreams with easy and affordable loan solutions.
+          <p className="text-gray-500 max-w-xl mx-auto text-sm md:text-base">
+            Trusted by thousands for simple and affordable financial solutions.
           </p>
         </div>
 
         <div
           className="relative"
           style={{
-            maskImage:
-              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            maskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+            WebkitMaskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
           }}
         >
           <motion.div
             ref={containerRef}
-            className="flex gap-8"
+            className="flex gap-5 md:gap-6"
             animate={controls}
             onHoverStart={() => controls.stop()}
             onHoverEnd={() =>
               controls.start({
                 x: [null, -containerWidth],
                 transition: {
-                  x: {
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    duration: 40,
-                    ease: "linear",
-                  },
+                  x: { repeat: Infinity, repeatType: "loop", duration: 35, ease: "linear" },
                 },
               })
             }
@@ -136,43 +116,34 @@ const TestimonialsMarquee = () => {
             {doubledItems.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col justify-between shrink-0 rounded-32px w-[380px] min-h-[380px] p-10 bg-white shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)] transition-all hover:shadow-lg border border-gray-50"
+                className="flex flex-col justify-between shrink-0 rounded-2xl w-[280px] md:w-[320px] p-6 md:p-8 bg-white border border-gray-100 shadow-[0_8px_20px_-12px_rgba(0,0,0,0.08)] hover:border-blue-200 transition-all duration-300"
               >
                 <div>
-                  {/* Quote Icon */}
-                  <div className="mb-6 text-blue-600 opacity-20">
-                    <svg
-                      width="40"
-                      height={30}
-                      viewBox="0 0 40 30"
-                      fill="currentColor"
-                    >
+                  <div className="mb-4 text-blue-500 opacity-20">
+                    <svg width="30" height="22" viewBox="0 0 40 30" fill="currentColor">
                       <path d="M0 18.2V0h16.4v18.2L10.9 30H1.8L8.2 18.2H0zm23.6 0V0H40v18.2L34.5 30h-9.1L31.8 18.2H23.6z" />
                     </svg>
                   </div>
 
-                  {/* Content */}
-                  <p className="text-[#4F4F6B] leading-relaxed text-[17px] font-normal">
+                  <p className="text-[#4F4F6B] leading-relaxed text-[15px] md:text-[16px] font-medium">
                     {item.content}
                   </p>
                 </div>
 
-                {/* User Info - Image Circle Fix Yahan Hai */}
-                <div className="mt-8 flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink:0 border border-gray-100 relative">
+                <div className="mt-6 flex items-center gap-3 border-t border-gray-50 pt-6">
+                  <div className="w-10 h-10 rounded-full overflow-hidden border border-gray-200 relative shrink-0">
                     <Image
                       src={item.avatar}
                       alt={item.name}
-                      width={48}
-                      height={48}
-                      className="object-cover w-full h-full"
+                      fill
+                      className="object-cover"
                     />
                   </div>
-                  <div>
-                    <h4 className="font-bold text-[18px] text-[#1A1A37] m-0 leading-tight">
+                  <div className="overflow-hidden">
+                    <h4 className="font-bold text-[15px] md:text-[16px] text-[#1A1A37] truncate">
                       {item.name}
                     </h4>
-                    <p className="text-[14px] m-0 mt-1 font-semibold text-blue-600 uppercase tracking-wider">
+                    <p className="text-[11px] md:text-[12px] font-bold text-blue-600 uppercase tracking-tight">
                       {item.role}
                     </p>
                   </div>

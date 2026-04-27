@@ -17,7 +17,8 @@ export default function HomeLoanPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* --- HERO SECTION --- */}
-      <section className="relative w-full h-[70vh] md:h-[85vh] lg:h-[90vh] bg-[#d73a32] overflow-hidden font-lexend">
+      {/* Mobile par h-[500px] fix kiya hai taaki image zyada zoom na ho */}
+      <section className="relative w-full h-[400px] md:h-[90vh] lg:h-[90vh] bg-[#d73a32] overflow-hidden font-lexend">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
@@ -26,30 +27,31 @@ export default function HomeLoanPage() {
             fill
             priority
             quality={100}
-            // Image ko right side push kiya hai taaki left mein text ke liye jagah ban jaye
-            className="object-cover object-right md:object-right transition-all duration-700 scale-105"
+            // MOBILE FIX: Mobile par 'object-[25%_center]' use kiya hai taaki 
+            // image ka main part (ghar/subject) left side se frame mein aa jaye.
+            className="object-cover object-[70%_center] md:object-right transition-all duration-700 scale-105"
           />
-          {/* Subtle gradient overlay to make text more readable on the left */}
-          <div className="absolute inset-0 bg-leanear-to-r from-black/40 via-transparent to-transparent z-1" />
+          {/* Responsive Gradient Overlay */}
+          {/* Mobile: Bottom-to-Top dark gradient for white text visibility */}
+          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent md:bg-linear-to-r md:from-black/60 md:via-transparent md:to-transparent z-1" />
         </div>
 
         {/* Hero Content Wrapper */}
-        {/* Padding-left (pl-4) ko kam kiya hai taaki text bilkul left mein dikhe */}
-        <div className="absolute inset-0 z-10 max-w-[1440px] mx-auto px-4 md:px-8 w-full flex items-center pb-16 md:pb-0">
+        <div className="absolute inset-0 z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full flex items-center pt-20 md:pt-0">
           <div className="w-full flex justify-start">
-            {/* items-start ensures text and button are left-aligned */}
-            <div className="max-w-[320px] md:max-w-2xl flex flex-col items-start text-left">
+            <div className="max-w-[280px] md:max-w-3xl flex flex-col items-start text-left">
               <Typography
                 variant="h2"
                 as="h1"
-                className="text-white mb-6 leading-[1.1] font-black drop-shadow-2xl text-xl md:text-[64px]"
+                // text-3xl! mobile ke liye perfect size hai
+                className="text-white mb-6 leading-[1.1] font-black drop-shadow-2xl text-3xl! md:text-[64px]! mt-0!"
               >
                 Home Loan BT & <br />
                 Top Up
               </Typography>
 
               <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply" className="w-full md:w-auto">
-                <button className="w-full md:w-auto bg-white text-[#d73a32] hover:bg-slate-100 px-10 py-3 md:px-14 md:py-4 rounded-xl font-bold text-base md:text-lg transition-all shadow-2xl active:scale-95 cursor-pointer">
+                <button className="w-full md:w-auto bg-white text-[#d73a32] hover:bg-slate-100 px-10 py-3 md:px-14 md:py-4 rounded-xl font-bold text-base md:text-lg transition-all shadow-2xl active:scale-95 cursor-pointer border-none">
                   Avail Now
                 </button>
               </Link>
@@ -59,34 +61,37 @@ export default function HomeLoanPage() {
       </section>
 
       {/* --- Rest of the Components --- */}
-      <section className="bg-white py-10 md:py-5">
+      
+      {/* Spacing ko balanced rakha hai taki mobile par overlap na ho */}
+      <section className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
         <HomeLoanBTProfiles />
       </section>
       
-      <section className="bg-white py-20 md:py-30">
+      <section className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-40 mt-20 md:-mt-24">
         <LoanCalculator />
       </section>
       
-      <section className="bg-white p-0 -mt-12 md:-mt-20 relative z-30">
+      <section className="relative z-20   md:space-y-10 py-8 md:py-10 -mt-20 md:-mt-40">
         <HomeLoanContent />
       </section>
       
-      <section className="bg-white p-0 -mt-10 md:-mt-15 relative z-30">
+      <section className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-40 md:-mt-50">
         <HomeLoanBTComparison />
       </section>
       
-      <section className="bg-white p-0 -mt-10 md:-mt-5 relative z-30">
+      <section className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-40">
         <HomeLoanBTJourney />
       </section>
-      <section className="bg-white p-0 -mt-10 md:-mt-5 relative z-30">
+      
+      <section className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-40">
         <DocumentsRequired />
       </section>
       
-      <section className="bg-white p-0 -mt-10 md:-mt-5 relative z-30">
+      <section className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-40">
         <HomeLoanBTFees />
       </section>
       
-      <section className="bg-white p-0 -mt-10 md:-mt-5 relative z-30">
+      <section className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-40">
         <HomeLoanBTFAQ />
       </section>
     </main>

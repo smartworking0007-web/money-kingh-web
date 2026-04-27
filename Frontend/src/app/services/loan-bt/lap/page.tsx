@@ -58,7 +58,7 @@ export default function HomeLoanPage() {
       <section className="bg-white p-0 -mt-8 md:-mt-5 relative z-30">
         <LAPBTProfiles />
       </section>
-      <section className="bg-white py-12 md:py-30">
+      <section className=" py-30 md:py-30">
         <LoanCalculator />
       </section>
       <section className="bg-white py-12 md:py-30">
@@ -67,13 +67,13 @@ export default function HomeLoanPage() {
       <section className="bg-white py-12 md:py-30">
         <LAPBTComparison />
       </section>
-      <section className="bg-white py-10 md:py-20">
+      <section className="bg-white py-10 md:py-0">
         <LAPDocuments />
       </section>
-      <section className="bg-white py-10 md:py-20">
+      <section className="bg-white -mt-15 md:py-0">
         <LAPBTJourney />
       </section>
-      <section className="bg-white py-10 md:py-20">
+      <section className="bg-white -mt-12 md:py-0">
         <LAPBTFees />
       </section>
       <section className="bg-white py-10 md:py-20 border-t border-slate-100">

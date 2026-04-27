@@ -7,39 +7,50 @@ export default function LoanAgainstPropertyContent() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 font-lexend">
+    <div className="max-w-7xl mx-auto px-10 md:px-12 py-5 md:py-5 ">
       {/* --- TOP SECTION --- */}
-      <div className="text-center mb-12">
+      <div className="text-center">
         <Typography
           variant="h3"
           as="h3"
-          className="text-[#1e293b] font-bold mb-6 text-3xl md:text-[42px] leading-tight"
+          className="text-[#1e293b] font-bold mb-5 text-[26px] md:text-[42px] leading-[1.2]"
         >
           What is Loan Against Property?
         </Typography>
 
-        <div className="max-w-5xl mx-auto border-b border-gray-200 pb-12">
-          <p className="text-gray-500 leading-relaxed text-base md:text-[18px]">
-            A loan against property in India offers higher loan amounts and 
-            lower interest rates compared to unsecured loans. Borrowers can 
-            enjoy flexible repayment tenures of up to 15–20 years, making EMIs 
-            more affordable.
-            
-            {/* Conditional Content */}
-            <span className={`${isExpanded ? "inline" : "hidden"}`}>
-              {" "} Since the loan is secured, lenders offer better terms based on 
-              your property value, income profile, and credit score. This financial 
-              product allows you to unlock the hidden value of your residential or 
-              commercial property while still retaining its ownership.
-            </span>
+        {/* max-w-[320px] mobile par text ko ek elegant narrow shape dega */}
+        <div className="max-w-[340px] md:max-w-4xl mx-auto">
+          <div className="text-gray-500 leading-[1.4] text-[18px] md:text-[18px] text-center">
+            <p className="inline">
+              A loan against property in India offers higher loan amounts and
+              lower interest rates compared to unsecured loans. Borrowers can
+              enjoy flexible repayment tenures.
+            </p>
 
-            <button
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="ml-2 text-[#D84B7E] hover:text-[#b03a64] font-medium underline-offset-4 border-b border-[#D84B7E] transition-all cursor-pointer bg-transparent border-none"
-            >
-              {isExpanded ? "Read Less" : "Read More"}
-            </button>
-          </p>
+            {isExpanded && (
+              <span className="inline animate-in fade-in duration-700">
+                {" "}
+                up to 15–20 years, making EMIs more affordable. Since the loan
+                is secured, lenders offer better terms based on your property
+                value and credit profile.
+              </span>
+            )}
+
+            {/* Read More - Clean Link Style */}
+            <div className="mt-2">
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="text-[#D84B7E] font-semibold text-[13px] uppercase tracking-wider hover:opacity-80 transition-all cursor-pointer bg-transparent border-none"
+              >
+                {isExpanded ? "Show Less" : "Read More"}
+              </button>
+            </div>
+          </div>
+
+          {/* Subtle decoration line */}
+          <div className="mt-12 flex justify-center">
+            <div className="h-1px w-12 bg-gray-200" />
+          </div>
         </div>
       </div>
     </div>

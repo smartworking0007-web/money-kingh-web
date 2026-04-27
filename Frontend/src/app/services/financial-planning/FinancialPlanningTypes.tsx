@@ -263,7 +263,7 @@ export default function FinancialPlanningTypes() {
                 ))}
               </div>
 
-              <Link href="/contact" className="block w-full">
+              <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply" className="block w-full">
                 <button className="w-full mt-6 md:mt-8 py-3.5 md:py-4 bg-[#1e293b] text-white rounded-xl md:rounded-2xl font-bold text-xs md:text-sm hover:bg-black transition-all shadow-lg active:scale-95">
                   Consult an Expert
                 </button>

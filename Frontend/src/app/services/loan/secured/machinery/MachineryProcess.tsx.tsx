@@ -79,7 +79,7 @@ export default function MachineryProcess() {
                 {item.highlight &&
                   (item.isLink ? (
                     <Link
-                      href="/contact"
+                      href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply"
                       className="font-bold block mt-1 decoration-2 underline-offset-4"
                     >
                       {item.highlight}

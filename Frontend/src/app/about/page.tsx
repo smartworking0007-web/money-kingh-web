@@ -11,25 +11,27 @@ import WhyChoose from "../components/Choose/WhyChoose";
 
 export default function About() {
   return (
-    <main className="w-full min-h-screen">
+    <main className="w-full min-h-screen bg-white overflow-x-hidden">
       <MissionVision />
-      {/* Sections ke beech ka gap kam karne ke liye space-y ko control karein */}
+
       <div className="w-full flex flex-col">
-        {/* Company Intro agar white background hai */}
-        <div className="max-w-7xl mx-auto px-4 py-16">
+        {/* Company Intro Wrapper */}
+        <div className="max-w-7xl mx-auto px-4 py-12 md:py-16">
           <CompanyIntro />
         </div>
+
         <AboutServiceGrid />
         <Hero />
         <AboutTestimonialCard />
-        
-        <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="w-full">
           <FinancialPartners />
-          
-          
         </div>
-        <ServiceGrid />   
-        <WhyChoose />
+
+        {/* Baki sections */}
+        <ServiceGrid />
+        <div className="mt-12 md:mt-24 mb-16 md:mb-32">
+          <WhyChoose />
+        </div>
       </div>
     </main>
   );

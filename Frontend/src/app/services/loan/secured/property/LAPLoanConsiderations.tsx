@@ -69,9 +69,9 @@ const LAPLoanConsiderations = () => {
         {/* Header Section */}
         <div className="mb-12 md:mb-16">
           <Typography
-            variant="h3"
+            variant="h4"
             as="h3"
-            className="text-3xl md:text-5xl font-black text-slate-900 leading-tight mb-4 mt-0!"
+            className="text-xl md:text-xl font-black text-slate-900 leading-tight mb-4 mt-0!"
           >
             Things to Consider Before Applying for a LAP Loan
           </Typography>

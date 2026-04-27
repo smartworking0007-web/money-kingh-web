@@ -48,58 +48,62 @@ export default function SIPMistakesSection() {
   return (
     <section className="w-full bg-slate-50 py-10 md:py-20 px-4 md:px-6 font-lexend overflow-hidden">
       <div className="max-w-7xl mx-auto">
+        
         {/* --- HEADER --- */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 md:mb-16">
-          <div className="space-y-2 md:space-y-4">
-            <div className="flex items-center gap-3">
-              <Typography
-                variant="h3"
-                as="h3"
-                className="text-xl md:text-4xl font-black text-slate-800 mt-0"
-              >
-                6 mistakes to avoid
-              </Typography>
-            </div>
-            <Typography
-              variant="h5"
-              as="h5"
-              className="text-slate-500 font-medium text-xs md:text-lg mt-0 leading-relaxed max-w-xl"
-            >
-              Common mistakes new investors often make when starting a SIP.
-            </Typography>
-          </div>
-
-          {/* Navigation Buttons (Hidden on small mobile for cleaner look, optional) */}
-          <div className="flex gap-2 md:gap-3"></div>
+        <div className="mb-8 md:mb-16">
+          <Typography
+            variant="h3"
+            as="h3"
+            className="text-2xl md:text-4xl font-black text-slate-800 mb-2 mt-0!"
+          >
+            6 mistakes to avoid
+          </Typography>
+          <Typography
+            variant="h5"
+            as="p"
+            className="text-slate-500 font-medium text-sm md:text-lg mt-0 leading-relaxed max-w-xl"
+          >
+            Common mistakes new investors often make when starting a SIP.
+          </Typography>
         </div>
 
-        {/* --- MISTAKES GRID --- */}
-        {/* Mobile: Horizontal Scroll with smaller boxes | Desktop: Grid */}
-        <div className="flex md:grid md:grid-cols-3 gap-4 md:gap-6 overflow-x-auto pb-4 md:pb-0 no-scrollbar snap-x snap-mandatory">
+        {/* --- MISTAKES GRID / SWIPER --- */}
+        {/* Mobile: flex + overflow-x-auto (Horizontal Scroll)
+          Desktop: md:grid (3 columns)
+        */}
+        <div className="flex md:grid md:grid-cols-3 gap-4 md:gap-6 overflow-x-auto pb-6 md:pb-0 no-scrollbar snap-x snap-mandatory">
           {mistakes.map((item, idx) => (
             <div
               key={idx}
-              className="min-w-240px md:min-w-full bg-white p-5 md:p-8 rounded-1.5rem md:rounded-2rem border-t-4 border-pink-500 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col gap-3 md:gap-4 snap-center"
+              // w-[85%] mobile par card ka size restrict karta hai taki agla card thoda dikhe
+              className="min-w-[85%] md:min-w-0 bg-white p-6 md:p-8 rounded-24px md:rounded-32px border-t-4 border-pink-500 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col gap-4 snap-center group"
             >
-              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-pink-50 flex items-center justify-center">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-pink-50 flex items-center justify-center group-hover:scale-110 transition-transform">
                 {item.icon}
               </div>
 
               <Typography
                 variant="h4"
-                className="text-sm md:text-xl font-bold text-slate-800 mt-0 leading-tight"
+                className="text-lg md:text-xl font-bold text-slate-800 mt-0! leading-tight"
               >
                 {item.title}
               </Typography>
 
               <Typography
                 variant="b1"
-                className="text-slate-500 text-[11px] md:text-sm leading-relaxed mt-0"
+                className="text-slate-500 text-sm md:text-base leading-relaxed mt-0!"
               >
                 {item.desc}
               </Typography>
             </div>
           ))}
+        </div>
+
+        {/* Swipe Indicator for Mobile */}
+        <div className="flex justify-center gap-1 mt-4 md:hidden">
+            <div className="w-8 h-1 bg-pink-500 rounded-full" />
+            <div className="w-2 h-1 bg-pink-200 rounded-full" />
+            <div className="w-2 h-1 bg-pink-200 rounded-full" />
         </div>
       </div>
     </section>

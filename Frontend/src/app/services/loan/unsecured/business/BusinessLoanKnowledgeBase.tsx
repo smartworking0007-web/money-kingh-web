@@ -66,7 +66,7 @@ const BusinessLoanKnowledgeBase = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="elative z-20 bg-white space-y-16 md:space-y-30 py-8 md:py-20 -mt-10 md:-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* --- SECTION 1: WHAT TO KNOW --- */}
         <div className="mb-20">

@@ -44,7 +44,7 @@ export default function HealthInsuranceHero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full justify-center md:justify-end">
-              <Link href="/contact" className="w-full sm:w-auto">
+              <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply" className="w-full sm:w-auto">
                 <button className="w-full bg-[#0f0e0e] text-white hover:bg-slate-900 px-10 py-3.5 md:px-12 md:py-4 rounded-xl font-bold text-base md:text-lg transition-all shadow-2xl active:scale-95">
                   Apply Now
                 </button>

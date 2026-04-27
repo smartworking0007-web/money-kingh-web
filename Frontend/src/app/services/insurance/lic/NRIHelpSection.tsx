@@ -116,7 +116,7 @@ export default function NRIHelpSection() {
         {/* --- LINK (BUTTON) --- */}
         <div className="mt-10 md:mt-12">
           <Link
-            href="/contact"
+            href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply"
             className="inline-block px-8 md:px-10 py-3 md:py-3.5 bg-linear-to-r from-[#D84B7E] to-[#b03a64] text-white rounded-full font-bold text-xs md:text-base shadow-lg hover:shadow-pink-200 transition-all active:scale-95 uppercase tracking-wider no-underline"
           >
             Start Comparing Now
