@@ -108,6 +108,17 @@ export default function Navbar() {
                   Open Demat Account
                 </Typography>
               </Link>
+               <Link
+                href="/blog"
+                className="px-4 h-full flex items-center group"
+              >
+                <Typography
+                  variant="nav-link"
+                  className="group-hover:text-blue-600"
+                >
+                  Blogs
+                </Typography>
+              </Link>
 
               <Link
                 href="/partner"
@@ -179,6 +190,11 @@ export default function Navbar() {
                         label="Contact Us"
                         onClick={closeMenu}
                       />
+                      <MobileNavLink
+      href="/blog"
+      label="Blogs"
+      onClick={closeMenu}
+    />
 
                       <Link
                         href="https://ekyc.mstock.com/Register-with-us?pdc=AE2D3E733"
@@ -186,6 +202,7 @@ export default function Navbar() {
                         rel="noopener noreferrer"
                         className="flex items-center justify-between p-4 rounded-md hover:bg-blue-50 group"
                       >
+                        
                         <Typography
                           variant="s1"
                           className="text-blue-600 font-semibold text-lg"
@@ -201,6 +218,7 @@ export default function Navbar() {
                         onClick={closeMenu}
                       />
                     </nav>
+                    
 
                     {/* Support Section */}
                     <div className="mt-8 px-2">
