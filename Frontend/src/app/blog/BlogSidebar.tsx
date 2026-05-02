@@ -35,7 +35,7 @@ export const BlogSidebar = () => {
               Financial Planning
             </Typography>
             <Typography variant="b3" className="font-bold text-gray-400">
-              (3)
+              (6)
             </Typography>
           </li>
           {/* Aap yahan aur categories add kar sakte hain */}

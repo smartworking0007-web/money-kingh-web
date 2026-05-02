@@ -4,6 +4,9 @@ import { Blog2 } from "./components/Blog2";
 import { BlogSidebar } from "./BlogSidebar";
 import { Typography } from "@/app/components/ui/Typography";
 import { Blog3 } from "./components/Blog3";
+import { Blog4 } from "./components/Blog4";
+import { Blog5 } from "./components/Blog5";
+import { Blog6 } from "./components/Blog6";
 
 export default function BlogPage() {
   return (
@@ -19,6 +22,9 @@ export default function BlogPage() {
               <Blog1 />
               <Blog2 />
               <Blog3 />
+              <Blog4 />
+              <Blog5 />
+              <Blog6 />
               {/* Future Blogs: <Blog2 /> */}
             </div>
           </div>
