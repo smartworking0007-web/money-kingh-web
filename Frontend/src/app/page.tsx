@@ -19,11 +19,8 @@ export default function Home() {
       {/* Content Wrapper with vertical spacing (gap) */}
       <div className="flex flex-col">
         <Kings />
-        
-        {/* Company Intro Section */}
         <CompanyIntro />
         <AboutFincart />
-        
         {/* Loan Calculator Section - Padding add ki gayi hai overlap rokne ke liye */}
         <div className="relative z-10 py-5 md:py-24 bg-white">
           <LoanCalculator />
@@ -31,7 +28,6 @@ export default function Home() {
         <div className="relative z-20">
           <ServiceGrid />
         </div>
-
         <FinancialPartners />
         <MutualPartners />
         <WhyChoose />
