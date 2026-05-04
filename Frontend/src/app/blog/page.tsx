@@ -7,6 +7,9 @@ import { Blog3 } from "./components/Blog3";
 import { Blog4 } from "./components/Blog4";
 import { Blog5 } from "./components/Blog5";
 import { Blog6 } from "./components/Blog6";
+import { Blog7 } from "./components/Blog7";
+import { Blog8 } from "./components/Blog8";
+import { Blog9 } from "./components/Blog9";
 
 export default function BlogPage() {
   return (
@@ -25,7 +28,9 @@ export default function BlogPage() {
               <Blog4 />
               <Blog5 />
               <Blog6 />
-              {/* Future Blogs: <Blog2 /> */}
+              <Blog7 />
+              <Blog8 />
+              <Blog9 />
             </div>
           </div>
           <div className="hidden lg:block w-[320px]">

@@ -19,7 +19,6 @@ export const BlogSidebar = () => {
           </button>
         </div>
       </div>
-
       {/* Categories Section */}
       <div className="bg-white p-5 md:p-6 rounded-lg shadow-sm border border-gray-100">
         <Typography
@@ -31,14 +30,16 @@ export const BlogSidebar = () => {
         </Typography>
         <ul className="space-y-3 md:space-y-4">
           <li className="flex justify-between items-center group cursor-pointer p-1 rounded-md hover:bg-gray-50 transition-all">
-            <Typography variant="b2" className="group-hover:text-blue-600 font-medium">
+            <Typography
+              variant="b2"
+              className="group-hover:text-blue-600 font-medium"
+            >
               Financial Planning
             </Typography>
             <Typography variant="b3" className="font-bold text-gray-400">
-              (6)
+              (9)
             </Typography>
           </li>
-          {/* Aap yahan aur categories add kar sakte hain */}
         </ul>
       </div>
     </aside>
