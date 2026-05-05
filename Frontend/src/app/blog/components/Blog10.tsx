@@ -1,14 +1,22 @@
 "use client";
+
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Clock, Folder, ArrowLeft, ChevronDown, ChevronUp } from "lucide-react";
+import {
+  Clock,
+  Folder,
+  ArrowLeft,
+  ChevronDown,
+  ChevronUp,
+  ChevronRight,
+} from "lucide-react";
 import { BlogCard1 } from "./BlogCard1";
 import { ShareSection } from "./ShareSection";
 import { Typography } from "@/app/components/ui/Typography";
 import { Button } from "@/app/components/ui/Button";
- 
-export const Blog9 = () => {
+
+export const Blog10 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
@@ -17,20 +25,20 @@ export const Blog9 = () => {
 
   const faqs = [
     {
-      q: "Q1. Do I need a registered company to get a business credit card?",
-      a: "Most banks require you to be a Sole Proprietor, Partner, or Director. You will typically need to show business registration (like GST or MSME certificate) and ITR of the business.",
+      q: "Q1. Does a car loan require more paperwork than a personal loan?",
+      a: "Yes. A car loan requires the vehicle's proforma invoice, insurance copy, and RC tracking. A personal loan usually only requires your KYC and income proof.",
     },
     {
-      q: "Q2. Can I get a business card if my startup is new?",
-      a: "If the business is new, banks may offer a card based on your personal credit score and income, but the card will still be in the company's name to help start its credit journey.",
+      q: "Q2. Can I pay off my car loan early?",
+      a: "Yes, but most banks charge a Foreclosure Penalty (usually 2%–5%). Always check the fine print before signing.",
     },
     {
-      q: "Q3. Are business credit card rewards different?",
-      a: "Yes. Instead of movie tickets, you often earn higher rewards on 'Business Categories' such as Google/Meta Ads, cloud hosting services (AWS/Azure), and corporate travel.",
+      q: "Q3. Will a car loan impact my CIBIL score differently?",
+      a: "Both affect your score. However, a car loan is a 'Secured Loan,' which helps balance your Credit Mix, potentially helping your score more than an 'Unsecured' personal loan.",
     },
     {
-      q: "Q4. What is 'Corporate Liability'?",
-      a: "This means the company is responsible for the debt. However, for many small businesses, banks may still require a 'Personal Guarantee' from the owner.",
+      q: "Q4. Can I get a car loan for an Electric Vehicle (EV) at lower rates?",
+      a: "Many banks now offer 'Green Car Loans' with a 0.50% discount on interest rates to encourage EV adoption in 2026.",
     },
   ];
 
@@ -42,11 +50,11 @@ export const Blog9 = () => {
           className="cursor-pointer w-full flex justify-center px-4"
         >
           <BlogCard1
-            title="Credit Card for Small Business: Why Entrepreneurs Should Keep Personal and Business Expenses Separate"
-            category="BUSINESS FINANCE"
+            title="Car Loan vs. Personal Loan: Which is the Smarter Way to Finance Your Dream Ride?"
+            category="CAR LOAN"
             author="Sumit Mishra"
-            date="May 04, 2026"
-            image="/images/blog/blog-9.jpeg"
+            date="May 05, 2026"
+            image="/images/blog/blog-10.jpeg"
           />
         </div>
       ) : (
@@ -64,8 +72,8 @@ export const Blog9 = () => {
             <div className="bg-white rounded-xl overflow-hidden border-gray-100">
               <div className="relative h-[250px] sm:h-[300px] md:h-[500px] w-full">
                 <Image
-                  src="/images/blog/blog-9.jpeg"
-                  alt="Comparison-table-for-business-and-personal-credit-card-features"
+                  src="/images/blog/blog-10.jpeg"
+                  alt="get your dream car with low emi"
                   fill
                   className="object-cover"
                   priority
@@ -77,18 +85,18 @@ export const Blog9 = () => {
                   variant="h5"
                   className="text-[#1e3a8a] mb-4 font-bold leading-tight uppercase"
                 >
-                  Credit Card for Small Business: Why Entrepreneurs Should Keep
-                  Personal and Business Expenses Separate
+                  Car Loan vs. Personal Loan: Which is the Smarter Way to
+                  Finance Your Dream Ride?
                 </Typography>
 
                 <div className="flex gap-4 text-gray-400 mb-6 pb-4 border-b overflow-x-auto no-scrollbar">
                   <div className="flex items-center gap-2 shrink-0">
                     <Clock size={16} />
-                    <Typography variant="b2">May 04, 2026</Typography>
+                    <Typography variant="b2">May 05, 2026</Typography>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
                     <Folder size={16} />
-                    <Typography variant="b2">Business Finance</Typography>
+                    <Typography variant="b2">Car Loan</Typography>
                   </div>
                 </div>
 
@@ -96,63 +104,54 @@ export const Blog9 = () => {
                   variant="s2"
                   className="text-gray-600 mb-10 font-medium leading-relaxed"
                 >
-                  Mixing personal and business finances is a &quot;financial
-                  trap&quot; that can hinder your growth. Discover why keeping
-                  these expenses separate is vital for your success.
+                  Buying a car is a significant commitment. While most buyers
+                  default to a standard car loan, savvy investors are
+                  considering personal loans for flexibility. Let&apos;s find
+                  your smarter choice.
                 </Typography>
 
                 <section className="space-y-10">
-                  <div className="space-y-6">
-                    <div>
+                  <div>
+                    <Typography
+                      variant="h5"
+                      className="text-[#1e3a8a] mb-4 font-bold uppercase"
+                    >
+                      Understanding the Core Difference
+                    </Typography>
+                    <Typography
+                      variant="b1"
+                      className="text-gray-700 leading-relaxed mb-4"
+                    >
+                      The fundamental difference lies in collateral. A{" "}
+                      <strong>Car Loan</strong> is secured and hypothecated to
+                      the vehicle, while a <strong>Personal Loan</strong> is
+                      unsecured and based on your creditworthiness.
+                    </Typography>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="p-6 bg-blue-50 rounded-xl border border-blue-100">
                       <Typography
-                        variant="h5"
-                        className="text-[#1e3a8a] mb-2 font-bold uppercase"
+                        variant="s1"
+                        className="font-bold mb-2 text-blue-800"
                       >
-                        1. Building a Business Credit History
+                        Car Loans: The Economical Choice
                       </Typography>
-                      <Typography variant="b1" className="text-gray-700">
-                        A strong business credit score makes it much easier to
-                        secure high-value Business Expansion Loans or Unsecured
-                        Business Loans at lower interest rates in the future.
+                      <Typography variant="b2" className="text-gray-600">
+                        Lower interest rates (8.5% - 11%) because the bank has
+                        the security of the vehicle.
                       </Typography>
                     </div>
-                    <div>
+                    <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
                       <Typography
-                        variant="h5"
-                        className="text-[#1e3a8a] mb-2 font-bold uppercase"
+                        variant="s1"
+                        className="font-bold mb-2 text-gray-800"
                       >
-                        2. Simplified Tax Compliance & Accounting
+                        Personal Loans: The Flexible Choice
                       </Typography>
-                      <Typography variant="b1" className="text-gray-700">
-                        Separate cards ensure that 100% of the transactions on
-                        your business statement are tax-deductible expenses,
-                        making audits much smoother.
-                      </Typography>
-                    </div>
-                    <div>
-                      <Typography
-                        variant="h5"
-                        className="text-[#1e3a8a] mb-2 font-bold uppercase"
-                      >
-                        3. Higher Credit Limits
-                      </Typography>
-                      <Typography variant="b1" className="text-gray-700">
-                        Business cards provide the liquidity you need for bulk
-                        purchases without &quot;maxing out&quot; your personal
-                        credit and hurting your personal score.
-                      </Typography>
-                    </div>
-                    <div>
-                      <Typography
-                        variant="h5"
-                        className="text-[#1e3a8a] mb-2 font-bold uppercase"
-                      >
-                        4. Protecting Your Personal Credit Score
-                      </Typography>
-                      <Typography variant="b1" className="text-gray-700">
-                        High business expenses on your personal card can cause
-                        your score to plummet. Business cards shift that
-                        liability away from your personal report.
+                      <Typography variant="b2" className="text-gray-600">
+                        Higher rates (11.5% - 18%) but offers 100% on-road
+                        funding and instant ownership.
                       </Typography>
                     </div>
                   </div>
@@ -163,70 +162,103 @@ export const Blog9 = () => {
                       variant="h5"
                       className="text-[#1e3a8a] mb-6 font-bold uppercase"
                     >
-                      Business vs. Personal Credit Cards: At a Glance
+                      Head-to-Head Comparison
                     </Typography>
                     <div className="overflow-x-auto rounded-lg border border-gray-200">
                       <table className="w-full text-left border-collapse">
-                        <thead className="bg-blue-50">
+                        <thead className="bg-gray-50">
                           <tr>
                             <th className="p-4 border-b font-bold text-gray-900">
                               Feature
                             </th>
                             <th className="p-4 border-b font-bold text-gray-900">
-                              Personal Card
+                              Car Loan
                             </th>
                             <th className="p-4 border-b font-bold text-gray-900">
-                              Business Card
+                              Personal Loan
                             </th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="hover:bg-gray-50">
+                          <tr>
                             <td className="p-4 border-b text-gray-700 font-medium">
-                              Primary Goal
+                              Interest Rate
                             </td>
-                            <td className="p-4 border-b text-gray-600 text-sm">
-                              Personal lifestyle
+                            <td className="p-4 border-b text-green-600 font-bold">
+                              8.5% - 11%
                             </td>
-                            <td className="p-4 border-b text-gray-600 text-sm">
-                              Business growth
+                            <td className="p-4 border-b text-red-600">
+                              11.5% - 18%
                             </td>
                           </tr>
-                          <tr className="hover:bg-gray-50">
+                          <tr>
                             <td className="p-4 border-b text-gray-700 font-medium">
-                              Credit Limit
+                              RC Status
                             </td>
                             <td className="p-4 border-b text-gray-600 text-sm">
-                              Based on income
+                              Hypothecated
                             </td>
                             <td className="p-4 border-b text-gray-600 text-sm">
-                              Based on turnover
+                              100% Personal
                             </td>
                           </tr>
-                          <tr className="hover:bg-gray-50">
+                          <tr>
                             <td className="p-4 border-b text-gray-700 font-medium">
-                              Reporting
+                              Down Payment
                             </td>
                             <td className="p-4 border-b text-gray-600 text-sm">
-                              CIBIL
+                              10% - 20% Required
                             </td>
                             <td className="p-4 border-b text-gray-600 text-sm">
-                              Business Bureaus
+                              Zero Possible
                             </td>
                           </tr>
-                          <tr className="hover:bg-gray-50">
+                          <tr>
                             <td className="p-4 border-b text-gray-700 font-medium">
-                              Rewards
+                              Approval Speed
                             </td>
                             <td className="p-4 border-b text-gray-600 text-sm">
-                              Movies & Dining
+                              Moderate
                             </td>
                             <td className="p-4 border-b text-gray-600 text-sm">
-                              SaaS & Ads
+                              Instant
                             </td>
                           </tr>
                         </tbody>
                       </table>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <Typography
+                      variant="h5"
+                      className="text-[#1e3a8a] font-bold uppercase"
+                    >
+                      When to Choose What?
+                    </Typography>
+                    <div className="space-y-4">
+                      <div className="flex gap-3 items-start">
+                        <ChevronRight
+                          className="text-blue-600 shrink-0 mt-1"
+                          size={18}
+                        />
+                        <Typography variant="b1">
+                          Choose a <strong>Car Loan</strong> if you are
+                          budget-conscious and plan to keep the vehicle for 5+
+                          years.
+                        </Typography>
+                      </div>
+                      <div className="flex gap-3 items-start">
+                        <ChevronRight
+                          className="text-blue-600 shrink-0 mt-1"
+                          size={18}
+                        />
+                        <Typography variant="b1">
+                          Choose a <strong>Personal Loan</strong> if you want
+                          zero down payment, absolute ownership from Day 1, or
+                          are buying a used car.
+                        </Typography>
+                      </div>
                     </div>
                   </div>
 
@@ -236,14 +268,14 @@ export const Blog9 = () => {
                         variant="h5"
                         className="text-white mb-2 font-bold uppercase"
                       >
-                        Empower Your Venture
+                        Drive Your Dream Today
                       </Typography>
                       <Typography
                         variant="b2"
                         className="text-blue-100 opacity-80"
                       >
-                        Separate your finances and build your company&apos;s
-                        credit today.
+                        Compare the best lending partners with Money King
+                        Financial.
                       </Typography>
                     </div>
                     <Link href="/contact" className="w-full md:w-auto">
@@ -256,7 +288,6 @@ export const Blog9 = () => {
                     </Link>
                   </div>
 
-                  {/* FAQ Section */}
                   <div className="pt-10 border-t border-gray-100">
                     <Typography
                       variant="h5"
