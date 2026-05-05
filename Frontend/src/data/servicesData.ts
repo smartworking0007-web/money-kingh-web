@@ -51,7 +51,7 @@ export const servicesData: ServiceItem[] = [
   },
   {
     id: 7,
-    title: "Gold Loan", // Maine title update kar diya context ke hisaab se
+    title: "Gold Loan", 
     image: "/images/servicesimages/s-7.jpg",
     href: "/services/loan/secured/gold",
   },

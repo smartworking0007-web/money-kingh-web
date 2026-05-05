@@ -1,3 +1,5 @@
+// src/data/ServicesDataDrowpdown.ts
+
 export interface ChildItem {
   title: string;
   href: string;
@@ -28,7 +30,7 @@ export const services: ServiceItem[] = [
           { title: "LAP", href: "/services/loan/secured/property" },
           { title: "Car loan", href: "/services/loan/secured/car" },
           { title: "Machinery Loan", href: "/services/loan/secured/machinery" },
-          { title: "Gold Loan", href: "/services/loan/secured/gold" }, // ✅ Gold Loan added
+          { title: "Gold Loan", href: "/services/loan/secured/gold" },
         ],
       },
       {
@@ -73,6 +75,7 @@ export const services: ServiceItem[] = [
           { title: "LAP BT & Top-Up", href: "/services/loan-bt/lap" },
           { title: "Machinery Loan BT", href: "/services/loan-bt/machinery" },
           { title: "Car Loan BT", href: "/services/loan-bt/car" },
+          { title: "Gold Loan BT", href: "/services/loan-bt/gold" },
         ],
       },
     ],
