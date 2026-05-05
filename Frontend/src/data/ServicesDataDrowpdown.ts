@@ -28,6 +28,7 @@ export const services: ServiceItem[] = [
           { title: "LAP", href: "/services/loan/secured/property" },
           { title: "Car loan", href: "/services/loan/secured/car" },
           { title: "Machinery Loan", href: "/services/loan/secured/machinery" },
+          { title: "Gold Loan", href: "/services/loan/secured/gold" }, // ✅ Gold Loan added
         ],
       },
       {
