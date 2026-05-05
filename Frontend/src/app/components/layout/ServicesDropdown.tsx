@@ -2,7 +2,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { Lexend } from "next/font/google";
-import { services, ServiceItem } from "@/data/ServicesDataDrowpdown";
+// ✅ Correct Imports
+import {
+  services,
+  ServiceItem,
+  SubItem,
+  ChildItem,
+} from "@/data/ServicesDataDrowpdown";
 import {
   ChevronDown,
   Home,
@@ -33,19 +39,21 @@ const IconComponent = ({ name }: { name?: string }) => {
   return icons[name?.toLowerCase() || ""] || <Sparkles size={14} />;
 };
 
+// ✅ ServiceBlock with correct types
 const ServiceBlock: React.FC<{
   service: ServiceItem;
   setIsOpen: (val: boolean) => void;
 }> = ({ service, setIsOpen }) => (
-  <div className="flex flex-col space-y-3 md:space-y-5">
-    <h3 className="text-slate-400 font-bold text-[9px] md:text-[10px] uppercase tracking-wider border-b border-slate-100 pb-1 md:pb-2">
+  <div className="flex flex-col space-y-4">
+    <h3 className="text-slate-400 font-bold text-[10px] uppercase tracking-wider border-b border-slate-100 pb-2">
       {service.title}
     </h3>
-    <ul className="space-y-4 md:space-y-6">
-      {service.subItems?.map((sub, i) => (
+    <ul className="space-y-5">
+      {/* ✅ 'sub' type defined as SubItem, 'i' as number */}
+      {service.subItems?.map((sub: SubItem, i: number) => (
         <li key={i} className="flex flex-col">
           <div className="flex items-start group">
-            <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-slate-50 flex items-center justify-center mr-2 md:mr-3 border border-slate-100 shrink-0 text-slate-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+            <div className="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center mr-3 border border-slate-100 shrink-0 text-slate-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
               <IconComponent name={sub.icon} />
             </div>
             <div className="flex flex-col pt-0.5 w-full">
@@ -53,24 +61,25 @@ const ServiceBlock: React.FC<{
                 <Link
                   href={sub.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-[13px] md:text-[14px] font-bold text-slate-800 leading-tight hover:text-blue-600 transition-colors"
+                  className="text-[14px] font-bold text-slate-800 leading-tight hover:text-blue-600 transition-colors"
                 >
                   {sub.title}
                 </Link>
               ) : (
-                <span className="text-[13px] md:text-[14px] font-bold text-slate-800 leading-tight">
+                <span className="text-[14px] font-bold text-slate-800 leading-tight">
                   {sub.title}
                 </span>
               )}
 
               {sub.children && (
-                <div className="mt-2 flex flex-col space-y-2 md:space-y-3 pl-3 border-l border-slate-200">
-                  {sub.children.map((child, j) => (
+                <div className="mt-2 flex flex-col space-y-2 pl-3 border-l border-slate-200">
+                  {/* ✅ 'child' type defined as ChildItem, 'j' as number */}
+                  {sub.children.map((child: ChildItem, j: number) => (
                     <Link
                       key={j}
                       href={child.href}
                       onClick={() => setIsOpen(false)}
-                      className="text-[11px] md:text-[12px] text-slate-500 hover:text-blue-600 font-medium block w-full py-0.5"
+                      className="text-[12px] text-slate-500 hover:text-blue-600 font-medium block w-full py-0.5"
                     >
                       {child.title}
                     </Link>
@@ -89,7 +98,6 @@ const ServicesDropdown: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Desktop hover functionality
   const handleMouseEnter = () => setIsOpen(true);
   const handleMouseLeave = () => setIsOpen(false);
 
@@ -132,28 +140,23 @@ const ServicesDropdown: React.FC = () => {
 
       {isOpen && (
         <>
-          {/* Mobile Overlay */}
           <div
             className="fixed inset-0 bg-black/10 z-998 md:hidden"
             onClick={() => setIsOpen(false)}
           />
 
-          {/* FIX: Desktop aur Mobile dono par perfectly center karne ke liye classes:
-            1. 'fixed' viewport ke hisaab se lega.
-            2. 'left-1/2' aur '-translate-x-1/2' se horizontal center hoga.
-          */}
-          <div className="fixed left-1/2 -translate-x-1/2 top-[65px] md:top-[75px] w-[92vw] md:w-[900px] lg:w-[1100px] z-999 bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden">
-            {/* Mobile Header */}
-            <div className="flex md:hidden items-center justify-between p-4 border-b bg-slate-50">
-              <span className="font-bold text-slate-700">Explore Services</span>
+          <div className="fixed left-1/2 -translate-x-1/2 top-[65px] md:top-[84px] w-[95vw] md:w-[90vw] lg:w-[1100px] z-999 bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden">
+            <div className="flex lg:hidden items-center justify-between p-4 border-b bg-slate-50">
+              <span className="font-bold text-slate-700">All Services</span>
               <X
                 className="w-5 h-5 text-slate-500 cursor-pointer"
                 onClick={() => setIsOpen(false)}
-              /> 
+              />
             </div>
 
-            <div className="p-5 md:p-10 max-h-[80vh] md:max-h-none overflow-y-auto custom-scrollbar">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-10 items-start">
+            <div className="p-5 md:p-8 lg:p-10 max-h-[80vh] overflow-y-auto no-scrollbar">
+              {/* ✅ Responsive Fix for Tablet: grid-cols-2 */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 items-start">
                 {loanService && (
                   <ServiceBlock service={loanService} setIsOpen={setIsOpen} />
                 )}
@@ -167,7 +170,7 @@ const ServicesDropdown: React.FC = () => {
                   />
                 )}
 
-                <div className="flex flex-col space-y-10 md:space-y-12">
+                <div className="flex flex-col space-y-10">
                   {otherServices.map((s, idx) => (
                     <ServiceBlock key={idx} service={s} setIsOpen={setIsOpen} />
                   ))}
