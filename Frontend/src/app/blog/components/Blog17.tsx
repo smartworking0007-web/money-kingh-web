@@ -71,7 +71,7 @@ export const Blog17 = () => {
               </button>
             </div>
 
-            <div className="bg-white rounded-xl overflow-hidden border-gray-100 ">
+            <div className="bg-white rounded-xl overflow-hidden border-gray-100">
               <div className="relative h-[250px] sm:h-[300px] md:h-[500px] w-full">
                 <Image
                   src="/images/blog/blog-17.jpeg"
