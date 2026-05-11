@@ -28,6 +28,9 @@ import { Blog21 } from "./components/Blog21";
 import { Blog22 } from "./components/Blog22";
 import { Blog23 } from "./components/Blog23";
 import { Blog24 } from "./components/Blog24";
+import { Blog25 } from "./components/Blog25";
+import { Blog26 } from "./components/Blog26";
+import { Blog27 } from "./components/Blog27";
 
 // 2. Blog Array Banayein (Aage naye blogs bas yahan add karne honge)
 const ALL_BLOGS = [
@@ -55,6 +58,9 @@ const ALL_BLOGS = [
   { id: 22, component: <Blog22 /> },
   { id: 23, component: <Blog23 /> },
   { id: 24, component: <Blog24 /> },
+  { id: 25, component: <Blog25 /> },
+  { id: 26, component: <Blog26 /> },
+  { id: 27, component: <Blog27 /> },
 ];
 
 export default function BlogPage() {

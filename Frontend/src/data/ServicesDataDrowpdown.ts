@@ -75,7 +75,6 @@ export const services: ServiceItem[] = [
           { title: "LAP BT & Top-Up", href: "/services/loan-bt/lap" },
           { title: "Machinery Loan BT", href: "/services/loan-bt/machinery" },
           { title: "Car Loan BT", href: "/services/loan-bt/car" },
-          { title: "Gold Loan BT", href: "/services/loan-bt/gold" },
         ],
       },
     ],

@@ -76,7 +76,6 @@ export const Blog24 = () => {
                 <ArrowLeft size={14} /> Back to Blogs
               </button>
             </div>
-
             <div className="bg-white rounded-xl overflow-hidden border-gray-100 ">
               <div className="relative h-[250px] sm:h-[300px] md:h-[500px] w-full">
                 <Image
