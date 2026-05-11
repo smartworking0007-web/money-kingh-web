@@ -4,7 +4,7 @@ import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { partnerLogos } from "@/data/mutualPartners";
-import { Typography } from "../ui/Typography"; // Adjust path as needed
+import { Typography } from "../ui/Typography"; 
 
 const MutualPartners: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -46,7 +46,7 @@ const MutualPartners: React.FC = () => {
   }, [isPaused]);
 
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-white to-gray-50 border-t border-gray-100 overflow-hidden">
+    <section className="py-16 md:py-20 gradient-to-b from-white to-gray-50 border-t border-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Typography
           variant="h3"
@@ -79,7 +79,7 @@ const MutualPartners: React.FC = () => {
             {partnerLogos.map((partner, index) => (
               <div
                 key={`${partner.name}-${index}`}
-                className="flex-shrink-0 snap-center w-[160px] md:w-[220px] h-16 md:h-24 flex items-center justify-center transition-all duration-300 hover:scale-105"
+                className="shrink-0 snap-center w-160px md:w-[220px] h-16 md:h-24 flex items-center justify-center transition-all duration-300 hover:scale-105"
               >
                 <Image
                   src={partner.src}

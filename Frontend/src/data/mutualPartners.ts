@@ -10,8 +10,6 @@ export interface MutualFundProduct {
   href: string;
 }
 
-// 9 most popular / largest mutual fund houses in India
-// Ordered roughly by AUM / visibility on retail platforms (Groww, Zerodha Coin, etc.) ~ Dec 2025
 export const numberedMutualData: PartnerLogo[] = [
   { name: "SBI Mutual Fund", src: "/images/mutual/2.jpeg" },
   { name: "ICICI Prudential", src: "/images/mutual/3.png" },
@@ -26,6 +24,13 @@ export const numberedMutualData: PartnerLogo[] = [
   { name: "Samco Mutual Fund", src: "/images/mutual/14.webp" },
   { name: "Tata Mutual Fund", src: "/images/mutual/15.webp" },
   { name: "Quant Mutual Fund", src: "/images/mutual/16.webp" },
+  { name: "Groww Mutual Fund", src: "/images/mutual/17.webp" },
+  { name: "Bajaj Finserv Mutual Fund", src: "/images/mutual/18.webp" },
+  { name: "Bandhan Mutual Fund", src: "/images/mutual/19.webp" },
+  { name: "Aditya Birla Sun Life Mutual Fund", src: "/images/mutual/20.webp" },
+  { name: "Canara Robeco", src: "/images/mutual/21.webp" },
+  { name: "DSP Mutual Fund", src: "/images/mutual/22.webp" },
+  { name: "Edelweiss Mutual Fund", src: "/images/mutual/23.webp" },
 ];
 
 export const partnerLogos: PartnerLogo[] = [...numberedMutualData];
