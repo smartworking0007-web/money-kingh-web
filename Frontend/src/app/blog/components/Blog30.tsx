@@ -4,15 +4,16 @@ import React, { useState } from "react";
 import Image from "next/image";
 import {
   Clock,
-  Folder,
   ArrowLeft,
   ChevronDown,
   ChevronUp,
-  Merge,
-  TrendingUp,
+  ShieldAlert,
+  Lock,
+  Smartphone,
+  UserX,
+  AlertTriangle,
   CheckCircle2,
-  Brain,
-  Percent,
+  PhoneOff,
 } from "lucide-react";
 import { BlogCard1 } from "./BlogCard1";
 import { ShareSection } from "./ShareSection";
@@ -23,7 +24,7 @@ interface FAQItem {
   a: string;
 }
 
-export const Blog27 = () => {
+export const Blog30 = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
@@ -32,22 +33,27 @@ export const Blog27 = () => {
 
   const faqs: FAQItem[] = [
     {
-      q: "Q1: Will consolidating my debt hurt my credit score?",
-      a: "Initially, you might see a small dip due to the 'hard inquiry'. However, in the long run, your score improves as you pay off high-interest balances and maintain a consistent, on-time payment history with your single EMI.",
+      q: "Q1. Can a fraudster withdraw money with just my phone number?",
+      a: "No. A phone number alone isn't enough. They usually need your bank details OR your OTP to gain access to your funds. This is why keeping the OTP private is critical.",
     },
     {
-      q: "Q2: Can I consolidate my credit card debt along with my personal loans?",
-      a: "Yes. In fact, credit card debt is the most important to include because it carries the highest interest rate (up to 42%). Merging it saves you a significant amount of money.",
+      q: "Q2. Is it safe to share an OTP if the caller sounds professional?",
+      a: "No. Fraudsters often use professional scripts and may even have some of your basic details to sound legitimate. Regardless of how professional they sound, never share your OTP.",
     },
     {
-      q: "Q3: Is a Debt Consolidation Loan the same as a Personal Loan?",
-      a: "Essentially, yes. It is a personal loan used specifically to pay off other creditors. Some banks offer specialized 'Consolidation' products, but a standard personal loan with a lower rate works the same way.",
+      q: "Q3. Why do I receive OTPs when I am not doing any transaction?",
+      a: "This means someone is trying to log into your account. If you get an 'unsolicited' OTP, it is a red flag. Change your passwords immediately and do not forward that SMS to anyone.",
     },
     {
-      q: "Q4: How do I know if the 'One EMI' solution is right for me?",
-      a: "If you struggle to track multiple due dates, or if more than 40% of your income is going toward high-interest debt, consolidation is a very smart move for your financial health.",
+      q: "Q4. Can I share an OTP with a 'Channel Partner' or Agent?",
+      a: "No. Even if an agent is helping you with a loan application, they do not need your OTP. You should always enter the OTP yourself on the official website or app.",
+    },
+    {
+      q: "Q5. Does Money King Financial use OTPs for login?",
+      a: "Yes, we use OTPs to ensure that only you can access your account. We send it so you can use it personally, not so you can tell it to someone else.",
     },
   ];
+
   return (
     <div className="w-full flex justify-center">
       {!isOpen ? (
@@ -56,11 +62,11 @@ export const Blog27 = () => {
           className="cursor-pointer w-full flex justify-center px-4"
         >
           <BlogCard1
-            title="The One EMI Solution: How to Simplify Your Life by Merging Your Debts"
-            category="LOAN"
+            title="Digital Safety First: Why You Should Never Share Your OTP (Even With Us)"
+            category="SECURITY"
             author="Sumit Mishra"
-            date="May 11, 2026"
-            image="/images/blog/blog-27.jpeg"
+            date="May 12, 2026"
+            image="/images/blog/blog-30.jpeg"
           />
         </div>
       ) : (
@@ -74,145 +80,174 @@ export const Blog27 = () => {
                 <ArrowLeft size={14} /> Back to Blogs
               </button>
             </div>
+
             <div className="bg-white rounded-xl overflow-hidden border-gray-100 ">
               <div className="relative h-[250px] sm:h-[300px] md:h-[500px] w-full">
                 <Image
-                  src="/images/blog/blog-27.jpeg"
-                  alt="Professional financial advisor explaining debt consolidation benefits to a client in a modern office."
+                  src="/images/blog/blog-30.jpeg"
+                  alt="secure-digital-banking-otp-protection"
                   fill
                   className="object-cover"
                   priority
                 />
               </div>
-
               <div className="px-5 py-8 md:px-12 md:py-14 text-justify">
                 <Typography
                   variant="h5"
                   className="text-[#1e3a8a] mb-4 font-bold leading-tight uppercase"
                 >
-                  The One EMI Solution: Reclaim Your Financial Peace
+                  Protecting Your Digital Key: The OTP Safety Guide
                 </Typography>
 
                 <div className="flex gap-4 text-gray-400 mb-8 pb-4 border-b overflow-x-auto no-scrollbar">
                   <div className="flex items-center gap-2 shrink-0">
                     <Clock size={16} />
-                    <Typography variant="b2">May 11, 2026</Typography>
+                    <Typography variant="b2">May 12, 2026</Typography>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
-                    <Folder size={16} />
-                    <Typography variant="b2">Loan</Typography>
+                    <ShieldAlert size={16} />
+                    <Typography variant="b2">Security</Typography>
                   </div>
                 </div>
+
                 <Typography
                   variant="s2"
-                  className="text-gray-600 mb-10 font-medium leading-relaxed block"
+                  className="text-gray-600 mb-10 font-medium leading-relaxed block "
                 >
-                  Managing multiple loan repayments can feel like a never-ending
-                  cycle of stress. Debt Consolidation—often called the{" "}
-                  <strong>&quot;One EMI&quot;</strong> solution—is your
-                  strategic exit.
+                  In digital banking, your OTP is the final barrier between your
+                  money and a criminal. The strongest lock is useless if you
+                  hand over the key.
                 </Typography>
 
                 <section className="space-y-12">
-                  {/* Strategy Box */}
-                  <div className="bg-blue-50 p-6 md:p-8 rounded-3xl border border-blue-100 flex gap-6 items-start">
-                    <Merge className="text-blue-600 shrink-0" size={32} />
+                  {/* Power of OTP Section */}
+                  <div className="bg-blue-50 p-6 md:p-8 rounded-3xl border border-blue-100 flex flex-col md:flex-row gap-6 items-center">
+                    <div className="bg-blue-600 p-4 rounded-2xl text-white shrink-0">
+                      <Lock size={32} />
+                    </div>
                     <div>
                       <Typography
                         variant="h5"
                         className="font-bold text-blue-900 uppercase mb-2"
                       >
-                        How it Works
+                        The Power of 2FA
                       </Typography>
-                      <Typography variant="b1" className="text-gray-700">
-                        Take out one single new loan at a lower rate to pay off
-                        all high-interest credit cards and small EMIs. You are
-                        left with{" "}
-                        <strong>
-                          one lender, one date, and one installment.
-                        </strong>
+                      <Typography
+                        variant="b1"
+                        className="text-gray-700 leading-relaxed"
+                      >
+                        Even if a fraudster knows your password, bank details,
+                        or PAN, they cannot complete a transaction without that
+                        4 or 6-digit code. It acts as your{" "}
+                        <strong>Second Factor of Authentication.</strong>
                       </Typography>
                     </div>
                   </div>
 
-                  {/* Benefits Grid */}
+                  {/* Scammer Tactics Grid */}
                   <div className="space-y-6">
                     <Typography
                       variant="h5"
                       className="font-bold text-gray-900 uppercase"
                     >
-                      Strategic Benefits
+                      Common Scammer Tactics
                     </Typography>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div className="p-6 border border-gray-100 rounded-2xl shadow-sm">
-                        <Percent className="text-green-600 mb-3" size={24} />
+                        <Smartphone className="text-red-500 mb-3" size={24} />
                         <Typography
                           variant="s2"
-                          className="font-bold mb-2 block"
+                          className="font-bold mb-2 block uppercase"
                         >
-                          Lower Interest
+                          The KYC Trap
                         </Typography>
                         <Typography variant="caption" className="text-gray-500">
-                          Move 42% credit card debt to a ~12% structured loan.
+                          Threats that your account will be blocked unless you
+                          &quot;verify&quot; via OTP.
                         </Typography>
                       </div>
-                      <div className="p-6 border border-gray-100 rounded-2xl ">
-                        <TrendingUp className="text-blue-600 mb-3" size={24} />
+                      <div className="p-6 border border-gray-100 rounded-2xl shadow-sm">
+                        <AlertTriangle
+                          className="text-orange-500 mb-3"
+                          size={24}
+                        />
                         <Typography
                           variant="s2"
-                          className="font-bold mb-2 block"
+                          className="font-bold mb-2 block uppercase"
                         >
-                          CIBIL Boost
+                          Loan Scams
                         </Typography>
                         <Typography variant="caption" className="text-gray-500">
-                          Lower credit utilization ratio by paying off multiple
-                          cards.
+                          Asking for an OTP to &quot;process fees&quot; for a
+                          pre-approved loan.
                         </Typography>
                       </div>
-                      <div className="p-6 border border-gray-100 rounded-2xl ">
-                        <Brain className="text-purple-600 mb-3" size={24} />
+                      <div className="p-6 border border-gray-100 rounded-2xl shadow-sm">
+                        <UserX className="text-purple-500 mb-3" size={24} />
                         <Typography
                           variant="s2"
-                          className="font-bold mb-2 block"
+                          className="font-bold mb-2 block uppercase"
                         >
-                          Mental Clarity
+                          Reward Tricks
                         </Typography>
                         <Typography variant="caption" className="text-gray-500">
-                          Stop &quot;survival mode&quot; and start planning for
-                          future goals.
+                          Claiming you won a prize that requires a code to be
+                          redeemed.
                         </Typography>
                       </div>
                     </div>
                   </div>
 
-                  {/* Action Steps */}
-                  <div className="bg-gray-900 text-white p-8 md:p-12 rounded-[40px] relative overflow-hidden">
+                  {/* The Golden Rule */}
+                  <div className="bg-red-600 text-white p-8 md:p-12 rounded-[40px] relative overflow-hidden shadow-xl">
+                    <div className="flex flex-col md:flex-row items-center gap-8">
+                      <PhoneOff size={60} className="text-red-200 shrink-0" />
+                      <div>
+                        <Typography
+                          variant="h5"
+                          className="text-white mb-4 font-bold uppercase"
+                        >
+                          The Money King Safety Protocol
+                        </Typography>
+                        <Typography
+                          variant="b1"
+                          className="text-red-50 leading-relaxed"
+                        >
+                          <strong>Money King Financial</strong> or any
+                          legitimate Bank will <strong>NEVER</strong> ask for
+                          your OTP, CVV, or PIN over a phone call, SMS, or
+                          Email. If someone asks, hang up immediately.
+                        </Typography>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Emergency Steps */}
+                  <div className="space-y-6">
                     <Typography
                       variant="h5"
-                      className="text-white mb-8 font-bold uppercase"
+                      className="font-bold text-gray-900 uppercase"
                     >
-                      Success Checklist
+                      Accidentally Shared an OTP?
                     </Typography>
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-3">
-                        <CheckCircle2 className="text-blue-400" size={20} />
-                        <Typography variant="b1">
-                          <strong>Audit:</strong> List every loan, its interest
-                          rate, and balance.
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="p-5 bg-gray-50 rounded-2xl flex gap-4">
+                        <div className="text-blue-600 shrink-0">
+                          <CheckCircle2 />
+                        </div>
+                        <Typography variant="b2">
+                          <strong>Freeze Accounts:</strong> Use your banking app
+                          to block all cards immediately.
                         </Typography>
                       </div>
-                      <div className="flex items-center gap-3">
-                        <CheckCircle2 className="text-blue-400" size={20} />
-                        <Typography variant="b1">
-                          <strong>Eligibility:</strong> Ensure your credit
-                          history is ready for the best rates.
-                        </Typography>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <CheckCircle2 className="text-blue-400" size={20} />
-                        <Typography variant="b1">
-                          <strong>No New Debt:</strong> Stop using credit cards
-                          once you consolidate.
+                      <div className="p-5 bg-gray-50 rounded-2xl flex gap-4">
+                        <div className="text-blue-600 shrink-0">
+                          <CheckCircle2 />
+                        </div>
+                        <Typography variant="b2">
+                          <strong>Report:</strong> Call the national helpline{" "}
+                          <strong>1930</strong> or visit official cybercrime
+                          portals.
                         </Typography>
                       </div>
                     </div>
@@ -230,7 +265,7 @@ export const Blog27 = () => {
                       {faqs.map((faq, index) => (
                         <div
                           key={index}
-                          className="border border-gray-100 rounded-xl overflow-hidden hover:border-blue-200 transition-all"
+                          className="border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:border-blue-200 transition-all"
                         >
                           <button
                             onClick={() => toggleFaq(index)}
