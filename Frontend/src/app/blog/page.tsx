@@ -37,8 +37,8 @@ import { Blog30 } from "./components/Blog30";
 import { Blog31 } from "./components/Blog31";
 import { Blog32 } from "./components/Blog32";
 import { Blog33 } from "./components/Blog33";
+import { Blog34 } from "./components/Blog34";
 
-// 2. Blog Array Banayein (Aage naye blogs bas yahan add karne honge)
 const ALL_BLOGS = [
   { id: 1, component: <Blog1 /> },
   { id: 2, component: <Blog2 /> },
@@ -73,19 +73,41 @@ const ALL_BLOGS = [
   { id: 31, component: <Blog31 /> },
   { id: 32, component: <Blog32 /> },
   { id: 33, component: <Blog33 /> },
+
+  // Scheduled Blog
+  {
+    id: 34,
+    publishAt: "2026-05-15T12:25:00",
+    component: <Blog34 />,
+  },
 ];
 
 export default function BlogPage() {
   const [currentPage, setCurrentPage] = useState(1);
-  const blogsPerPage = 6; 
+
+  const blogsPerPage = 6;
+
+  // Only Published Blogs
+  const publishedBlogs = ALL_BLOGS.filter((blog) => {
+    if (!blog.publishAt) return true;
+
+    return new Date(blog.publishAt) <= new Date();
+  });
 
   // Pagination Logic
-  const totalPages = Math.ceil(ALL_BLOGS.length / blogsPerPage);
-  const indexOfLastBlog = currentPage * blogsPerPage;
-  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const totalPages = Math.ceil(
+    publishedBlogs.length / blogsPerPage
+  );
 
-  // Current page ke liye blogs filter karein
-  const currentBlogs = ALL_BLOGS.slice(indexOfFirstBlog, indexOfLastBlog);
+  const indexOfLastBlog = currentPage * blogsPerPage;
+
+  const indexOfFirstBlog =
+    indexOfLastBlog - blogsPerPage;
+
+  const currentBlogs = publishedBlogs.slice(
+    indexOfFirstBlog,
+    indexOfLastBlog
+  );
 
   return (
     <main className="min-h-screen bg-[#F8FAFC]">
@@ -102,7 +124,7 @@ export default function BlogPage() {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="flex flex-col lg:flex-row gap-12 justify-center">
           <div className="flex-1 max-w-[800px]">
-            {/* --- GRID VIEW (Mapping through Array) --- */}
+            {/* Blog Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
               {currentBlogs.map((blog) => (
                 <div key={blog.id} className="w-full">
@@ -111,11 +133,15 @@ export default function BlogPage() {
               ))}
             </div>
 
-            {/* --- NUMERICAL PAGINATION --- */}
+            {/* Pagination */}
             <div className="mt-16 flex items-center justify-center gap-4">
               {/* Previous */}
               <button
-                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                onClick={() =>
+                  setCurrentPage((prev) =>
+                    Math.max(prev - 1, 1)
+                  )
+                }
                 disabled={currentPage === 1}
                 className={`flex items-center font-bold text-[#1e5d91] ${
                   currentPage === 1
@@ -128,27 +154,30 @@ export default function BlogPage() {
 
               {/* Numbers */}
               <div className="flex gap-2">
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                  (number) => (
-                    <button
-                      key={number}
-                      onClick={() => setCurrentPage(number)}
-                      className={`px-3 py-1 text-lg font-bold transition-all ${
-                        currentPage === number
-                          ? "text-orange-400 border-b-2 border-orange-400"
-                          : "text-[#1e5d91] hover:text-blue-800"
-                      }`}
-                    >
-                      {number}
-                    </button>
-                  ),
-                )}
+                {Array.from(
+                  { length: totalPages },
+                  (_, i) => i + 1
+                ).map((number) => (
+                  <button
+                    key={number}
+                    onClick={() => setCurrentPage(number)}
+                    className={`px-3 py-1 text-lg font-bold transition-all ${
+                      currentPage === number
+                        ? "text-orange-400 border-b-2 border-orange-400"
+                        : "text-[#1e5d91] hover:text-blue-800"
+                    }`}
+                  >
+                    {number}
+                  </button>
+                ))}
               </div>
 
               {/* Next */}
               <button
                 onClick={() =>
-                  setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                  setCurrentPage((prev) =>
+                    Math.min(prev + 1, totalPages)
+                  )
                 }
                 disabled={currentPage === totalPages}
                 className={`flex items-center font-bold text-[#1e5d91] ${
