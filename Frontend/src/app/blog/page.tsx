@@ -1,9 +1,10 @@
 "use client";
+
 import React, { useState } from "react";
 import { BlogSidebar } from "./BlogSidebar";
 import { Typography } from "@/app/components/ui/Typography";
 
-// 1. Saare Blogs Import karein
+// Blogs Import
 import { Blog1 } from "./components/Blog1";
 import { Blog2 } from "./components/Blog2";
 import { Blog3 } from "./components/Blog3";
@@ -38,6 +39,15 @@ import { Blog31 } from "./components/Blog31";
 import { Blog32 } from "./components/Blog32";
 import { Blog33 } from "./components/Blog33";
 import { Blog34 } from "./components/Blog34";
+import { Blog35 } from "./components/Blog35";
+import { Blog36 } from "./components/Blog36";
+import { Blog37 } from "./components/Blog37";
+import { Blog38 } from "./components/Blog38";
+import { Blog39 } from "./components/Blog39";
+import { Blog40 } from "./components/Blog40";
+import { Blog41 } from "./components/Blog41";
+import { Blog42 } from "./components/Blog42";
+import { Blog43 } from "./components/Blog43";
 
 const ALL_BLOGS = [
   { id: 1, component: <Blog1 /> },
@@ -73,12 +83,57 @@ const ALL_BLOGS = [
   { id: 31, component: <Blog31 /> },
   { id: 32, component: <Blog32 /> },
   { id: 33, component: <Blog33 /> },
+  { id: 34, component: <Blog34 /> },
 
-  // Scheduled Blog
+  // Saturday - 16 May 2026 - 12:30 PM
   {
-    id: 34,
-    publishAt: "2026-05-15T12:42:00",
-    component: <Blog34 />,
+    id: 35,
+    publishAt: "2026-05-16T12:30:00",
+    component: <Blog35 />,
+  },
+  {
+    id: 36,
+    publishAt: "2026-05-16T12:30:00",
+    component: <Blog36 />,
+  },
+  {
+    id: 37,
+    publishAt: "2026-05-16T12:30:00",
+    component: <Blog37 />,
+  },
+
+  // Monday - 18 May 2026 - 12:30 PM
+  {
+    id: 38,
+    publishAt: "2026-05-18T12:30:00",
+    component: <Blog38 />,
+  },
+  {
+    id: 39,
+    publishAt: "2026-05-18T12:30:00",
+    component: <Blog39 />,
+  },
+  {
+    id: 40,
+    publishAt: "2026-05-18T12:30:00",
+    component: <Blog40 />,
+  },
+
+  // Tuesday - 19 May 2026 - 12:30 PM
+  {
+    id: 41,
+    publishAt: "2026-05-19T12:30:00",
+    component: <Blog41 />,
+  },
+  {
+    id: 42,
+    publishAt: "2026-05-19T12:30:00",
+    component: <Blog42 />,
+  },
+  {
+    id: 43,
+    publishAt: "2026-05-19T12:30:00",
+    component: <Blog43 />,
   },
 ];
 
@@ -94,12 +149,13 @@ export default function BlogPage() {
     return new Date(blog.publishAt) <= new Date();
   });
 
-  // Pagination Logic
+  // Pagination
   const totalPages = Math.ceil(
     publishedBlogs.length / blogsPerPage
   );
 
-  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfLastBlog =
+    currentPage * blogsPerPage;
 
   const indexOfFirstBlog =
     indexOfLastBlog - blogsPerPage;
@@ -112,29 +168,33 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen bg-[#F8FAFC]">
       {/* Banner */}
-      <div className="h-[200px] w-full flex items-center justify-center bg-[#4A90E2]">
+      <div className="h-160px md:h-[200px] w-full flex items-center justify-center bg-[#4A90E2]">
         <Typography
           variant="h1"
-          className="text-white uppercase tracking-widest"
+          className="text-white uppercase tracking-widest text-center px-4"
         >
           Blogs
         </Typography>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="flex flex-col lg:flex-row gap-12 justify-center">
+      <div className="max-w-7xl mx-auto px-4 py-10 md:py-16">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 justify-center">
+          
+          {/* Left Content */}
           <div className="flex-1 max-w-[800px]">
+            
             {/* Blog Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 justify-items-center">
               {currentBlogs.map((blog) => (
-                <div key={blog.id} className="w-full">
+                <div key={blog.id} className="w-full flex justify-center">
                   {blog.component}
                 </div>
               ))}
             </div>
 
             {/* Pagination */}
-            <div className="mt-16 flex items-center justify-center gap-4">
+            <div className="mt-12 md:mt-16 flex flex-wrap items-center justify-center gap-3 md:gap-4">
+              
               {/* Previous */}
               <button
                 onClick={() =>
@@ -143,28 +203,30 @@ export default function BlogPage() {
                   )
                 }
                 disabled={currentPage === 1}
-                className={`flex items-center font-bold text-[#1e5d91] ${
+                className={`px-4 py-2 rounded-md text-sm md:text-base font-bold border transition-all ${
                   currentPage === 1
-                    ? "opacity-30 cursor-not-allowed"
-                    : "hover:underline"
+                    ? "opacity-40 cursor-not-allowed border-gray-200 text-gray-400"
+                    : "border-[#1e5d91] text-[#1e5d91] hover:bg-[#1e5d91] hover:text-white"
                 }`}
               >
-                « Previous
+                Previous
               </button>
 
               {/* Numbers */}
-              <div className="flex gap-2">
+              <div className="flex flex-wrap items-center justify-center gap-2">
                 {Array.from(
                   { length: totalPages },
                   (_, i) => i + 1
                 ).map((number) => (
                   <button
                     key={number}
-                    onClick={() => setCurrentPage(number)}
-                    className={`px-3 py-1 text-lg font-bold transition-all ${
+                    onClick={() =>
+                      setCurrentPage(number)
+                    }
+                    className={`min-w-40px h-40px rounded-md text-sm md:text-base font-bold transition-all ${
                       currentPage === number
-                        ? "text-orange-400 border-b-2 border-orange-400"
-                        : "text-[#1e5d91] hover:text-blue-800"
+                        ? "bg-orange-400 text-white"
+                        : "bg-white border border-gray-200 text-[#1e5d91] hover:bg-[#1e5d91] hover:text-white"
                     }`}
                   >
                     {number}
@@ -180,13 +242,13 @@ export default function BlogPage() {
                   )
                 }
                 disabled={currentPage === totalPages}
-                className={`flex items-center font-bold text-[#1e5d91] ${
+                className={`px-4 py-2 rounded-md text-sm md:text-base font-bold border transition-all ${
                   currentPage === totalPages
-                    ? "opacity-30 cursor-not-allowed"
-                    : "hover:underline"
+                    ? "opacity-40 cursor-not-allowed border-gray-200 text-gray-400"
+                    : "border-[#1e5d91] text-[#1e5d91] hover:bg-[#1e5d91] hover:text-white"
                 }`}
               >
-                Next »
+                Next
               </button>
             </div>
           </div>
