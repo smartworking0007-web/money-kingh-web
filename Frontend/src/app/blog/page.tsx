@@ -48,7 +48,7 @@ import { Blog40 } from "./components/Blog40";
 import { Blog41 } from "./components/Blog41";
 import { Blog42 } from "./components/Blog42";
 import { Blog43 } from "./components/Blog43";
-
+ 
 const ALL_BLOGS = [
   { id: 1, component: <Blog1 /> },
   { id: 2, component: <Blog2 /> },
@@ -150,7 +150,7 @@ export default function BlogPage() {
               <div className="flex flex-wrap items-center justify-center gap-2">
                 {Array.from(
                   { length: totalPages },
-                  (_, i) => i + 1
+                  (_, i) => i + 1 
                 ).map((number) => ( 
                   <button
                     key={number}

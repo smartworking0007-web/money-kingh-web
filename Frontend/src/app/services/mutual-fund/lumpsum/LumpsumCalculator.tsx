@@ -76,7 +76,7 @@ const LumpsumCalculator = () => {
                     </Typography>
                   </div>
                   <input 
-                    type="range" min="5000" max="1000000" step="5000"
+                    type="range" min="5000" max="100000000" step="5000"
                     value={initialInvestment}
                     onChange={(e) => setInitialInvestment(Number(e.target.value))}
                     className={`${sliderClass} accent-indigo-600 text-indigo-600`}
