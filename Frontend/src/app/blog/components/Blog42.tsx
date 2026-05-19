@@ -95,7 +95,7 @@ export const Blog42 = () => {
             title="How AI is Changing the Future of Banking and Finance: 2026 Edition"
             category="FINTECH & AI"
             author="Sumit Mishra"
-            date="May 15, 2026"
+            date="May 19, 2026"
             image="/images/blog/blog-42.jpg"
           />
         </div>
@@ -136,7 +136,7 @@ export const Blog42 = () => {
                 <div className="flex gap-4 text-gray-400 mb-8 pb-4 border-b overflow-x-auto no-scrollbar">
                   <div className="flex items-center gap-2 shrink-0">
                     <Clock size={16} />
-                    <Typography variant="b2" as="span" className="text-gray-400">May 15, 2026</Typography>
+                    <Typography variant="b2" as="span" className="text-gray-400">May 19, 2026</Typography>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
                     <Cpu size={16} />

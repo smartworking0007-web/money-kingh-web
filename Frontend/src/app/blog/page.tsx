@@ -84,94 +84,34 @@ const ALL_BLOGS = [
   { id: 32, component: <Blog32 /> },
   { id: 33, component: <Blog33 /> },
   { id: 34, component: <Blog34 /> },
-
-  // Saturday - 16 May 2026 - 12:30 PM
-  {
-    id: 35,
-    publishAt: "2026-05-16T12:30:00",
-    component: <Blog35 />,
-  },
-  {
-    id: 36,
-    publishAt: "2026-05-16T12:30:00",
-    component: <Blog36 />,
-  },
-  {
-    id: 37,
-    publishAt: "2026-05-16T12:30:00",
-    component: <Blog37 />,
-  },
-
-  // Monday - 18 May 2026 - 12:30 PM
-  {
-    id: 38,
-    publishAt: "2026-05-18T12:30:00",
-    component: <Blog38 />,
-  },
-  {
-    id: 39,
-    publishAt: "2026-05-18T12:30:00",
-    component: <Blog39 />,
-  },
-  {
-    id: 40,
-    publishAt: "2026-05-18T12:30:00",
-    component: <Blog40 />,
-  },
-
-  // Tuesday - 19 May 2026 - 12:30 PM
-  {
-    id: 41,
-    publishAt: "2026-05-19T12:30:00",
-    component: <Blog41 />,
-  },
-  {
-    id: 42,
-    publishAt: "2026-05-19T12:30:00",
-    component: <Blog42 />,
-  },
-  {
-    id: 43,
-    publishAt: "2026-05-19T12:30:00",
-    component: <Blog43 />,
-  },
+  { id: 35, component: <Blog35 /> },
+  { id: 36, component: <Blog36 /> },
+  { id: 37, component: <Blog37 /> },
+  { id: 38, component: <Blog38 /> },
+  { id: 39, component: <Blog39 /> },
+  { id: 40, component: <Blog40 /> },
+  { id: 41, component: <Blog41 /> },
+  { id: 42, component: <Blog42 /> },
+  { id: 43, component: <Blog43 /> },
 ];
 
 export default function BlogPage() {
   const [currentPage, setCurrentPage] = useState(1);
-
   const blogsPerPage = 6;
 
-  // Only Published Blogs
-  const publishedBlogs = ALL_BLOGS.filter((blog) => {
-    if (!blog.publishAt) return true;
-
-    return new Date(blog.publishAt) <= new Date();
-  });
-
-  // Pagination
-  const totalPages = Math.ceil(
-    publishedBlogs.length / blogsPerPage
-  );
-
-  const indexOfLastBlog =
-    currentPage * blogsPerPage;
-
-  const indexOfFirstBlog =
-    indexOfLastBlog - blogsPerPage;
-
-  const currentBlogs = publishedBlogs.slice(
-    indexOfFirstBlog,
-    indexOfLastBlog
-  );
+  // Pagination calculation parameters
+  const totalPages = Math.ceil(ALL_BLOGS.length / blogsPerPage);
+  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const currentBlogs = ALL_BLOGS.slice(indexOfFirstBlog, indexOfLastBlog);
 
   return (
     <main className="min-h-screen bg-[#F8FAFC]">
-      {/* Banner */}
-      <div className="h-160px md:h-[200px] w-full flex items-center justify-center bg-[#4A90E2]">
+      {/* Dynamic Banner Layout */}
+      <div className="h-40 md:h-[200px] w-full flex items-center justify-center bg-[#4A90E2]">
         <Typography
           variant="h1"
-          className="text-white uppercase tracking-widest text-center px-4"
+          className="text-white uppercase tracking-widest text-center px-4 my-0"
         >
           Blogs
         </Typography>
@@ -180,28 +120,22 @@ export default function BlogPage() {
       <div className="max-w-7xl mx-auto px-4 py-10 md:py-16">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 justify-center">
           
-          {/* Left Content */}
-          <div className="flex-1 max-w-[800px]">
-            
-            {/* Blog Grid */}
+          {/* Left Grid Layout */}
+          <div className="flex-1 max-w-[800px]"> 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 justify-items-center">
               {currentBlogs.map((blog) => (
                 <div key={blog.id} className="w-full flex justify-center">
                   {blog.component}
-                </div>
+                </div> 
               ))}
             </div>
 
-            {/* Pagination */}
-            <div className="mt-12 md:mt-16 flex flex-wrap items-center justify-center gap-3 md:gap-4">
+            {/* Micro-optimized Responsive Pagination Grid */}
+            <div className="mt-12 md:mt-16 flex flex-wrap items-center justify-center gap-3 md:gap-4 px-2">
               
-              {/* Previous */}
+              {/* Previous Control Action */}
               <button
-                onClick={() =>
-                  setCurrentPage((prev) =>
-                    Math.max(prev - 1, 1)
-                  )
-                }
+                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
                 className={`px-4 py-2 rounded-md text-sm md:text-base font-bold border transition-all ${
                   currentPage === 1
@@ -212,18 +146,16 @@ export default function BlogPage() {
                 Previous
               </button>
 
-              {/* Numbers */}
+              {/* Page Number Sequence Modules */}
               <div className="flex flex-wrap items-center justify-center gap-2">
                 {Array.from(
                   { length: totalPages },
                   (_, i) => i + 1
-                ).map((number) => (
+                ).map((number) => ( 
                   <button
                     key={number}
-                    onClick={() =>
-                      setCurrentPage(number)
-                    }
-                    className={`min-w-40px h-40px rounded-md text-sm md:text-base font-bold transition-all ${
+                    onClick={() => setCurrentPage(number)}
+                    className={`min-w-10 h-10 rounded-md text-sm md:text-base font-bold transition-all ${
                       currentPage === number
                         ? "bg-orange-400 text-white"
                         : "bg-white border border-gray-200 text-[#1e5d91] hover:bg-[#1e5d91] hover:text-white"
@@ -231,16 +163,12 @@ export default function BlogPage() {
                   >
                     {number}
                   </button>
-                ))}
+                ))}    
               </div>
 
-              {/* Next */}
+              {/* Next Control Action */} 
               <button
-                onClick={() =>
-                  setCurrentPage((prev) =>
-                    Math.min(prev + 1, totalPages)
-                  )
-                }
+                onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
                 disabled={currentPage === totalPages}
                 className={`px-4 py-2 rounded-md text-sm md:text-base font-bold border transition-all ${
                   currentPage === totalPages
@@ -253,7 +181,7 @@ export default function BlogPage() {
             </div>
           </div>
 
-          {/* Sidebar */}
+          {/* Persistent Sticky Desktop Sidebar */}
           <div className="hidden lg:block w-[320px]">
             <BlogSidebar />
           </div>

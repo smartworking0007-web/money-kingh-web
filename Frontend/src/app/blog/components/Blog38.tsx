@@ -118,7 +118,7 @@ export const Blog38 = () => {
             title="Top 10 Smart Investment Strategies for 2026: The Future of Wealth"
             category="INVESTMENT"
             author="Sumit Mishra"
-            date="May 15, 2026"
+            date="May 18, 2026"
             image="/images/blog/blog-38.jpg"
           />
         </div>
@@ -156,7 +156,7 @@ export const Blog38 = () => {
                 <div className="flex gap-4 text-gray-400 mb-8 pb-4 border-b">
                   <div className="flex items-center gap-2">
                     <Clock size={16} />
-                    <Typography variant="b2">May 15, 2026</Typography>
+                    <Typography variant="b2">May 18, 2026</Typography>
                   </div>
                   <div className="flex items-center gap-2">
                     <Folder size={16} />

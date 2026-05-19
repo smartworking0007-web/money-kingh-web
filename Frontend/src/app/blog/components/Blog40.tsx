@@ -94,7 +94,7 @@ export const Blog40 = () => {
             title="7 Critical Personal Finance Mistakes Young Professionals Should Avoid"
             category="CAREER & FINANCE"
             author="Sumit Mishra"
-            date="May 15, 2026"
+            date="May 18, 2026"
             image="/images/blog/blog-40.jpg"
           />
         </div>
@@ -132,7 +132,7 @@ export const Blog40 = () => {
                 <div className="flex gap-4 text-gray-400 mb-8 pb-4 border-b overflow-x-auto no-scrollbar">
                   <div className="flex items-center gap-2 shrink-0">
                     <Clock size={16} />
-                    <Typography variant="b2">May 15, 2026</Typography>
+                    <Typography variant="b2">May 18, 2026</Typography>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
                     <Briefcase size={16} />

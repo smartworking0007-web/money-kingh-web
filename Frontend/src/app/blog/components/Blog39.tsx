@@ -68,7 +68,7 @@ export const Blog39 = () => {
             title="How to Build Multiple Income Sources in India: A 2026 Strategy"
             category="WEALTH MANAGEMENT"
             author="Sumit Mishra"
-            date="May 16, 2026"
+            date="May 18, 2026"
             image="/images/blog/blog-39.jpg"
           />
         </div>
