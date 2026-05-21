@@ -102,7 +102,7 @@ export const Blog45 = () => {
             title="Instant Business Loans in India: Fast Cash for Emergency Capital"
             category="FINANCIAL AGILITY"
             author="Sumit Mishra"
-            date="May 20, 2026"
+            date="May 21, 2026"
             image="/images/blog/blog-45.jpeg"
           />
         </div>

@@ -102,7 +102,7 @@ export const Blog43 = () => {
             title="Step-by-Step Guide to Financial Freedom Before 40"
             category="WEALTH STRATEGY"
             author="Sumit Mishra"
-            date="May 19, 2026"
+            date="May 20, 2026"
             image="/images/blog/blog-43.jpg"
           />
         </div>
