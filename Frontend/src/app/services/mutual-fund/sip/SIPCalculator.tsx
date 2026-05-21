@@ -78,7 +78,7 @@ const SIPCalculator = () => {
                     </Typography>
                   </div>
                   <input 
-                    type="range" min="500" max="100000" step="500"
+                    type="range" min="500" max="10000000 " step="500"
                     value={monthlyInvestment}
                     onChange={(e) => setMonthlyInvestment(Number(e.target.value))}
                     className={`${sliderClass} accent-blue-600 text-blue-600`}
