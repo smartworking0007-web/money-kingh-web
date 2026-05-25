@@ -85,9 +85,8 @@ export const Blog46 = () => {
                 <Typography variant="caption" as="span" className="font-bold uppercase text-inherit">
                   Back to Blogs
                 </Typography>
-              </button>
-            </div>
-
+                </button>
+            </div> 
             <div className="bg-white rounded-xl overflow-hidden border-gray-100 shadow-sm">
               <div className="relative h-[250px] sm:h-[300px] md:h-[500px] w-full">
                 <Image
@@ -101,7 +100,7 @@ export const Blog46 = () => {
 
               <div className="px-5 py-8 md:px-12 md:py-14 text-justify">
                 <Typography
-                  variant="h2"
+                  variant="h4"
                   className="text-[#1e3a8a] uppercase mt-0"
                 >
                   The Pursuit of Happiness: How Financial Wellness Leads to True Peace of Mind
@@ -140,7 +139,7 @@ export const Blog46 = () => {
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <Smile className="text-blue-600 shrink-0" size={24} />
-                      <Typography variant="h3" className="text-gray-900 uppercase my-0">
+                      <Typography variant="h5" className="text-gray-900 uppercase my-0">
                         1. Defining Financial Wellness in the Modern Era
                       </Typography>
                     </div>
@@ -162,7 +161,7 @@ export const Blog46 = () => {
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <TrendingUp className="text-green-600 shrink-0" size={24} />
-                      <Typography variant="h3" className="text-gray-900 uppercase my-0">
+                      <Typography variant="h5" className="text-gray-900 uppercase my-0">
                         2. The Credit Score as a Happiness Index
                       </Typography>
                     </div>
@@ -184,7 +183,7 @@ export const Blog46 = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
                       <CreditCard className="text-purple-600 shrink-0" size={24} />
-                      <Typography variant="h3" className="text-gray-900 uppercase my-0">
+                      <Typography variant="h5" className="text-gray-900 uppercase my-0">
                         3. Credit Cards: A Mental Stressor vs. A Strategic Tool
                       </Typography>
                     </div>
@@ -228,7 +227,7 @@ export const Blog46 = () => {
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <ShieldCheck className="text-amber-600 shrink-0" size={24} />
-                      <Typography variant="h3" className="text-gray-900 uppercase my-0">
+                      <Typography variant="h5" className="text-gray-900 uppercase my-0">
                         4. The Psychological Power of Paying Bills on Time
                       </Typography>
                     </div>
@@ -250,7 +249,7 @@ export const Blog46 = () => {
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <ShoppingBag className="text-rose-600 shrink-0" size={24} />
-                      <Typography variant="h3" className="text-gray-900 uppercase my-0">
+                      <Typography variant="h5" className="text-gray-900 uppercase my-0">
                         5. Debunking the Dangerous Myth of &quot;Retail Therapy&quot;
                       </Typography>
                     </div>
@@ -274,7 +273,7 @@ export const Blog46 = () => {
                       <Heart size={150} />
                     </div>
                     <Typography
-                      variant="h4"
+                      variant="h5"
                       className="text-blue-400 mb-4 uppercase relative z-10 mt-0"
                     >
                       6. Emergency Funds: The Ultimate Mental Sleep Aid
@@ -310,7 +309,7 @@ export const Blog46 = () => {
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <Briefcase className="text-cyan-600 shrink-0" size={24} />
-                      <Typography variant="h3" className="text-gray-900 uppercase my-0">
+                      <Typography variant="h5" className="text-gray-900 uppercase my-0">
                         7. Living Debt-Free is Living Worry-Free
                       </Typography>
                     </div>
@@ -332,7 +331,7 @@ export const Blog46 = () => {
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <Sparkles className="text-indigo-600 shrink-0" size={24} />
-                      <Typography variant="h3" className="text-gray-900 uppercase my-0">
+                      <Typography variant="h5" className="text-gray-900 uppercase my-0">
                         8. Investing in Experiences Over Material Possessions
                       </Typography>
                     </div>
@@ -367,7 +366,7 @@ export const Blog46 = () => {
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <Gift className="text-emerald-600 shrink-0" size={24} />
-                      <Typography variant="h3" className="text-gray-900 uppercase my-0">
+                      <Typography variant="h5" className="text-gray-900 uppercase my-0">
                         9. Sharing Happiness: The Beautiful Psychology of Giving
                       </Typography>
                     </div>
@@ -389,7 +388,7 @@ export const Blog46 = () => {
                   <div className="p-8 bg-blue-50 rounded-3xl border border-blue-100 space-y-6">
                     <div className="flex items-center gap-3">
                       <Layers className="text-[#1e3a8a] shrink-0" size={28} />
-                      <Typography variant="h4" className="text-blue-900 uppercase my-0">
+                      <Typography variant="h5" className="text-blue-900 uppercase my-0">
                         10. The Ultimate Action Plan to Connect Wealth and Well-Being
                       </Typography>
                     </div>
