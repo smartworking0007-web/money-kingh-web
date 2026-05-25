@@ -124,7 +124,7 @@ export const Blog45 = () => {
             <div className="bg-white rounded-xl overflow-hidden border-gray-100 shadow-sm">
               <div className="relative h-[250px] sm:h-[300px] md:h-[500px] w-full">
                 <Image
-                  src="/images/blog/blog-45.jpg"
+                  src="/images/blog/blog-45.jpeg"
                   alt="A business owner processing a fast online business loan setup using a laptop and phone, with graphical overlays of speed and capital growth."
                   fill
                   className="object-cover"

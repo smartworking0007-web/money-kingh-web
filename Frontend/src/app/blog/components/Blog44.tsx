@@ -124,7 +124,7 @@ export const Blog44 = () => {
             <div className="bg-white rounded-xl overflow-hidden border-gray-100 shadow-sm">
               <div className="relative h-[250px] sm:h-[300px] md:h-[500px] w-full">
                 <Image
-                  src="/images/blog/blog-44.jpg"
+                  src="/images/blog/blog-44.jpeg"
                   alt="A modern office setup with growth charts and a handshake representing successful business funding in India."
                   fill
                   className="object-cover"
