@@ -1,4 +1,4 @@
-"use client"; // Required for animations in Next.js App Router
+"use client"; 
 
 import React from "react";
 import Link from "next/link";
