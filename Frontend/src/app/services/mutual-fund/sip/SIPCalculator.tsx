@@ -11,8 +11,8 @@ import {
 import { Typography } from "@/app/components/ui/Typography";
 
 const SIPCalculator = () => {
-  // डिफॉल्ट वैल्यू ₹10,000 सेट की गई है
-  const [monthlyInvestment, setMonthlyInvestment] = useState<number>(10000);
+  // बायडिफ़ॉल्ट (Default) वैल्यू ₹100 सेट की गई है
+  const [monthlyInvestment, setMonthlyInvestment] = useState<number>(100);
   const [expectedReturn, setExpectedReturn] = useState<number>(12);
   const [timePeriod, setTimePeriod] = useState<number>(15);
 
@@ -78,11 +78,11 @@ const SIPCalculator = () => {
                       {formatCurrency(monthlyInvestment)}
                     </Typography>
                   </div>
-                  {/* min="100" किया गया है और step="100" ताकि ₹100 के गुणांक में बढ़े */}
+                  {/* min="100", max="1000000" (10 लाख) और step="100" सेट किया गया है */}
                   <input 
                     type="range" 
                     min="100" 
-                    max="10000000" 
+                    max="1000000" 
                     step="100"
                     value={monthlyInvestment}
                     onChange={(e) => setMonthlyInvestment(Number(e.target.value))}
