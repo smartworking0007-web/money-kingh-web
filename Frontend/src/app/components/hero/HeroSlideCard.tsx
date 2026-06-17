@@ -62,7 +62,7 @@ export default function HeroSlider() {
                   <div className="flex flex-col sm:flex-row gap-5">
                     {/* 2. Wrap Button with Next.js Link */}
                     <Link
-                      href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply"
+                      href="/contact"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-white px-10 py-4 rounded-full transition-all hover:scale-105 active:scale-95 shadow-2xl group cursor-pointer inline-flex items-center justify-center"

@@ -15,14 +15,14 @@ export const Blog49 = () => {
       {!isOpen ? (
         <div
           onClick={() => setIsOpen(true)}
-          className="cursor-pointer w-full flex justify-center px-4"
+          className="cursor-pointer w-full flex justify-center px-4"        
         >
           <BlogCard1
             title="10 Simple Ways to Save Money Every Month Without Sacrificing Your Lifestyle"
-            category="FINANCIAL LITERACY"
-            author="Kishan Baranwal"
-            date="June 16, 2026"
-            image="/images/blog/blog-49.jpeg"
+            category="FINANCIAL LITERACY"        
+            author="Kishan Baranwal"         
+            date="June 16, 2026"            
+            image="/images/blog/blog-49.jpeg"       
           />
         </div>
       ) : (
