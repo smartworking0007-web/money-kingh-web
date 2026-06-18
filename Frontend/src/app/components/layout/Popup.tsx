@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";              
+import Image from "next/image";
 import { Typography } from "../ui/Typography";
 import { db } from "@/lib/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
@@ -9,10 +9,10 @@ export default function WelcomePopup() {
   const [showPopup, setShowPopup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",                    
-    phone: "",                   
-    email: "",                                 
-  });                
+    name: "",
+    phone: "",
+    email: "",
+  });
 
   useEffect(() => {
     const hasSubmitted = localStorage.getItem("popupSubmitted");
@@ -29,9 +29,9 @@ export default function WelcomePopup() {
     setIsSubmitting(true);
     try {
       await addDoc(collection(db, "contact_forms"), {
-        fullName: formData.name,        
-        phone: formData.phone,     
-        email: formData.email,    
+        fullName: formData.name,
+        phone: formData.phone,
+        email: formData.email,
         createdAt: serverTimestamp(),
         source: "welcome_popup",
       });
@@ -50,10 +50,19 @@ export default function WelcomePopup() {
   if (!showPopup) return null;
 
   return (
-    /* Removed the onClick from the parent to prevent closing on backdrop click */
     <div className="fixed inset-0 z-9999 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm px-4 pt-12 font-lexend overflow-y-auto">
       <div className="relative bg-white rounded-2xl shadow-2xl max-w-sm w-full my-auto overflow-hidden border border-slate-100 transform transition-all duration-300 animate-in fade-in zoom-in-95">
-        {/* CLOSE BUTTON REMOVED: User cannot bypass the form */}
+        
+        {/* ADDED: Close Button */}
+        <button
+          onClick={() => setShowPopup(false)}
+          className="absolute top-4 right-4 z-10 text-white hover:text-amber-500 transition-colors bg-black/20 hover:bg-black/40 rounded-full p-1"
+          aria-label="Close popup"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
 
         <div className="bg-slate-900 pt-8 pb-6 text-center text-white px-6">
           <div className="relative bg-white w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4 overflow-hidden shadow-2xl border-4 border-slate-700 p-2">
@@ -68,7 +77,7 @@ export default function WelcomePopup() {
           </div>
           <Typography
             variant="h5"
-            as="h2" 
+            as="h2"
             className="text-white font-bold tracking-tight mb-1"
           >
             Grow Your Wealth
@@ -79,48 +88,20 @@ export default function WelcomePopup() {
         </div>
 
         <form onSubmit={handleSubmit} className="px-6 py-6 bg-white">
+          {/* ... existing form fields ... */}
           <div className="space-y-4">
+            {/* Full Name, Phone, Email inputs remain the same */}
             <div>
-              <label className="block mb-1.5 text-[10px] font-black text-slate-400 uppercase tracking-[1px]">
-                Full Name
-              </label>
-              <input
-                required
-                type="text"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all text-sm text-slate-800"
-                placeholder="Enter your name"
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-              />
+              <label className="block mb-1.5 text-[10px] font-black text-slate-400 uppercase tracking-[1px]">Full Name</label>
+              <input required type="text" className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all text-sm text-slate-800" placeholder="Enter your name" onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
             </div>
             <div>
-              <label className="block mb-1.5 text-[10px] font-black text-slate-400 uppercase tracking-[1px]">
-                Phone Number
-              </label>
-              <input
-                required
-                type="tel"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all text-sm text-slate-800"
-                placeholder="+91 00000 00000"
-                onChange={(e) =>
-                  setFormData({ ...formData, phone: e.target.value })
-                }
-              />
+              <label className="block mb-1.5 text-[10px] font-black text-slate-400 uppercase tracking-[1px]">Phone Number</label>
+              <input required type="tel" className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all text-sm text-slate-800" placeholder="+91 00000 00000" onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
             </div>
             <div>
-              <label className="block mb-1.5 text-[10px] font-black text-slate-400 uppercase tracking-[1px]">
-                Email Address
-              </label>
-              <input
-                required
-                type="email"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all text-sm text-slate-800"
-                placeholder="example@mail.com"
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-              />
+              <label className="block mb-1.5 text-[10px] font-black text-slate-400 uppercase tracking-[1px]">Email Address</label>
+              <input required type="email" className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all text-sm text-slate-800" placeholder="example@mail.com" onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
             </div>
           </div>
 
@@ -135,8 +116,8 @@ export default function WelcomePopup() {
           >
             {isSubmitting ? "Processing..." : "Get Free Consultation"}
           </button>
-        </form>              
-      </div>               
+        </form>
+      </div>
     </div>
   );
 }
