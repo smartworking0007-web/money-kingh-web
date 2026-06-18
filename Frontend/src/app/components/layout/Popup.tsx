@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import Image from "next/image";              
 import { Typography } from "../ui/Typography";
 import { db } from "@/lib/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
@@ -9,10 +9,10 @@ export default function WelcomePopup() {
   const [showPopup, setShowPopup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-  });
+    name: "",                    
+    phone: "",                   
+    email: "",                                 
+  });                
 
   useEffect(() => {
     const hasSubmitted = localStorage.getItem("popupSubmitted");
@@ -29,9 +29,9 @@ export default function WelcomePopup() {
     setIsSubmitting(true);
     try {
       await addDoc(collection(db, "contact_forms"), {
-        fullName: formData.name,
-        phone: formData.phone,
-        email: formData.email,
+        fullName: formData.name,        
+        phone: formData.phone,     
+        email: formData.email,    
         createdAt: serverTimestamp(),
         source: "welcome_popup",
       });
@@ -68,7 +68,7 @@ export default function WelcomePopup() {
           </div>
           <Typography
             variant="h5"
-            as="h2"
+            as="h2" 
             className="text-white font-bold tracking-tight mb-1"
           >
             Grow Your Wealth
@@ -135,8 +135,8 @@ export default function WelcomePopup() {
           >
             {isSubmitting ? "Processing..." : "Get Free Consultation"}
           </button>
-        </form>
-      </div>
+        </form>              
+      </div>               
     </div>
   );
 }

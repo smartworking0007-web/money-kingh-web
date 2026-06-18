@@ -37,7 +37,7 @@ export const BlogSidebar = () => {
               Financial Planning
             </Typography>
             <Typography variant="b3" className="font-bold text-gray-400">
-              (46)
+              (51)
             </Typography>
           </li>
         </ul>
