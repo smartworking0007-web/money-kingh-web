@@ -29,12 +29,12 @@ export default function WelcomePopup() {
     setIsSubmitting(true);
     try {
       await addDoc(collection(db, "contact_forms"), {
-        fullName: formData.name,
-        phone: formData.phone,
-        email: formData.email,
-        createdAt: serverTimestamp(),
-        source: "welcome_popup",
-      });
+        fullName: formData.name,                  
+        phone: formData.phone,                     
+        email: formData.email,           
+        createdAt: serverTimestamp(),            
+        source: "welcome_popup",     
+      }); 
 
       localStorage.setItem("popupSubmitted", "true");
       alert("Thank you! Our experts will get in touch with you shortly.");
@@ -47,20 +47,30 @@ export default function WelcomePopup() {
     }
   };
 
-  if (!showPopup) return null;
-
-  return (
+  if (!showPopup) return null;     
+                            
+  return (                   
     <div className="fixed inset-0 z-9999 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm px-4 pt-12 font-lexend overflow-y-auto">
       <div className="relative bg-white rounded-2xl shadow-2xl max-w-sm w-full my-auto overflow-hidden border border-slate-100 transform transition-all duration-300 animate-in fade-in zoom-in-95">
-        
         {/* ADDED: Close Button */}
-        <button
+        <button                
           onClick={() => setShowPopup(false)}
           className="absolute top-4 right-4 z-10 text-white hover:text-amber-500 transition-colors bg-black/20 hover:bg-black/40 rounded-full p-1"
           aria-label="Close popup"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg" 
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
 
@@ -92,16 +102,46 @@ export default function WelcomePopup() {
           <div className="space-y-4">
             {/* Full Name, Phone, Email inputs remain the same */}
             <div>
-              <label className="block mb-1.5 text-[10px] font-black text-slate-400 uppercase tracking-[1px]">Full Name</label>
-              <input required type="text" className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all text-sm text-slate-800" placeholder="Enter your name" onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
+              <label className="block mb-1.5 text-[10px] font-black text-slate-400 uppercase tracking-[1px]">
+                Full Name
+              </label>
+              <input
+                required
+                type="text"
+                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all text-sm text-slate-800"
+                placeholder="Enter your name"
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+              />
             </div>
             <div>
-              <label className="block mb-1.5 text-[10px] font-black text-slate-400 uppercase tracking-[1px]">Phone Number</label>
-              <input required type="tel" className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all text-sm text-slate-800" placeholder="+91 00000 00000" onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
+              <label className="block mb-1.5 text-[10px] font-black text-slate-400 uppercase tracking-[1px]">
+                Phone Number
+              </label>
+              <input
+                required
+                type="tel"
+                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all text-sm text-slate-800"
+                placeholder="+91 00000 00000"
+                onChange={(e) =>
+                  setFormData({ ...formData, phone: e.target.value })
+                }
+              />
             </div>
-            <div>
-              <label className="block mb-1.5 text-[10px] font-black text-slate-400 uppercase tracking-[1px]">Email Address</label>
-              <input required type="email" className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all text-sm text-slate-800" placeholder="example@mail.com" onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+            <div>     
+              <label className="block mb-1.5 text-[10px] font-black text-slate-400 uppercase tracking-[1px]">
+                Email Address
+              </label>
+              <input
+                required              
+                type="email"
+                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all text-sm text-slate-800"
+                placeholder="example@mail.com"
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })          
+                }
+              />
             </div>
           </div>
 
