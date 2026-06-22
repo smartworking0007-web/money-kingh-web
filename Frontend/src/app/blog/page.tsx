@@ -57,9 +57,9 @@ import { Blog49 } from "./components/Blog49";
 import { Blog50 } from "./components/Blog50";
 import { Blog51 } from "./components/Blog51";
 import { Blog52 } from "./components/Blog52";
+import { Blog53 } from "./components/Blog53";
+import { Blog54 } from "./components/Blog54";
 
-
- 
 const ALL_BLOGS = [
   { id: 1, component: <Blog1 /> },
   { id: 2, component: <Blog2 /> },
@@ -112,10 +112,9 @@ const ALL_BLOGS = [
   { id: 49, component: <Blog49 /> },
   { id: 50, component: <Blog50 /> },
   { id: 51, component: <Blog51 /> },
-   { id: 52, component: <Blog52 /> },
-
-
-
+  { id: 52, component: <Blog52 /> },
+  { id: 53, component: <Blog53 /> },
+  { id: 54, component: <Blog54 /> },
 ];
 
 export default function BlogPage() {
@@ -142,20 +141,18 @@ export default function BlogPage() {
 
       <div className="max-w-7xl mx-auto px-4 py-10 md:py-16">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 justify-center">
-          
           {/* Left Grid Layout */}
-          <div className="flex-1 max-w-[800px]"> 
+          <div className="flex-1 max-w-[800px]">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 justify-items-center">
               {currentBlogs.map((blog) => (
                 <div key={blog.id} className="w-full flex justify-center">
                   {blog.component}
-                </div> 
+                </div>
               ))}
             </div>
 
             {/* Micro-optimized Responsive Pagination Grid */}
             <div className="mt-12 md:mt-16 flex flex-wrap items-center justify-center gap-3 md:gap-4 px-2">
-              
               {/* Previous Control Action */}
               <button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
@@ -171,27 +168,28 @@ export default function BlogPage() {
 
               {/* Page Number Sequence Modules */}
               <div className="flex flex-wrap items-center justify-center gap-2">
-                {Array.from(
-                  { length: totalPages },
-                  (_, i) => i + 1 
-                ).map((number) => ( 
-                  <button
-                    key={number}
-                    onClick={() => setCurrentPage(number)}
-                    className={`min-w-10 h-10 rounded-md text-sm md:text-base font-bold transition-all ${
-                      currentPage === number
-                        ? "bg-orange-400 text-white"
-                        : "bg-white border border-gray-200 text-[#1e5d91] hover:bg-[#1e5d91] hover:text-white"
-                    }`}
-                  >
-                    {number}
-                  </button>
-                ))}    
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                  (number) => (
+                    <button
+                      key={number}
+                      onClick={() => setCurrentPage(number)}
+                      className={`min-w-10 h-10 rounded-md text-sm md:text-base font-bold transition-all ${
+                        currentPage === number
+                          ? "bg-orange-400 text-white"
+                          : "bg-white border border-gray-200 text-[#1e5d91] hover:bg-[#1e5d91] hover:text-white"
+                      }`}
+                    >
+                      {number}
+                    </button>
+                  ),
+                )}
               </div>
 
-              {/* Next Control Action */} 
+              {/* Next Control Action */}
               <button
-                onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+                onClick={() =>
+                  setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                }
                 disabled={currentPage === totalPages}
                 className={`px-4 py-2 rounded-md text-sm md:text-base font-bold border transition-all ${
                   currentPage === totalPages
