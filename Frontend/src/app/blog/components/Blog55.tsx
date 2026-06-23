@@ -21,7 +21,7 @@ export const Blog55 = () => {
             title="How Mutual Fund Expense Ratios Are Set and What You Actually Pay"
             category="MUTUAL FUNDS"
             author="Sumit Mishra"
-            date="June 22, 2026"
+            date="June 23, 2026"
             image="/images/blog/blog-55.jpeg"
           />
         </div>
