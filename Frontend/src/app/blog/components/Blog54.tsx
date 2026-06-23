@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Clock, ArrowLeft, HelpCircle, } from "lucide-react";
+import { Clock, ArrowLeft, HelpCircle } from "lucide-react";
 import { BlogCard1 } from "./BlogCard1";
 import { ShareSection } from "./ShareSection";
 import { Typography } from "@/app/components/ui/Typography";
@@ -39,11 +39,11 @@ export const Blog54 = () => {
             </button>
 
             <div className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm">
-              <div className="relative h-[300px] md:h-[500px] w-full">
+              <div className="relative h-[300px] md:h-[500px] w-full">             
                 <Image
-                  src="/images/blog/blog-54.jpeg"
-                  alt="An analytical document review highlighting the process of surrendering life insurance policy in India on a clean office desk background."
-                  fill
+                  src="/images/blog/blog-54.jpeg"                     
+                  alt="An analytical document review highlighting the process of surrendering life insurance policy in India on a clean office desk background."                          
+                  fill                         
                   className="object-cover"
                   priority
                 />
@@ -52,7 +52,7 @@ export const Blog54 = () => {
               <div className="px-5 py-8 md:px-12 md:py-14">
                 <Typography
                   variant="h5"
-                  className="text-[#1e3a8a] uppercase text-2xl md:text-4xl mb-4"
+                  className="text-[#1e3a8a] uppercase text-2xl md:text-4xl mb-4" 
                 >
                   Surrendering Life Insurance Policy in India: What You Need to
                   Know After the New IRDAI Rules
@@ -65,11 +65,11 @@ export const Blog54 = () => {
 
                 <article className="prose max-w-none text-gray-600 text-justify space-y-6">
                   <p>
-                    Terminating a life insurance policy before its maturity is a
-                    major financial decision. Before you walk into an insurance
-                    branch to submit a surrender form, it is absolutely crucial
-                    to understand the new regulatory rules, tax traps, and
-                    absolute loss parameters.
+                    Terminating a life insurance policy before its maturity is a            
+                    major financial decision. Before you walk into an insurance                 
+                    branch to submit a surrender form, it is absolutely crucial                    
+                    to understand the new regulatory rules, tax traps, and                     
+                    absolute loss parameters.                    
                   </p>
 
                   <h2>1. The Core Concept: What is Surrender Value?</h2>
@@ -80,6 +80,7 @@ export const Blog54 = () => {
                     applies strictly to traditional products; Pure Term
                     Insurance plans offer no surrender value.
                   </p>
+
                   <ul>
                     <li>
                       <strong>Guaranteed Surrender Value (GSV):</strong> A fixed
@@ -205,7 +206,7 @@ export const Blog54 = () => {
                 </div>
 
                 <div className="mt-14">
-                  <ShareSection />
+                  <ShareSection /> 
                 </div>
               </div>
             </div>
