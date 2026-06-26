@@ -62,6 +62,7 @@ import { Blog54 } from "./components/Blog54";
 import { Blog55 } from "./components/Blog55";
 import { Blog56 } from "./components/Blog56";
 import { Blog57 } from "./components/Blog57";
+import { Blog58 } from "./components/Blog58";
 
 const ALL_BLOGS = [
   { id: 1, component: <Blog1 /> },
@@ -121,6 +122,8 @@ const ALL_BLOGS = [
   { id: 55, component: <Blog55 /> },
   { id: 56, component: <Blog56 /> },
   { id: 57, component: <Blog57 /> },
+  { id: 58, component: <Blog58 /> },
+
 ];
 
 export default function BlogPage() {
