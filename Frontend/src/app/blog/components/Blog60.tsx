@@ -20,8 +20,8 @@ export const Blog60 = () => {
           <BlogCard1
             title="9 Major Credit Card Rule Changes in India (2026): What You Need to Know"
             category="REGULATORY UPDATES"
-            author="Sumit Mishra"
-            date="June 29, 2026"
+            author="Sumit Mishra"      
+            date="June 29, 2026"          
             image="/images/blog/blog-60.jpeg"
           />
         </div>
