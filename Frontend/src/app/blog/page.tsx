@@ -60,12 +60,13 @@ import { Blog52 } from "./components/Blog52";
 import { Blog53 } from "./components/Blog53";
 import { Blog54 } from "./components/Blog54";
 import { Blog55 } from "./components/Blog55";
-import { Blog56 } from "./components/Blog56"; 
+import { Blog56 } from "./components/Blog56";
 import { Blog57 } from "./components/Blog57";
 import { Blog58 } from "./components/Blog58";
 import { Blog59 } from "./components/Blog59";
 import { Blog60 } from "./components/Blog60";
 import { Blog61 } from "./components/Blog61";
+import { Blog62 } from "./components/Blog62";
 
 const ALL_BLOGS = [
   { id: 1, component: <Blog1 /> },
@@ -129,7 +130,7 @@ const ALL_BLOGS = [
   { id: 59, component: <Blog59 /> },
   { id: 60, component: <Blog60 /> },
   { id: 61, component: <Blog61 /> },
-
+  { id: 62, component: <Blog62 /> },
 ];
 
 export default function BlogPage() {
@@ -137,13 +138,13 @@ export default function BlogPage() {
   const blogsPerPage = 6;
 
   // Pagination calculation parameters
-  const totalPages = Math.ceil(ALL_BLOGS.length / blogsPerPage);                    
-  const indexOfLastBlog = currentPage * blogsPerPage;                                 
-  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;                         
-  const currentBlogs = ALL_BLOGS.slice(indexOfFirstBlog, indexOfLastBlog);           
+  const totalPages = Math.ceil(ALL_BLOGS.length / blogsPerPage);
+  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const currentBlogs = ALL_BLOGS.slice(indexOfFirstBlog, indexOfLastBlog);
 
-  return (          
-    <main className="min-h-screen bg-[#F8FAFC]">                
+  return (
+    <main className="min-h-screen bg-[#F8FAFC]">
       {/* Dynamic Banner Layout */}
       <div className="h-40 md:h-[200px] w-full flex items-center justify-center bg-[#4A90E2]">
         <Typography
