@@ -72,6 +72,7 @@ import { Blog64 } from "./components/Blog64";
 import { Blog65 } from "./components/Blog65";
 import { Blog66 } from "./components/Blog66";
 import { Blog67 } from "./components/Blog67";
+import { Blog68 } from "./components/Blog68";
 
 
 const ALL_BLOGS = [
@@ -142,6 +143,8 @@ const ALL_BLOGS = [
   { id: 65, component: <Blog65 /> },
   { id: 66, component: <Blog66 /> },
   { id: 67, component: <Blog67 /> },
+  { id: 68, component: <Blog68 /> },
+
 
 ];
 
@@ -164,9 +167,8 @@ export default function BlogPage() {
           className="text-white uppercase tracking-widest text-center px-4 my-0"
         >
           Blogs
-        </Typography>
-      </div>
-
+        </Typography> 
+      </div>  
       <div className="max-w-7xl mx-auto px-4 py-10 md:py-16">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 justify-center">
           {/* Left Grid Layout */}
