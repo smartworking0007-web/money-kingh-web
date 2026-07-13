@@ -73,6 +73,7 @@ import { Blog65 } from "./components/Blog65";
 import { Blog66 } from "./components/Blog66";
 import { Blog67 } from "./components/Blog67";
 import { Blog68 } from "./components/Blog68";
+import { Blog69 } from "./components/Blog69";
 
 
 const ALL_BLOGS = [
@@ -144,6 +145,7 @@ const ALL_BLOGS = [
   { id: 66, component: <Blog66 /> },
   { id: 67, component: <Blog67 /> },
   { id: 68, component: <Blog68 /> },
+  { id: 69, component: <Blog69 /> }
 
 
 ];
@@ -236,7 +238,7 @@ export default function BlogPage() {
           <div className="hidden lg:block w-[320px]">
             <BlogSidebar />
           </div>
-        </div>
+        </div>  
       </div>
     </main>
   );

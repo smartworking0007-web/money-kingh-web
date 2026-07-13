@@ -4,6 +4,8 @@ import React from "react";
 import Image from "next/image";
 import { Typography } from "@/app/components/ui/Typography";
 
+
+
 interface BlogCardProps {
   title: string;
   category: string;
@@ -18,6 +20,7 @@ export const BlogCard1 = ({
   author,
   date,
   image,
+
 }: BlogCardProps) => {
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col group hover:shadow-md transition-all duration-300 w-full sm:max-w-[360px]">
@@ -45,7 +48,7 @@ export const BlogCard1 = ({
           as="h2"
           className="text-[#1e3a8a] group-hover:text-blue-600 line-clamp-3 transition-colors duration-300 font-bold leading-tight"
         >
-          {title}
+          {title}   
         </Typography>
       </div>
 
