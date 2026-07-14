@@ -1,8 +1,7 @@
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
-import { Clock, ArrowLeft, HelpCircle } from "lucide-react";
+import { Clock, ArrowLeft, HelpCircle,  } from "lucide-react";
 import { BlogCard1 } from "./BlogCard1";
 import { ShareSection } from "./ShareSection";
 import { Typography } from "@/app/components/ui/Typography";
@@ -72,7 +71,6 @@ export const Blog69 = () => {
                     80C, offering the dual benefit of tax deduction and
                     equity-linked wealth multiplication.
                   </p>
-
                   <h2>
                     1. The SIP Approach: Discipline & Volatility Mitigation
                   </h2>
@@ -118,7 +116,7 @@ export const Blog69 = () => {
                       investment happens on one day, the full corpus becomes
                       liquid exactly three years later.
                     </li>
-                  </ul>
+                  </ul> 
 
                   <h2>3. Head-to-Head Comparison</h2>
                   <div className="overflow-x-auto">
@@ -153,7 +151,6 @@ export const Blog69 = () => {
                       </tbody>
                     </table>
                   </div>
-
                   <h2>4. The Smart Hybrid Strategy</h2>
                   <p>
                     You don t have to choose strictly one. Many investors use a{" "}
@@ -170,7 +167,7 @@ export const Blog69 = () => {
                     <ul className="space-y-4">
                       <li>
                         <strong>
-                          Q: Do I get tax benefits for every SIP installment?
+                          Q: Do I get tax benefits for every SIP installment ?
                         </strong>
                         <br />
                         Yes, every installment qualifies under Section 80C, but
@@ -185,7 +182,7 @@ export const Blog69 = () => {
                       </li>
                       <li>
                         <strong>
-                          Q: Which is better for long-term growth?
+                          Q: Which is better for long-term growth ?
                         </strong>
                         <br />
                         Both strategies yield similar results over long
@@ -204,12 +201,11 @@ export const Blog69 = () => {
                     Maximize Your Tax Savings
                   </Typography>
                   <Typography variant="b2" className="text-gray-300">
-                    Not sure which tax-saving path aligns with your cash flow?
+                    Not sure which tax-saving path aligns with your cash flow ?
                     Our financial experts are here to help you design a plan
-                    that optimizes your tax liability and long-term returns.
+                    that optimizes your tax liability and long-term returns .
                   </Typography>
                 </div>
-
                 <div className="mt-14">
                   <ShareSection />
                 </div>
@@ -220,4 +216,4 @@ export const Blog69 = () => {
       )}
     </div>
   );
-};
+}; 
