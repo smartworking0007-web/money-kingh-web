@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import NextLink from "next/link";
 import { Clock, ArrowLeft, HelpCircle } from "lucide-react";
 import { BlogCard1 } from "./BlogCard1";
 import { ShareSection } from "./ShareSection";
@@ -65,87 +66,150 @@ export const Blog70 = () => {
 
                 <article className="prose max-w-none text-gray-600 text-justify space-y-6">
                   <p>
-                    For many students, life insurance feels like a distant
-                    concern—a topic reserved for middle-aged parents. However,
-                    this perception overlooks the profound strategic advantage
-                    of securing financial protection early in life. In 2026, as
-                    education costs rise and financial independence becomes a
-                    priority, student life insurance is a vital tool for
-                    building a stable foundation.
+                    For many students,{" "}
+                    <NextLink
+                      href="/services/insurance/lic"
+                      className="text-red-600 font-semibold hover:underline"
+                    >
+                      life insurance
+                    </NextLink>{" "}
+                    feels like a distant concern—a topic reserved for
+                    middle-aged parents. However, this perception overlooks the
+                    profound strategic advantage of securing financial
+                    protection early. In 2026, as education costs rise,{" "}
+                    <NextLink
+                      href="/services/insurance/lic"
+                      className="text-red-600 font-semibold hover:underline"
+                    >
+                      student life insurance
+                    </NextLink>{" "}
+                    is emerging as a vital tool for building a stable
+                    foundation.
                   </p>
 
-                  <h2>1. Why Should Students Consider Life Insurance?</h2>
-                  <ul>
+                  <h2>What is Student Life Insurance?</h2>
+                  <p>
+                    Student{" "}
+                    <NextLink
+                      href="/services/insurance/lic"
+                      className="text-red-600 font-semibold hover:underline"
+                    >
+                      life insurance
+                    </NextLink>{" "}
+                    is essentially a standard policy—often a Term Insurance
+                    Plan—tailored for young adults. It acts as a safeguard
+                    against unforeseen liabilities, such as education loans, and
+                    serves as a long-term investment in financial discipline.
+                  </p>
+
+                  <h2>Why Should Students Consider Life Insurance?</h2>
+                  <p>
+                    It may seem premature, but here is why you should look into{" "}
+                    <NextLink
+                      href="/services/insurance/lic"
+                      className="text-red-600 font-semibold hover:underline"
+                    >
+                      life insurance plans
+                    </NextLink>{" "}
+                    during your college years:
+                  </p>
+                  <ol className="space-y-4">
                     <li>
-                      <strong>Managing Education Loans:</strong> Many students
-                      fund education through loans co-signed by parents. Life
-                      insurance ensures these debts are cleared, protecting your
-                      family’s retirement savings.
+                      <strong>Managing Education Loans:</strong> A{" "}
+                      <NextLink
+                        href="/services/insurance/lic"
+                        className="text-red-600 font-semibold hover:underline"
+                      >
+                        life insurance policy
+                      </NextLink>{" "}
+                      ensures that if an unforeseen event occurs, loan debts are
+                      cleared, protecting your family’s financial future.
                     </li>
                     <li>
                       <strong>Locking in Lower Premiums:</strong> Insurance is
-                      priced based on age and health. Purchasing early allows
-                      you to lock in significantly lower premiums that remain
-                      consistent for decades.
+                      priced based on age. Purchasing{" "}
+                      <NextLink
+                        href="/services/insurance/lic"
+                        className="text-red-600 font-semibold hover:underline"
+                      >
+                        life insurance
+                      </NextLink>{" "}
+                      at 22 locks in a rate significantly lower than what you
+                      would pay later in life.
                     </li>
                     <li>
-                      <strong>Guaranteed Insurability:</strong> Health is
-                      unpredictable. Buying early ensures your insurability is
-                      locked in regardless of future lifestyle-related health
-                      changes.
+                      <strong>Guaranteed Insurability:</strong> By buying{" "}
+                      <NextLink
+                        href="/services/insurance/lic"
+                        className="text-red-600 font-semibold hover:underline"
+                      >
+                        insurance
+                      </NextLink>{" "}
+                      early, you ensure your coverage is locked in regardless of
+                      future health changes.
                     </li>
                     <li>
                       <strong>Financial Discipline:</strong> Paying a regular
-                      premium cultivates early financial planning habits, moving
-                      your focus from short-term desires to long-term stability.
+                      premium for your{" "}
+                      <NextLink
+                        href="/services/insurance/lic"
+                        className="text-red-600 font-semibold hover:underline"
+                      >
+                        life insurance
+                      </NextLink>{" "}
+                      plan cultivates essential financial habits.
                     </li>
-                  </ul>
+                  </ol>
 
-                  <h2>2. Types of Life Insurance for Young Adults</h2>
+                  <h2>Types of Life Insurance Policies</h2>
                   <div className="overflow-x-auto">
                     <table className="w-full border-collapse border border-gray-200">
                       <thead>
                         <tr className="bg-gray-100">
                           <th className="border p-2">Plan Type</th>
                           <th className="border p-2">Purpose</th>
-                          <th className="border p-2">Key Feature</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td className="border p-2">Term Insurance</td>
-                          <td className="border p-2">Pure Protection</td>
                           <td className="border p-2">
-                            High coverage, lowest cost
+                            Pure protection via{" "}
+                            <NextLink
+                              href="/services/insurance/lic"
+                              className="text-red-600 hover:underline"
+                            >
+                              life insurance
+                            </NextLink>
                           </td>
                         </tr>
                         <tr>
                           <td className="border p-2">Endowment Plan</td>
-                          <td className="border p-2">Savings + Protection</td>
                           <td className="border p-2">
-                            Guaranteed maturity benefit
+                            Savings +{" "}
+                            <NextLink
+                              href="/services/insurance/lic"
+                              className="text-red-600 hover:underline"
+                            >
+                              Insurance protection
+                            </NextLink>
                           </td>
                         </tr>
                         <tr>
                           <td className="border p-2">Money-Back</td>
-                          <td className="border p-2">Structured Liquidity</td>
                           <td className="border p-2">
-                            Regular interval payouts
+                            Structured{" "}
+                            <NextLink
+                              href="/services/insurance/lic"
+                              className="text-red-600 hover:underline"
+                            >
+                              insurance payouts
+                            </NextLink>
                           </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
-
-                  <h2>3. Strategic Advantages</h2>
-                  <p>
-                    Beyond protection, these policies offer tax advantages under{" "}
-                    <strong>Section 80C</strong> and maturity payouts that are
-                    often tax-exempt under <strong>Section 10(10D)</strong>.
-                    Furthermore, because young individuals are generally
-                    low-risk, many policies offer streamlined underwriting,
-                    requiring minimal medical documentation.
-                  </p>
 
                   <div className="bg-gray-50 p-6 rounded-xl border border-gray-200 mt-8">
                     <h2 className="text-[#1e3a8a] text-xl font-bold mb-4 flex items-center gap-2">
@@ -153,27 +217,33 @@ export const Blog70 = () => {
                     </h2>
                     <ul className="space-y-4">
                       <li>
-                        <strong>Q: Is a medical check-up required?</strong>
+                        <strong>
+                          Q: Is a medical check-up required for students?
+                        </strong>
                         <br />
-                        Often, young individuals are considered low-risk, so
-                        many policies provide coverage with minimal
-                        documentation, depending on the sum assured.
-                      </li>
-                      <li>
-                        <strong>Q: Can I increase my coverage later?</strong>
-                        <br />
-                        Yes, many term plans offer Life Stage riders, allowing
-                        you to increase your cover upon major events like
-                        marriage or starting a career.
+                        Often, young individuals find{" "}
+                        <NextLink
+                          href="/services/insurance/lic"
+                          className="text-red-600 hover:underline"
+                        >
+                          life insurance coverage
+                        </NextLink>{" "}
+                        with minimal medical documentation.
                       </li>
                       <li>
                         <strong>
                           Q: What if I can t afford a high premium?
                         </strong>
                         <br />
-                        Start small. Even a modest sum assured covering your
-                        loan amount and basic responsibilities is a solid
-                        starting point that you can upgrade later.
+                        You don t need a high cover initially. Start with a
+                        modest{" "}
+                        <NextLink
+                          href="/services/insurance/lic"
+                          className="text-red-600 hover:underline"
+                        >
+                          life insurance
+                        </NextLink>{" "}
+                        sum assured and upgrade later.
                       </li>
                     </ul>
                   </div>
@@ -186,11 +256,24 @@ export const Blog70 = () => {
                   >
                     Secure Your Future Today
                   </Typography>
-                  <Typography variant="b2" className="text-gray-300">
+                  <Typography variant="b2" className="text-gray-300 mb-6 block">
                     A small investment today provides a lifetime of security.
-                    Contact our advisors to find a term plan that fits your
-                    student budget and protects your future earning potential.
+                    Explore our range of
+                    <NextLink
+                      href="/services/insurance/lic"
+                      className="text-red-400 font-bold hover:underline mx-1"
+                    >
+                      LIC life insurance plans
+                    </NextLink>
+                    and protect your earning potential.
                   </Typography>
+
+                  <NextLink
+                    href="/services/insurance/lic"
+                    className="inline-block bg-red-600 text-white font-bold px-8 py-3 rounded-xl hover:bg-red-700 transition"
+                  >
+                    Explore LIC Plans
+                  </NextLink>
                 </div>
 
                 <div className="mt-14">
