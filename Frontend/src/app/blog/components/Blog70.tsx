@@ -86,7 +86,6 @@ export const Blog70 = () => {
                     is emerging as a vital tool for building a stable
                     foundation.
                   </p>
-
                   <h2>What is Student Life Insurance?</h2>
                   <p>
                     Student{" "}
@@ -94,7 +93,7 @@ export const Blog70 = () => {
                       href="/services/insurance/lic"
                       className="text-red-600 font-semibold hover:underline"
                     >
-                      life insurance
+                      life insurance  
                     </NextLink>{" "}
                     is essentially a standard policy—often a Term Insurance
                     Plan—tailored for young adults. It acts as a safeguard
@@ -110,7 +109,7 @@ export const Blog70 = () => {
                       className="text-red-600 font-semibold hover:underline"
                     >
                       life insurance plans
-                    </NextLink>{" "}
+                    </NextLink>{" "} 
                     during your college years:
                   </p>
                   <ol className="space-y-4">
