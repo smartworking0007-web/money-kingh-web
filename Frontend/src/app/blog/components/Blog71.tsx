@@ -12,7 +12,7 @@ export const Blog71 = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center"> 
       {!isOpen ? (
         <div
           onClick={() => setIsOpen(true)}
@@ -300,7 +300,7 @@ export const Blog71 = () => {
                           className="text-red-600 font-bold hover:underline"
                         >
                           {" "}
-                          "Balance Transfer + Top-Up"{" "}
+                          Balance Transfer + Top-Up {" "}
                         </NextLink>
                         to move your loan to a new lender and secure additional
                         funds simultaneously.
@@ -310,7 +310,7 @@ export const Blog71 = () => {
                           Q: How much amount can I get as a top-up?
                         </strong>
                         <br />
-                        This depends on your property's current value and your
+                        This depends on your property s current value and your
                         repayment capacity; some lenders offer up to ₹50 lakhs.
                       </li>
                       <li>
@@ -325,7 +325,7 @@ export const Blog71 = () => {
                           {" "}
                           credit services portal{" "}
                         </NextLink>{" "}
-                        for more details on current lender charges.
+                        for more details on current lender charges .
                       </li>
                     </ul>
                   </div>
@@ -346,7 +346,6 @@ export const Blog71 = () => {
                     ensure your repayment capacity aligns with your long-term
                     goals.
                   </Typography>
-
                   <NextLink
                     href="/services/loan-bt/home"
                     className="inline-block bg-red-600 text-white font-bold px-8 py-3 rounded-xl hover:bg-red-700 transition"
