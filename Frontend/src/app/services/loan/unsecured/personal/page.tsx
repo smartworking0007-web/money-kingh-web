@@ -76,7 +76,6 @@ export default function PersonalLoanPage() {
                   <span className="text-slate-900 font-bold ml-2">
                     9.98% p.a.  Subject to eligibility.
                   </span>
-                  
                 </Typography>
                 <Typography variant="b1" className="text-slate-600 m-0!">
                   A personal loan offers a structured financial solution for all
@@ -178,6 +177,25 @@ export default function PersonalLoanPage() {
       <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-25 md:-mt-35">
         <LoanFAQ />
       </div>
+
+      {/* --- GOOGLE ADS MANDATORY FINANCIAL DISCLOSURES SECTION --- */}
+      <section className="bg-slate-100 border-t border-slate-200 py-10 px-4 sm:px-6 mt-12">
+        <div className="max-w-7xl mx-auto text-xs sm:text-sm text-slate-600 space-y-3 leading-relaxed">
+          <p className="font-bold text-slate-800 text-base">Regulatory Disclosures & Representative Example:</p>
+          <p>
+            • <strong>Minimum and Maximum Repayment Period:</strong> The repayment tenure ranges from a minimum of 12 months up to a maximum of 60 months. Subject to lender terms and individual eligibility.
+          </p>
+          <p>
+            • <strong>Maximum Annual Percentage Rate (APR):</strong> The maximum APR goes up to 24% p.a., which includes the baseline interest rate along with applicable processing fees and standard charges.
+          </p>
+          <p>
+            • <strong>Representative Example of Loan Cost:</strong> If you borrow ₹1,00,000 for a tenure of 12 months at an interest rate (APR) of 11.5% p.a. with a processing fee of ₹2,000, your total repayment amount will be approximately ₹1,11,500. (Actual figures, interest rates, and fees vary based on the respective lender evaluation and your credit profile).
+          </p>
+          <p>
+            • Money King Financial Services Pvt. Ltd. operates strictly as an intermediary/Direct Selling Agent (DSA) assisting customers in connecting with RBI-regulated banks and NBFCs. Final loan approvals, disbursals, and interest rates are determined entirely by the lending partner institutions.
+          </p>
+        </div>
+      </section>
     </main>
   );
 }
