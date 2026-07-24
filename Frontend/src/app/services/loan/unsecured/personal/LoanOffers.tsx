@@ -33,7 +33,7 @@ const LoanOffers: React.FC = () => {
       interestRateStr: "9.99% - 12.5%",
       tenure: "1-5 Years",
       fee: "₹ 6,500",
-      tags: ["10 Second Disbursal*", "100% Digital Process*", "Quick Disbursal"]
+      tags: ["Smooth Loan Journey*", "100% Digital Process*", "Quick Disbursal"]
     },
     {
       id: 2,
@@ -63,7 +63,7 @@ const LoanOffers: React.FC = () => {
     }
   ]);
 
-  const [activeSort, setActiveSort] = useState("Lowest Interest Rate");
+  const [activeSort, setActiveSort] = useState("Competitive Interest Rates");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedBank, setSelectedBank] = useState("");
 
@@ -87,7 +87,7 @@ const LoanOffers: React.FC = () => {
   const handleSort = (label: string) => {
     setActiveSort(label);
     const sortedData = [...banks];
-    if (label === "Lowest Interest Rate") sortedData.sort((a, b) => a.interestRateVal - b.interestRateVal);
+    if (label === "Competitive Interest Rates") sortedData.sort((a, b) => a.interestRateVal - b.interestRateVal);
     else if (label === "Max Loan Amount") sortedData.sort((a, b) => b.maxLoanVal - a.maxLoanVal);
     else if (label === "Min Loan Amount") sortedData.sort((a, b) => a.maxLoanVal - b.maxLoanVal);
     setBanks(sortedData);
@@ -124,7 +124,7 @@ const LoanOffers: React.FC = () => {
              <ListFilter size={16} className="text-slate-400" />
              <Typography variant="b2" className="m-0! font-medium text-slate-600">Sort by:</Typography>
           </div>
-          {["Lowest Interest Rate", "Max Loan Amount", "Min Loan Amount"].map((label) => (
+          {["Competitive Interest Rates", "Max Loan Amount", "Min Loan Amount"].map((label) => (
             <button key={label} onClick={() => handleSort(label)}
               className={cn("px-4 py-1.5 border rounded-md text-xs font-bold shrink-0 uppercase tracking-tight transition-all",
                 activeSort === label ? "border-blue-600 text-blue-600 bg-blue-50/50" : "border-slate-200 text-slate-500 bg-white")}>

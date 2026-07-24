@@ -1,6 +1,6 @@
 "use client";
-import React from 'react';
-import { Typography } from '@/app/components/ui/Typography';
+import React from "react";
+import { Typography } from "@/app/components/ui/Typography";
 
 const loanTypes = [
   {
@@ -45,15 +45,15 @@ const LoanTypes = () => {
   return (
     <section className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Section Heading */}
         <div className="mb-8 md:mb-12">
-          <Typography 
-            variant="h3" 
-            as="h2" 
-            className="text-[#2d2d2d] font-bold text-2xl sm:text-3xl md:text-4xl mt--10! leading-tight text-center md:text-left"
+          <Typography
+            variant="h3"
+            as="h2"
+            className="text-[#2d2d2d] font-bold text-2xl sm:text-3xl md:text-4xl mt-0! leading-tight text-center md:text-left"
           >
-            Choose the Right Personal Loan for Your Needs
+            Choose the Right Personal Loan Option for Your Needs. Subject to
+            Eligibility.
           </Typography>
         </div>
 
@@ -73,15 +73,15 @@ const LoanTypes = () => {
                 cursor-pointer
               `}
             >
-              <Typography 
-                variant="b1" 
+              <Typography
+                variant="b1"
                 className="text-slate-600 font-medium m-0! leading-tight text-sm sm:text-base"
               >
                 {loan.title}
               </Typography>
-              <Typography 
-                variant="h4" 
-                as="span" 
+              <Typography
+                variant="h4"
+                as="span"
                 className="text-[#333333] font-bold mt-1! leading-tight text-lg sm:text-xl md:text-2xl"
               >
                 {loan.subtitle}

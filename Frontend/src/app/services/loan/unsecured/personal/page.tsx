@@ -25,7 +25,7 @@ export default function PersonalLoanPage() {
     },
     {
       icon: <Clock className="w-8 h-8 text-slate-500 stroke-[1.5]" />,
-      title: "Quick Approval & Faster Disbursal",
+      title: "Digital Processing & Support",
       desc: "No Collaterals or Hidden Charges",
     },
     {
@@ -71,21 +71,19 @@ export default function PersonalLoanPage() {
                   as="p"
                   className="text-slate-800 font-medium m-0! leading-snug"
                 >
-                  Compare & choose best personal loan with interest rates
-                  starting at
+                  Compare personal loan offers from partner banks and NBFCs with
+                  interest rates starting at
                   <span className="text-slate-900 font-bold ml-2">
-                    9.98% p.a.
-                  </span>{" "}
-                  only.
+                    9.98% p.a.  Subject to eligibility.
+                  </span>
+                  
                 </Typography>
-
                 <Typography variant="b1" className="text-slate-600 m-0!">
-                  A personal loan offers a quick and flexible financial solution
-                  for all your immediate needs, whether its for travel, medical
+                  A personal loan offers a structured financial solution for all
+                  your immediate needs, whether its for travel, medical
                   emergencies, or debt consolidation.
                 </Typography>
               </div>
-
               {/* Vertical Features List */}
               <div className="space-y-10 mt-12">
                 {features.map((item, i) => (
@@ -126,7 +124,7 @@ export default function PersonalLoanPage() {
 
             <div className="relative z-10 drop-shadow-[0_50px_80px_rgba(0,0,0,0.15)] transform hover:scale-105 transition-transform duration-500">
               <Image
-                src="/images/Loan/pmss.png"
+                src="/images/Loan/pssssss.png"
                 alt="Personal Loan App Dashboard"
                 width={400}
                 height={750}
@@ -144,10 +142,6 @@ export default function PersonalLoanPage() {
       </section>
 
       {/* --- CONTENT COMPONENTS AREA --- */}
-      {/* Yahan 'space-y-16' ya 'space-y-24' ka use karke components ke beech gap add kiya gaya hai.
-          'mb-20' ensure karega ki page ke end mein bhi thodi jagah rahe.
-      */}
-
       <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
         <TrustBar />
       </div>
