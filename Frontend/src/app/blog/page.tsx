@@ -156,19 +156,13 @@ const ALL_BLOGS = [
   { id: 72, component: <Blog72 /> },
   { id: 73, component: <Blog73 /> },
   { id: 74, component: <Blog74 /> }
-
-  
-
-
-
-
 ];
 
 export default function BlogPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 6;
 
-  // Pagination calculation parameters
+  
   const totalPages = Math.ceil(ALL_BLOGS.length / blogsPerPage);
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
@@ -185,6 +179,7 @@ export default function BlogPage() {
           Blogs
         </Typography> 
       </div>  
+       
       <div className="max-w-7xl mx-auto px-4 py-10 md:py-16">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 justify-center">
           {/* Left Grid Layout */}
@@ -250,7 +245,7 @@ export default function BlogPage() {
 
           {/* Persistent Sticky Desktop Sidebar */}
           <div className="hidden lg:block w-[320px]">
-            <BlogSidebar />
+          <BlogSidebar />
           </div>
         </div>  
       </div>
