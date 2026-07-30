@@ -16,7 +16,7 @@ const features = [
   },
   {
     id: "03",
-    title: "Competitive Interest Rates",
+    title: "Competitive Interest Rates", 
     desc: "Interest starts from 9.99% p.a. Subject to eligibility and lender evaluation. Flexible repayment keeps EMIs manageable for your budget.",
   },
   {
@@ -33,7 +33,7 @@ const features = [
     id: "06",
     title: "Multiple End-Use Flexibility",
     desc: "Use the loan for genuine purposes: medical emergency, wedding, education, home renovation, travel, debt consolidation, or family functions as per lender terms.",
-  },
+  }, 
   {
     id: "07",
     title: "Prepayment Terms (As per Lender Policy)",
@@ -57,7 +57,7 @@ const LoanFeatures = () => {
             as="h2"
             className="text-[#002e5b] font-bold mb-6 mt-0! leading-tight"
           >
-            What is a Personal Loan?
+            What is a Personal Loan ?
           </Typography>
 
           <div className="space-y-6">
@@ -70,7 +70,6 @@ const LoanFeatures = () => {
               renovation, or debt consolidation — no collateral/guarantor
               needed. Subject to eligibility.
             </Typography>
-
             <Typography
               variant="b1"
               className="text-slate-500 leading-relaxed "

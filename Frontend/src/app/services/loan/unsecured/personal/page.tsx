@@ -381,7 +381,7 @@ export default function PersonalLoanPage() {
             RBI-regulated institutions. Minimum repayment period: 12 months;
             Maximum repayment period: 60 months; Maximum Annual Percentage Rate
             (APR): 24%. Representative Example: For a loan of ₹1,00,000 borrowed
-            over 12 months at 11.5% APR with a ₹2,000 processing fee, total
+            over 12 months at 11.5% APR with a ₹2,000 processing fee, total 
             repayment equals ₹1,11,500. All loans are subject to credit
             appraisal, verification, and sole discretion of partner banks and
             NBFCs.
