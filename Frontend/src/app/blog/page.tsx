@@ -81,6 +81,7 @@ import { Blog73 } from "./components/Blog73";
 import { Blog74 } from "./components/Blog74";
 import { Blog75 } from "./components/Blog75";
 import { Blog76 } from "./components/Blog76";
+import { Blog77 } from "./components/Blog77";
 
 
 const ALL_BLOGS = [
@@ -160,14 +161,14 @@ const ALL_BLOGS = [
   { id: 74, component: <Blog74 /> },
   { id: 75, component: <Blog75 /> },
   { id: 76, component: <Blog76 /> },
+  { id: 77, component: <Blog77 /> },
+
 
 ];
 
 export default function BlogPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 6;
-
-  
   const totalPages = Math.ceil(ALL_BLOGS.length / blogsPerPage);
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
@@ -175,7 +176,7 @@ export default function BlogPage() {
 
   return (
     <main className="min-h-screen bg-[#F8FAFC]">
-      {/* Dynamic Banner Layout */}
+      {/* Dynamic Banner Layout */}  
       <div className="h-40 md:h-[200px] w-full flex items-center justify-center bg-[#4A90E2]">
         <Typography
           variant="h1"
@@ -247,7 +248,6 @@ export default function BlogPage() {
               </button>
             </div>
           </div>
-
           {/* Persistent Sticky Desktop Sidebar */}
           <div className="hidden lg:block w-[320px]">
           <BlogSidebar />
