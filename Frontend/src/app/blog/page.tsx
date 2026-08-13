@@ -84,7 +84,7 @@ import { Blog76 } from "./components/Blog76";
 import { Blog77 } from "./components/Blog77";
 import { Blog78 } from "./components/Blog78";
 import { Blog79 } from "./components/Blog79";
-
+import { Blog80 } from "./components/Blog80";
 
 const ALL_BLOGS = [
   { id: 1, component: <Blog1 /> },
@@ -165,9 +165,8 @@ const ALL_BLOGS = [
   { id: 76, component: <Blog76 /> },
   { id: 77, component: <Blog77 /> },
   { id: 78, component: <Blog78 /> },
-  { id: 79, component: <Blog79 /> }
-
-
+  { id: 79, component: <Blog79 /> },
+  { id: 80, component: <Blog80 /> },
 ];
 
 export default function BlogPage() {
@@ -180,16 +179,16 @@ export default function BlogPage() {
 
   return (
     <main className="min-h-screen bg-[#F8FAFC]">
-      {/* Dynamic Banner Layout */}  
+      {/* Dynamic Banner Layout */}
       <div className="h-40 md:h-[200px] w-full flex items-center justify-center bg-[#4A90E2]">
         <Typography
           variant="h1"
           className="text-white uppercase tracking-widest text-center px-4 my-0"
         >
           Blogs
-        </Typography> 
-      </div>  
-       
+        </Typography>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 py-10 md:py-16">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 justify-center">
           {/* Left Grid Layout */}
@@ -254,9 +253,9 @@ export default function BlogPage() {
           </div>
           {/* Persistent Sticky Desktop Sidebar */}
           <div className="hidden lg:block w-[320px]">
-          <BlogSidebar />
+            <BlogSidebar />
           </div>
-        </div>  
+        </div>
       </div>
     </main>
   );
