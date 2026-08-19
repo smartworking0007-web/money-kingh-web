@@ -26,8 +26,7 @@ const TrustBar: React.FC = () => {
             as="p"
             className="m-0 font-bold leading-tight text-slate-900 text-[11px] md:text-sm whitespace-nowrap"
           >
-            Trusted by 10K+ <br />
-            Customers 90+ Branches 155+ Bank Partners
+            Trusted
           </Typography>
         </div>
 

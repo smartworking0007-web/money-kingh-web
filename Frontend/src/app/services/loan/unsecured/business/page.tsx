@@ -27,8 +27,8 @@ export default function BusinessLoanPage() {
     },
     {
       icon: <Zap className="w-8 h-8 text-amber-500 stroke-[1.5]" />,
-      title: "Funds in 48 Hours",
-      desc: "Capital in your account within 48-72 hours of approval.",
+      title: "Fast Application Processing",
+      desc: "Capital in your account within Fast Application Processing.",
     },
     {
       icon: <Briefcase className="w-8 h-8 text-slate-600 stroke-[1.5]" />,
@@ -61,11 +61,11 @@ export default function BusinessLoanPage() {
             <div className="max-w-2xl">
               {/* Main Heading Replacement */}
               <Typography
-                variant="h2"
-                as="h3"
+                variant="h3"
+                as="h4"
                 className="text-[#002e5b] mb-10! -mt-20 leading-tight font-black"
               >
-                Unsecured Business Loan in India
+                Unsecured Business Loan in India - Apply Online Without Colletral
               </Typography>
 
               <div className="space-y-6">
@@ -74,10 +74,7 @@ export default function BusinessLoanPage() {
                   as="p"
                   className="text-slate-800 font-medium m-0! leading-snug"
                 >
-                  Fast & Affordable Business Loans – Starting
-                  <span className="text-blue-500 font-bold ml-2">
-                    @ 9.99% p.a.
-                  </span>
+                  Fast Application Processing
                 </Typography>
                 {/* Paragraph description removed as requested */}
               </div>
@@ -123,7 +120,7 @@ export default function BusinessLoanPage() {
 
             <div className="relative z-10 -mt-15 drop-shadow-[0_50px_80px_rgba(0,0,0,0.15)] transform hover:scale-105 transition-transform duration-500">
               <Image
-                src="/images/Loan/pmss.png"
+                src="/images/Loan/pmssss.png"
                 alt="Business Loan Growth Dashboard"
                 width={400}
                 height={750}
@@ -142,7 +139,7 @@ export default function BusinessLoanPage() {
       </section>
 
       {/* --- CONTENT COMPONENTS AREA --- */}
-      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-30 -mt-10 md:-mt-24">
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-30 -mt-10 md:-mt-15">
         <TrustBar />
       </div>
       <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-35 mt-20 md:-mt-10">

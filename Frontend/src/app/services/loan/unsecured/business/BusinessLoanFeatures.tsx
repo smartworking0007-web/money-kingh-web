@@ -10,7 +10,7 @@ const featuresData = [
   },
   {
     id: "02",
-    title: "100% Unsecured Loan – No Collateral Required",
+    title: "Unsecured Business Loan – No Traditional Collateral Required",
     desc: "We offer unsecured business loans without any collateral. You can secure funding based on your business performance and credit profile without risking your assets.",
   },
   {

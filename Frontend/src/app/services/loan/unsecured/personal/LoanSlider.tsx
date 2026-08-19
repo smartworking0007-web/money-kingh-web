@@ -27,6 +27,7 @@ const loanTypes = [
     desc: "Many lenders allow existing loan borrowers of other banks/NBFCs to transfer their outstanding loans subject to eligibility and lender evaluation for better terms.",
     icon: <RefreshCcw className="w-8 h-8 text-blue-600" />,
     bgColor: "bg-blue-50",
+    href: "/services/loan-bt/personal",
   },
   {
     title: "Pre-approved Personal Loan",
@@ -147,13 +148,18 @@ const LoanSlider = () => {
             }}
             className="pb-14 px-2!"
           >
-            {loanTypes.map((loan, index) => (
-              <SwiperSlide key={index}>
-                <div className="bg-white rounded-3xl p-8 min-h-[420px] h-full shadow-sm border border-slate-100 flex flex-col items-center text-center group hover:-translate-y-2 transition-all duration-300">
+            {loanTypes.map((loan, index) => {
+              const CardContent = (
+                <div
+                  className={cn(
+                    "bg-white rounded-3xl p-8 min-h-[420px] h-full shadow-sm border border-slate-100 flex flex-col items-center text-center group hover:-translate-y-2 transition-all duration-300",
+                    loan.href && "cursor-pointer hover:shadow-md"
+                  )}
+                >
                   <div
                     className={cn(
-                      "w-20 h-20 rounded-2xl flex items-center justify-center mb-8 ring-4 ring-white shadow-md transition-all duration-500",
-                      loan.bgColor,
+                      "w-20 h-20 rounded-2xl flex items-center justify-center mb-8 ring-4 ring-white shadow-md transition-all duration-500 group-hover:scale-105",
+                      loan.bgColor
                     )}
                   >
                     {loan.icon}
@@ -162,7 +168,7 @@ const LoanSlider = () => {
                   <Typography
                     variant="h5"
                     as="h3"
-                    className="text-slate-900 font-bold mb-4! leading-tight min-h-[50px] flex items-center justify-center"
+                    className="text-slate-900 font-bold mb-4! leading-tight min-h-[50px] flex items-center justify-center group-hover:text-blue-600 transition-colors"
                   >
                     {loan.title}
                   </Typography>
@@ -171,8 +177,20 @@ const LoanSlider = () => {
                     {loan.desc}
                   </div>
                 </div>
-              </SwiperSlide>
-            ))}
+              );
+
+              return (
+                <SwiperSlide key={index}>
+                  {loan.href ? (
+                    <Link href={loan.href} className="block h-full no-underline">
+                      {CardContent}
+                    </Link>
+                  ) : (
+                    CardContent
+                  )}
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
       </div>

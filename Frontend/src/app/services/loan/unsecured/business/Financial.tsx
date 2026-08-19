@@ -58,7 +58,7 @@ const Financial = () => {
                       as="h5"
                       className="text-[#002e5b] text-sm md:text-base  m-0!"
                     >
-                      Quick Approval & Fast Disbursement
+                      Fast Application Support
                     </Typography>
                   </div>
                   <p className="text-slate-600 text-xs md:text-sm ml-5 m-0!">

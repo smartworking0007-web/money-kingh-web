@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "4. How long does it take for a business loan to get approved?",
-    a: "Digital lending platforms and fintechs can provide in-principle approval within 59 minutes. However, the full disbursement process for traditional banks usually takes 7 to 10 working days after document verification.",
+    a: "Processing time varies by lender, application profile & document verification",
   },
   {
     q: "5. Is the interest on a business loan tax-deductible?",

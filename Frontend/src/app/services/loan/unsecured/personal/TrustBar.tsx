@@ -45,23 +45,12 @@ const TrustBar: React.FC = () => {
         {/* Section 3: Happy Customers */}
         <div className="flex flex-col items-center shrink-0 md:px-8 md:border-r border-slate-100">
           <Typography variant="h5" as="span" className="m-0 font-bold text-slate-900 text-base md:text-xl leading-none">
-            1K+
+            1ooo+
           </Typography>
           <Typography variant="b3" as="span" className="m-0 italic text-slate-500 font-light text-[10px] md:text-xs whitespace-nowrap">
             Happy Customers
           </Typography>
         </div>
-
-        {/* Section 4: Banks */}
-        <div className="flex flex-col items-center shrink-0 md:px-8">
-          <Typography variant="h5" as="span" className="m-0 font-bold text-slate-900 text-base md:text-xl leading-none">
-            30+
-          </Typography>
-          <Typography variant="b3" as="span" className="m-0 italic text-slate-500 font-light text-[10px] md:text-xs whitespace-nowrap">
-            Banks
-          </Typography>
-        </div>
-
       </div>
     </div>
   );

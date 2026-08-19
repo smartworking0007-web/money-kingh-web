@@ -17,7 +17,7 @@ const features = [
   {
     id: "03",
     title: "Competitive Interest Rates", 
-    desc: "Interest starts from 9.99% p.a. Subject to eligibility and lender evaluation. Flexible repayment keeps EMIs manageable for your budget.",
+    desc: "Interest starts from 12.5% p.a. Subject to eligibility and lender evaluation. Flexible repayment keeps EMIs manageable for your budget.",
   },
   {
     id: "04",

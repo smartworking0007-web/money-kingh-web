@@ -133,7 +133,7 @@ export default function PersonalLoanPage() {
                 as="h1"
                 className="text-[#002e5b] mb-6! mt-0! leading-tight font-black"
               >
-                Personal Loan Facilitation
+                Personal Loan 
               </Typography>
 
               <div className="space-y-6">
@@ -145,7 +145,7 @@ export default function PersonalLoanPage() {
                   Compare personal loan offers from RBI-regulated partner banks
                   and NBFCs with interest rates starting at
                   <span className="text-slate-900 font-bold ml-2">
-                    9.98% p.a. Subject to eligibility.
+                    12.5% p.a. Subject to eligibility.
                   </span>
                 </Typography>
                 <Typography variant="b1" className="text-slate-600 m-0!">
@@ -272,7 +272,7 @@ export default function PersonalLoanPage() {
                   <strong>Tenure:</strong> 12 Months
                 </li>
                 <li>
-                  <strong>Interest Rate:</strong> 11.5% p.a.
+                  <strong>Interest Rate:</strong> 12.5% p.a.
                 </li>
                 <li>
                   <strong>Processing Fee (approx 2%):</strong> ₹2,000 + GST
@@ -281,7 +281,7 @@ export default function PersonalLoanPage() {
                   <strong>Maximum APR:</strong> Up to 24% p.a.
                 </li>
                 <li>
-                  <strong>Approximate Monthly EMI:</strong> ₹8,834
+                  <strong>Approximate Monthly EMI:</strong> ₹8,862
                 </li>
                 <li>
                   <strong>Total Repayment Cost:</strong> ₹1,11,500

@@ -26,8 +26,7 @@ const AboutBusinessLoan = () => {
               className="text-slate-600 font-medium  border-l-4 border-blue-500 pl-4 py-1"
             >
               Get fast and affordable unsecured business loans in India with
-              minimal documentation. Quick approval, low interest rates, and
-              easy online application.
+              minimal documentation. With a Convenient application process, subject to lender, eligibility and approval.
             </Typography>
 
             {/* 1st Paragraph */}

@@ -49,12 +49,12 @@ export default function HomeLoanPage() {
           {/* mt-16 se text ko thoda upar shift kiya hai kyunki height kam hui hai */}
           <div className="max-w-[340px] md:max-w-xl flex flex-col items-center md:items-start text-center md:text-left mt-16 md:mt-0">
             <Typography
-              variant="h1"
+              variant="h2"
               as="h1"
               className="text-white md:text-[#1e293b] mb-4 font-black leading-[1.1] text-2xl sm:text-4xl md:text-[64px] drop-shadow-2xl md:drop-shadow-none"
             >
-              Sapno Ka Ghar, <br className="hidden md:block" />
-              Sirf Ek Loan Door
+              Home loan in  india- <br className="hidden md:block" />
+              compare interest rate, eligibility and offers.
             </Typography>
 
             <Typography
@@ -62,8 +62,7 @@ export default function HomeLoanPage() {
               as="p"
               className="text-white/90 md:text-[#334155] mb-8 font-medium leading-relaxed text-xs md:text-lg max-w-[260px] md:max-w-lg"
             >
-              Make your dream home a reality with 12 EMIs waived on your home
-              loan. Fast process, low interest.
+              Compare home loan option from bank and nbfc in india. check home loan interest, eligibility document, fees, emi & repayment option before applying. 
             </Typography>
 
             <Link
