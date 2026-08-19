@@ -11,38 +11,38 @@ const ApplyHomeLoan = () => {
   const stepsData = [
     {
       step: "01",
-      title: "Application Procedure",
-      desc: "Complete the housing loan application with accurate personal and financial details.",
+      title: "Check Eligibility",
+      desc: "Basic eligibility and loan requirement assess karein.",
     },
     {
       step: "02",
-      title: "Processing Fee",
-      desc: "Remit the processing fee to commence validation of your application.",
+      title: "Submit Application",
+      desc: "Personal, income and property-related information provide karein.",
     },
     {
       step: "03",
-      title: "Bank Discussion",
-      desc: "The bank may request a face-to-face or telephonic discussion with you.",
+      title: "Submit Documents",
+      desc: "KYC, income and property documents submit karein.",
     },
     {
       step: "04",
-      title: "Loan evaluation",
-      desc: "The bank assesses your application in line with its credit policies.",
+      title: "Lender Assessment",
+      desc: "Lender credit, income, property and documentation evaluate karta hai.",
     },
     {
       step: "05",
-      title: "Loan sanction",
-      desc: "Receive a detailed sanction letter post-approval outlining loan specifics.",
+      title: "Sanction & Offer Review",
+      desc: "Sanction letter aur loan terms carefully review karein.",
     },
     {
       step: "06",
-      title: "Property scrutiny",
-      desc: "Undergo property inspection for legal and valuation compliance.",
+      title: "Property & Legal Verification",
+      desc: "Applicable legal and technical checks complete hote hain.",
     },
     {
       step: "07",
-      title: "Disbursement",
-      desc: "The loan is disbursed on positive verification, enabling your property investment.",
+      title: "Agreement & Disbursal",
+      desc: "Sign loan agreement and proceed for final loan disbursal.",
     },
   ];
 
@@ -54,13 +54,7 @@ const ApplyHomeLoan = () => {
   }, [stepsData.length]);
 
   return (
-    <section
-      className="relative w-full overflow-hidden border-b border-gray-100 bg-white px-5 py-6 md:px-12 md:py-12 -mt-10 md:-mt-5 font-lexend z-10"
-      /* -mt-10: Mobile par 40px upar shift karega
-         md:-mt-20: Desktop par 80px upar shift karega
-         py-6 / md:py-12: Padding kam kar di hai taaki section "Upar" dikhe
-      */
-    >
+    <section className="relative w-full overflow-hidden border-b border-gray-100 bg-white px-5 py-6 md:px-12 md:py-12 -mt-10 md:-mt-5 font-lexend z-10">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 md:grid-cols-12">
         {/* --- LEFT SIDE: IMAGE --- */}
         <div className="relative flex justify-center self-end items-end md:col-span-5 order-2 md:order-1">
@@ -85,7 +79,7 @@ const ApplyHomeLoan = () => {
               as="h2"
               className="mb-3 mt-0! text-2xl font-bold tracking-tight text-[#1e293b] md:text-5xl leading-tight"
             >
-              How to apply for a Home Loan
+              How to Apply for a Home Loan
             </Typography>
             <Typography
               variant="b3"
@@ -125,7 +119,11 @@ const ApplyHomeLoan = () => {
                 {stepsData.map((_, i) => (
                   <div
                     key={i}
-                    className={`h-1 rounded-full transition-all duration-500 ${i === activeStep ? "w-6 md:w-8 bg-[#00C4D8]" : "w-1.5 md:w-2 bg-gray-200"}`}
+                    className={`h-1 rounded-full transition-all duration-500 ${
+                      i === activeStep
+                        ? "w-6 md:w-8 bg-[#00C4D8]"
+                        : "w-1.5 md:w-2 bg-gray-200"
+                    }`}
                   ></div>
                 ))}
               </div>

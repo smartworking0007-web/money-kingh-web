@@ -24,14 +24,14 @@ const HomeLoanRejection = () => {
       color: "bg-blue-50 text-blue-600",
     },
     {
-      title: "Property Legalities",
-      desc: "Issues with titles, missing municipal approvals, or non-approved layouts lead to instant rejection.",
+      title: "Property Title issues",
+      desc: "Missing approvals or incomplete documentation may result may result in rejection or delayas, depending on the lender's & texchnical assessment. ",
       icon: <Building2 className="w-6 h-6" />,
       color: "bg-amber-50 text-amber-600",
     },
     {
-      title: "Multiple Enquiries",
-      desc: "Applying at 5 banks at once? It makes you look 'credit hungry' and negatively impacts your CIBIL.",
+      title: "Multiple Credit Enquiries",
+      desc: "Applying For Several loans with in a short period may result in multiple hard enquires on your credit report & can effect how landers assess your create profile",
       icon: <Search className="w-6 h-6" />,
       color: "bg-purple-50 text-purple-600",
     },
