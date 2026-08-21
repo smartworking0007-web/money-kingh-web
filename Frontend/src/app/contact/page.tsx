@@ -185,7 +185,7 @@ export default function ContactPage() {
                 <p className="text-[10px] font-bold text-slate-400 uppercase">
                   Call Us
                 </p>
-                <p className="font-bold text-slate-900">+91 76692 91199</p>
+                <p className="font-bold text-slate-900">+91 9311284229</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
