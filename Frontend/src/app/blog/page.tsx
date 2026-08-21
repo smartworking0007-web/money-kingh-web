@@ -89,6 +89,7 @@ import { Blog81 } from "./components/Blog81";
 import { Blog82 } from "./components/Blog82";
 import { Blog83 } from "./components/Blog83";
 import { Blog84 } from "./components/Blog84";
+import { Blog85 } from "./components/Blog85";
 
 const ALL_BLOGS = [
   { id: 1, component: <Blog1 /> },
@@ -175,6 +176,8 @@ const ALL_BLOGS = [
   { id: 82, component: <Blog82 /> },
   { id: 83, component: <Blog83 /> },
   { id: 84, component: <Blog84 /> },
+  { id: 85, component: <Blog85 /> },
+
 
 
 
@@ -218,11 +221,10 @@ export default function BlogPage() {
               <button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
-                className={`px-4 py-2 rounded-md text-sm md:text-base font-bold border transition-all ${
-                  currentPage === 1
+                className={`px-4 py-2 rounded-md text-sm md:text-base font-bold border transition-all ${currentPage === 1
                     ? "opacity-40 cursor-not-allowed border-gray-200 text-gray-400"
                     : "border-[#1e5d91] text-[#1e5d91] hover:bg-[#1e5d91] hover:text-white"
-                }`}
+                  }`}
               >
                 Previous
               </button>
@@ -234,11 +236,10 @@ export default function BlogPage() {
                     <button
                       key={number}
                       onClick={() => setCurrentPage(number)}
-                      className={`min-w-10 h-10 rounded-md text-sm md:text-base font-bold transition-all ${
-                        currentPage === number
+                      className={`min-w-10 h-10 rounded-md text-sm md:text-base font-bold transition-all ${currentPage === number
                           ? "bg-orange-400 text-white"
                           : "bg-white border border-gray-200 text-[#1e5d91] hover:bg-[#1e5d91] hover:text-white"
-                      }`}
+                        }`}
                     >
                       {number}
                     </button>
@@ -252,11 +253,10 @@ export default function BlogPage() {
                   setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                 }
                 disabled={currentPage === totalPages}
-                className={`px-4 py-2 rounded-md text-sm md:text-base font-bold border transition-all ${
-                  currentPage === totalPages
+                className={`px-4 py-2 rounded-md text-sm md:text-base font-bold border transition-all ${currentPage === totalPages
                     ? "opacity-40 cursor-not-allowed border-gray-200 text-gray-400"
                     : "border-[#1e5d91] text-[#1e5d91] hover:bg-[#1e5d91] hover:text-white"
-                }`}
+                  }`}
               >
                 Next
               </button>

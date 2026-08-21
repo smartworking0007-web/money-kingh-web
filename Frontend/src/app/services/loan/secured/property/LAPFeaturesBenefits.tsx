@@ -1,60 +1,44 @@
 "use client";
+
 import React from "react";
 import { Typography } from "@/app/components/ui/Typography";
 
 const benefitsData = [
-  {
-    title: "Competitive Interest Rates",
-    desc: "Benefit from attractive interest rates starting from 9.25% p.a.",
-  },
-  {
-    title: "Easy Balance Transfer Facility",
-    desc: "Transfer your existing loan and reduce your EMI burden.",
-  },
-  {
-    title: "Doorstep & Digital Processing",
-    desc: "Apply seamlessly from your home or office with minimal paperwork.",
-  },
-  {
-    title: "Additional Financial Benefits",
-    desc: "Avail value-added services like overdraft and top-up loans.",
-  },
+  "Higher loan amount",
+  "Competitive interest rates compared with many unsecured options",
+  "Longer repayment tenure",
+  "Use for eligible personal or business requirements",
+  "Balance transfer options, where available",
+  "Top-up facility, subject to lender policy",
+  "Secured loan structure",
 ];
 
 const LAPFeaturesBenefits = () => {
   return (
-    // py-20 ko badal kar pt-0 pb-16 kiya hai taaki upar wale section se gap khatam ho jaye
-    <section className="w-full bg-white pt-0 pb-16  font-lexend">
+    <section className="w-full bg-white pt-0 pb-16 font-lexend">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center mb-10">
           <Typography
             variant="h3"
             as="h3"
-            className="text-[#1e293b]  text-xl md:text-[30px] leading-tight"
+            className="text-[#1e293b] text-xl md:text-[30px] leading-tight font-semibold"
           >
-            Features and Benefits of <br /> LAP Loan in India
+            Benefits of Loan Against Property
           </Typography>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefitsData.map((item, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {benefitsData.map((title, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-100 rounded-2xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-lg transition-all flex flex-col h-full"
+              className="bg-white border border-gray-100 rounded-2xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-lg transition-all duration-300 flex items-center h-full"
             >
               <Typography
                 variant="b1"
                 as="h5"
-                className="text-[#1e293b] font-bold text-lg mb-2"
+                className="text-[#1e293b] font-bold text-base md:text-lg leading-snug"
               >
-                {item.title}
-              </Typography>
-              <Typography
-                variant="b3"
-                as="p"
-                className="text-slate-500 text-sm leading-relaxed"
-              >
-                {item.desc}
+                {title}
               </Typography>
             </div>
           ))}

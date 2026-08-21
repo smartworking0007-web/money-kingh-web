@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { Typography } from "@/app/components/ui/Typography";
 import { Info, Lightbulb, ArrowRightLeft, CheckCircle } from "lucide-react";
 
@@ -66,7 +67,7 @@ const BusinessLoanKnowledgeBase = () => {
   ];
 
   return (
-    <section className="elative z-20 bg-white space-y-16 md:space-y-30 py-8 md:py-20 -mt-10 md:-mt-24">
+    <section className="relative z-20 bg-white space-y-16 md:space-y-30 py-8 md:py-20 -mt-10 md:-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* --- SECTION 1: WHAT TO KNOW --- */}
         <div className="mb-20">
@@ -83,23 +84,19 @@ const BusinessLoanKnowledgeBase = () => {
 
           <Typography
             variant="b2"
-            className="text-slate-900 mb-10 leading-relaxed max-w-4x2"
+            className="text-slate-900 mb-10 leading-relaxed max-w-4xl"
           >
             Meta Description- Before applying for an unsecured business loan in India, it is important to understand key financial factors that affect approval, interest rates, and repayment capacity. This business loan guide helps you make informed decisions and improve your approval chances.
-
           </Typography>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <KnowledgeCard
               title="Fixed vs. Floating Rates"
-              desc=".Choose between fixed and floating interest rates based on your business cash flow. Fixed rates offer stability, while floating rates may vary with market conditions.
-"
+              desc="Choose between fixed and floating interest rates based on your business cash flow. Fixed rates offer stability, while floating rates may vary with market conditions."
             />
             <KnowledgeCard
               title="Choosing the Right Lender"
-              desc="A CIBIL score of 700+ improves your chances of business loan approval and helps secure lower interest rates.
-
-"
+              desc="A CIBIL score of 700+ improves your chances of business loan approval and helps secure lower interest rates."
             />
             <KnowledgeCard
               title="Power of Credit Score"
@@ -107,13 +104,11 @@ const BusinessLoanKnowledgeBase = () => {
             />
             <KnowledgeCard
               title="Total Cost of Borrowing"
-              desc="Consider processing fees, prepayment charges, and hidden costs along with interest rates before choosing a loan.
-"
+              desc="Consider processing fees, prepayment charges, and hidden costs along with interest rates before choosing a loan."
             />
             <KnowledgeCard
               title="EMI Affordability"
-              desc="Select a loan tenure that matches your repayment capacity. Longer tenure reduces EMI, while shorter tenure saves interest.
-"
+              desc="Select a loan tenure that matches your repayment capacity. Longer tenure reduces EMI, while shorter tenure saves interest."
             />
           </div>
         </div>
@@ -127,7 +122,7 @@ const BusinessLoanKnowledgeBase = () => {
               as="h3"
               className="text-[#002e5b] font-bold m-0!"
             >
-              Tips to Improve Business Loan Approval Chances in India 
+              Tips to Improve Business Loan Approval Chances in India
             </Typography>
           </div>
 
@@ -166,7 +161,13 @@ const BusinessLoanKnowledgeBase = () => {
               as="h3"
               className="text-[#002e5b] font-bold m-0!"
             >
-              Personal Loan vs. Business Loan: Which is Right for You?
+              <Link
+                href="https://moneykingfinancial.com/services/loan/unsecured/personal"
+                className="text-blue-600 hover:underline transition-all"
+              >
+                Personal Loan
+              </Link>{" "}
+              vs. Business Loan: Which is Right for You?
             </Typography>
           </div>
 
@@ -178,7 +179,12 @@ const BusinessLoanKnowledgeBase = () => {
                     Feature
                   </th>
                   <th className="p-5 font-bold uppercase tracking-wider text-xs border-l border-white/10">
-                    Personal Loan
+                    <Link
+                      href="https://moneykingfinancial.com/services/loan/unsecured/personal"
+                      className="hover:underline hover:text-blue-200 inline-flex items-center gap-1"
+                    >
+                      Personal Loan
+                    </Link>
                   </th>
                   <th className="p-5 font-bold uppercase tracking-wider text-xs border-l border-white/10 bg-blue-600">
                     Business Loan

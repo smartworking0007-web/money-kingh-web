@@ -15,6 +15,8 @@ import LAPLoanDocuments from "./LAPLoanDocuments";
 import ApplyLAPLoan from "./ApplyLAPLoan";
 import LAPLoanConsiderations from "./LAPLoanConsiderations";
 import LAPLoanFAQ from "./LAPLoanFAQ";
+import CarLoanComparison from "../car/CarLoanComparison";
+import LAPVsPersonalLoan from "./LAPVsPersonalLoan";
 
 export default function LoanAgainstPropertyPage() {
   return (
@@ -26,7 +28,7 @@ export default function LoanAgainstPropertyPage() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/laplon/lapa.jpeg"
-              alt="Loan Against Property"
+              alt="Loan Against Property "
               fill
               // object-[75%] mobile par image ko thoda right khiskayega taki log frame mein aayein
               className="object-cover object-[97%_center] md:object-right transition-all duration-500"
@@ -40,10 +42,10 @@ export default function LoanAgainstPropertyPage() {
             <div className="max-w-full md:max-w-2xl">
               <Typography
                 variant="h1"
-                as="h1"
-                className="text-white! text-4xl! md:text-7xl! font-extrabold! mb-3! mt-0! leading-[1.1]! drop-shadow-lg"
+                as="h2"
+                className="text-white! text-4xl! md:text-6xl! font-extrabold! mb-3! mt-0! leading-[1.1]! drop-shadow-lg"
               >
-                Loan Against <br /> Property
+                LAP in india/ interest rate & eligibility 
               </Typography>
 
               <Typography
@@ -51,7 +53,7 @@ export default function LoanAgainstPropertyPage() {
                 as="p"
                 className="text-white! text-lg! md:text-2xl! mb-8! mt-0! font-medium! drop-shadow-md"
               >
-                Enjoy long tenures up to 20 years.
+                Apply for a loan approve property in india with flexible tenure & competitive interest rate. check lap loan eligibitive documents change & application process.
               </Typography>
 
               <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply">
@@ -108,6 +110,9 @@ export default function LoanAgainstPropertyPage() {
 
       <div className="-mt-15 md:-mt-30 pb-16 md:pb-28 relative z-20">
         <LAPLoanConsiderations />
+      </div>
+      <div className="-mt-15 md:-mt-30 pb-16 md:pb-28 relative z-20">
+        <LAPVsPersonalLoan />
       </div>
 
       <div className="-mt-20 md:-mt-45 pb-16 md:pb-28 relative z-20">
