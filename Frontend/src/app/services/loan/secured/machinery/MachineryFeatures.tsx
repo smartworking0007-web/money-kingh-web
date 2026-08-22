@@ -14,7 +14,7 @@ export default function MachineryFeatures() {
     {
       title: "High Loan Amount",
       description:
-        "Avail machinery loans up to ₹10 Crore, depending on your business profile, to support large-scale investments and expansion.",
+        "loan amount : up to 10 crore , subject to lender policy & applicant eligibility. ",
       icon: <Coins className="w-6 h-6" />,
     },
     {
@@ -26,7 +26,7 @@ export default function MachineryFeatures() {
     {
       title: "Competitive Interest Rates",
       description:
-        "Get machinery finance at attractive interest rates (subject to profile), helping you reduce overall borrowing costs.",
+        "up to 90%/100% depending on machinery type, lender policy & borrower profile.",
       icon: <Percent className="w-6 h-6" />,
     },
     {

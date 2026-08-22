@@ -1,18 +1,28 @@
-// data/whyChoose.ts
+// data/whyChoose.tsx
+import React from "react";
+import Link from "next/link";
 
 export interface WhyChooseItem {
   id: number;
-  title: string;
+  title: React.ReactNode;
   icon: string;
-  link?: string;
 }
 
 export const whyChooseData: WhyChooseItem[] = [
   {
     id: 1,
-    title: "Personalized Personal Loan",
+    title: (
+      <span>
+        Personalized{" "}
+        <Link
+          href="/services/loan/unsecured/personal"
+          className="text-[#004687] font-semibold hover:underline"
+        >
+          Personal Loan
+        </Link>
+      </span>
+    ),
     icon: "/images/Choose/adv1.png",
-    link: "/services/loan/unsecured/personal",
   },
   {
     id: 2,

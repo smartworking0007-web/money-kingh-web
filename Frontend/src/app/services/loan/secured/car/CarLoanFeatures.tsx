@@ -15,7 +15,7 @@ export default function CarLoanFeaturesV3() {
       },
       {
         title: "Up to 100% Financing",
-        desc: "Many lenders offer up to 100% financing on the on-road price, reducing or even eliminating the need for a down payment.",
+        desc: "Some lenders may offers high finances, potentially covering a significant portion of the on-road price, subject to lender policy, vehicle type & applicant eligibity.",
       },
       {
         title: "High Loan Amount Eligibility",

@@ -22,9 +22,9 @@ interface StatItem {
 
 export default function MachineryLoanPage() {
   const data = {
-    title: "Power Your Business With Advanced Machinery",
+    title: "Machinery loan in india",
     description:
-      "Boost your business productivity with financing for new or used machinery & equipment.",
+      "get a machinery loan in india for new or used equipment, check  Machinery finance interest rate, eligibility, documents, loant amount & repayment tenure.",
     stats: [] as StatItem[],
     features: [] as string[],
   };

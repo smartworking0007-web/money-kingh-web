@@ -14,6 +14,7 @@ import CarLoanTips from "./CarLoanTips";
 import EligibilityCriteria from "./EligibilityCriteria";
 import DocumentsRequired from "./DocumentsRequired";
 import FAQPage from "./FAQPage";
+import HowToApplyCarLoan from "./HowToApplyCarLoan";
 
 export default function CarLoanPage() {
   const data = {
@@ -109,19 +110,22 @@ export default function CarLoanPage() {
       <section className="-mt-30 md:-mt-55 pb-16 md:pb-35 relative z-20">
         <DocumentsRequired />
       </section>
-
       <section className="-mt-30 md:-mt-55 pb-16 md:pb-35 relative z-20">
-        <FAQPage />
+        <HowToApplyCarLoan />
       </section>
 
       <section className="-mt-30 md:-mt-55 pb-16 md:pb-35 relative z-20">
         <FinancialPartners />
       </section>
+      
 
       <section className="py-12 md:py-20">
         <div className="-mt-25 md:-mt-55 pb-16 md:pb-10 relative z-20">
           <WhyChoose />
         </div>
+      </section>
+      <section className="-mt-30 md:-mt-30 pb-16 md:pb-35 relative z-20">
+        <FAQPage />
       </section>
     </main>
   );
