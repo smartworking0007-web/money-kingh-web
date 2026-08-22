@@ -4,16 +4,16 @@ import { Typography } from "@/app/components/ui/Typography";
 
 export default function CarLoanComparison() {
   const bankData = [
-    { name: "State Bank of India", rate: "8.75% p.a. onwards", tenure: "Up to 7 years" },
-    { name: "Indian Overseas Bank", rate: "7.55% p.a. onwards", tenure: "Up to 7 years" },
-    { name: "IDFC First Bank", rate: "9.99% p.a. onwards", tenure: "Up to 10 years" },
-    { name: "Canara Bank", rate: "7.45% p.a. onwards", tenure: "Up to 7 years" },
-    { name: "HDFC Bank", rate: "9.00% p.a. onwards (Rack Interest)", tenure: "Up to 7 years" },
-    { name: "IndusInd Bank", rate: "8.00% p.a. onwards", tenure: "Up to 5 years" },
-    { name: "ICICI Bank", rate: "8.50% p.a. onwards", tenure: "Up to 7 years" },
-    { name: "Union Bank of India", rate: "7.40% p.a. onwards", tenure: "Up to 7 years" },
-    { name: "Bank of Maharashtra", rate: "7.45% p.a. onwards", tenure: "Up to 7 years" },
-    { name: "Axis Bank", rate: "8.85% p.a. onwards", tenure: "Up to 7 years" },
+    { name: "State Bank of India", rate: "Verfiy interest rate", tenure: "Up to 7 years" },
+    { name: "Indian Overseas Bank", rate: "Verfiy interest rate", tenure: "Up to 7 years" },
+    { name: "IDFC First Bank", rate: "Verfiy interest rate", tenure: "Up to 10 years" },
+    { name: "Canara Bank", rate: "Verfiy interest rate", tenure: "Up to 7 years" },
+    { name: "HDFC Bank", rate: "Verfiy interest rate", tenure: "Up to 7 years" },
+    { name: "IndusInd Bank", rate: "Verfiy interest rate", tenure: "Up to 5 years" },
+    { name: "ICICI Bank", rate: "Verfiy interest rate", tenure: "Up to 7 years" },
+    { name: "Union Bank of India", rate: "Verfiy interest rate", tenure: "Up to 7 years" },
+    { name: "Bank of Maharashtra", rate: "Verfiy interest rate", tenure: "Up to 7 years" },
+    { name: "Axis Bank", rate: "Verfiy interest rate", tenure: "Up to 7 years" },
   ];
 
   return (

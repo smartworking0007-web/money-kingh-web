@@ -17,8 +17,8 @@ import FAQPage from "./FAQPage";
 
 export default function CarLoanPage() {
   const data = {
-    title: "Feel the joy of a\nlonger drive",
-    description: "Take the next drive in your own car with a car loan.",
+    title: "Car loan in india\ninterest rate eligibility & emi",
+    description: "Get a car loan in india with flexible repayment opitions. check car loan interest rate,eligibility, document & new or use car loan opitions  ",
   };
 
   return (
