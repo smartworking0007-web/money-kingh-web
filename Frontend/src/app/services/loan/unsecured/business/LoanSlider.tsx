@@ -23,35 +23,35 @@ const loanData = [
     desc: "A business loan is ideal for long-term expansion, purchasing assets, or scaling operations. It offers a lump sum amount with fixed monthly EMIs and repayment tenure ranging from 1 to 5 years.",
     icon: <BarChart3 size={32} className="text-blue-600" />,
     bg: "bg-blue-50",
-    link: "https://moneykingfinancial.com/services/loan/unsecured/business",
+    link: "/services/loan/unsecured/business",
   },
   {
     title: "Working Capital Loan",
-    desc: "<a href='https://moneykingfinancial.com/Apply/Working-Capital' class='text-[#2563eb] underline font-medium hover:text-blue-800'>Working capital loan</a> help businesses manage daily operational expenses such as salaries, rent, and inventory. These are usually short-term loans and can be unsecured loans, ensuring smooth cash flow.",
+    desc: "Working capital loans help businesses manage daily operational expenses such as salaries, rent, and inventory. These are usually short-term loans and can be unsecured loans, ensuring smooth cash flow.",
     icon: <Settings size={32} className="text-emerald-600" />,
     bg: "bg-emerald-50",
-    link: "https://moneykingfinancial.com/Apply/Working-Capital",
+    link: "/services/loan/unsecured/business",
   },
   {
     title: "MSME & Govt. Loan Schemes",
-    desc: "<a href='https://moneykingfinancial.com/services/loan/unsecured/business' class='text-[#2563eb] underline font-medium hover:text-blue-800'>MSME loans</a> and government-backed schemes like MUDRA and CGTMSE provide affordable funding options for small businesses. These loans often come with lower interest rates and collateral-free benefits.",
+    desc: "MSME loans and government-backed schemes like MUDRA and CGTMSE provide affordable funding options for small businesses. These loans often come with lower interest rates and collateral-free benefits.",
     icon: <Building2 size={32} className="text-orange-600" />,
     bg: "bg-orange-50",
-    link: "https://moneykingfinancial.com/services/loan/unsecured/business",
+    link: "/services/loan/unsecured/business",
   },
   {
     title: "Machinery & Equipment Financing",
-    desc: "<a href='https://moneykingfinancial.com/services/loan/secured/machinery' class='text-[#2563eb] underline font-medium hover:text-blue-800'>Machinery loans</a> help businesses purchase equipment and upgrade operations. In most cases, the machinery itself acts as collateral, allowing businesses to access funding at competitive interest rates.",
+    desc: "Machinery loans help businesses purchase equipment and upgrade operations. In most cases, the machinery itself acts as collateral, allowing businesses to access funding at competitive interest rates.",
     icon: <Cpu size={32} className="text-purple-600" />,
     bg: "bg-purple-50",
-    link: "https://moneykingfinancial.com/services/loan/secured/machinery",
+    link: "/services/loan/secured/machinery",
   },
   {
     title: "Invoice Discounting / Bill Financing",
     desc: "Invoice financing allows businesses to get instant funds against unpaid invoices. This helps improve cash flow and ensures smooth operations without waiting for client payments.",
     icon: <FileText size={32} className="text-sky-600" />,
     bg: "bg-sky-50",
-    link: "https://moneykingfinancial.com/services/loan/unsecured/business",
+    link: "/services/loan/unsecured/business",
   },
 ];
 
@@ -113,10 +113,9 @@ const LoanSlider = () => {
                   {loan.title}
                 </h3>
 
-                <div
-                  className="text-slate-600 text-sm md:text-base leading-relaxed m-0!"
-                  dangerouslySetInnerHTML={{ __html: loan.desc }}
-                />
+                <p className="text-slate-600 text-sm md:text-base leading-relaxed m-0!">
+                  {loan.desc}
+                </p>
               </div>
             </SwiperSlide>
           ))}
