@@ -44,6 +44,11 @@ export const metadata: Metadata = {
   description: "Learn in-demand skills with industry experts",
   metadataBase: new URL("https://moneykingfinancial.com"),
   alternates: { canonical: "/" },
+  icons: {
+    icon: "/images/logo.svg",
+    shortcut: "/images/logo.svg",
+    apple: "/images/logo.svg",
+  },
 };
 
 export default function RootLayout({
