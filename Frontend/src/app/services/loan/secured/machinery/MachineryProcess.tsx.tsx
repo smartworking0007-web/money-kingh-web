@@ -76,7 +76,7 @@ export default function MachineryProcess() {
               <div className="text-slate-800 font-bold text-sm md:text-base leading-snug">
                 {item.title}
               </div>
-            </motion.div>
+            </motion.div> 
           ))}
         </div>
       </div>
