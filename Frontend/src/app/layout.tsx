@@ -45,7 +45,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://moneykingfinancial.com"),
   alternates: { canonical: "/" },
   icons: {
-    icon: "/images/logo.svg",
+    icon: [
+      { url: "/images/logo.svg", type: "image/svg+xml" },
+    ],
     shortcut: "/images/logo.svg",
     apple: "/images/logo.svg",
   },
@@ -82,7 +84,7 @@ export default function RootLayout({
         ${manrope.variable} 
         ${outfit.variable} 
         ${urbanist.variable} 
-        ${inter.className}  /* Default font abhi Inter rakha hai */
+        ${inter.className}
         antialiased bg-white
       `}
       >
