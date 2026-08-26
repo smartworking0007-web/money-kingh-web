@@ -43,10 +43,10 @@ export default function GoldLoanRates() {
             {/* Box 1 */}
             <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex flex-col items-start hover:shadow-md transition-shadow">
               <p className="text-[#004687] text-[10px] font-bold uppercase tracking-wider mb-1">
-                Interest Rate
+                Gold Loan Interest Rate
               </p>
               <p className="text-slate-900 text-2xl font-black leading-tight">
-                9% – 14%
+                9%–14% p.a.
               </p>
               <p className="text-slate-500 text-[11px] mt-2 leading-tight">
                 Based on gold purity & market value.

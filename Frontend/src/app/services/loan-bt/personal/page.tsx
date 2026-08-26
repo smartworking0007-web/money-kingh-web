@@ -23,7 +23,7 @@ export default function GoldLoanPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/bt/per bt.png"
-            alt="Turn your gold into opportunities"
+            alt="Gold Loan in India | Interest Rate, Eligibility & Documents "
             fill
             className="object-cover object-right"
             priority

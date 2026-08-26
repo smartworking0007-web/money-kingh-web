@@ -11,7 +11,7 @@ export default function GoldLoanDetails() {
           {/* LEFT: IMAGE SECTION */}
           <div className="w-full md:w-1/2 relative min-h-[300px]">
             <Image
-              src="/images/gold/gold1.jpeg" 
+              src="/images/gold/gold2.png" 
               alt="gold loan converted into cash"
               fill
               className="object-cover"
@@ -32,17 +32,18 @@ export default function GoldLoanDetails() {
             <div className="space-y-8">
               {/* Loan Amount */}
               <div className="flex items-start gap-4">
-                <div className="bg-blue-50 p-3 rounded-xl text-2xl">💰</div>
+                <div className="bg-blue-50 p-3 rounded-xl text-2xl"> ₹</div>
                 <div>
                   <Typography variant="h5" className="text-gray-900 font-bold">
                     Loan Amount
                   </Typography>
                   <p className="text-gray-600 text-lg leading-snug">
                     <span className="text-[#004687] font-semibold">
-                      ₹25,000 to ₹40 Lakhs
+                      ₹25,000 to ₹40 Lakh
                     </span>
                     <br />
-                    <span className="text-sm">(depending on gold value)</span>
+                    <span className="text-sm">(The sanctioned loan amount depends on gold purity, net weight, valuation, applicable LTV limits and lender eligibility criteria.
+)</span>
                   </p>
                 </div>
               </div>
@@ -52,12 +53,10 @@ export default function GoldLoanDetails() {
                 <div className="bg-blue-50 p-3 rounded-xl text-2xl">📊</div>
                 <div>
                   <Typography variant="h5" className="text-gray-900 font-bold">
-                    Loan-to-Value (LTV)
+                    Loan-to-value (LTV)
                   </Typography>
                   <p className="text-gray-600 text-lg leading-snug">
-                    Get up to{" "}
-                    <span className="text-[#004687] font-semibold">75%</span> of
-                    your gold s current market value.
+                     Loan-to-value (LTV) is subject to applicable regulatory requirements and lender policy. 
                   </p>
                 </div>
               </div>

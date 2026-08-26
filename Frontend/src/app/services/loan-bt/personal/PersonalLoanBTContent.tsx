@@ -41,7 +41,7 @@ export default function PersonalLoanBTContent() {
           as="h2"
           className="text-[#1e293b] font-black mb-4 text-2xl md:text-[42px] mt-0"
         >
-          Personal Loan Balance Transfer & Top-Up
+          Personal Loan Balance Transfer & Top-Up | Eligibility & Rates 
         </Typography>
 
         <Typography
@@ -54,7 +54,8 @@ export default function PersonalLoanBTContent() {
 
         <div className="max-w-5xl mx-auto border-b border-gray-200 pb-12">
           <p className="text-gray-500 leading-relaxed text-base md:text-[18px] mt-0 text-center">
-            A Personal Loan Balance Transfer allows you to transfer your existing loan from one lender to another at a lower interest rate. Along with this, you can also avail a Top-Up Loan, which provides additional funds over and above your outstanding loan amount.
+            Transfer your existing personal loan to a new lender and explore lower interest rates, reduced EMI and top-up loan options. Check eligibility, documents, rates and charges. 
+
             
             {/* Conditional Content (Read More) */}
             <span className={`${isExpanded ? "inline" : "hidden"}`}>

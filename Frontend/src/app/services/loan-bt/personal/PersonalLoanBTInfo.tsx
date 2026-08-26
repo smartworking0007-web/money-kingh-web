@@ -28,7 +28,7 @@ export default function PersonalLoanBTInfo() {
               as="h3"
               className="text-[#1e293b] font-black text-lg md:text-2xl mt-0"
             >
-              What is Personal Loan Balance Transfer?
+             What is a Personal Loan Balance Transfer? 
             </Typography>
           </div>
 

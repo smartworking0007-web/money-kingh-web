@@ -13,6 +13,7 @@ import GoldLoanEligibility from "./GoldLoanEligibility";
 import ApplyGoldLoan from "./ApplyGoldLoan";
 import GoldLoanProcess from "./GoldLoanProcess";
 import FAQPage from "../car/FAQPage";
+import GoldLoanTypes from "./GoldLoanTypes";
 
 export default function GoldLoanPage() {
   return (
@@ -36,19 +37,20 @@ export default function GoldLoanPage() {
         <div className="container mx-auto px-10 md:px-20 relative z-10">
           <div className="max-w-[85%] md:max-w-2xl">
             <Typography
-              variant="h2"
+              variant="h5"
               as="h2"
               className="text-[#004687]! text-3xl! md:text-5xl! font-bold! mb-4! mt-0! leading-tight!"
             >
-              Turn your gold <br className="md:hidden" /> into opportunities
+              Gold Loan in India |  <br className="md:hidden" /> Interest Rate, Eligibility & Documents
             </Typography>
 
             <Typography
-              variant="s1"
+              variant="b1"
               as="p"
               className="text-slate-700! text-lg! md:text-2xl! mb-8! mt-0! font-medium!"
             >
-              Safe, secure & quick gold loans for your various needs.
+              Get a Gold Loan against eligible gold jewellery or coins. Check Gold Loan interest rates, eligibility, loan amount, documents, tenure and repayment options.
+
             </Typography>
 
             <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply">
@@ -71,6 +73,11 @@ export default function GoldLoanPage() {
       <section className="bg-white py-10 md:py-5 ">
         <LoanCalculator />
       </section>
+
+       <section className="bg-white py-10 md:py-5 ">
+        <GoldLoanTypes />
+      </section>
+
       <section className="bg-white py-10 md:py-5 ">
         <GoldLoanFeatures />
       </section>
