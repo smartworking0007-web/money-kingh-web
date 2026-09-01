@@ -39,20 +39,24 @@ export default function HomeLoanPage() {
         {/* Hero Content Wrapper */}
         <div className="absolute inset-0 z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full flex items-center pt-20 md:pt-0">
           <div className="w-full flex justify-start">
-            <div className="max-w-[280px] md:max-w-3xl flex flex-col items-start text-left">
+            <div className="max-w-[280px] sm:max-w-xl md:max-w-3xl flex flex-col items-start text-left">
               <Typography
-                variant="h2"
+                variant="h1"
                 as="h1"
-                // text-3xl! mobile ke liye perfect size hai
-                className="text-white mb-6 leading-[1.1] font-black drop-shadow-2xl text-3xl! md:text-[64px]! mt-0!"
+                className="text-white mb-6 leading-[1.15] font-black drop-shadow-2xl text-3xl sm:text-4xl md:text-6xl tracking-tight"
               >
-                Home Loan BT & <br />
-                Top Up
+                Personal Loan Balance Transfer
+                <span className="block text-blue-100 text-xl sm:text-2xl md:text-3xl font-semibold mt-2 drop-shadow-none">
+                  Lower Interest Rates, Top-Up & Faster Approval
+                </span>
               </Typography>
 
-              <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply" className="w-full md:w-auto">
+              <Link
+                href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply"
+                className="w-full md:w-auto"
+              >
                 <button className="w-full md:w-auto bg-white text-[#d73a32] hover:bg-slate-100 px-10 py-3 md:px-14 md:py-4 rounded-xl font-bold text-base md:text-lg transition-all shadow-2xl active:scale-95 cursor-pointer border-none">
-                  Avail Now
+                  Apply Now
                 </button>
               </Link>
             </div>
@@ -61,36 +65,36 @@ export default function HomeLoanPage() {
       </section>
 
       {/* --- Rest of the Components --- */}
-      
+
       {/* Spacing ko balanced rakha hai taki mobile par overlap na ho */}
       <section className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
         <HomeLoanBTProfiles />
       </section>
-      
+
       <section className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-40 mt-20 md:-mt-24">
         <LoanCalculator />
       </section>
-      
+
       <section className="relative z-20   md:space-y-10 py-8 md:py-10 -mt-20 md:-mt-40">
         <HomeLoanContent />
       </section>
-      
+
       <section className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-40 md:-mt-50">
         <HomeLoanBTComparison />
       </section>
-      
+
       <section className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-40">
         <HomeLoanBTJourney />
       </section>
-      
+
       <section className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-40">
         <DocumentsRequired />
       </section>
-      
+
       <section className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-40">
         <HomeLoanBTFees />
       </section>
-      
+
       <section className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-40">
         <HomeLoanBTFAQ />
       </section>
