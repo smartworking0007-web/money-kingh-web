@@ -22,7 +22,7 @@ export const Blog91: React.FC = () => {
             title="The Ultimate Life Insurance Guide: Protecting Your Family’s Financial Future"
             category="INSURANCE"
             author="Sumit Mishra"
-            date="August 28, 2026"
+            date="August 31, 2026"
             image="/images/blog/blog-91.png"
           />
         </div>
@@ -69,7 +69,7 @@ export const Blog91: React.FC = () => {
 
                 <div className="flex items-center gap-2 text-gray-400 mb-8 border-b pb-4">
                   <Clock size={16} />
-                  <Typography variant="b2">August 28, 2026</Typography>
+                  <Typography variant="b2">August 31, 2026</Typography>
                 </div>
 
                 {/* Blog Article Body */}
