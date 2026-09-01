@@ -54,7 +54,7 @@ export const Blog5 = () => {
             category="PERSONAL LOAN"
             author="Sumit Mishra"
             date="May 02, 2026"
-            image="/images/blog/blog-5.jpeg"
+            image="/images/blog/blog-5.jpg"
           />
         </div>
       ) : (
@@ -72,7 +72,7 @@ export const Blog5 = () => {
             <div className="bg-white rounded-xl overflow-hidden border-gray-100">
               <div className="relative h-[250px] sm:h-[300px] md:h-[500px] w-full">
                 <Image
-                  src="/images/blog/blog-5.jpeg"
+                  src="/images/blog/blog-5.jpg"
                   alt="Low salary personal loan approval tips"
                   fill
                   className="object-cover"

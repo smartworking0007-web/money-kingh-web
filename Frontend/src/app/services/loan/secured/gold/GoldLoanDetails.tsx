@@ -11,7 +11,7 @@ export default function GoldLoanDetails() {
           {/* LEFT: IMAGE SECTION */}
           <div className="w-full md:w-1/2 relative min-h-[300px]">
             <Image
-              src="/images/gold/gold2.png" 
+              src="/images/gold/gold2.jpg" 
               alt="gold loan converted into cash"
               fill
               className="object-cover"

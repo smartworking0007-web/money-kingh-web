@@ -43,7 +43,7 @@ export const Blog3 = () => {
             category="DEMAT ACCOUNT"
             author="Sumit Mishra"
             date="April 30, 2026"
-            image="/images/blog/blog-3.jpeg"
+            image="/images/blog/blog-3.jpg"
           />
         </div>
       ) : (
@@ -61,7 +61,7 @@ export const Blog3 = () => {
             <div className="bg-white rounded-xl overflow-hidden border-gray-100">
               <div className="relative h-[250px] sm:h-[300px] md:h-[500px] w-full">
                 <Image
-                  src="/images/blog/blog-3.jpeg"
+                  src="/images/blog/blog-3.jpg"
                   alt="Open demat account with zero charges"
                   fill
                   className="object-cover"

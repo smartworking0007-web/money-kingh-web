@@ -12,7 +12,7 @@ const Financial = () => {
         {/* Optimized Next.js Image using your 1.jpeg from public/images/Loan/ */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/Loan/1.jpeg"
+            src="/images/Loan/1 (1) (1).jpg"
             alt="Money King Financial Background"
             fill
             className="object-cover"

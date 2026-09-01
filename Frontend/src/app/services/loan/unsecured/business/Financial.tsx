@@ -12,7 +12,7 @@ const Financial = () => {
         {/* Background Image - Centered */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/Loan/C.png"
+            src="/images/Loan/C.webp"
             alt="business loan"
             fill
             className="object-cover object-center"

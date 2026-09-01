@@ -18,7 +18,7 @@ export default function HealthInsuranceHero() {
         {/* Background Image Container */}
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
-            src="/images/helt/helt1.jpeg"
+            src="/images/helt/helt1.jpg"
             alt="Family Health Insurance"
             fill
             // object-cover mobile par bhi full screen fill karega

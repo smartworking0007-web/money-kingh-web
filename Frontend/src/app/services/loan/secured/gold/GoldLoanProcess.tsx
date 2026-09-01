@@ -44,7 +44,7 @@ export default function GoldLoanProcess() {
         <div className="w-full lg:w-1/2 relative">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl">
             <Image
-              src="/images/gold/goldloan3.png"
+              src="/images/gold/goldloan3.jpg"
               alt="Money with gold"
               width={600}
               height={400}

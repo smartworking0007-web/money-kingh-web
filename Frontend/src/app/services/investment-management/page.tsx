@@ -13,7 +13,7 @@ export default function InvestmentPlanningHero() {
       <section className="relative w-full overflow-hidden">
         <div className="relative w-full aspect-4/3 sm:aspect-15/9 md:aspect-15/8 lg:aspect-15/6">
           <Image
-            src="/images/footer/investment.jpeg"
+            src="/images/footer/investment.jpg"
             alt="Expert Investment Planning"
             fill
             className="object-cover object-right md:object-center transition-all duration-500"

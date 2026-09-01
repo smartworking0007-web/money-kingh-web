@@ -12,7 +12,7 @@ const partners = [
   {
     name: "Priyanka Diwakar",
     role: "Sales Manager",
-    image: "/images/Founders/Picture2.png",
+    image: "/images/Founders/Picture2.jpg",
   },
   {
     name: "Shivangi Verma",
@@ -22,12 +22,12 @@ const partners = [
   {
     name: "Maneesh Thakur",
     role: "Senior Consultant",
-    image: "/images/Founders/Picture4.png",
+    image: "/images/Founders/Picture4.jpg",
   },
   {
     name: "Jyoti",
     role: "Sales Manager",
-    image: "/images/Founders/Picture5.png",
+    image: "/images/Founders/Picture5.jpg",
   },
   {
     name: "Amit",

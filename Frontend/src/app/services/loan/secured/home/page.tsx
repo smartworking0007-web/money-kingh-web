@@ -30,7 +30,7 @@ export default function HomeLoanPage() {
         {/* Background Image Container */}
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
-            src="/images/loanpage/home.jpeg"
+            src="/images/loanpage/home.jpg"
             alt="New Home Background"
             fill
             /* object-left ensures banda aur ghar left side se frame mein rahein. 

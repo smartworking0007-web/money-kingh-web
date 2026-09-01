@@ -63,7 +63,7 @@ const AboutBusinessLoan = () => {
 
             <div className="overflow-hidden rounded-2xl shadow-2xl border border-slate-100">
               <Image
-                src="/images/Loan/Business loan.png" // Ensure you save the image from the 2nd upload here
+                src="/images/Loan/Businessloan.jpg" // Ensure you save the image from the 2nd upload here
                 alt="unsecured business loan India concept image"
                 width={600}
                 height={400}

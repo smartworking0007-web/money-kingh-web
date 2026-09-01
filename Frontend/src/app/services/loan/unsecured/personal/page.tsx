@@ -196,7 +196,7 @@ export default function PersonalLoanPage() {
 
             <div className="relative z-10 drop-shadow-[0_50px_80px_rgba(0,0,0,0.15)] transform hover:scale-105 transition-transform duration-500">
               <Image
-                src="/images/Loan/pssssss.png"
+                src="/images/Loan/pssssss.jpg"
                 alt="Personal Loan App Dashboard Interface"
                 width={400}
                 height={750}

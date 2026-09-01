@@ -54,7 +54,7 @@ export const Blog6 = () => {
             category="INVESTMENT"
             author="Sumit Mishra"
             date="May 02, 2026"
-            image="/images/blog/blog-6.jpeg"
+            image="/images/blog/blog-6.jpg"
           />
         </div>
       ) : (

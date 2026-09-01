@@ -58,7 +58,7 @@ export const Blog4 = () => {
             category="CREDIT SCORE"
             author="Sumit Mishra"
             date="May 02, 2026"
-            image="/images/blog/blog-4.jpeg"
+            image="/images/blog/blog-4.jpg"
           />
         </div>
       ) : (
@@ -78,7 +78,7 @@ export const Blog4 = () => {
               {/* Header Image with SEO Alt Tag */}
               <div className="relative h-[250px] sm:h-[300px] md:h-[500px] w-full">
                 <Image
-                  src="/images/blog/blog-4.jpeg"
+                  src="/images/blog/blog-4.jpg"
                   alt="Credit Score Myths stop you from getting a loan"
                   fill
                   className="object-cover"

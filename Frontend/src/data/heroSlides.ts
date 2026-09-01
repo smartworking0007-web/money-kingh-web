@@ -10,7 +10,7 @@ export type HeroSlide = {
 export const heroSlides: HeroSlide[] = [
   {
     id: 1,
-    imageUrl: "/images/frame6.png",
+    imageUrl: "/images/frame6 (1).jpg",
     imageAlt: "Finance Strategy",
     title: "Your Wealth.\nOur Strategy.\nYour Future.",
     description: "Bespoke financial strategies designed for discerning individuals, families, and businesses who demand clarity, precision, and measurable results.",
