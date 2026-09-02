@@ -97,6 +97,7 @@ import { Blog89 } from "./components/Blog89";
 import { Blog90 } from "./components/Blog90";
 import { Blog91 } from "./components/Blog91";
 import { Blog92 } from "./components/Blog92";
+import { Blog93 } from "./components/Blog93";
 
 
 const ALL_BLOGS = [
@@ -192,7 +193,7 @@ const ALL_BLOGS = [
   { id: 90, component: <Blog90 /> },
   { id: 91, component: <Blog91 /> },
   { id: 92, component: <Blog92 /> },
-
+  { id: 93, component: <Blog93 /> }
 
 
 ];
