@@ -11,50 +11,67 @@ interface TestimonialItem {
   avatar: string;
   name: string;
   role: string;
+  width: number;
+  height: number;
 }
 
 const marqueeItems: TestimonialItem[] = [
   {
     type: "text",
-    content: "Money King Financial Services helped me secure a business loan within 48 hours. The process was transparent and the team was extremely helpful.",
+    content:
+      "Money King Financial Services helped me secure a business loan within 48 hours. The process was transparent and the team was extremely helpful.",
     avatar: "/images/Testimonial/1.jpeg",
     name: "Rajesh Khanna",
     role: "SME Business Owner",
+    width: 48,
+    height: 48,
   },
   {
     type: "text",
-    content: "Best experience with personal loans! Minimal documentation and very competitive interest rates. Highly recommend them for financial needs.",
+    content:
+      "Best experience with personal loans! Minimal documentation and very competitive interest rates. Highly recommend them for financial needs.",
     avatar: "/images/Testimonial/2.jpeg",
     name: "Sandeep Verma",
     role: "Professional",
+    width: 48,
+    height: 48,
   },
   {
     type: "text",
-    content: "I was struggling with home loan approvals until I met the team at Money King. They managed everything professionally and got it sanctioned quickly.",
+    content:
+      "I was struggling with home loan approvals until I met the team at Money King. They managed everything professionally and got it sanctioned quickly.",
     avatar: "/images/Testimonial/3.jpeg",
     name: "Maneesh Singh",
     role: "Property Investor",
+    width: 48,
+    height: 48,
   },
   {
     type: "text",
-    content: "Excellent service and honest advice. They don't just sell loans; they provide the right financial solution according to your capacity.",
+    content:
+      "Excellent service and honest advice. They don't just sell loans; they provide the right financial solution according to your capacity.",
     avatar: "/images/Testimonial/4.png",
     name: "Anil Patel",
     role: "Retailer",
+    width: 48,
+    height: 48,
   },
   {
     type: "text",
-    content: "Getting a gold loan was never this easy. The staff is polite and the valuation process is very fair. Thank you Money King team!",
+    content:
+      "Getting a gold loan was never this easy. The staff is polite and the valuation process is very fair. Thank you Money King team!",
     avatar: "/images/Testimonial/5.jpeg",
     name: "Ajay Sharma",
     role: "Entrepreneur",
+    width: 48,
+    height: 48,
   },
 ];
 
-const TestimonialsMarquee = () => {
+const TestimonialsMarquee: React.FC = () => {
   const controls = useAnimation();
   const containerRef = useRef<HTMLDivElement>(null);
-  const [containerWidth, setContainerWidth] = useState(0);
+  const [containerWidth, setContainerWidth] = useState<number>(0);
 
   const doubledItems = [...marqueeItems, ...marqueeItems, ...marqueeItems];
 
@@ -72,7 +89,7 @@ const TestimonialsMarquee = () => {
           x: {
             repeat: Infinity,
             repeatType: "loop",
-            duration: 35, // Thoda fast marquee
+            duration: 35,
             ease: "linear",
           },
         },
@@ -95,8 +112,10 @@ const TestimonialsMarquee = () => {
         <div
           className="relative"
           style={{
-            maskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
-            WebkitMaskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+            maskImage:
+              "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
           }}
         >
           <motion.div
@@ -131,12 +150,14 @@ const TestimonialsMarquee = () => {
                 </div>
 
                 <div className="mt-6 flex items-center gap-3 border-t border-gray-50 pt-6">
-                  <div className="w-10 h-10 rounded-full overflow-hidden border border-gray-200 relative shrink-0">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border border-gray-200 shrink-0 flex items-center justify-center bg-gray-50">
                     <Image
                       src={item.avatar}
                       alt={item.name}
-                      fill
-                      className="object-cover"
+                      width={item.width}
+                      height={item.height}
+                      className="w-12 h-12 rounded-full object-cover"
+                      loading="lazy"
                     />
                   </div>
                   <div className="overflow-hidden">
