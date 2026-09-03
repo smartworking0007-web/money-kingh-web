@@ -1,8 +1,7 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Typography } from "@/app/components/ui/Typography";
 import WhyChoose from "@/app/components/Choose/WhyChoose";
 import LoanCalculator from "@/app/components/LoanCalculator/LoanCalculator";
@@ -21,11 +20,19 @@ import HomeLoanDosDonts from "./HomeLoanDosDonts";
 import HomeLoanTips from "./HomeLoanTips";
 import HomeLoanFAQ from "./HomeLoanFAQ";
 
+export const metadata: Metadata = {
+  title: "Home Loan in India: Compare Interest Rates, Eligibility & Offers | Money King",
+  description:
+    "Compare home loan options from leading banks and NBFCs in India. Check interest rates, eligibility criteria, required documents, EMI calculation, and fast approval terms.",
+  alternates: {
+    canonical: "/services/loan/secured/home",
+  },
+};
+
 export default function HomeLoanPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* --- HERO SECTION --- */}
-      {/* Height ko mobile pe 450px kiya hai taaki image choti dikhe */}
       <section className="relative w-full h-[450px] md:h-[85vh] bg-[#73c7d3] overflow-hidden">
         {/* Background Image Container */}
         <div className="absolute inset-0 w-full h-full z-0">
@@ -33,27 +40,24 @@ export default function HomeLoanPage() {
             src="/images/loanpage/home.jpg"
             alt="New Home Background"
             fill
-            /* object-left ensures banda aur ghar left side se frame mein rahein. 
-               scale-100 kiya hai taaki image extra badi na dikhe. */
             className="object-cover object-left md:object-center transition-all duration-700 scale-100"
             priority
-            quality={100}
+            quality={95}
           />
 
-          {/* Mobile Overlay: Text readability ke liye gradient */}
+          {/* Mobile Overlay */}
           <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent md:bg-transparent" />
         </div>
 
         {/* Hero Content Wrapper */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full h-full flex items-center justify-center md:justify-end">
-          {/* mt-16 se text ko thoda upar shift kiya hai kyunki height kam hui hai */}
           <div className="max-w-[340px] md:max-w-xl flex flex-col items-center md:items-start text-center md:text-left mt-16 md:mt-0">
             <Typography
               variant="h2"
               as="h1"
               className="text-white md:text-[#1e293b] mb-4 font-black leading-[1.1] text-2xl sm:text-4xl md:text-[64px] drop-shadow-2xl md:drop-shadow-none"
             >
-              Home loan in  india- <br className="hidden md:block" />
+              Home loan in india- <br className="hidden md:block" />
               compare interest rate, eligibility and offers.
             </Typography>
 
@@ -62,7 +66,7 @@ export default function HomeLoanPage() {
               as="p"
               className="text-white/90 md:text-[#334155] mb-8 font-medium leading-relaxed text-xs md:text-lg max-w-[260px] md:max-w-lg"
             >
-              Compare home loan option from bank and nbfc in india. check home loan interest, eligibility document, fees, emi & repayment option before applying. 
+              Compare home loan option from bank and nbfc in india. check home loan interest, eligibility document, fees, emi & repayment option before applying.
             </Typography>
 
             <Link
@@ -77,7 +81,7 @@ export default function HomeLoanPage() {
         </div>
       </section>
 
-      {/* --- BAKI SAB SECTIONS --- */}
+      {/* --- CONTENT SECTIONS --- */}
       <div className="relative z-20 bg-white">
         <section className="py-10">
           <HomeLoanContent />

@@ -1,7 +1,6 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
+import type { Metadata } from "next";
 import { Typography } from "@/app/components/ui/Typography";
 import LoanCalculator from "@/app/components/LoanCalculator/LoanCalculator";
 import FinancialPartners from "@/app/components/FinancialPartners/FinancialPartners";
@@ -10,9 +9,19 @@ import MachineryFeatures from "./MachineryFeatures";
 import MachineryEligibility from "./MachineryEligibility";
 import MachineryLoanRatesBanner from "./MachineryLoanRatesBanner";
 import DocumentsAccordionPage from "./DocumentsRequiredPage";
+// import MachineryProcess from "./MachineryProcess";
 import MachineryProcess from "./MachineryProcess.tsx";
 import ProductSegmentation from "./ProductSegmentation";
 import MachineryFAQ from "./MachineryFAQ";
+
+export const metadata: Metadata = {
+  title: "Machinery Loan in India | Check Interest Rate & Eligibility",
+  description:
+    "Get a machinery loan in India for new or used equipment. Check machinery finance interest rates, eligibility, documents, loan amount, and repayment tenure.",
+  alternates: {
+    canonical: "/services/loan/secured/machinery",
+  },
+};
 
 interface StatItem {
   label: string;
@@ -24,7 +33,7 @@ export default function MachineryLoanPage() {
   const data = {
     title: "Machinery loan in india",
     description:
-      "get a machinery loan in india for new or used equipment, check  Machinery finance interest rate, eligibility, documents, loant amount & repayment tenure.",
+      "get a machinery loan in india for new or used equipment, check Machinery finance interest rate, eligibility, documents, loant amount & repayment tenure.",
     stats: [] as StatItem[],
     features: [] as string[],
   };
@@ -38,12 +47,9 @@ export default function MachineryLoanPage() {
             src="/images/Machinery/Machinery.jpeg"
             alt="Background"
             fill
-            // MOBILE FIX: object-[20%_center] mobile par image ko left shift karega
-            // md:object-center web par pehle jaisa hi rakhega
             className="object-cover object-[80%_center] md:object-center brightness-[0.7]"
             priority
           />
-          {/* Mobile par overlay thoda strong kiya hai taaki text saaf dikhe */}
           <div className="absolute inset-0 bg-black/50 md:bg-black/40" />
         </div>
 
@@ -53,7 +59,6 @@ export default function MachineryLoanPage() {
               <Typography
                 variant="h1"
                 as="h1"
-                // text-3xl! se mobile heading handle hogi, md:text-6xl! desktop ke liye
                 className="text-white font-bold! text-3xl! md:text-6xl! mb-6 mt-0! leading-tight!"
               >
                 {data.title || " "}
@@ -66,7 +71,7 @@ export default function MachineryLoanPage() {
                 {data.description || " "}
               </Typography>
 
-              {/* Stats & Features agar data hai toh... */}
+              {/* Stats & Features */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
                 {data.stats.map((stat, i) => (
                   <div
@@ -102,27 +107,27 @@ export default function MachineryLoanPage() {
         <MachineryEligibility />
       </div>
 
-      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-50">
+      <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-50">
         <DocumentsAccordionPage />
       </div>
 
-      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-30">
+      <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-30">
         <MachineryProcess />
       </div>
 
-      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-50">
+      <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-50">
         <MachineryLoanRatesBanner />
       </div>
 
-      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-50">
+      <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-50">
         <ProductSegmentation />
       </div>
 
-      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-50">
+      <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-50">
         <FinancialPartners />
       </div>
 
-      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-35">
+      <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-35">
         <MachineryFAQ />
       </div>
     </main>

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import WhyChoose from "./components/Choose/WhyChoose";
 import FinancialPartners from "./components/FinancialPartners/FinancialPartners";
 // import Founders from "./components/founders/Founders";
@@ -10,12 +11,21 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import Kings from "./components/kings/Kings";
 import AboutFincart from "./components/AboutFincart/AboutFincart";
 
+export const metadata: Metadata = {
+  title: "Money King Financial Services | Loans, Insurance & Wealth Planning",
+  description:
+    "Explore tailored personal loans, business financing, machinery loans, insurance, and mutual fund advisory with Money King Financial Services.",
+  alternates: {
+    canonical: "/",
+  },
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 overflow-x-hidden">
       {/* Hero Section */}
       <HeroSlider />
-      
+
       {/* Content Wrapper with vertical spacing (gap) */}
       <div className="flex flex-col">
         <Kings />

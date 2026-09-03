@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 import {
@@ -133,7 +134,7 @@ export default function PersonalLoanPage() {
                 as="h1"
                 className="text-[#002e5b] mb-6! mt-0! leading-tight font-black"
               >
-                Personal Loan 
+                Personal Loan
               </Typography>
 
               <div className="space-y-6">
@@ -156,6 +157,7 @@ export default function PersonalLoanPage() {
                   banks and NBFCs.
                 </Typography>
               </div>
+
               {/* Vertical Features List */}
               <div className="space-y-10 mt-12">
                 {features.map((item, i) => (
@@ -213,13 +215,12 @@ export default function PersonalLoanPage() {
         </div>
       </section>
 
-      {/* --- GOOGLE ADS COMPLIANT DISCLOSURE SECTION (IMMEDIATELY BELOW HERO) --- */}
+      {/* --- GOOGLE ADS COMPLIANT DISCLOSURE SECTION --- */}
       <section
         className="bg-slate-50 border-y border-slate-200 py-8 px-4 sm:px-6"
         aria-label="Important Regulatory Disclosures"
       >
         <div className="max-w-7xl mx-auto space-y-6">
-          {/* Highlighted Important Disclosure Card */}
           <div className="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-xl shadow-xs">
             <div className="flex items-start gap-3">
               <AlertCircle className="w-6 h-6 text-amber-600 shrink-0 mt-0.5" />
@@ -240,7 +241,6 @@ export default function PersonalLoanPage() {
             </div>
           </div>
 
-          {/* Detailed Compliance Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs space-y-3">
               <div className="flex items-center gap-2 text-blue-900 font-semibold">
@@ -290,7 +290,6 @@ export default function PersonalLoanPage() {
             </div>
           </div>
 
-          {/* Quick Regulatory Disclaimers Bullets */}
           <div className="text-xs text-slate-500 space-y-1.5 pt-2">
             <p>
               • <strong>Processing Fee & Charges:</strong> Applicable processing
@@ -325,10 +324,10 @@ export default function PersonalLoanPage() {
       <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-20">
         <LoanFeatures />
       </div>
-      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-45">
+      <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-45">
         <LoanSlider />
       </div>
-      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-28 md:-mt-45">
+      <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-28 md:-mt-45">
         <Financial />
       </div>
       <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
@@ -381,15 +380,15 @@ export default function PersonalLoanPage() {
             RBI-regulated institutions. Minimum repayment period: 12 months;
             Maximum repayment period: 60 months; Maximum Annual Percentage Rate
             (APR): 24%. Representative Example: For a loan of ₹1,00,000 borrowed
-            over 12 months at 11.5% APR with a ₹2,000 processing fee, total 
+            over 12 months at 11.5% APR with a ₹2,000 processing fee, total
             repayment equals ₹1,11,500. All loans are subject to credit
             appraisal, verification, and sole discretion of partner banks and
             NBFCs.
           </p>
           <p className="text-slate-400">
-            &copy; {new Date().getFullYear()} Money King Financial Services Pvt.
-            Ltd. All rights reserved. Designed to comply fully with Google Ads
-            Personal Loan policies and financial advertising standards.
+            &copy; 2026 Money King Financial Services Pvt. Ltd. All rights
+            reserved. Designed to comply fully with Google Ads Personal Loan
+            policies and financial advertising standards.
           </p>
         </div>
       </section>

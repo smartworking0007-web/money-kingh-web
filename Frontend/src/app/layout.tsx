@@ -7,6 +7,7 @@ import {
   Outfit,
   Urbanist,
 } from "next/font/google";
+// import "./globals.css";
 import "./globals.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -43,11 +44,8 @@ export const metadata: Metadata = {
   title: "Money King",
   description: "Learn in-demand skills with industry experts",
   metadataBase: new URL("https://moneykingfinancial.com"),
-  alternates: { canonical: "/" },
   icons: {
-    icon: [
-      { url: "/images/logo.svg", type: "image/svg+xml" },
-    ],
+    icon: [{ url: "/images/logo.svg", type: "image/svg+xml" }],
     shortcut: "/images/logo.svg",
     apple: "/images/logo.svg",
   },

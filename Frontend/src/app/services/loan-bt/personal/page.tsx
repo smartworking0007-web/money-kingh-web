@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import PersonalLoanBTContent from "./PersonalLoanBTContent";
 import LoanCalculator from "@/app/components/LoanCalculator/LoanCalculator";
@@ -14,7 +15,8 @@ import PersonalLoanBTSteps from "./PersonalLoanBTSteps";
 import PersonalLoanBTWhyChoose from "./PersonalLoanBTWhyChoose";
 import PersonalLoanCategories from "./PersonalLoanCategories";
 import PersonalLoanBTFAQ from "./PersonalLoanBTFAQ";
-export default function GoldLoanPage() {
+
+export default function PersonalLoanBTPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* --- HERO SECTION --- */}
@@ -23,7 +25,7 @@ export default function GoldLoanPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/bt/perbt.jpg"
-            alt="Gold Loan in India | Interest Rate, Eligibility & Documents "
+            alt="Personal Loan Balance Transfer in India"
             fill
             className="object-cover object-right"
             priority
@@ -32,43 +34,57 @@ export default function GoldLoanPage() {
           <div className="absolute inset-0 bg-linear-to-r from-white via-white/95 to-transparent md:via-white/40" />
         </div>
       </section>
-      <section className="bg-white py-10 md:py-5 ">
+
+      {/* --- CONTENT SECTIONS --- */}
+      <section className="bg-white py-10 md:py-5">
         <PersonalLoanBTContent />
       </section>
-      <section className="bg-white py-20 md:py-30 ">
+
+      <section className="bg-white py-20 md:py-30">
         <LoanCalculator />
       </section>
-      <section className="bg-white py-10 md:py-5 ">
+
+      <section className="bg-white py-10 md:py-5">
         <PersonalLoanBTInfo />
       </section>
-      <section className="bg-white py-10 md:py-5 ">
+
+      <section className="bg-white py-10 md:py-5">
         <PersonalLoanBTBenefits />
       </section>
-      <section className="bg-white py-10 md:py-5 ">
+
+      <section className="bg-white py-10 md:py-5">
         <PersonalLoanBTEligibility />
       </section>
-       <section className="bg-white py-10 md:py-5 ">
+
+      <section className="bg-white py-10 md:py-5">
         <PersonalLoanBTDocuments />
       </section>
-      <section className="bg-white py-10 md:py-5 ">
+
+      <section className="bg-white py-10 md:py-5">
         <PersonalLoanBTInterest />
       </section>
-       <section className="bg-white py-10 md:py-5 ">
+
+      <section className="bg-white py-10 md:py-5">
         <PersonalLoanBTFees />
       </section>
-       <section className="bg-white py-10 md:py-5 ">
+
+      <section className="bg-white py-10 md:py-5">
         <PersonalLoanBTTarget />
       </section>
-      <section className="bg-white py-10 md:py-5 ">
+
+      <section className="bg-white py-10 md:py-5">
         <PersonalLoanBTSteps />
       </section>
-      <section className="bg-white py-10 md:py-5 ">
+
+      <section className="bg-white py-10 md:py-5">
         <PersonalLoanBTWhyChoose />
       </section>
-       <section className="bg-white py-10 md:py-5 ">
+
+      <section className="bg-white py-10 md:py-5">
         <PersonalLoanCategories />
       </section>
-      <section className="bg-white py-10 md:py-5 ">
+
+      <section className="bg-white py-10 md:py-5">
         <PersonalLoanBTFAQ />
       </section>
     </main>

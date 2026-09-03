@@ -19,7 +19,8 @@ import HowToApplyCarLoan from "./HowToApplyCarLoan";
 export default function CarLoanPage() {
   const data = {
     title: "Car loan in india\ninterest rate eligibility & emi",
-    description: "Get a car loan in india with flexible repayment opitions. check car loan interest rate,eligibility, document & new or use car loan opitions  ",
+    description:
+      "Get a car loan in india with flexible repayment opitions. check car loan interest rate,eligibility, document & new or use car loan opitions  ",
   };
 
   return (
@@ -31,7 +32,6 @@ export default function CarLoanPage() {
             src="/images/Carloan/car.jpeg"
             alt="couple in a car"
             fill
-            // Mobile par image ko thoda sa aur right kiya hai (80%) taki couple clear dikhe
             className="object-cover object-[68%_center] md:object-right transition-all duration-500"
             priority
           />
@@ -39,24 +39,22 @@ export default function CarLoanPage() {
           {/* Desktop Gradient */}
           <div className="hidden md:block absolute inset-0 bg-linear-to-r to-transparent" />
 
-          {/* Mobile Gradient: Isse left side se thoda light rakha hai taki text background se mix na ho */}
-          <div className="block md:hidden absolute inset-0 bg-linear-to-r " />
+          {/* Mobile Gradient */}
+          <div className="block md:hidden absolute inset-0 bg-linear-to-r" />
         </div>
 
-        {/* px-4 se mobile par text thoda aur left khisak jayega (as requested) */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-12 w-full">
           <div className="max-w-[280px] md:max-w-2xl">
             <Typography
               variant="h2"
               as="h1"
-              // Mobile par text size 2xl! kiya hai taki container width kam le
               className="text-white-900 leading-tight mb-3 whitespace-pre-line text-2xl! md:text-6xl! font-extrabold!"
             >
               {data.title}
             </Typography>
             <Typography
               variant="b1"
-              className="text-sm md:text-lg text-gray-800 mb-6 max-w-240px md:max-w-lg font-medium!"
+              className="text-sm md:text-lg text-gray-800 mb-6 max-w-[240px] md:max-w-lg font-medium!"
             >
               {data.description}
             </Typography>
@@ -76,7 +74,7 @@ export default function CarLoanPage() {
         </div>
       </section>
 
-      {/* --- Baki sections pehle jaise hi rahenge --- */}
+      {/* Content Sections */}
       <div className="-mt-15 md:-mt-8 pb-16 md:pb-28 relative z-20">
         <CarLoanComparison />
       </div>
@@ -110,6 +108,7 @@ export default function CarLoanPage() {
       <section className="-mt-30 md:-mt-55 pb-16 md:pb-35 relative z-20">
         <DocumentsRequired />
       </section>
+
       <section className="-mt-30 md:-mt-55 pb-16 md:pb-35 relative z-20">
         <HowToApplyCarLoan />
       </section>
@@ -117,13 +116,13 @@ export default function CarLoanPage() {
       <section className="-mt-30 md:-mt-55 pb-16 md:pb-35 relative z-20">
         <FinancialPartners />
       </section>
-      
 
       <section className="py-12 md:py-20">
         <div className="-mt-25 md:-mt-55 pb-16 md:pb-10 relative z-20">
           <WhyChoose />
         </div>
       </section>
+
       <section className="-mt-30 md:-mt-30 pb-16 md:pb-35 relative z-20">
         <FAQPage />
       </section>

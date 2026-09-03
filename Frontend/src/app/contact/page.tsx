@@ -92,7 +92,7 @@ export default function ContactPage() {
 
           {success ? (
             <div className="p-6 bg-emerald-50 text-emerald-700 rounded-2xl border border-emerald-100 font-bold text-center">
-              ✓ Successfully submitted! We ll call you soon.
+              ✓ Successfully submitted! We will call you soon.
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -240,7 +240,7 @@ export default function ContactPage() {
                   "p-6 rounded-2xl border-2 transition-all duration-500",
                   selectedBranch === "Mumbai (HO)"
                     ? "bg-blue-600 border-blue-600 text-white shadow-blue-200"
-                    : "bg-slate-50 border-slate-100 text-slate-900",
+                    : "bg-slate-50 border-slate-100 text-slate-900"
                 )}
               >
                 <p
@@ -248,7 +248,7 @@ export default function ContactPage() {
                     "text-[10px] font-black uppercase tracking-widest mb-2",
                     selectedBranch === "Mumbai (HO)"
                       ? "text-blue-200"
-                      : "text-blue-600",
+                      : "text-blue-600"
                   )}
                 >
                   {selectedBranch}

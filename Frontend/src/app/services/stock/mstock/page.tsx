@@ -46,7 +46,7 @@ export default function MStockHeroPage() {
         {/* Smooth Wave Graphic */}
         <div className="absolute bottom-0 left-0 w-full leading-none z-0">
           <svg
-            className="relative block w-full h-80px md:h-[180px]"
+            className="relative block w-full h-[80px] md:h-[180px]"
             viewBox="0 0 1440 320"
             preserveAspectRatio="none"
           >
@@ -104,7 +104,7 @@ export default function MStockHeroPage() {
                   <div className="relative group">
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2">
                       <span className="text-gray-400 font-bold">+91</span>
-                      <div className="w-1px h-5 md:h-6 bg-gray-200"></div>
+                      <div className="w-[1px] h-5 md:h-6 bg-gray-200"></div>
                     </div>
                     <input
                       type="tel"
@@ -162,7 +162,7 @@ export default function MStockHeroPage() {
               </p>
             </div>
 
-            <div className="text-center md:border-r gray-100 px-2 py-4 md:py-0 border-t border-b md:border-t-0 md:border-b-0 bgray-50">
+            <div className="text-center md:border-r border-gray-100 px-2 py-4 md:py-0 border-t border-b md:border-t-0 md:border-b-0">
               <p className="text-3xl md:text-4xl font-black text-[#003B73] mb-0.5">
                 ₹0{" "}
                 <span className="text-base md:text-xl font-bold uppercase">
@@ -186,7 +186,7 @@ export default function MStockHeroPage() {
         </div>
       </div>
 
-      {/* --- BAKI SARE SECTIONS --- */}
+      {/* --- REMAINING SECTIONS --- */}
       <section className="bg-white py-12 md:py-20">
         <StockMarketInvestment />
       </section>

@@ -1,5 +1,5 @@
-// src/app/about/page.tsx
 import React from "react";
+import type { Metadata } from "next";
 import CompanyIntro from "../components/stats/CompanyIntro";
 import ServiceGrid from "../components/Service/ServiceGrid";
 import FinancialPartners from "../components/FinancialPartners/FinancialPartners";
@@ -8,6 +8,15 @@ import AboutServiceGrid from "./AboutServiceGrid";
 import Hero from "./Hero";
 import { AboutTestimonialCard } from "./AboutTestimonialCard";
 import WhyChoose from "../components/Choose/WhyChoose";
+
+export const metadata: Metadata = {
+  title: "About Us | Money King Financial Services",
+  description:
+    "Learn about Money King Financial Services Pvt. Ltd. Discover our vision, mission, nationwide partner network, and leadership in loan distribution and financial advisory.",
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 export default function About() {
   return (

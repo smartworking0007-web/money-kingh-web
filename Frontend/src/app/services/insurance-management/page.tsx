@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import InsuranceRiskContent from "./InsuranceRiskContent";
 import InsuranceRiskFeatures from "./InsuranceRiskFeatures";
@@ -8,7 +9,7 @@ import InsuranceRiskSolutions from "./InsuranceRiskSolutions";
 import WhyChooseInsurance from "./WhyChooseInsurance";
 import InsuranceRiskFAQ from "./InsuranceRiskFAQ";
 
-export default function CarLoanHero() {
+export default function InsuranceManagementPage() {
   return (
     <main className="w-full bg-white">
       {/* --- HERO SECTION --- */}
@@ -23,7 +24,7 @@ export default function CarLoanHero() {
           />
 
           {/* --- LEFT SIDE TEXT OVERLAY --- */}
-          <div className="absolute inset-0 bg-leaner-to-r from-black/60 to-transparent flex items-center">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">
             <div className="container mx-auto px-6 md:px-12 lg:px-20">
               <div className="max-w-2xl text-white">
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight drop-shadow-lg">

@@ -29,7 +29,7 @@ export default function GoldLoanPage() {
             className="object-cover object-right"
             priority
           />
-          {/* Gradient Overlay using v4 bg-linear syntax */}
+          {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-linear-to-r from-white via-white/95 to-transparent md:via-white/40" />
         </div>
 
@@ -41,7 +41,7 @@ export default function GoldLoanPage() {
               as="h2"
               className="text-[#004687]! text-3xl! md:text-5xl! font-bold! mb-4! mt-0! leading-tight!"
             >
-              Gold Loan in India |  <br className="md:hidden" /> Interest Rate, Eligibility & Documents
+              Gold Loan in India | <br className="md:hidden" /> Interest Rate, Eligibility & Documents
             </Typography>
 
             <Typography
@@ -50,7 +50,6 @@ export default function GoldLoanPage() {
               className="text-slate-700! text-lg! md:text-2xl! mb-8! mt-0! font-medium!"
             >
               Get a Gold Loan against eligible gold jewellery or coins. Check Gold Loan interest rates, eligibility, loan amount, documents, tenure and repayment options.
-
             </Typography>
 
             <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply">
@@ -66,45 +65,43 @@ export default function GoldLoanPage() {
       </section>
 
       {/* --- CONTENT SECTION --- */}
-      {/* py-20 provides a strong visual break, and border-t adds a subtle separation line */}
-      <section className="bg-white py-20 md:py-28 ">
+      <section className="bg-white py-20 md:py-28">
         <GoldLoanContent />
       </section>
-      <section className="bg-white py-10 md:py-5 ">
+
+      <section className="bg-white py-10 md:py-5">
         <LoanCalculator />
       </section>
 
-       <section className="bg-white py-10 md:py-5 ">
+      <section className="bg-white py-10 md:py-5">
         <GoldLoanTypes />
       </section>
 
-      <section className="bg-white py-10 md:py-5 ">
+      <section className="bg-white py-10 md:py-5">
         <GoldLoanFeatures />
       </section>
 
-       <section className="bg-white py-10 md:py-5 ">
+      <section className="bg-white py-10 md:py-5">
         <GoldLoanDetails />
       </section>
 
-      <section className="bg-white py-10 md:py-5 ">
+      <section className="bg-white py-10 md:py-5">
         <GoldLoanRates />
       </section>
 
-      
-      <section className="bg-white py-10 md:py-5 ">
+      <section className="bg-white py-10 md:py-5">
         <GoldLoanEligibility />
       </section>
 
-       
-      <section className="bg-white py-10 md:py-5 ">
+      <section className="bg-white py-10 md:py-5">
         <ApplyGoldLoan />
       </section>
 
-      <section className="bg-white py-10 md:py-5 ">
+      <section className="bg-white py-10 md:py-5">
         <GoldLoanProcess />
       </section>
 
-      <section className="bg-white py-10 md:py-5 ">
+      <section className="bg-white py-10 md:py-5">
         <FAQPage />
       </section>
     </main>

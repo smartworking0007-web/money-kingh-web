@@ -10,7 +10,7 @@ import ApplyStepSection from "./ApplyStepSection";
 import CreditCardDocuments from "./CreditCardDocuments";
 import FAQSection from "./FAQSection";
 
-export default function LoanAgainstPropertyPage() {
+export default function HDFCCreditCardPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* --- HERO SECTION --- */}
@@ -18,12 +18,12 @@ export default function LoanAgainstPropertyPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/credit/cre.jpeg"
-            alt="Loan Against Property"
+            alt="HDFC Credit Card"
             fill
             className="object-cover object-right"
             priority
           />
-          {/* Overlay gradient optimized */}
+          {/* Overlay gradient */}
           <div className="absolute inset-0 bg-linear-to-r from-white via-white/95 to-transparent md:via-white/40" />
         </div>
 
@@ -31,7 +31,7 @@ export default function LoanAgainstPropertyPage() {
           <div className="max-w-[90%] md:max-w-2xl">
             <Typography
               variant="h2"
-              as="h2"
+              as="h1"
               className="text-[#004687]! text-4xl! md:text-7xl! font-bold! mb-4! mt-0! leading-tight!"
             >
               Save more on everyday
@@ -58,23 +58,25 @@ export default function LoanAgainstPropertyPage() {
           </div>
         </div>
       </section>
-      <section className="bg-white py-10 md:py-5 ">
+
+      {/* --- CONTENT SECTIONS --- */}
+      <section className="bg-white py-10 md:py-5">
         <CreditCardIndiaPage />
       </section>
 
-      <section className="bg-white py-10 md:py-5 ">
+      <section className="bg-white py-10 md:py-5">
         <CreditCardTabs />
       </section>
 
-      <section className="bg-white py-10 md:py-5 ">
+      <section className="bg-white py-10 md:py-5">
         <ApplyStepSection />
       </section>
 
-       <section className="bg-white py-0 md:py-5 ">
+      <section className="bg-white py-0 md:py-5">
         <CreditCardDocuments />
       </section>
 
-      <section className="bg-white py-10 md:py-5 ">
+      <section className="bg-white py-10 md:py-5">
         <FAQSection />
       </section>
     </main>

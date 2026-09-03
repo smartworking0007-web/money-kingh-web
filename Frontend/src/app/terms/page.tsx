@@ -1,11 +1,20 @@
 import React from "react";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions | Money King Financial Services",
+  description:
+    "Read the terms and conditions governing the use of services, websites, CRM platforms, and partner networks operated by Money King Financial Services Pvt. Ltd.",
+  alternates: {
+    canonical: "/terms",
+  },
+};
 
 export default function TermsAndConditions() {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 font-lexend">
       <div className="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-lg rounded-xl border border-gray-100">
-        
         {/* Header Section */}
         <div className="border-b pb-6 mb-8 text-center md:text-left">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
@@ -20,7 +29,6 @@ export default function TermsAndConditions() {
         </div>
 
         <div className="space-y-8 text-gray-700 leading-relaxed text-sm md:text-base">
-          
           {/* Welcome Text */}
           <section className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
             <p>

@@ -2,14 +2,13 @@
 
 import React from "react";
 import Image from "next/image";
-// Yahan humne PartnerBenefits ko import kiya hai
 import PartnerBenefits from "./benefitsLeft";
 import WhyChooseUs from "./WhyChooseUs";
 import PartnerSteps from "./PartnerSteps";
 import TestimonialsHub from "./Testimonials";
 import FAQSection from "./FAQ";
 
-export default function HealthInsuranceHero() {
+export default function PartnerPage() {
   return (
     <main className="w-full bg-white">
       {/* --- HERO SECTION --- */}
@@ -20,8 +19,7 @@ export default function HealthInsuranceHero() {
             alt="Be the Partner Everyone Wishes to be"
             width={1920}
             height={800}
-            layout="responsive"
-            className="w-full h-auto"
+            className="w-full h-auto object-cover"
             priority
           />
         </div>
@@ -32,6 +30,6 @@ export default function HealthInsuranceHero() {
       <PartnerSteps />
       <TestimonialsHub />
       <FAQSection />
-      </main>
+    </main>
   );
-}
+} 

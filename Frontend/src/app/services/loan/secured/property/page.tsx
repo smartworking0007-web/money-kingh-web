@@ -15,7 +15,6 @@ import LAPLoanDocuments from "./LAPLoanDocuments";
 import ApplyLAPLoan from "./ApplyLAPLoan";
 import LAPLoanConsiderations from "./LAPLoanConsiderations";
 import LAPLoanFAQ from "./LAPLoanFAQ";
-import CarLoanComparison from "../car/CarLoanComparison";
 import LAPVsPersonalLoan from "./LAPVsPersonalLoan";
 
 export default function LoanAgainstPropertyPage() {
@@ -23,18 +22,16 @@ export default function LoanAgainstPropertyPage() {
     <main className="min-h-screen bg-white">
       {/* --- HERO SECTION --- */}
       <section className="relative w-full overflow-hidden">
-        {/* Mobile: aspect-square (1:1) ya [4/5] use karne se image ki height achhi dikhegi aur bande nahi katenge */}
         <div className="relative w-full aspect-5/5 md:aspect-none md:h-[600px] flex items-center">
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/laplon/lapa.jpeg"
-              alt="Loan Against Property "
+              alt="Loan Against Property"
               fill
-              // object-[75%] mobile par image ko thoda right khiskayega taki log frame mein aayein
               className="object-cover object-[97%_center] md:object-right transition-all duration-500"
               priority
             />
-            {/* Mobile Gradient: Niche se upar black shadow taki white text dikhe */}
+            {/* Mobile Gradient */}
             <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent md:bg-linear-to-r md:from-black/60 md:via-transparent md:to-transparent" />
           </div>
 
@@ -45,7 +42,7 @@ export default function LoanAgainstPropertyPage() {
                 as="h2"
                 className="text-white! text-4xl! md:text-6xl! font-extrabold! mb-3! mt-0! leading-[1.1]! drop-shadow-lg"
               >
-                LAP in india/ interest rate & eligibility 
+                LAP in india/ interest rate & eligibility
               </Typography>
 
               <Typography
@@ -70,12 +67,10 @@ export default function LoanAgainstPropertyPage() {
       </section>
 
       {/* --- CONTENT SECTIONS --- */}
-
       <div className="py-10 md:py-10">
         <LoanAgainstPropertyContent />
       </div>
 
-      {/* Spacing adjustments to prevent overlapping on mobile */}
       <div className="-mt-15 md:-mt-10 pb-10 md:pb-10 relative z-20">
         <LAPFeaturesBenefits />
       </div>
@@ -111,6 +106,7 @@ export default function LoanAgainstPropertyPage() {
       <div className="-mt-15 md:-mt-30 pb-16 md:pb-28 relative z-20">
         <LAPLoanConsiderations />
       </div>
+
       <div className="-mt-15 md:-mt-30 pb-16 md:pb-28 relative z-20">
         <LAPVsPersonalLoan />
       </div>

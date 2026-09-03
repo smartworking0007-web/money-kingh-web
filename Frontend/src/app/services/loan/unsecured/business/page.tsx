@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 import { ShieldCheck, Zap, Briefcase, BarChart3 } from "lucide-react";
@@ -9,7 +10,6 @@ import LoanOffers from "./LoanOffers";
 import LoanSlider from "./LoanSlider";
 import Financial from "./Financial";
 import Eligibility from "./Eligibility";
-
 import LoanFAQ from "./LoanFAQ";
 import { AboutTestimonialCard } from "@/app/about/AboutTestimonialCard";
 import FinancialPartners from "@/app/components/FinancialPartners/FinancialPartners";
@@ -59,7 +59,6 @@ export default function BusinessLoanPage() {
           {/* --- LEFT CONTENT AREA --- */}
           <div className="lg:col-span-7 z-10">
             <div className="max-w-2xl">
-              {/* Main Heading Replacement */}
               <Typography
                 variant="h3"
                 as="h4"
@@ -76,10 +75,9 @@ export default function BusinessLoanPage() {
                 >
                   Fast Application Processing
                 </Typography>
-                {/* Paragraph description removed as requested */}
               </div>
 
-              {/* Vertical Features List with updated logic */}
+              {/* Vertical Features List */}
               <div className="space-y-10 mt-12">
                 {features.map((item, i) => (
                   <div key={i} className="flex items-start gap-6 group">
@@ -154,19 +152,19 @@ export default function BusinessLoanPage() {
       <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-25 -mt-10 md:-mt-30">
         <BusinessLoanFeatures />
       </div>
-      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-10 -mt-30 md:-mt-40">
+      <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-10 -mt-30 md:-mt-40">
         <LoanSlider />
       </div>
-      <div className="relative z-20  space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-30">
+      <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-30">
         <Financial />
       </div>
-      <div className="relative z-20  space-y-10 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
+      <div className="relative z-20 space-y-10 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
         <Eligibility />
       </div>
       <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
         <BusinessLoanKnowledgeBase />
       </div>
-      <div className="relative z-20  space-y-10 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-40">
+      <div className="relative z-20 space-y-10 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-40">
         <GovtLoanSchemes />
       </div>
       <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-50">
