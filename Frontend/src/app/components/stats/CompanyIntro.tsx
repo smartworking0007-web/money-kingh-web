@@ -59,28 +59,28 @@ const CompanyIntro: React.FC = () => {
               variant="h3"
               className="text-gray-900 m-0 leading-tight text-xl md:text-3xl font-semibold"
             >
-              Analyze Your <span className="text-blue-600">Wealth</span>
+              Simple, Transparent Financial <span className="text-blue-600">Solutions</span>
             </Typography>
 
             <Typography
-              variant="b2"
+              variant="b3"
               className="text-gray-600 mt-3 md:mt-4 mb-8 m-0 leading-relaxed text-sm md:text-base"
             >
-              Our documentation-light process is built for the speed of modern
-              Indian business. We eliminate red tape so you can focus on growth.
+              From choosing a suitable loan product to completing the application process, Money King helps eligible customers navigate financial products through a structured and transparent process. 
+
             </Typography>
 
             <div className="grid gap-5 max-w-sm mx-auto lg:mx-0 text-left">
               {[
                 {
-                  title: "Rapid Approval",
-                  desc: "Funds processed within 48 hours.",
+                  title: "Streamlined Processing",
+                  desc: "We help simplify documentation and application coordination with lending partners.",
                   icon: Clock,
                   color: "bg-blue-50 text-blue-600",
                 },
                 {
-                  title: "Transparent",
-                  desc: "Absolute clarity in terms. No hidden fees.",
+                  title: "Transparent Fee Disclosure",
+                  desc: "Applicable interest rates, processing fees and other charges are disclosed according to the respective lender's terms.",
                   icon: Shield,
                   color: "bg-emerald-50 text-emerald-600",
                 },

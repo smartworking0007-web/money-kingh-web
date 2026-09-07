@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Health Insurance Plans in India | Compare & Buy Online | Money King",
+  title: "Health Insurance Plans | Cashless Hospitalization & Medical Cover | Money King",
   description:
-    "Compare and buy health insurance plans online with Money King Financial Services. Comprehensive family coverage, critical illness protection, and instant cashless hospitalization.",
+    "Protect your family with comprehensive health insurance plans. Get high sum insured, cashless claims at network hospitals, and instant policy approval.",
   alternates: {
-    canonical: "/services/insurance/health",
+    canonical: "https://moneykingfinancial.com/services/insurance/health",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

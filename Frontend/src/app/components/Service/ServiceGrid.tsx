@@ -10,7 +10,7 @@ const ServiceGrid = () => {
       {/* --- HEADER SECTION --- */}
       <div className="max-w-5xl mx-auto text-center mb-6">
         <Typography variant="h2" className="text-white mb-4">
-          Apply Today Achieve Tomorrow
+           Loan & Financial Services in India 
         </Typography>
         <Typography variant="b1" className="text-gray-300 max-w-2xl mx-auto">
           &quot;Quick approvals, flexible options, and loans that work for your goals.&quot;

@@ -12,8 +12,8 @@ export const heroSlides: HeroSlide[] = [
     id: 1,
     imageUrl: "/images/frame6.jpg",
     imageAlt: "Finance Strategy",
-    title: "Your Wealth.\nOur Strategy.\nYour Future.",
-    description: "Bespoke financial strategies designed for discerning individuals, families, and businesses who demand clarity, precision, and measurable results.",
+    title: "Loans & Financial\nServices in India\nMoney King",
+    description: "Money King Financial Services connects individuals and businesses with loan, insurance and financial solutions from partner banks, NBFCs and financial institutions across India",
     contactLink: "/contact",
   },
 ];

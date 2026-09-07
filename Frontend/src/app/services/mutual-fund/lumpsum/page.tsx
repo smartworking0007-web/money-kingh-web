@@ -33,7 +33,7 @@ export default function LumpsumInvestmentPage() {
 
       {/* --- CONTENT WRAPPER WITH DIVS --- */}
       {/* Calculator Section - Floating Effect */}
-      <div className="relative z-20  py-8 md:py-20 mt-10 md:-mt-32 rounded-t-[40px] md:rounded-t-none">
+      <div className="relative z-20  py-8 md:py-20 mt-10 md:-mt-10 rounded-t-[40px] md:rounded-t-none">
         <LumpsumCalculator />
       </div>
 

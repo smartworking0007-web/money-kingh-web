@@ -105,7 +105,8 @@ const TestimonialsMarquee: React.FC = () => {
             What Our Clients Say
           </Typography>
           <p className="text-gray-500 max-w-xl mx-auto text-sm md:text-base">
-            Trusted by thousands for simple and affordable financial solutions.
+            Helping customers explore financial solutions across India. 
+
           </p>
         </div>
 

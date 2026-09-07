@@ -5,7 +5,11 @@ export const metadata: Metadata = {
   description:
     "Transfer your existing personal loan to leading banks at lower interest rates. Reduce monthly EMIs, consolidate debt, and get instant top-up loan options.",
   alternates: {
-    canonical: "/services/loan-bt/personal",
+    canonical: "https://moneykingfinancial.com/services/loan-bt/personal",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

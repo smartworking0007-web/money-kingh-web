@@ -49,8 +49,9 @@ export default function MoneyKingSection() {
                 <Typography variant="s1" as="p" className="text-gray-800 font-semibold">
                   We work with India&apos;s top banks & NBFCs!
                 </Typography>
-                <Typography variant="b1" className="text-gray-600 mt-2">
-                  Our vision is to provide premium, hassle-free financial services 
+                <Typography variant="b3" className="text-gray-600 mt-2">
+                 Money King Financial Services Pvt. Ltd. is a financial distribution and loan facilitation platform that connects eligible customers with partner banks, NBFCs and financial institutions. Loan approval, interest rates, loan amount, fees and disbursal are determined by the respective lending partner based on applicant eligibility and credit assessment. 
+
                   that <span className="text-[#1e266e] font-bold">empower your future.</span>
                 </Typography>
               </div>
@@ -67,9 +68,9 @@ export default function MoneyKingSection() {
                 </div>
                 <div>
                   <Typography variant="h5" as="h4" className="mt-0 mb-1 text-gray-900">
-                    2016 Startup
+                    Since 2016 
                   </Typography>
-                  <Typography variant="b2" className="text-gray-500">
+                  <Typography variant="b3" className="text-gray-500">
                     Preparing to set a new benchmark in the financial industry.
                   </Typography>
                 </div>
