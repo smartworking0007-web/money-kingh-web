@@ -73,9 +73,10 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] font-lexend pb-20">
+      {/* --- HERO SECTION WITH H1 --- */}
       <section className="bg-slate-900 py-20 px-6 text-center text-white">
-        <Typography variant="h2" as="h1" className="font-black mb-3">
-          Get in Touch
+        <Typography variant="h2" as="h1" className="font-black mb-3 text-3xl sm:text-4xl md:text-5xl">
+          Get in Touch with Money King
         </Typography>
         <p className="text-slate-400 max-w-md mx-auto text-sm md:text-base">
           Experience financial excellence at our Mumbai Headquarters and
@@ -84,10 +85,10 @@ export default function ContactPage() {
       </section>
 
       <section className="max-w-6xl mx-auto px-6 -mt-12 grid lg:grid-cols-12 gap-8">
-        {/* LEFT: FORM SECTION */}
+        {/* LEFT: FORM SECTION WITH H2 */}
         <div className="lg:col-span-7 bg-white rounded-3xl shadow-xl p-8 md:p-10 border border-slate-100">
-          <Typography variant="h4" className="text-slate-900 font-bold mb-6">
-            Send us a Message
+          <Typography variant="h4" as="h2" className="text-slate-900 font-bold mb-6 text-xl sm:text-2xl">
+            Send Us a Message
           </Typography>
 
           {success ? (
@@ -101,6 +102,7 @@ export default function ContactPage() {
                   type="text"
                   placeholder="Full Name"
                   required
+                  value={formData.fullName}
                   className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
                   onChange={(e) =>
                     setFormData({ ...formData, fullName: e.target.value })
@@ -110,6 +112,7 @@ export default function ContactPage() {
                   type="tel"
                   placeholder="Phone Number"
                   required
+                  value={formData.phone}
                   className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
@@ -120,6 +123,7 @@ export default function ContactPage() {
                 type="email"
                 placeholder="Email Address"
                 required
+                value={formData.email}
                 className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
@@ -127,6 +131,7 @@ export default function ContactPage() {
               />
               <select
                 className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none cursor-pointer"
+                value={formData.course}
                 onChange={(e) =>
                   setFormData({ ...formData, course: e.target.value })
                 }
@@ -139,6 +144,7 @@ export default function ContactPage() {
               <textarea
                 placeholder="Your Message"
                 rows={3}
+                value={formData.message}
                 className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none resize-none"
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
@@ -149,7 +155,9 @@ export default function ContactPage() {
                 <input
                   type="checkbox"
                   checked={formData.consent}
-                  readOnly
+                  onChange={(e) =>
+                    setFormData({ ...formData, consent: e.target.checked })
+                  }
                   className="mt-1"
                 />
                 <p className="text-[11px] text-slate-600">
@@ -166,7 +174,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-4 bg-blue-600 text-white rounded-2xl font-black uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
+                className="w-full py-4 bg-blue-600 text-white rounded-2xl font-black uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 cursor-pointer disabled:opacity-50"
               >
                 {loading ? "Sending..." : "Submit Request"}
               </button>
@@ -207,8 +215,8 @@ export default function ContactPage() {
             <div className="p-8">
               <div className="flex items-center gap-2 mb-6">
                 <MapPin size={20} className="text-blue-600" />
-                <Typography variant="h5" className="font-bold text-slate-900">
-                  Our Headquarters
+                <Typography variant="h5" as="h3" className="font-bold text-slate-900">
+                  Our Headquarters & Branches
                 </Typography>
               </div>
 

@@ -1,5 +1,4 @@
-"use client";
-
+import type { Metadata } from "next";
 import React from "react";
 import Image from "next/image";
 import {
@@ -24,6 +23,61 @@ import LoanCharges from "./LoanCharges";
 import LoanFAQ from "./LoanFAQ";
 import { AboutTestimonialCard } from "@/app/about/AboutTestimonialCard";
 import FinancialPartners from "@/app/components/FinancialPartners/FinancialPartners";
+
+// --- COMPLETE SEO METADATA ---
+export const metadata: Metadata = {
+  title: "Personal Loan in India: Low Rates | Money King Financial",
+  description:
+    "Compare and apply for personal loans from RBI-regulated banks and NBFCs. Minimal documentation, transparent processing fees, and quick approval support.",
+  keywords: [
+    "Personal Loan in India",
+    "compare personal loan interest rates",
+    "instant personal loan apply online",
+    "low interest personal loan",
+    "unsecured personal loans",
+    "personal loan eligibility criteria",
+    "quick personal loan approval",
+    "Money King Financial Services",
+    "Money King",
+  ],
+  authors: [{ name: "Money King Financial Services" }],
+  creator: "Money King Financial Services",
+  publisher: "Money King Financial Services",
+  alternates: {
+    canonical: "https://moneykingfinancial.com/services/loan/unsecured/personal",
+    languages: {
+      en: "https://moneykingfinancial.com/services/loan/unsecured/personal",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: "Personal Loan in India | Compare Low Interest Rates & Apply | Money King",
+    description:
+      "Compare and apply for personal loans from RBI-regulated banks and NBFCs. Minimal documentation, transparent processing fees, and quick approval support.",
+    url: "https://moneykingfinancial.com/services/loan/unsecured/personal",
+    siteName: "Money King Financial Services",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Personal Loan in India | Compare Low Interest Rates & Apply | Money King",
+    description:
+      "Compare and apply for personal loans from RBI-regulated banks and NBFCs. Minimal documentation, transparent processing fees, and quick approval support.",
+  },
+};
 
 export default function PersonalLoanPage() {
   const features = [
@@ -129,12 +183,13 @@ export default function PersonalLoanPage() {
           {/* --- LEFT CONTENT AREA --- */}
           <div className="lg:col-span-7 z-10">
             <div className="max-w-2xl">
+              {/* --- H1 HEADING --- */}
               <Typography
                 variant="d1"
                 as="h1"
-                className="text-[#002e5b] mb-6! mt-0! leading-tight font-black"
+                className="text-[#002e5b] mb-6! mt-0! leading-tight font-black text-3xl sm:text-5xl lg:text-6xl"
               >
-                Personal Loan
+                Personal Loan in India
               </Typography>
 
               <div className="space-y-6">

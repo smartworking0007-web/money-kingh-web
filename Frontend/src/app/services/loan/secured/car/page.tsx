@@ -1,5 +1,4 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Typography } from "@/app/components/ui/Typography";
@@ -15,6 +14,63 @@ import EligibilityCriteria from "./EligibilityCriteria";
 import DocumentsRequired from "./DocumentsRequired";
 import FAQPage from "./FAQPage";
 import HowToApplyCarLoan from "./HowToApplyCarLoan";
+
+// --- COMPLETE SEO METADATA ---
+export const metadata: Metadata = {
+  // Exactly 55 characters (including spaces)
+  title: "Car Loan in India: Rates & EMI | Money King Financials",
+  description:
+    "Get a car loan in India with flexible repayment options. Compare interest rates, check eligibility criteria, required documents, and explore new or used car financing options.",
+  keywords: [
+    "Car Loan in India",
+    "Car Loan Interest Rates",
+    "Car Loan Eligibility",
+    "Car Loan EMI Calculator",
+    "new car loan India",
+    "used car financing options",
+    "car loan documents required",
+    "apply car loan online",
+    "Money King Financial Services",
+    "Money King",
+  ],
+  authors: [{ name: "Money King Financial Services" }],
+  creator: "Money King Financial Services",
+  publisher: "Money King Financial Services",
+  alternates: {
+    canonical: "https://moneykingfinancial.com/services/loan/secured/car",
+    languages: {
+      en: "https://moneykingfinancial.com/services/loan/secured/car",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: "Car Loan in India: Compare Interest Rates, Eligibility & EMI | Money King",
+    description:
+      "Get a car loan in India with flexible repayment options. Compare interest rates, check eligibility criteria, required documents, and explore new or used car financing options.",
+    url: "https://moneykingfinancial.com/services/loan/secured/car",
+    siteName: "Money King Financial Services",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Car Loan in India: Compare Interest Rates, Eligibility & EMI | Money King",
+    description:
+      "Get a car loan in India with flexible repayment options. Compare interest rates, check eligibility criteria, required documents, and explore new or used car financing options.",
+  },
+};
 
 export default function CarLoanPage() {
   const data = {

@@ -1,4 +1,5 @@
-"use client";
+import type { Metadata } from "next";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import MachineryLoanContent from "./MachineryLoanContent";
@@ -9,36 +10,82 @@ import MachineryLoanApplyStep from "./MachineryLoanApplyStep";
 import MachineryLoanFAQs from "./MachineryLoanFAQs";
 import { Typography } from "@/app/components/ui/Typography";
 
+// --- COMPLETE SEO METADATA ---
+export const metadata: Metadata = {
+  title: "Machinery Loan Balance Transfer & Top-Up | Money King",
+  description:
+    "Transfer your business machinery loan to top lenders at competitive interest rates. Reduce machinery EMIs and unlock quick top-up funding for business growth.",
+  keywords: [
+    "Machinery Loan Balance Transfer",
+    "Machinery Loan Top-Up",
+    "business machinery loan transfer",
+    "equipment loan balance transfer India",
+    "reduce machinery loan EMI",
+    "machinery loan interest rates",
+    "commercial equipment financing",
+    "Money King Financial Services",
+    "Money King",
+  ],
+  authors: [{ name: "Money King Financial Services" }],
+  creator: "Money King Financial Services",
+  publisher: "Money King Financial Services",
+  alternates: {
+    canonical: "https://moneykingfinancial.com/services/loan-bt/machinery",
+    languages: {
+      en: "https://moneykingfinancial.com/services/loan-bt/machinery",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: "Machinery Loan Balance Transfer & Top-Up | Money King",
+    description:
+      "Transfer your business machinery loan to top lenders at competitive interest rates. Reduce machinery EMIs and unlock quick top-up funding for business growth.",
+    url: "https://moneykingfinancial.com/services/loan-bt/machinery",
+    siteName: "Money King Financial Services",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Machinery Loan Balance Transfer & Top-Up | Money King",
+    description:
+      "Transfer your business machinery loan to top lenders at competitive interest rates. Reduce machinery EMIs and unlock quick top-up funding for business growth.",
+  },
+};
+
 export default function MachineryLoanHero() {
   return (
     <main className="w-full bg-white">
       {/* --- HERO SECTION --- */}
       <section className="relative w-full overflow-hidden">
-        {/* Mobile: h-[500px] (Fixed height for better image view)
-            Desktop: aspect-ratio maintain kiya hai
-        */}
         <div className="relative w-full h-[500px] md:h-auto md:aspect-15/9 lg:aspect-15/6">
           <Image
             src="/images/bt/ma.jpeg"
-            alt="Business Machinery Loan"
+            alt="Business Machinery Loan Balance Transfer & Top-Up"
             fill
-            // object-[35%] mobile par image ko thoda khiskayega taki main subject dikhe
             className="object-cover object-[35%_center] md:object-center"
             priority
           />
 
-          {/* Overlay: 
-              Mobile par bottom-to-top gradient taki text readable ho.
-              Desktop par dark overlay.
-          */}
+          {/* Overlay */}
           <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent md:bg-black/40 flex items-center">
             <div className="max-w-7xl mx-auto px-6 w-full">
-              {/* Mobile par left-align (text-left) zyada premium lagta hai */}
               <div className="max-w-xl text-left text-white space-y-4 md:space-y-6">
                 <Typography
                   variant="h2"
                   as="h1"
-                  // text-3xl! mobile ke liye balance size hai
                   className="text-white! font-black! text-3xl! md:text-5xl! lg:text-6xl! leading-tight! mt-0!"
                 >
                   Machinery Loan to <br />
@@ -46,8 +93,7 @@ export default function MachineryLoanHero() {
                 </Typography>
 
                 <p className="text-white/90 text-base md:text-lg lg:text-xl font-medium max-w-md leading-relaxed">
-                  Get fast, flexible funding for high-tech machinery with
-                  minimal documentation and attractive interest rates.
+                  Transfer your business machinery loan to top lenders at competitive interest rates. Reduce machinery EMIs and unlock quick top-up funding for business growth.
                 </p>
 
                 {/* Apply Now Button */}
@@ -64,6 +110,20 @@ export default function MachineryLoanHero() {
           </div>
         </div>
       </section>
+
+      {/* --- H2 SECTION --- */}
+      <section className="w-full pt-12 md:pt-16 pb-4 px-6 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Benefits of <span className="text-blue-600">Machinery Loan Balance Transfer & Top-Up</span>
+          </h2>
+          <p className="text-slate-600 text-sm md:text-base mt-3 max-w-2xl mx-auto">
+            Reduce equipment EMIs, shift high-interest machinery debts to partner banks, and access liquid capital for modern infrastructure.
+          </p>
+        </div>
+      </section>
+
+      {/* --- CONTENT SECTIONS --- */}
       <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-24">
         <MachineryLoanContent />
       </div>

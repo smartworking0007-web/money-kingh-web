@@ -10,16 +10,62 @@ import MachineryEligibility from "./MachineryEligibility";
 import MachineryLoanRatesBanner from "./MachineryLoanRatesBanner";
 import DocumentsAccordionPage from "./DocumentsRequiredPage";
 // import MachineryProcess from "./MachineryProcess";
-import MachineryProcess from "./MachineryProcess.tsx";
 import ProductSegmentation from "./ProductSegmentation";
 import MachineryFAQ from "./MachineryFAQ";
 
+// --- COMPLETE SEO METADATA ---
 export const metadata: Metadata = {
-  title: "Machinery Loan in India | Check Interest Rate & Eligibility",
+  // Exactly 55 characters including spaces
+  title: "Machinery Loan in India: Rates | Money King Financials",
   description:
     "Get a machinery loan in India for new or used equipment. Check machinery finance interest rates, eligibility, documents, loan amount, and repayment tenure.",
+  keywords: [
+    "Machinery Loan in India",
+    "machinery finance interest rates",
+    "equipment loan eligibility",
+    "new machinery financing",
+    "used equipment loan India",
+    "machinery loan documents required",
+    "commercial equipment loan",
+    "Money King Financial Services",
+    "Money King",
+  ],
+  authors: [{ name: "Money King Financial Services" }],
+  creator: "Money King Financial Services",
+  publisher: "Money King Financial Services",
   alternates: {
-    canonical: "/services/loan/secured/machinery",
+    canonical: "https://moneykingfinancial.com/services/loan/secured/machinery",
+    languages: {
+      en: "https://moneykingfinancial.com/services/loan/secured/machinery",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: "Machinery Loan in India | Check Interest Rate & Eligibility",
+    description:
+      "Get a machinery loan in India for new or used equipment. Check machinery finance interest rates, eligibility, documents, loan amount, and repayment tenure.",
+    url: "https://moneykingfinancial.com/services/loan/secured/machinery",
+    siteName: "Money King Financial Services",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Machinery Loan in India | Check Interest Rate & Eligibility",
+    description:
+      "Get a machinery loan in India for new or used equipment. Check machinery finance interest rates, eligibility, documents, loan amount, and repayment tenure.",
   },
 };
 
@@ -31,9 +77,9 @@ interface StatItem {
 
 export default function MachineryLoanPage() {
   const data = {
-    title: "Machinery loan in india",
+    title: "Machinery Loan in India",
     description:
-      "get a machinery loan in india for new or used equipment, check Machinery finance interest rate, eligibility, documents, loant amount & repayment tenure.",
+      "Get a machinery loan in India for new or used equipment. Check machinery finance interest rates, eligibility, documents, loan amount, and repayment tenure.",
     stats: [] as StatItem[],
     features: [] as string[],
   };
@@ -45,7 +91,7 @@ export default function MachineryLoanPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/Machinery/Machinery.jpeg"
-            alt="Background"
+            alt="Machinery Loan in India"
             fill
             className="object-cover object-[80%_center] md:object-center brightness-[0.7]"
             priority
@@ -56,19 +102,20 @@ export default function MachineryLoanPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-24 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-10">
+              {/* --- H1 HEADING --- */}
               <Typography
                 variant="h1"
                 as="h1"
                 className="text-white font-bold! text-3xl! md:text-6xl! mb-6 mt-0! leading-tight!"
               >
-                {data.title || " "}
+                {data.title}
               </Typography>
 
               <Typography
                 variant="b1"
                 className="text-white/90 mb-10 text-base md:text-xl max-w-2xl mt-0!"
               >
-                {data.description || " "}
+                {data.description}
               </Typography>
 
               {/* Stats & Features */}
@@ -93,6 +140,18 @@ export default function MachineryLoanPage() {
         </div>
       </section>
 
+      {/* --- H2 SECTION --- */}
+      <section className="w-full pt-12 md:pt-16 pb-4 px-6 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Key Features of <span className="text-blue-600">Machinery Finance in India</span>
+          </h2>
+          <p className="text-slate-600 text-sm md:text-base mt-3 max-w-2xl mx-auto">
+            Upgrade your manufacturing infrastructure with competitive interest rates, customized repayment tenure, and hassle-free documentation.
+          </p>
+        </div>
+      </section>
+
       {/* Content Sections */}
       <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-15">
         <MachineryLoanInfo />
@@ -100,7 +159,7 @@ export default function MachineryLoanPage() {
       <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-15">
         <LoanCalculator />
       </div>
-      <div className="relative z-20 bg-white space-y-16 md:space-y-24 -py-10 -md:py-10">
+      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-10">
         <MachineryFeatures />
       </div>
       <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-30">
@@ -111,9 +170,9 @@ export default function MachineryLoanPage() {
         <DocumentsAccordionPage />
       </div>
 
-      <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-30">
+      {/* <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-30">
         <MachineryProcess />
-      </div>
+      </div> */}
 
       <div className="relative z-20 space-y-16 md:space-y-24 py-8 md:py-20 -mt-20 md:-mt-50">
         <MachineryLoanRatesBanner />

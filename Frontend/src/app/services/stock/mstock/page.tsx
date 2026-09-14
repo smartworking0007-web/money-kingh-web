@@ -12,15 +12,12 @@ import OptionsTools from "./OptionsTools";
 import FAQSection from "./FAQSection";
 
 export default function MStockHeroPage() {
-  // Mobile number state
   const [mobileNumber, setMobileNumber] = useState("");
 
-  // Redirect function to your link
   const handleRedirect = (e: React.FormEvent) => {
     e.preventDefault();
     if (mobileNumber.length === 10) {
       const baseUrl = "https://ekyc.mstock.com/Register-with-us?pdc=AE2D3E733";
-      // Redirecting with the number
       window.location.href = `${baseUrl}&mobile=${mobileNumber}`;
     } else {
       alert("Please enter a valid 10-digit mobile number");
@@ -31,7 +28,6 @@ export default function MStockHeroPage() {
     <main className="min-h-screen bg-white font-sans overflow-x-hidden">
       {/* --- HERO SECTION --- */}
       <section className="relative w-full bg-[#FFF9F5] overflow-hidden pt-12 pb-24 md:pt-24 md:pb-40">
-        {/* Background Candlestick Chart Decoration */}
         <div className="absolute inset-0 z-0 opacity-[0.05] md:opacity-[0.07] pointer-events-none">
           <div
             className="w-full h-full bg-repeat-x"
@@ -43,7 +39,6 @@ export default function MStockHeroPage() {
           ></div>
         </div>
 
-        {/* Smooth Wave Graphic */}
         <div className="absolute bottom-0 left-0 w-full leading-none z-0">
           <svg
             className="relative block w-full h-[80px] md:h-[180px]"
@@ -59,7 +54,7 @@ export default function MStockHeroPage() {
 
         <div className="max-w-7xl mx-auto px-5 md:px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-            {/* Left Side: Headlines */}
+            {/* Left Side: Headlines (H1) */}
             <div className="lg:col-span-7 text-center lg:text-left flex flex-col justify-center">
               <Typography
                 variant="h1"
@@ -92,6 +87,7 @@ export default function MStockHeroPage() {
               <div className="w-full max-w-[390px] bg-[#003B73] rounded-2xl p-6 md:p-9 shadow-[0_20px_50px_rgba(0,59,115,0.3)]">
                 <Typography
                   variant="h5"
+                  as="h2"
                   className="text-white font-bold mb-6 text-center text-lg md:text-xl leading-snug"
                 >
                   Open FREE Demat Account <br />
@@ -146,9 +142,10 @@ export default function MStockHeroPage() {
         </div>
       </section>
 
-      {/* --- FEATURE HIGHLIGHT BAR --- */}
+      {/* --- FEATURE HIGHLIGHT BAR (H2) --- */}
       <div className="relative z-20 -mt-8 md:-mt-13 px-5 md:px-6">
         <div className="max-w-6xl mx-auto bg-white rounded-2xl md:rounded-3xl shadow-[0_15px_40px_rgba(0,0,0,0.08)] border border-gray-100 p-6 md:p-10">
+          <h2 className="sr-only">m.Stock Brokerage & Account Features</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-0 items-center">
             <div className="text-center md:border-r border-gray-100 px-2 pb-4 md:pb-0">
               <p className="text-3xl md:text-4xl font-black text-[#FF7A00] mb-0.5">
@@ -186,7 +183,7 @@ export default function MStockHeroPage() {
         </div>
       </div>
 
-      {/* --- REMAINING SECTIONS --- */}
+      {/* --- CONTENT SECTIONS --- */}
       <section className="bg-white py-12 md:py-20">
         <StockMarketInvestment />
       </section>
