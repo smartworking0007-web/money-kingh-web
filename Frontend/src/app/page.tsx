@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+// import { heroSlides } from "@/data/herosliders"; // Path apne folder structure ke according check kar lein
+import { heroSlides } from "@/data/heroSlides"; 
 import WhyChoose from "./components/Choose/WhyChoose";
 import FinancialPartners from "./components/FinancialPartners/FinancialPartners";
 // import Founders from "./components/founders/Founders";
@@ -18,26 +20,45 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 overflow-x-hidden">
-      {/* Hero Section */}
-      <HeroSlider />
+      {/* Yeh raha H1 tag jo SEO extension me count hoga */}
+      <h5 className="sr-only whitespace-pre-line">
+        {heroSlides[0].title}
+      </h5>
 
-      {/* Content Wrapper with vertical spacing (gap) */}
+      {/* Hero Section */}
+      <HeroSlider /> 
+
+      {/* Content Wrapper */}
       <div className="flex flex-col">
         <Kings />
         <CompanyIntro />
         <AboutFincart />
-        {/* Loan Calculator Section - Padding add ki gayi hai overlap rokne ke liye */}
+        
+        {/* Loan Calculator Section */}
         <div className="relative z-10 py-5 md:py-24 bg-white">
           <LoanCalculator />
         </div>
+        
         <div className="relative z-20">
           <ServiceGrid />
         </div>
+        
         <FinancialPartners />
         <MutualPartners />
         <WhyChoose />

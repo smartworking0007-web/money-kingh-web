@@ -104,6 +104,10 @@ import { Blog96 } from "./components/Blog96";
 import { Blog97 } from "./components/Blog97";
 import { Blog98 } from "./components/Blog98";
 import { Blog99 } from "./components/Blog99";
+import { Blog100 } from "./components/Blog100";
+import { Blog101 } from "./components/Blog101";
+import { Blog102 } from "./components/Blog102";
+import { Blog103 } from "./components/Blog103";
 
 
 
@@ -208,6 +212,12 @@ const ALL_BLOGS = [
   { id: 97, component: <Blog97 /> },
   { id: 98, component: <Blog98 /> },
   { id: 99, component: <Blog99 /> },
+  { id: 100, component: <Blog100 /> },
+  { id: 101, component: <Blog101 /> },
+  { id: 102, component: <Blog102 /> },
+  { id: 103, component: <Blog103 /> },
+
+
 ];
 
 export default function BlogPage() {
@@ -249,8 +259,8 @@ export default function BlogPage() {
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
                 className={`px-4 py-2 rounded-md text-sm md:text-base font-bold border transition-all ${currentPage === 1
-                    ? "opacity-40 cursor-not-allowed border-gray-200 text-gray-400"
-                    : "border-[#1e5d91] text-[#1e5d91] hover:bg-[#1e5d91] hover:text-white"
+                  ? "opacity-40 cursor-not-allowed border-gray-200 text-gray-400"
+                  : "border-[#1e5d91] text-[#1e5d91] hover:bg-[#1e5d91] hover:text-white"
                   }`}
               >
                 Previous
@@ -264,8 +274,8 @@ export default function BlogPage() {
                       key={number}
                       onClick={() => setCurrentPage(number)}
                       className={`min-w-10 h-10 rounded-md text-sm md:text-base font-bold transition-all ${currentPage === number
-                          ? "bg-orange-400 text-white"
-                          : "bg-white border border-gray-200 text-[#1e5d91] hover:bg-[#1e5d91] hover:text-white"
+                        ? "bg-orange-400 text-white"
+                        : "bg-white border border-gray-200 text-[#1e5d91] hover:bg-[#1e5d91] hover:text-white"
                         }`}
                     >
                       {number}
@@ -281,8 +291,8 @@ export default function BlogPage() {
                 }
                 disabled={currentPage === totalPages}
                 className={`px-4 py-2 rounded-md text-sm md:text-base font-bold border transition-all ${currentPage === totalPages
-                    ? "opacity-40 cursor-not-allowed border-gray-200 text-gray-400"
-                    : "border-[#1e5d91] text-[#1e5d91] hover:bg-[#1e5d91] hover:text-white"
+                  ? "opacity-40 cursor-not-allowed border-gray-200 text-gray-400"
+                  : "border-[#1e5d91] text-[#1e5d91] hover:bg-[#1e5d91] hover:text-white"
                   }`}
               >
                 Next

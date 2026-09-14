@@ -13,7 +13,8 @@ export const heroSlides: HeroSlide[] = [
     imageUrl: "/images/frame6.jpg",
     imageAlt: "Finance Strategy",
     title: "Loans & Financial\nServices in India\nMoney King",
-    description: "Money King Financial Services connects individuals and businesses with loan, insurance and financial solutions from partner banks, NBFCs and financial institutions across India",
+    description:
+      "Apply for personal loans, business loans, insurance, and mutual funds with Money King Financial Services. Get expert financial solutions in India.",
     contactLink: "/contact",
   },
 ];
