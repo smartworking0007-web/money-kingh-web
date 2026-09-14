@@ -20,12 +20,54 @@ import HomeLoanDosDonts from "./HomeLoanDosDonts";
 import HomeLoanTips from "./HomeLoanTips";
 import HomeLoanFAQ from "./HomeLoanFAQ";
 
+// --- SEO METADATA (Title: exactly 55 characters including spaces) ---
 export const metadata: Metadata = {
-  title: "Home Loan in India: Compare Interest Rates, Eligibility & Offers | Money King",
+  title: "Home Loans in India: Compare Rates | Money King India",
   description:
-    "Compare home loan options from leading banks and NBFCs in India. Check interest rates, eligibility criteria, required documents, EMI calculation, and fast approval terms.",
+    "Compare home loans from top banks & NBFCs with Money King. Check low interest rates, eligibility criteria, EMI calculation, and get fast approval.",
+  keywords: [
+    "Home Loans in India",
+    "Compare Interest Rates",
+    "home loan eligibility criteria",
+    "home loan EMI calculator",
+    "apply home loan online",
+    "low interest home loans",
+    "housing finance India",
+    "Money King Financial Services",
+    "Money King",
+  ],
+  authors: [{ name: "Money King Financial Services" }],
+  creator: "Money King Financial Services",
+  publisher: "Money King Financial Services",
   alternates: {
-    canonical: "/services/loan/secured/home",
+    canonical: "https://moneykingfinancial.com/services/loan/secured/home",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: "Home Loans in India: Compare Interest Rates & Apply Online",
+    description:
+      "Compare home loans from top banks & NBFCs with Money King. Check low interest rates, eligibility criteria, EMI calculation, and get fast approval.",
+    url: "https://moneykingfinancial.com/services/loan/secured/home",
+    siteName: "Money King Financial Services",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Home Loans in India: Compare Interest Rates & Apply Online",
+    description:
+      "Compare home loans from top banks & NBFCs with Money King. Check low interest rates, eligibility criteria, EMI calculation, and get fast approval.",
   },
 };
 
@@ -38,7 +80,7 @@ export default function HomeLoanPage() {
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
             src="/images/loanpage/home.jpg"
-            alt="New Home Background"
+            alt="Home Loans in India: Compare Interest Rates & Apply Online"
             fill
             className="object-cover object-left md:object-center transition-all duration-700 scale-100"
             priority
@@ -52,21 +94,22 @@ export default function HomeLoanPage() {
         {/* Hero Content Wrapper */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full h-full flex items-center justify-center md:justify-end">
           <div className="max-w-[340px] md:max-w-xl flex flex-col items-center md:items-start text-center md:text-left mt-16 md:mt-0">
+            {/* --- H1 HEADING --- */}
             <Typography
               variant="h2"
               as="h1"
-              className="text-white md:text-[#1e293b] mb-4 font-black leading-[1.1] text-2xl sm:text-4xl md:text-[64px] drop-shadow-2xl md:drop-shadow-none"
+              className="text-white md:text-[#1e293b] mb-4 font-black leading-[1.1] text-2xl sm:text-4xl md:text-[54px] drop-shadow-2xl md:drop-shadow-none"
             >
-              Home loan in india- <br className="hidden md:block" />
-              compare interest rate, eligibility and offers.
+              Home Loans in India: Compare Interest Rates & Apply Online
             </Typography>
 
+            {/* --- DESCRIPTION --- */}
             <Typography
               variant="s1"
               as="p"
               className="text-white/90 md:text-[#334155] mb-8 font-medium leading-relaxed text-xs md:text-lg max-w-[260px] md:max-w-lg"
             >
-              Compare home loan option from bank and nbfc in india. check home loan interest, eligibility document, fees, emi & repayment option before applying.
+              Compare home loans from top banks & NBFCs with Money King. Check low interest rates, eligibility criteria, EMI calculation, and get fast approval.
             </Typography>
 
             <Link

@@ -1,5 +1,5 @@
-"use client";
-
+import type { Metadata } from "next";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Typography } from "@/app/components/ui/Typography";
@@ -15,6 +15,53 @@ import GoldLoanProcess from "./GoldLoanProcess";
 import FAQPage from "../car/FAQPage";
 import GoldLoanTypes from "./GoldLoanTypes";
 
+// --- COMPLETE SEO METADATA ---
+export const metadata: Metadata = {
+  title: "Gold Loan in India: Rates & Eligibility | Money King IN",
+  description:
+    "Get instant gold loan against jewellery or coins with Money King. Compare low interest rates, check per gram rate, and get instant approval.",
+  keywords: [
+    "Gold Loan in India",
+    "Gold Loan Interest Rates",
+    "Per Gram Rate",
+    "Gold Loan Eligibility",
+    "instant gold loan",
+    "gold loan against jewellery",
+    "gold loan documents",
+    "Money King Financial Services",
+    "Money King",
+  ],
+  authors: [{ name: "Money King Financial Services" }],
+  creator: "Money King Financial Services",
+  publisher: "Money King Financial Services",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: "Gold Loan in India: Interest Rates, Per Gram Rate & Eligibility",
+    description:
+      "Get instant gold loan against jewellery or coins with Money King. Compare low interest rates, check per gram rate, and get instant approval.",
+    siteName: "Money King Financial Services",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gold Loan in India: Interest Rates, Per Gram Rate & Eligibility",
+    description:
+      "Get instant gold loan against jewellery or coins with Money King. Compare low interest rates, check per gram rate, and get instant approval.",
+  },
+};
+
 export default function GoldLoanPage() {
   return (
     <main className="min-h-screen bg-white">
@@ -24,7 +71,7 @@ export default function GoldLoanPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/gold/gold.jpeg"
-            alt="Turn your gold into opportunities"
+            alt="Gold Loan in India: Interest Rates, Per Gram Rate & Eligibility"
             fill
             className="object-cover object-right"
             priority
@@ -36,12 +83,13 @@ export default function GoldLoanPage() {
         {/* Hero Content */}
         <div className="container mx-auto px-10 md:px-20 relative z-10">
           <div className="max-w-[85%] md:max-w-2xl">
+            {/* H1 Heading */}
             <Typography
               variant="h5"
-              as="h2"
+              as="h1"
               className="text-[#004687]! text-3xl! md:text-5xl! font-bold! mb-4! mt-0! leading-tight!"
             >
-              Gold Loan in India | <br className="md:hidden" /> Interest Rate, Eligibility & Documents
+              Gold Loan in India: Interest Rates, Per Gram Rate & Eligibility
             </Typography>
 
             <Typography
@@ -49,13 +97,13 @@ export default function GoldLoanPage() {
               as="p"
               className="text-slate-700! text-lg! md:text-2xl! mb-8! mt-0! font-medium!"
             >
-              Get a Gold Loan against eligible gold jewellery or coins. Check Gold Loan interest rates, eligibility, loan amount, documents, tenure and repayment options.
+              Get instant gold loan against jewellery or coins with Money King. Compare low interest rates, check per gram rate, and get instant approval.
             </Typography>
 
             <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply">
               <Button
                 size="lg"
-                className="bg-[#004687]! hover:bg-[#003566]! rounded-xl! h-12! md:h-14! px-8! md:px-10! shadow-lg! cursor-pointer transition-colors"
+                className="bg-[#004687]! hover:bg-[#003566]! rounded-xl! h-12! md:h-14! px-8! md:px-10! shadow-lg! cursor-pointer transition-colors text-white"
               >
                 APPLY NOW
               </Button>

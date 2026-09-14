@@ -1,5 +1,5 @@
-"use client";
-
+import type { Metadata } from "next";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Typography } from "@/app/components/ui/Typography";
@@ -17,6 +17,53 @@ import LAPLoanConsiderations from "./LAPLoanConsiderations";
 import LAPLoanFAQ from "./LAPLoanFAQ";
 import LAPVsPersonalLoan from "./LAPVsPersonalLoan";
 
+// --- SEO METADATA (Title: exactly 55 characters including spaces) ---
+export const metadata: Metadata = {
+  title: "Loan Against Property in India | Money King Financials",
+  description:
+    "Apply for Loan Against Property (LAP) in India with flexible tenure and low interest rates. Check LAP eligibility and apply online.",
+  keywords: [
+    "Loan Against Property in India",
+    "LAP interest rates",
+    "LAP loan eligibility",
+    "apply loan against property online",
+    "mortgage loan India",
+    "LAP vs personal loan",
+    "low interest property loan",
+    "Money King Financial Services",
+    "Money King",
+  ],
+  authors: [{ name: "Money King Financial Services" }],
+  creator: "Money King Financial Services",
+  publisher: "Money King Financial Services",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: "Loan Against Property (LAP) in India: Interest Rates & Eligibility",
+    description:
+      "Apply for Loan Against Property (LAP) in India with flexible tenure and low interest rates. Check LAP eligibility and apply online.",
+    siteName: "Money King Financial Services",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Loan Against Property (LAP) in India: Interest Rates & Eligibility",
+    description:
+      "Apply for Loan Against Property (LAP) in India with flexible tenure and low interest rates. Check LAP eligibility and apply online.",
+  },
+};
+
 export default function LoanAgainstPropertyPage() {
   return (
     <main className="min-h-screen bg-white">
@@ -26,23 +73,24 @@ export default function LoanAgainstPropertyPage() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/laplon/lapa.jpeg"
-              alt="Loan Against Property"
+              alt="Loan Against Property (LAP) in India: Interest Rates & Eligibility"
               fill
               className="object-cover object-[97%_center] md:object-right transition-all duration-500"
               priority
             />
-            {/* Mobile Gradient */}
+            {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent md:bg-linear-to-r md:from-black/60 md:via-transparent md:to-transparent" />
           </div>
 
           <div className="container mx-auto px-6 md:px-20 relative z-10 mt-auto pb-12 md:pb-0 md:mt-0">
             <div className="max-w-full md:max-w-2xl">
+              {/* --- H1 HEADING --- */}
               <Typography
                 variant="h1"
-                as="h2"
+                as="h1"
                 className="text-white! text-4xl! md:text-6xl! font-extrabold! mb-3! mt-0! leading-[1.1]! drop-shadow-lg"
               >
-                LAP in india/ interest rate & eligibility
+                Loan Against Property (LAP) in India: Interest Rates & Eligibility
               </Typography>
 
               <Typography
@@ -50,13 +98,13 @@ export default function LoanAgainstPropertyPage() {
                 as="p"
                 className="text-white! text-lg! md:text-2xl! mb-8! mt-0! font-medium! drop-shadow-md"
               >
-                Apply for a loan approve property in india with flexible tenure & competitive interest rate. check lap loan eligibitive documents change & application process.
+                Apply for Loan Against Property (LAP) in India with flexible tenure and low interest rates. Check LAP eligibility and apply online.
               </Typography>
 
               <Link href="http://application.dsacrm.com/e22787fa-e05f-4643-a0af-d4a5b98889ba/apply">
                 <Button
                   size="lg"
-                  className="bg-[#004687]! hover:bg-[#003566]! rounded-xl! h-12! md:h-14! px-10! shadow-xl! cursor-pointer border-none!"
+                  className="bg-[#004687]! hover:bg-[#003566]! rounded-xl! h-12! md:h-14! px-10! shadow-xl! cursor-pointer border-none! text-white"
                 >
                   APPLY NOW
                 </Button>
