@@ -8,12 +8,10 @@ import { BlogCard1 } from "./BlogCard1";
 import { ShareSection } from "./ShareSection";
 import { Typography } from "@/app/components/ui/Typography";
 
-// 1. Define the props interface allowing optional title
 export interface Blog100Props {
   title?: string;
 }
 
-// 2. Pass the interface to React.FC and destructure the prop
 export const Blog100: React.FC<Blog100Props> = ({ title }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -246,9 +244,9 @@ export const Blog100: React.FC<Blog100Props> = ({ title }) => {
                   </NextLink>
                 </div>
 
-                {/* Social Share Section */}
+                {/* Social Share Section (Fixed: removed title prop) */}
                 <div className="mt-8 border-t pt-6">
-                  <ShareSection title={displayTitle} />
+                  <ShareSection />
                 </div>
               </div>
             </div>
