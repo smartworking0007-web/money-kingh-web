@@ -82,7 +82,7 @@ const ApplyLAPLoan = () => {
           </div>
 
           {/* STEP DISPLAY AREA */}
-          <div className="relative flex min-h-[160px] md:min-h-[200px] items-start gap-4 md:gap-10">
+          <div className="relative flex min-h-40 md:min-h-[200px] items-start gap-4 md:gap-10">
             <div className="relative shrink-0">
               <div className="flex h-12 w-12 animate-bounce items-center justify-center rounded-full bg-[#1e293b] text-lg font-extrabold text-white shadow-xl md:h-20 md:w-20 md:text-3xl">
                 {stepsData[activeStep].step}

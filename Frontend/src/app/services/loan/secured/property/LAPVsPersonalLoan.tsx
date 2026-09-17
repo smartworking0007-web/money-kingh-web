@@ -152,5 +152,4 @@ const LAPVsPersonalLoan = () => {
     </section>
   );
 };
-
 export default LAPVsPersonalLoan;
