@@ -23,7 +23,7 @@ export const Blog109: React.FC = () => {
             category="MUTUAL FUNDS"
             author="Kishan Baranwal"
             date="September 22, 2026"
-            image="/images/blog/blog-109.jpeg"
+            image="/images/blog/Blog-109.jpeg"
           />
         </div>
       ) : (
@@ -46,7 +46,7 @@ export const Blog109: React.FC = () => {
               <div className="w-full flex justify-center bg-slate-50 py-4 px-4 border-b border-gray-100">
                 <div className="relative w-full max-w-3xl aspect-[16/9] rounded-lg overflow-hidden shadow-md">
                   <Image
-                    src="/images/blog/blog-109.jpeg"
+                    src="/images/blog/Blog-109.jpeg"
                     alt="SIP Interest Rate Calculation and Returns"
                     fill
                     className="object-cover"
