@@ -159,7 +159,7 @@ export const Blog109: React.FC = () => {
                     How Are SIP Returns Calculated? (XIRR vs. CAGR)
                   </h2>
                   <p>
-                    Because an investor deposits money in multiple installments across different market levels rather than a lump sum, standard interest formulas ($A = P(1 + r/n)^{nt}$) do not accurately measure SIP performance.
+                    Because an investor deposits money in multiple installments across different market levels rather than a lump sum, standard interest formulas (A = P(1 + r/n)^nt) do not accurately measure SIP performance.
                   </p>
                   <p>
                     Financial institutions use two key metrics:
