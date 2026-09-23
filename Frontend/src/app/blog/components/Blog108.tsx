@@ -30,9 +30,14 @@ export const Blog108: React.FC = () => {
         <div className="fixed inset-0 z-40 bg-white overflow-y-auto pt-20 md:pt-28 no-scrollbar animate-in fade-in duration-300 text-left">
           <div className="relative max-w-5xl mx-auto pb-20 px-4 md:px-6">
             {/* Back Button */}
+            {/* Back Button */}
             <button
-              onClick={() => setIsOpen(false)}
-              className="flex items-center mb-6 text-gray-500 hover:text-[#1e3a8a] transition-colors gap-1"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setIsOpen(false);
+              }}
+              className="flex items-center mb-6 text-gray-500 hover:text-[#1e3a8a] transition-colors gap-1 cursor-pointer"
             >
               <ArrowLeft size={14} />
               <Typography variant="caption" className="font-bold uppercase">
