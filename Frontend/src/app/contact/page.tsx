@@ -75,8 +75,8 @@ export default function ContactPage() {
     <div className="min-h-screen bg-[#F8FAFC] font-lexend pb-20">
       {/* --- HERO SECTION WITH H1 --- */}
       <section className="bg-slate-900 py-20 px-6 text-center text-white">
-        <Typography variant="h2" as="h1" className="font-black mb-3 text-3xl sm:text-4xl md:text-5xl">
-          Get in Touch with Money King
+        <Typography variant="h2" as="h1" className="font-black mb-3 text-2xl sm:text-4xl md:text-5xl">
+           Get In Touch With Our Experts
         </Typography>
         <p className="text-slate-400 max-w-md mx-auto text-sm md:text-base">
           Experience financial excellence at our Mumbai Headquarters and

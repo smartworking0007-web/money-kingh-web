@@ -246,13 +246,16 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen bg-[#F8FAFC]">
       {/* Dynamic Banner Layout */}
-      <div className="h-40 md:h-[200px] w-full flex items-center justify-center bg-[#4A90E2]">
+      <div className="py-12 md:py-16 w-full flex flex-col items-center justify-center bg-[#4A90E2] px-4 text-center">
         <Typography
           variant="h1"
-          className="text-white uppercase tracking-widest text-center px-4 my-0"
+          className="text-white font-extrabold text-2xl md:text-4xl tracking-tight max-w-4xl mx-auto mb-2"
         >
-          Blogs
+          Loan Guides & Market News 
         </Typography>
+        <p className="text-white/90 text-sm md:text-base max-w-xl mx-auto">
+          Explore expert tips on loans, mutual funds, and wealth management.
+        </p>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-10 md:py-16">

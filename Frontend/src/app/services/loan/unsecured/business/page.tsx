@@ -38,7 +38,8 @@ export const metadata: Metadata = {
   creator: "Money King Financial Services",
   publisher: "Money King Financial Services",
   alternates: {
-    canonical: "https://moneykingfinancial.com/services/loan/unsecured/business",
+    canonical:
+      "https://moneykingfinancial.com/services/loan/unsecured/business",
     languages: {
       en: "https://moneykingfinancial.com/services/loan/unsecured/business",
     },
@@ -57,7 +58,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Unsecured Business Loan in India | Apply Online Without Collateral | Money King",
+    title:
+      "Unsecured Business Loan in India | Apply Online Without Collateral | Money King",
     description:
       "Apply for unsecured business loans in India without collateral. Fast application processing, customized EMI options, and tailored MSME business support.",
     url: "https://moneykingfinancial.com/services/loan/unsecured/business",
@@ -67,7 +69,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Unsecured Business Loan in India | Apply Online Without Collateral | Money King",
+    title:
+      "Unsecured Business Loan in India | Apply Online Without Collateral | Money King",
     description:
       "Apply for unsecured business loans in India without collateral. Fast application processing, customized EMI options, and tailored MSME business support.",
   },
@@ -120,7 +123,7 @@ export default function BusinessLoanPage() {
                 as="h1"
                 className="text-[#002e5b] mb-6! mt-0! leading-tight font-black text-3xl sm:text-5xl lg:text-6xl"
               >
-                Unsecured Business Loan in India: Apply Online Without Collateral
+                Unsecured Business Loans in India | Fast Approval
               </Typography>
 
               <div className="space-y-6">
@@ -129,7 +132,9 @@ export default function BusinessLoanPage() {
                   as="p"
                   className="text-slate-800 font-medium m-0! leading-snug"
                 >
-                  Apply for unsecured business loans in India without collateral. Fast application processing, customized EMI options, and tailored MSME business support.
+                  Apply for unsecured business loans in India without
+                  collateral. Fast application processing, customized EMI
+                  options, and tailored MSME business support.
                 </Typography>
               </div>
 
@@ -196,10 +201,12 @@ export default function BusinessLoanPage() {
       <section className="w-full pt-12 md:pt-16 pb-4 px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Key Advantages of <span className="text-blue-600">Unsecured Business Financing</span>
+            Key Advantages of{" "}
+            <span className="text-blue-600">Unsecured Business Financing</span>
           </h2>
           <p className="text-slate-600 text-sm md:text-base mt-3 max-w-2xl mx-auto">
-            Scale operations, meet urgent working capital needs, and invest in inventory without pledging your enterprise assets.
+            Scale operations, meet urgent working capital needs, and invest in
+            inventory without pledging your enterprise assets.
           </p>
         </div>
       </section>

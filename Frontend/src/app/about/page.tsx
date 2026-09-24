@@ -62,6 +62,10 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <main className="w-full min-h-screen bg-white overflow-x-hidden">
+      <header className="sr-only">
+        <h1>About Money King Financial Services | Our Mission & Vision</h1>
+      </header>
+      
       <MissionVision />
 
       <div className="w-full flex flex-col">
