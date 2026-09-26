@@ -17,7 +17,7 @@ import GoldLoanTypes from "./GoldLoanTypes";
 
 // --- COMPLETE SEO METADATA ---
 export const metadata: Metadata = {
-  title: "Gold Loan in India: Rates & Eligibility | Money King IN",
+  title: "Gold Loan | Low Interest Rates & Instant Approval",
   description:
     "Get instant gold loan against jewellery or coins with Money King. Compare low interest rates, check per gram rate, and get instant approval.",
   keywords: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Gold Loan in India: Interest Rates, Per Gram Rate & Eligibility",
+    title: "Gold Loan | Low Interest Rates & Instant Approval",
     description:
       "Get instant gold loan against jewellery or coins with Money King. Compare low interest rates, check per gram rate, and get instant approval.",
     siteName: "Money King Financial Services",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gold Loan in India: Interest Rates, Per Gram Rate & Eligibility",
+    title: "Gold Loan | Low Interest Rates & Instant Approval",
     description:
       "Get instant gold loan against jewellery or coins with Money King. Compare low interest rates, check per gram rate, and get instant approval.",
   },

@@ -19,7 +19,7 @@ import LAPVsPersonalLoan from "./LAPVsPersonalLoan";
 
 // --- SEO METADATA (Title: exactly 55 characters including spaces) ---
 export const metadata: Metadata = {
-  title: "Loan Against Property in India | Money King Financials",
+  title: "Loan Against Property (LAP) | Low Interest Rates",
   description:
     "Apply for Loan Against Property (LAP) in India with flexible tenure and low interest rates. Check LAP eligibility and apply online.",
   keywords: [
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Loan Against Property (LAP) in India: Interest Rates & Eligibility",
+    title: "Loan Against Property (LAP) | Low Interest Rates",
     description:
       "Apply for Loan Against Property (LAP) in India with flexible tenure and low interest rates. Check LAP eligibility and apply online.",
     siteName: "Money King Financial Services",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Loan Against Property (LAP) in India: Interest Rates & Eligibility",
+    title: "Loan Against Property (LAP) | Low Interest Rates",
     description:
       "Apply for Loan Against Property (LAP) in India with flexible tenure and low interest rates. Check LAP eligibility and apply online.",
   },
@@ -73,7 +73,7 @@ export default function LoanAgainstPropertyPage() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/laplon/lapa.jpeg"
-              alt="Loan Against Property (LAP) in India: Interest Rates & Eligibility"
+              alt="Loan Against Property LAP Interest Rates and Eligibility"
               fill
               className="object-cover object-[97%_center] md:object-right transition-all duration-500"
               priority
@@ -84,13 +84,13 @@ export default function LoanAgainstPropertyPage() {
 
           <div className="container mx-auto px-6 md:px-20 relative z-10 mt-auto pb-12 md:pb-0 md:mt-0">
             <div className="max-w-full md:max-w-2xl">
-              {/* --- H1 HEADING --- */}
+              {/* --- H1 HEADING (Optimized under 60 characters for SEO) --- */}
               <Typography
                 variant="h1"
                 as="h1"
                 className="text-white! text-4xl! md:text-6xl! font-extrabold! mb-3! mt-0! leading-[1.1]! drop-shadow-lg"
               >
-                Loan Against Property (LAP) in India: Interest Rates & Eligibility
+                Loan Against Property (LAP) | Low Interest Rates
               </Typography>
 
               <Typography
