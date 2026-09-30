@@ -7,18 +7,11 @@ import { Typography } from "@/app/components/ui/Typography";
 
 // Blogs Import
 import { Blog1 } from "./components/Blog1";
-import { Blog2 } from "./components/Blog2";
-import { Blog3 } from "./components/Blog3";
 import { Blog4 } from "./components/Blog4";
-import { Blog5 } from "./components/Blog5";
 import { Blog6 } from "./components/Blog6";
-import { Blog7 } from "./components/Blog7";
-import { Blog8 } from "./components/Blog8";
-import { Blog9 } from "./components/Blog9";
 import { Blog10 } from "./components/Blog10";
 import { Blog11 } from "./components/Blog11";
 import { Blog12 } from "./components/Blog12";
-import { Blog13 } from "./components/Blog13";
 import { Blog14 } from "./components/Blog14";
 import { Blog15 } from "./components/Blog15";
 import { Blog16 } from "./components/Blog16";
@@ -28,8 +21,6 @@ import { Blog19 } from "./components/Blog19";
 import { Blog20 } from "./components/Blog20";
 import { Blog21 } from "./components/Blog21";
 import { Blog22 } from "./components/Blog22";
-import { Blog23 } from "./components/Blog23";
-import { Blog24 } from "./components/Blog24";
 import { Blog25 } from "./components/Blog25";
 import { Blog26 } from "./components/Blog26";
 import { Blog27 } from "./components/Blog27";
@@ -41,18 +32,13 @@ import { Blog32 } from "./components/Blog32";
 import { Blog33 } from "./components/Blog33";
 import { Blog34 } from "./components/Blog34";
 import { Blog35 } from "./components/Blog35";
-import { Blog36 } from "./components/Blog36";
 import { Blog37 } from "./components/Blog37";
 import { Blog38 } from "./components/Blog38";
 import { Blog39 } from "./components/Blog39";
 import { Blog40 } from "./components/Blog40";
 import { Blog41 } from "./components/Blog41";
-import { Blog42 } from "./components/Blog42";
 import { Blog43 } from "./components/Blog43";
-import { Blog44 } from "./components/Blog44";
 import { Blog45 } from "./components/Blog45";
-import { Blog46 } from "./components/Blog46";
-import { Blog47 } from "./components/Blog47";
 import { Blog48 } from "./components/Blog48";
 import { Blog49 } from "./components/Blog49";
 import { Blog50 } from "./components/Blog50";
@@ -66,7 +52,6 @@ import { Blog57 } from "./components/Blog57";
 import { Blog58 } from "./components/Blog58";
 import { Blog59 } from "./components/Blog59";
 import { Blog60 } from "./components/Blog60";
-import { Blog61 } from "./components/Blog61";
 import { Blog62 } from "./components/Blog62";
 import { Blog63 } from "./components/Blog63";
 import { Blog64 } from "./components/Blog64";
@@ -79,7 +64,6 @@ import { Blog70 } from "./components/Blog70";
 import { Blog71 } from "./components/Blog71";
 import { Blog72 } from "./components/Blog72";
 import { Blog73 } from "./components/Blog73";
-import { Blog74 } from "./components/Blog74";
 import { Blog75 } from "./components/Blog75";
 import { Blog76 } from "./components/Blog76";
 import { Blog77 } from "./components/Blog77";
@@ -92,14 +76,12 @@ import { Blog83 } from "./components/Blog83";
 import { Blog84 } from "./components/Blog84";
 import { Blog85 } from "./components/Blog85";
 import { Blog86 } from "./components/Blog86";
-import { Blog87 } from "./components/Blog87";
 import { Blog88 } from "./components/Blog88";
 import { Blog89 } from "./components/Blog89";
 import { Blog90 } from "./components/Blog90";
 import { Blog91 } from "./components/Blog91";
 import { Blog92 } from "./components/Blog92";
 import { Blog93 } from "./components/Blog93";
-import { Blog94 } from "./components/Blog94";
 import { Blog95 } from "./components/Blog95";
 import { Blog96 } from "./components/Blog96";
 import { Blog97 } from "./components/Blog97";
@@ -127,18 +109,11 @@ import { Blog114 } from "./components/Blog114";
 
 const ALL_BLOGS = [
   { id: 1, component: <Blog1 /> },
-  { id: 2, component: <Blog2 /> },
-  { id: 3, component: <Blog3 /> },
   { id: 4, component: <Blog4 /> },
-  { id: 5, component: <Blog5 /> },
   { id: 6, component: <Blog6 /> },
-  { id: 7, component: <Blog7 /> },
-  { id: 8, component: <Blog8 /> },
-  { id: 9, component: <Blog9 /> },
   { id: 10, component: <Blog10 /> },
   { id: 11, component: <Blog11 /> },
   { id: 12, component: <Blog12 /> },
-  { id: 13, component: <Blog13 /> },
   { id: 14, component: <Blog14 /> },
   { id: 15, component: <Blog15 /> },
   { id: 16, component: <Blog16 /> },
@@ -148,8 +123,6 @@ const ALL_BLOGS = [
   { id: 20, component: <Blog20 /> },
   { id: 21, component: <Blog21 /> },
   { id: 22, component: <Blog22 /> },
-  { id: 23, component: <Blog23 /> },
-  { id: 24, component: <Blog24 /> },
   { id: 25, component: <Blog25 /> },
   { id: 26, component: <Blog26 /> },
   { id: 27, component: <Blog27 /> },
@@ -161,18 +134,13 @@ const ALL_BLOGS = [
   { id: 33, component: <Blog33 /> },
   { id: 34, component: <Blog34 /> },
   { id: 35, component: <Blog35 /> },
-  { id: 36, component: <Blog36 /> },
   { id: 37, component: <Blog37 /> },
   { id: 38, component: <Blog38 /> },
   { id: 39, component: <Blog39 /> },
   { id: 40, component: <Blog40 /> },
   { id: 41, component: <Blog41 /> },
-  { id: 42, component: <Blog42 /> },
   { id: 43, component: <Blog43 /> },
-  { id: 44, component: <Blog44 /> },
   { id: 45, component: <Blog45 /> },
-  { id: 46, component: <Blog46 /> },
-  { id: 47, component: <Blog47 /> },
   { id: 48, component: <Blog48 /> },
   { id: 49, component: <Blog49 /> },
   { id: 50, component: <Blog50 /> },
@@ -186,7 +154,6 @@ const ALL_BLOGS = [
   { id: 58, component: <Blog58 /> },
   { id: 59, component: <Blog59 /> },
   { id: 60, component: <Blog60 /> },
-  { id: 61, component: <Blog61 /> },
   { id: 62, component: <Blog62 /> },
   { id: 63, component: <Blog63 /> },
   { id: 64, component: <Blog64 /> },
@@ -199,7 +166,6 @@ const ALL_BLOGS = [
   { id: 71, component: <Blog71 /> },
   { id: 72, component: <Blog72 /> },
   { id: 73, component: <Blog73 /> },
-  { id: 74, component: <Blog74 /> },
   { id: 75, component: <Blog75 /> },
   { id: 76, component: <Blog76 /> },
   { id: 77, component: <Blog77 /> },
@@ -212,14 +178,12 @@ const ALL_BLOGS = [
   { id: 84, component: <Blog84 /> },
   { id: 85, component: <Blog85 /> },
   { id: 86, component: <Blog86 /> },
-  { id: 87, component: <Blog87 /> },
   { id: 88, component: <Blog88 /> },
   { id: 89, component: <Blog89 /> },
   { id: 90, component: <Blog90 /> },
   { id: 91, component: <Blog91 /> },
   { id: 92, component: <Blog92 /> },
   { id: 93, component: <Blog93 /> },
-  { id: 94, component: <Blog94 /> },
   { id: 95, component: <Blog95 /> },
   { id: 96, component: <Blog96 /> },
   { id: 97, component: <Blog97 /> },
