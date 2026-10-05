@@ -7,60 +7,60 @@ import { Typography } from "@/app/components/ui/Typography";
 
 const faqs = [
   {
-    q: "1. What is a Gold Loan?",
-    a: "A Gold Loan is a secured loan where eligible gold jewellery or other accepted gold assets are pledged with a lender as security against the borrowed amount. The loan amount depends on factors such as gold purity, net weight, valuation, applicable LTV limits and lender policy.",
+    q: "1. What is a Car Loan?",
+    a: "A Car Loan is a secured loan where the vehicle itself or other accepted assets are pledged with a lender as security against the borrowed amount. The loan amount depends on factors such as car valuation, on-road price, applicable LTV limits and lender policy.",
   },
   {
-    q: "2. What is the Gold Loan interest rate?",
-    a: "Gold Loan interest rates vary depending on the lender, loan amount, tenure, gold valuation, repayment method and applicant profile. Money King offers access to competitive Gold Loan options through its lending partners, with the final interest rate determined by the respective lender.",
+    q: "2. What is the Car Loan interest rate?",
+    a: "Car Loan interest rates vary depending on the lender, loan amount, tenure, car valuation, repayment method and applicant profile. Money King offers access to competitive Car Loan options through its lending partners, with the final interest rate determined by the respective lender.",
   },
   {
-    q: "3. How much loan can I get against gold?",
-    a: "The loan amount depends primarily on the purity and net weight of the eligible gold, its assessed value and the applicable Loan-to-Value (LTV) ratio. The final sanctioned amount is subject to the lending partner's eligibility criteria and applicable regulatory requirements.",
+    q: "3. How much loan can I get against a car?",
+    a: "The loan amount depends primarily on the model and market value of the car, its assessed valuation and the applicable Loan-to-Value (LTV) ratio. The final sanctioned amount is subject to the lending partner's eligibility criteria and applicable regulatory requirements.",
   },
   {
-    q: "4. What is the LTV for a Gold Loan?",
-    a: "LTV, or Loan-to-Value ratio, represents the maximum loan amount in relation to the eligible value of the pledged gold. The applicable LTV depends on the type of lender, loan purpose and prevailing regulatory requirements; for certain regulated gold-loan categories, RBI guidance provides a 75% LTV limit.",
+    q: "4. What is the LTV for a Car Loan?",
+    a: "LTV, or Loan-to-Value ratio, represents the maximum loan amount in relation to the eligible value of the car. The applicable LTV depends on the type of lender, loan purpose and prevailing regulatory requirements; lenders typically finance up to 80% to 100% of the car's on-road or ex-showroom price.",
   },
   {
-    q: "5. What documents are required for a Gold Loan?",
-    a: "Generally, applicants need valid KYC documents such as PAN, Aadhaar or another accepted identity/address proof. The gold jewellery or eligible gold asset also needs to be presented for purity, weight and valuation assessment. Additional documents may be required depending on the lender and loan product.",
+    q: "5. What documents are required for a Car Loan?",
+    a: "Generally, applicants need valid KYC documents such as PAN, Aadhaar or another accepted identity/address proof, alongside income proof like salary slips, bank statements, or ITR. The car proforma invoice also needs to be presented for valuation and loan processing. Additional documents may be required depending on the lender and loan product.",
   },
   {
-    q: "6. Who is eligible for a Gold Loan?",
-    a: "Eligibility generally depends on the applicant's age, KYC status, ownership or right to pledge the gold, type and purity of the gold and the lender's credit policy. Specific age, gold purity and documentation requirements may vary between lending partners.",
+    q: "6. Who is eligible for a Car Loan?",
+    a: "Eligibility generally depends on the applicant's age, KYC status, employment type (salaried or self-employed), income stability, and the lender's credit policy. Specific age, income, and documentation requirements may vary between lending partners.",
   },
   {
-    q: "7. Is income proof required for a Gold Loan?",
-    a: "Some Gold Loan products may have limited income-proof requirements because the loan is secured against pledged gold. However, KYC and other lender-specific requirements still apply, and additional documentation may be requested depending on the loan product and applicant profile.",
+    q: "7. Is income proof required for a Car Loan?",
+    a: "Yes, unlike some fully secured asset loans, Car Loans generally require proof of stable income—such as salary slips, Form 16, or Income Tax Returns (ITR)—to establish repayment capacity. KYC and other lender-specific requirements also apply.",
   },
   {
-    q: "8. Is CIBIL score required for a Gold Loan?",
-    a: "CIBIL score requirements vary by lender and Gold Loan product. Since the loan is secured against gold, some lenders may place less emphasis on credit history than they would for an unsecured loan, but the lender may still consider the applicant's credit profile while determining eligibility and loan terms.",
+    q: "8. Is CIBIL score required for a Car Loan?",
+    a: "CIBIL score requirements vary by lender and loan product. A good credit score (typically 750 or above) helps secure quick approval and lower interest rates, though some lenders may consider applicants with lower scores under specific terms or higher down payments.",
   },
   {
-    q: "9. Can I get a Gold Loan against gold jewellery?",
-    a: "Yes, eligible gold jewellery can generally be pledged as security for a Gold Loan, subject to the lender's accepted gold type, purity, ownership and valuation requirements. The lender assesses the eligible gold content before determining the loan amount. RBI guidance also provides for proper assaying and valuation of pledged gold jewellery.",
+    q: "9. Can I get a Car Loan for a used car?",
+    a: "Yes, eligible pre-owned or used cars can generally be financed through a Used Car Loan, subject to the lender's accepted car age, model, ownership, and valuation requirements. The lender assesses the vehicle condition before determining the loan amount.",
   },
   {
-    q: "10. What is the maximum Gold Loan tenure?",
-    a: "Gold Loan tenure depends on the lending partner, loan product and repayment option selected. Short-term and longer-tenure options may be available, but the maximum tenure is determined by the respective lender's policy and applicable regulations.",
+    q: "10. What is the maximum Car Loan tenure?",
+    a: "Car Loan tenure depends on the lending partner, loan product, and whether the car is new or used. Tenures typically range from 1 year up to 7 years (12 to 84 months), with the maximum tenure determined by the respective lender's policy.",
   },
   {
-    q: "11. Can I repay a Gold Loan through EMI?",
-    a: "Yes, some Gold Loan products offer EMI-based repayment options. Depending on the lender, other repayment structures such as bullet repayment or interest-payment options may also be available. The applicable repayment method should be confirmed with the lending partner before taking the loan.",
+    q: "11. Can I repay a Car Loan through EMI?",
+    a: "Yes, Car Loans are primarily structured around monthly Equated Monthly Installments (EMIs). Depending on the lender, other repayment structures or prepayment options may also be available. The applicable repayment method should be confirmed with the lending partner.",
   },
   {
-    q: "12. What happens if I don't repay my Gold Loan?",
-    a: "If the borrower fails to repay the outstanding amount according to the loan agreement, the lender may follow its applicable notice and recovery process. If the dues remain unpaid, the pledged gold may ultimately be auctioned according to the lender's terms and applicable regulations, after following the required process and notices.",
+    q: "12. What happens if I don't repay my Car Loan?",
+    a: "If the borrower fails to repay the outstanding EMIs according to the loan agreement, the lender may follow its applicable notice and recovery process. If dues remain unpaid, the lender holds hypothecation rights over the vehicle and may proceed with legal repossession and auction as per regulatory terms.",
   },
   {
-    q: "13. Can I get my pledged gold back before the loan tenure ends?",
-    a: "Yes, pledged gold can generally be released after the outstanding loan amount and applicable interest or charges have been paid according to the lender's terms. The exact release process and any applicable charges depend on the lending partner and the repayment arrangement.",
+    q: "13. Can I prepay or foreclose my Car Loan before tenure ends?",
+    a: "Yes, a Car Loan can generally be prepaid or foreclosed after paying the outstanding loan amount and any applicable foreclosure charges according to the lender's terms. The exact foreclosure process and fees depend on the lending partner and loan agreement.",
   },
   {
-    q: "14. How is the Gold Loan amount calculated?",
-    a: "The Gold Loan amount is generally calculated based on the eligible gold's purity, net weight, applicable gold valuation and the permitted LTV ratio. The intrinsic value of the eligible gold is considered for valuation, while the final sanctioned amount is subject to the lender's policy and applicable regulatory requirements.",
+    q: "14. How is the Car Loan amount calculated?",
+    a: "The Car Loan amount is generally calculated based on the vehicle's ex-showroom or on-road price, applicable LTV ratio, applicant's monthly income, existing liabilities, and credit score. The final sanctioned amount is subject to the lender's credit policy and regulatory requirements.",
   },
 ];
 
