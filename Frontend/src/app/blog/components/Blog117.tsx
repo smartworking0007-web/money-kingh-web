@@ -128,7 +128,7 @@ export const Blog117: React.FC = () => {
             title="₹500 SIP Investment Guide: How to Start Small & Build Big Wealth in 2026"
             category="MUTUAL FUND"
             author="Kishan Baranwal"
-            date="October 6, 2026"
+            date="October 8, 2026"
             image="/images/blog/Blog-117.jpeg"
           />
         </div>
