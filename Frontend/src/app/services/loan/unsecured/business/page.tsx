@@ -16,6 +16,7 @@ import BusinessLoanKnowledgeBase from "./BusinessLoanKnowledgeBase";
 import GovtLoanSchemes from "./GovtLoanSchemes";
 import AboutBusinessLoan from "./AboutBusinessLoan";
 import BusinessLoanFeatures from "./BusinessLoanFeatures";
+import ABBCalculator from "@/app/components/LoanCalculator/ABBCalculator";
 
 // --- COMPLETE SEO METADATA ---
 export const metadata: Metadata = {
@@ -212,15 +213,15 @@ export default function BusinessLoanPage() {
       </section>
 
       {/* --- CONTENT COMPONENTS AREA --- */}
-      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-30 -mt-10 md:-mt-15">
+      <div className="relative z-20 bg-white py-8 md:py-12 space-y-12 md:space-y-16">
         <TrustBar />
+        <ABBCalculator />
       </div>
-      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-35 mt-20 md:-mt-10">
-        <LoanCalculator />
-      </div>
-      <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-10 -mt-10 md:-mt-30">
+
+      <div className="relative z-20 bg-white py-8 md:py-10">
         <LoanOffers />
       </div>
+
       <div className="relative z-20 bg-white space-y-16 md:space-y-24 py-8 md:py-20 -mt-10 md:-mt-20">
         <AboutBusinessLoan />
       </div>
