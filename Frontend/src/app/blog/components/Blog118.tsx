@@ -22,7 +22,7 @@ export const Blog118: React.FC = () => {
             title="Business Loan Documents Required in India: The Complete 2026 Checklist for Fast Approval"
             category="BUSINESS LOAN"
             author="Kishan Baranwal"
-            date="October 6, 2026"
+            date="October 9, 2026"
             image="/images/blog/Blog-118.jpeg"
           />
         </div>
@@ -76,7 +76,7 @@ export const Blog118: React.FC = () => {
 
                 <div className="flex items-center gap-2 text-gray-400 mb-8 border-b pb-4">
                   <Clock size={16} />
-                  <Typography variant="b2">October 6, 2026</Typography>
+                  <Typography variant="b2">October 9, 2026</Typography>
                   <span className="mx-2">•</span>
                   <Typography variant="b2">By Kishan Baranwal</Typography>
                 </div>
