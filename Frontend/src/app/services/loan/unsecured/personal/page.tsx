@@ -44,7 +44,8 @@ export const metadata: Metadata = {
   creator: "Money King Financial Services",
   publisher: "Money King Financial Services",
   alternates: {
-    canonical: "https://moneykingfinancial.com/services/loan/unsecured/personal",
+    canonical:
+      "https://moneykingfinancial.com/services/loan/unsecured/personal",
     languages: {
       en: "https://moneykingfinancial.com/services/loan/unsecured/personal",
     },
@@ -63,7 +64,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Personal Loan in India | Compare Low Interest Rates & Apply | Money King",
+    title:
+      "Personal Loan in India | Compare Low Interest Rates & Apply | Money King",
     description:
       "Compare and apply for personal loans from RBI-regulated banks and NBFCs. Minimal documentation, transparent processing fees, and quick approval support.",
     url: "https://moneykingfinancial.com/services/loan/unsecured/personal",
@@ -73,7 +75,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Personal Loan in India | Compare Low Interest Rates & Apply | Money King",
+    title:
+      "Personal Loan in India | Compare Low Interest Rates & Apply | Money King",
     description:
       "Compare and apply for personal loans from RBI-regulated banks and NBFCs. Minimal documentation, transparent processing fees, and quick approval support.",
   },
@@ -108,6 +111,18 @@ export default function PersonalLoanPage() {
     "@context": "https://schema.org",
     "@type": "FinancialService",
     name: "Money King Financial Services Pvt. Ltd.",
+    image: "https://moneykingfinancial.com/logo.png",
+    telephone: "+911204206832", // Apna business/office phone number likhein
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "A-39 Sector-63",
+      addressLocality: "Noida",
+      addressRegion: "Uttar Pradesh",
+      postalCode: "201301",
+      addressCountry: "IN",
+    },
+    priceRange: "₹₹",
+    url: "https://moneykingfinancial.com/services/loan/unsecured/personal",
     description:
       "Loan Facilitator and Direct Selling Agent (DSA) connecting customers with RBI regulated banks and NBFCs for personal loans.",
     areaServed: "India",

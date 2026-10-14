@@ -40,7 +40,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // 1. WWW to non-WWW redirect (Aapka purana code)
+      // 1. WWW to non-WWW redirect
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.moneykingfinancial.com' }],
@@ -48,7 +48,24 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       
-      // 2. SEO 301 Redirects: Old /Apply URLs to New /services/ URLs
+      // 2. Direct Old URLs Redirects (Yeh naye add karne hain jo Semrush mein 404 de rahe hain)
+      {
+        source: '/personal-loan',
+        destination: '/services/loan/unsecured/personal',
+        permanent: true,
+      },
+      {
+        source: '/business-loan',
+        destination: '/services/loan/unsecured/business',
+        permanent: true,
+      },
+      {
+        source: '/home-loan',
+        destination: '/services/loan/secured/home',
+        permanent: true,
+      },
+
+      // 3. SEO 301 Redirects: Old /Apply URLs to New /services/ URLs
       {
         source: '/Apply/Business-Loan',
         destination: '/services/loan/unsecured/business',

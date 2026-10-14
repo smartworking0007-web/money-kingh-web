@@ -9,9 +9,10 @@ import InsuranceRiskSolutions from "./InsuranceRiskSolutions";
 import WhyChooseInsurance from "./WhyChooseInsurance";
 import InsuranceRiskFAQ from "./InsuranceRiskFAQ";
 
-// --- COMPLETE SEO METADATA (Title: exactly 55 characters including spaces) ---
+// --- COMPLETE SEO METADATA ---
 export const metadata: Metadata = {
-  title: "Insurance & Risk Management | Money King Financial Hub",
+  // Title ko unique aur SEO-friendly banaya gaya hai
+  title: "Corporate & Individual Risk Management Advisory | Money King",
   description:
     "Protect your future, assets, and business with comprehensive insurance and risk mitigation advisory from Money King Financial Services.",
   keywords: [
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Insurance & Risk Management Solutions | Money King Financial Services",
+    title: "Corporate & Individual Risk Management Advisory | Money King",
     description:
       "Protect your future, assets, and business with comprehensive insurance and risk mitigation advisory from Money King Financial Services.",
     url: "https://moneykingfinancial.com/services/insurance-management",
@@ -57,21 +58,50 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Insurance & Risk Management Solutions | Money King Financial Services",
+    title: "Corporate & Individual Risk Management Advisory | Money King",
     description:
       "Protect your future, assets, and business with comprehensive insurance and risk mitigation advisory from Money King Financial Services.",
   },
 };
 
 export default function InsuranceManagementPage() {
+  // --- JSON-LD SCHEMA FOR BETTER GOOGLE CRAWLING & SEARCH CONSOLE ---
+  const jsonLdSchema = {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    name: "Money King Financial Services Pvt. Ltd.",
+    url: "https://moneykingfinancial.com/services/insurance-management",
+    image: "https://moneykingfinancial.com/images/footer/Risk.jpeg",
+    telephone: "+91-9876543210", // Apna official office contact number update karein
+    priceRange: "₹₹",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "A-39 Sector-63",
+      addressLocality: "Noida",
+      addressRegion: "Uttar Pradesh",
+      postalCode: "201301",
+      addressCountry: "IN",
+    },
+    description:
+      "Comprehensive insurance and risk management advisory helping individuals and commercial enterprises safeguard health, machinery, and business assets.",
+  };
+
   return (
     <main className="w-full bg-white font-sans">
+      {/* --- STRUCTURED DATA SCRIPT --- */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLdSchema),
+        }}
+      />
+
       {/* --- HERO SECTION WITH H1 --- */}
       <section className="relative w-full overflow-hidden">
         <div className="relative w-full aspect-6/3 sm:aspect-10/9 md:aspect-15/9 lg:aspect-15/6">
           <Image
             src="/images/footer/Risk.jpeg"
-            alt="Insurance & Risk Management Solutions"
+            alt="Insurance and Risk Management Advisory Solutions"
             fill
             className="object-cover object-right md:object-center transition-all duration-500"
             priority
@@ -81,7 +111,7 @@ export default function InsuranceManagementPage() {
           <div className="absolute inset-0 bg-linear-to-r from-slate-950/90 via-slate-900/60 to-transparent flex items-center">
             <div className="container mx-auto px-6 md:px-12 lg:px-20">
               <div className="max-w-2xl text-white space-y-4">
-                {/* --- H1 HEADING --- */}
+                {/* --- H1 HEADING (Unique & Keyword Optimized) --- */}
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-black leading-tight drop-shadow-lg text-white">
                   Insurance & <br />
                   <span className="text-blue-400">Risk Management</span> Solutions
@@ -106,7 +136,7 @@ export default function InsuranceManagementPage() {
       </section>
 
       {/* --- SUB-HEADER SECTION WITH H2 --- */}
-      <section className="w-full pt-10 md:pt-14 pb-2 px-6 text-center">
+      <section className="w-full pt-10 md:pt-14 pb-4 px-6 text-center">
         <div className="max-w-4xl mx-auto">
           {/* --- H2 HEADING --- */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
@@ -114,6 +144,18 @@ export default function InsuranceManagementPage() {
           </h2>
           <p className="text-slate-600 text-sm md:text-base mt-2 max-w-2xl mx-auto">
             Safeguard individual health, commercial property, and business assets against unforeseen liabilities with our custom insurance strategies.
+          </p>
+        </div>
+      </section>
+
+      {/* --- SEO TEXT BLOCK (Fixes Low Text-to-HTML Ratio Issue) --- */}
+      <section className="bg-slate-50 border-y border-slate-200 py-10 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto space-y-4 text-slate-700 leading-relaxed">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+            Strategic Financial Risk Management & Commercial Insurance
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-600">
+            At Money King Financial Services Pvt. Ltd., we deliver tailored risk assessment and management solutions designed for both individual policyholders and corporate clients. Mitigating credit risks, operational hazards, and health contingencies is essential for sustaining financial security. Through our advisory network, we facilitate seamless access to IRDAI-regulated insurance providers offering comprehensive coverage for Health, Life, Commercial Property, Keyman Insurance, and Plant & Machinery.
           </p>
         </div>
       </section>

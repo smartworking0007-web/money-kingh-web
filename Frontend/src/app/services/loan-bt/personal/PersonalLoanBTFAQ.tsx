@@ -77,7 +77,7 @@ export default function PersonalLoanBTFAQ() {
         <span>
           A balance transfer may involve a hard credit enquiry, which can have a temporary impact on your credit score. Maintaining timely repayments on the new loan can help maintain a healthy credit profile over time. Learn more about{" "}
           <Link
-            href="/personal-loan"
+            href="/services/loan/unsecured/personal"
             className="text-blue-600 font-semibold hover:underline"
           >
             personal loan
