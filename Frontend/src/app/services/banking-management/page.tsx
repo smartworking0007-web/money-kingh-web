@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Banking Management & Corporate Financial Solutions | Money King",
+    title: "Comprehensive banking management and advisory services facilitating corporate accounts, working capital setups, and treasury solutions.",
     description:
       "Explore strategic banking management, financial risk mitigation, and corporate banking solutions with Money King Financial Services.",
   },
