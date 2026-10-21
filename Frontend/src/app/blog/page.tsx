@@ -112,6 +112,7 @@ import { Blog121 } from "./components/Blog121";
 import { Blog122 } from "./components/Blog122";
 import { Blog123 } from "./components/Blog123";
 import { Blog124 } from "./components/Blog124";
+import { Blog125 } from "./components/Blog125";
 
 
 
@@ -224,6 +225,7 @@ const ALL_BLOGS = [
   { id: 122, component: <Blog122 /> },
   { id: 123, component: <Blog123 /> },
   { id: 124, component: <Blog124 /> },
+  { id: 125, component: <Blog125 /> },
 ];
 
 export default function BlogPage() {
@@ -248,6 +250,9 @@ export default function BlogPage() {
           Explore expert tips on loans, mutual funds, and wealth management.
         </p>
       </div>
+
+      {/* Code paste here  */}
+      
 
       <div className="max-w-7xl mx-auto px-4 py-10 md:py-16">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 justify-center">

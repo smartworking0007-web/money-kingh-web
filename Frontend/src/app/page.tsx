@@ -47,10 +47,14 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 overflow-x-hidden">
-      {/* SEO H1 Tag */}
+     
+       {/* Multiple H1 issue on semrush  */}
+     
+      {/* SEO H1 Tag
       <h1 className="sr-only whitespace-pre-line">
         {heroSlides[0]?.title}
-      </h1>
+      </h1> */}
+      
 
       {/* Hero Section */}
       <HeroSlider />
