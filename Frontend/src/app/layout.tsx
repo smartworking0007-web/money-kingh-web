@@ -118,9 +118,8 @@ import Popup from "./components/layout/Popup";
 import Script from "next/script";
 
 // ==========================================
-// ADDED: Diwali Festive Banner Import
+// ADDED:  Festive Banner Import
 // ==========================================
-import { DiwaliBanner } from "./components/DiwaliBanner";
 
 // 1. Inter (Standard Professional)
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -194,9 +193,9 @@ export default function RootLayout({
       `}
       >
         {/* ========================================== */}
-        {/* ADDED: Top Festive Diwali Banner           */}
+        {/* ADDED: Top Festive  Banner           */}
         {/* ========================================== */}
-        <DiwaliBanner />
+        
 
         <Navbar />
         <main className="pt-0 lg:pt-0">
